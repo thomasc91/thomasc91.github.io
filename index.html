@@ -21,8 +21,8 @@ var focus_node = null, highlight_node = null;
 var text_center = false;
 var outline = false;
 var color = d3.scale.ordinal()
-    .domain(["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"])
-    .range(["#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111","#111"]);
+    .domain(["0","1", "2", "3", "4", "5"])
+    .range(["#b20","#111","#999","#037","#ec0","#581"]);
     
 var highlight_color = "white";
 var highlight_trans = 0.1;
@@ -32,8 +32,8 @@ var size = d3.scale.pow().exponent(1)
   .range([8,24]);
 	
 var force = d3.layout.force()
-  .linkDistance(60)
-  .charge(-700)
+  .linkDistance(80)
+  .charge(-1000)
   .size([w,h]);
 var default_node_color = "#ccc";
 //var default_node_color = "rgb(3,190,100)";
