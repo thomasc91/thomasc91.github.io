@@ -873,7 +873,7 @@
 {"score": 3, "size": 2.583, "id": "Willis-Wode", "type": "circle", "img": ""},
 {"score": 2, "size": 1.854, "id": "Wyl-(guard)", "type": "circle", "img": ""},
 {"score": 2, "size": 0.946, "id": "Wylla", "type": "circle", "img": ""},
-{"score": 1, "size": 2.54, "id": "Yoren", "type": "circle", "img": ""},],
+{"score": 1, "size": 2.54, "id": "Yoren", "type": "circle", "img": ""}],
   "directed": false,
   "multigraph": false
 }
