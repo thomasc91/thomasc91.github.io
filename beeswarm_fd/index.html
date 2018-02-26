@@ -37,7 +37,7 @@ var YEARS = [1960, 2014];
 var USER_YEAR = 1970;
 
 var margin = {top: 45, right: 70, bottom: 50, left: 215 },
-    width = 1200 - margin.left - margin.right,
+    width = 900 - margin.left - margin.right,
 	height = 750 - margin.top - margin.bottom,
     padding = 3, // separation between nodes, in different categories
     radius = 4,
@@ -56,9 +56,6 @@ var y = d3.scale.ordinal()
 // Axes
 var xAxis = d3.svg.axis()
     .scale(x)
-    .tickFormat(function(d) {        
-            return d;
-    }    
     .tickSize(height+20)
     .orient("top");
 var yAxis = d3.svg.axis()
