@@ -56,13 +56,9 @@ var y = d3.scale.ordinal()
 // Axes
 var xAxis = d3.svg.axis()
     .scale(x)
-    .tickFormat(function(d) {
-        if (d == 100) {
-            return ">" + d;
-        } else {
+    .tickFormat(function(d) {        
             return d;
-        }
-    })
+    }    
     .tickSize(height+20)
     .orient("top");
 var yAxis = d3.svg.axis()
