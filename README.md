@@ -1,2 +1,2 @@
-# game-of-thrones-network-analysis
-Visualisations in D3 of character networks in Game of Thrones
+# Experiments in D3.js
+Using GitHub pages for D3.js visualisation hosting.
