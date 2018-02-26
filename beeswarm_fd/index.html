@@ -47,7 +47,7 @@ var n = 100,     // total number of nodes
     n_adj = 102; 
 
 var x = d3.scale.linear()
-    .domain([0, 40])
+    .domain([0, 100])
     .range([0, width-margin.right]);
 var y = d3.scale.ordinal()
     .domain(occs_in_order)
@@ -58,9 +58,9 @@ var xAxis = d3.svg.axis()
     .scale(x)
     .tickFormat(function(d) {
         if (d == 40) {
-            return ">$" + d*5 + "k";
+            return ">" + d";
         } else {
-            return "$" + d*5 + "k";
+            return d;
         }
     })
     .tickSize(height+20)
