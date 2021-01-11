@@ -8,7 +8,7 @@ async function drawBars() {
 	
   // 2. Create chart dimensions
 
-  const width = 1200
+  const width = 600
   let dimensions = {
     width: width,
     height: width * 0.6,
@@ -84,8 +84,8 @@ async function drawBars() {
       .attr("x", d => xScale(d.x0) + (xScale(d.x1) - xScale(d.x0)) / 2)
 	  .style("text-anchor", "middle")
       .attr("fill", "darkgrey")
-      .style("font-size", "16px")
-      .style("font-family", "sans-serif")
+      .style("font-size", "10px")
+      .style("font-family", "Poppins")
       .attr("y", d => dimensions.boundedHeight)
 	  .transition(barTransition)
 	  .delay((d, i) => { return i * 150; })
@@ -108,7 +108,7 @@ async function drawBars() {
   const meanLabel = bounds.append("text")
       .attr("x", xScale(mean))
       .attr("y", -20)
-	  .style("font-family", "sans-serif")
+	  .style("font-family", "poppins")
       .text("mean")
       .attr("fill", "maroon")
       .style("font-size", "16px")
@@ -124,7 +124,8 @@ async function drawBars() {
   const xAxis = bounds.append("g")
     .call(xAxisGenerator)
       .style("transform", `translateY(${dimensions.boundedHeight}px)`)
-	  .style("font-size", "16px")
+	  .style("font-size", "10px")
+	  .style("font-family", "Poppins")
 
   const xAxisLabel = xAxis.append("text")
       .attr("x", dimensions.boundedWidth / 2)
@@ -132,6 +133,7 @@ async function drawBars() {
       .attr("fill", "black")
       .style("font-size", "16px")
       .text("Word count")
+	  .style("font-family", "Poppins")
       .style("text-transform", "capitalize")
 }
 drawBars()
