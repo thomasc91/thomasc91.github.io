@@ -6,11 +6,8 @@ text {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+   display: flex;
     align-items: center;
+    justify-content: center;
     padding: 2em;
-    letter-spacing: -0.011em;
-    color: #34495e;
-    background: #f8f9fa;
 }
