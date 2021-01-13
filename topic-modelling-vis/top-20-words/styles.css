@@ -1,0 +1,16 @@
+
+text {
+    fill: black;
+    font-size: 12px;
+    font-family: Poppins;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    letter-spacing: -0.011em;
+    color: #34495e;
+    background: #f8f9fa;
+}

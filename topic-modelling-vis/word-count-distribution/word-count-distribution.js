@@ -2,7 +2,7 @@ async function drawBars() {
 
   // 1. Access data
   const dataset = await d3.csv("word_count.csv")
-  console.log(dataset)
+  
   const metricAccessor = d => +d.word_count //the + converts to numeric from string
   const yAccessor = d => d.length
 	
@@ -38,14 +38,13 @@ async function drawBars() {
     .domain(d3.extent(dataset, metricAccessor))
     .range([0, dimensions.boundedWidth])
     .nice()
-  console.log(d3.extent(dataset, metricAccessor))
+  
   const binsGenerator = d3.histogram()
     .domain(xScale.domain())
     .value(metricAccessor)
     .thresholds(26)
   
-  const bins = binsGenerator(dataset)
-  console.log(bins)
+  const bins = binsGenerator(dataset)  
 
   const yScale = d3.scaleLinear()
     .domain([0, d3.max(bins, yAccessor)])
@@ -76,7 +75,7 @@ async function drawBars() {
 	  .attr("y", d => yScale(yAccessor(d)))
       .attr("height", d => dimensions.boundedHeight - yScale(yAccessor(d)))
 	  
-      .attr("fill", "cornflowerblue")
+      
 
   const barText = binGroups.filter(yAccessor)
     .append("text")
@@ -102,15 +101,15 @@ async function drawBars() {
 	  .transition(meanTransition)
 	  .delay((d, i) => { return i * 500; })
       .attr("y2", dimensions.boundedHeight)
-      .attr("stroke", "maroon")
-      .attr("stroke-dasharray", "2px 4px")
+      .attr("stroke", "grey")
+      .attr("stroke-dasharray", "6px 6px")
 	  
   const meanLabel = bounds.append("text")
       .attr("x", xScale(mean))
       .attr("y", -20)
 	  .style("font-family", "poppins")
       .text("mean")
-      .attr("fill", "maroon")
+      .attr("fill", "black")
       .style("font-size", "16px")
       .style("text-anchor", "middle")
 	  

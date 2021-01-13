@@ -1,5 +1,5 @@
-.bin rect {
-    fill: cornflowerblue;
+rect {
+    fill: #1762a9;
 }
 .bin text {
     text-anchor: middle;
@@ -8,10 +8,6 @@
     font-family: Poppins;
 }
 
-.mean {
-    stroke: maroon;
-    stroke-dasharray: 2px 4px;
-}
 
 .x-axis-label {
     fill: black;
