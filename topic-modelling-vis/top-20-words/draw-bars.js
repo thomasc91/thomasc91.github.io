@@ -11,7 +11,7 @@ async function drawBars() {
     width: width,
     height: width * 1.6,
     margin: {
-      top: 30,
+      top: 10,
       right: 30,
       bottom: 50,
       left: 60,
