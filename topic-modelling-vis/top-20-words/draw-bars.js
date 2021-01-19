@@ -1,9 +1,7 @@
 async function drawBars() {
 
   // 1. Access data
-  //dataset = await d3.csv("top_20_words.csv")
-  dataset = await d3.csv("https://drive.google.com/uc?export=download&id=18OrglgTvSSfF4nSUT61HgxIzjn1p0hHU")
- 
+  dataset = await d3.csv("top_20_words.csv")   
   const yAccessor = d => d.word
   const xAccessor = d => +d.frequency
   // 2. Create chart dimensions
