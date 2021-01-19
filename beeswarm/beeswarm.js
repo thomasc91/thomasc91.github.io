@@ -35,6 +35,7 @@ async function drawBeeswarm() {
     const width = 1200
 
         let dimensions = {
+			
         width: width,
         height: width * 0.8,
         margin: {
