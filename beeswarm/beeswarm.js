@@ -10,7 +10,7 @@ async function drawBeeswarm() {
     dataset = await d3.csv("shootings.csv")
         const dateParser = d3.timeParse("%Y-%m-%d")
 
-        const n_frames_to_simulate = 300
+        
 
         const xAccessor = d => dateParser(d.date)
         const yAccessor = d => d.race
@@ -93,27 +93,25 @@ async function drawBeeswarm() {
         .style("opacity", 0);
 
     const simulation = d3.forceSimulation(dataset)	    
-        .force("x", d3.forceX(d => xScale(xAccessor(d))).strength(0.2))
-        .force("y", d3.forceY(d => yScale(yAccessor(d))).strength(0.2))
-        .force("collide", d3.forceCollide().radius(d => radiusAccessor(d) + 0.5).iterations(2))		
+        .force("x", d3.forceX(d => xScale(xAccessor(d))).strength(.2))
+        .force("y", d3.forceY(d => yScale(yAccessor(d))).strength(.2))
+        .force("collide", d3.forceCollide().radius(d => radiusAccessor(d) + 0.5).iterations(1))		
         .on('tick', tick)
 		
 	function tick(){
 		d3.selectAll('.node')
 			.attr("cx", d => d.x)
 			.attr("cy", d => d.y)
-	
-
 	}
         // 3. bind data and draw nodes
         const node = bounds.selectAll(".node")
-        .data(dataset).enter()
-        .append("circle")
-		.attr("x", 800)
-        .attr("class", "node")
+        .data(dataset).enter()		
+        .append("circle")		
+		.attr("class", "node")
+		.attr("cx", d => xScale(xAccessor(d))) 
+		.attr("cy", d => yScale(yAccessor(d)))
         .attr("r", d => radiusAccessor(d))
-        .attr("fill", d => colors(colorAccessor(d)))
-
+		.attr("fill", d => colors(colorAccessor(d)))
        
     // Show tooltip when hovering over circle (data for respective person)
     d3.selectAll(".node").on("mousemove", function (d) {
