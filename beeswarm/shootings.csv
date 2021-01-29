@@ -1,0 +1,1100 @@
+id,name,date,manner_of_death,armed,age,gender,race,city,state,signs_of_mental_illness,threat_level,flee,body_camera,arms_category
+4493,Neico Crooks,2019-02-22,shot,vehicle,21.0,M,Black,Miami Gardens,FL,False,attack,Car,False,Vehicles
+4499,Felipe Martinez,2019-02-22,shot,knife,36.0,M,Hispanic,Poteet,TX,False,other,Car,False,Sharp objects
+4486,Sterling Durant Humbert,2019-02-23,shot,gun,28.0,M,White,Carrollton,TX,False,attack,Car,True,Guns
+4487,Daniel David Messmer,2019-02-23,shot,gun,24.0,M,White,Victorville,CA,True,attack,Not fleeing,False,Guns
+4488,Angel Burke,2019-02-23,shot,gun,29.0,M,White,Clarksville,TN,False,other,Foot,False,Guns
+4501,Jackie Scott Pendergrass,2019-02-23,shot,gun,44.0,M,White,Blountville,TN,False,attack,Not fleeing,False,Guns
+4480,Tommy Kirby,2019-02-24,shot,unknown,41.0,M,White,Flint,MI,False,undetermined,Car,False,Unknown
+4494,Bryan A. Ryder,2019-02-25,shot,knife,38.0,M,White,Springfield,MO,True,other,Other,False,Sharp objects
+4548,David Litton,2019-02-25,shot,gun,40.0,M,White,Denver,CO,False,other,Not fleeing,False,Guns
+4492,Sasha Ann Pishko,2019-02-26,shot,vehicle,20.0,F,White,McIntosh County,GA,False,attack,Car,False,Vehicles
+4496,Tyler Schmidtbauer,2019-02-26,shot,gun,27.0,M,White,Miltona,MN,False,other,Not fleeing,True,Guns
+4497,Joseph Hart,2019-02-26,shot,gun,51.0,M,White,Huger,SC,False,attack,Not fleeing,False,Guns
+4549,Brandon Schmitt,2019-02-26,shot,gun,48.0,M,White,Struthers,OH,False,attack,Not fleeing,False,Guns
+4495,James Scott Reed,2019-02-27,shot,gun,40.0,M,Black,Killeen,TX,False,attack,Not fleeing,False,Guns
+4524,Michael Pierce,2019-02-28,shot,gun,29.0,M,White,Vancouver,WA,True,attack,Not fleeing,False,Guns
+4528,Kenneth Joseph Sisneros,2019-02-28,shot,gun,34.0,M,Hispanic,Lone Tree,CO,False,other,Foot,False,Guns
+4536,Brenda Rodriguez Mendoza,2019-03-01,shot,gun,20.0,F,Hispanic,Salinas,CA,False,other,Other,False,Guns
+4550,Maurice Arrisgado,2019-03-01,shot,unarmed,47.0,M,Asian,Honolulu,HI,False,other,Foot,False,Unarmed
+4523,Eduardo Munoz,2019-03-01,shot and Tasered,unarmed,29.0,M,Hispanic,Fairfield,TX,False,other,Not fleeing,False,Unarmed
+4538,Larry Todd Hoover,2019-03-02,shot,sword,33.0,M,White,Mount Holly,NC,True,other,Not fleeing,False,Sharp objects
+4541,Tyler J. Meier,2019-03-02,shot,unarmed,46.0,M,White,Fairchild,WI,False,attack,Not fleeing,False,Unarmed
+4542,Clair Jewell,2019-03-02,shot,unknown,35.0,F,White,Carter County,KY,False,other,Other,False,Unknown
+4526,Luke Anthony Swann,2019-03-04,shot,gun,36.0,M,Black,Des Moines,IA,False,attack,Foot,False,Guns
+4534,Stephen Kaylor,2019-03-04,shot,gun,63.0,M,White,Rancho Mirage,CA,True,attack,Other,False,Guns
+4539,Daniel Moncada,2019-03-04,shot,gun,27.0,M,Hispanic,San Antonio,TX,False,attack,Not fleeing,False,Guns
+4540,Jeremy Ponce,2019-03-04,shot,gun,17.0,M,Hispanic,San Antonio,TX,False,attack,Car,False,Guns
+4547,Shamikle Jackson,2019-03-04,shot,machete,22.0,M,Black,Aurora,CO,False,other,Not fleeing,True,Sharp objects
+4567,Stephanie Areanda Quiroz,2019-03-05,shot,unarmed,21.0,F,Hispanic,Bakersfield,CA,False,other,Car,False,Unarmed
+4679,Joshua Worth,2019-03-05,shot,unknown,31.0,M,White,Greenville,MS,True,undetermined,Other,False,Unknown
+4529,Danny Brogdon,2019-03-05,shot and Tasered,knife,56.0,M,White,Muskogee,OK,False,other,Not fleeing,False,Sharp objects
+4537,Antonio Joseph Valentine,2019-03-05,shot and Tasered,gun,32.0,M,Black,Jacksonville,FL,False,other,Not fleeing,False,Guns
+4678,Donqaule Maurice Gray,2019-03-06,shot,gun,25.0,M,Black,Morgantown,WV,False,attack,Foot,False,Guns
+4544,Rodney Fisher,2019-03-07,shot,gun,47.0,M,White,Jonesboro,AR,False,other,Not fleeing,False,Guns
+4545,Carlos Hunter,2019-03-07,shot,gun,37.11793090137039,M,Hispanic,Vancouver,WA,False,other,Not fleeing,False,Guns
+4546,Dylan Aikey,2019-03-07,shot,gun,23.0,M,White,Anchorage,AK,False,attack,Foot,False,Guns
+4556,Thomas Wayne Swinford,2019-03-08,shot,toy weapon,34.0,M,White,Athens,GA,True,attack,Other,True,Other unusual objects
+4554,Beth Plant,2019-03-09,shot,knife,51.0,F,White,Cheatham County,TN,False,attack,Not fleeing,False,Sharp objects
+4557,Eric Hagstrom,2019-03-09,shot,gun,35.0,M,White,Phoenix,AZ,False,attack,Not fleeing,False,Guns
+4558,Joel David Kellay,2019-03-09,shot,gun,46.0,M,White,Pennfield Township,MI,False,attack,Not fleeing,False,Guns
+4559,Tommy Wayne Welch,2019-03-09,shot,knife,59.0,M,White,Quanah,TX,False,undetermined,Not fleeing,False,Sharp objects
+4677,Rodney Lassiter,2019-03-09,shot,gun,30.0,M,Black,Monahans,TX,True,attack,Not fleeing,False,Guns
+4552,Brandon Robertson,2019-03-10,shot,gun,34.0,M,Native,Redding,CA,False,attack,Foot,False,Guns
+4553,Phillip Wayne Outland,2019-03-10,shot,gun,44.0,M,White,Cofield,NC,False,attack,Not fleeing,False,Guns
+4555,Sokhom Hon,2019-03-10,shot,unknown,31.0,M,Asian,San Bernardino,CA,True,attack,Not fleeing,False,Unknown
+4674,Anthony Lee Montoya,2019-03-10,shot,gun,51.0,M,Hispanic,Lakewood,CO,False,attack,Car,False,Guns
+4675,Michael J. D'Angelo,2019-03-11,shot,knife,34.0,M,White,Westminster,MD,False,attack,Not fleeing,False,Sharp objects
+4560,Robert Mark Frady,2019-03-12,shot,gun,45.0,M,White,Salacoa,GA,False,attack,Not fleeing,False,Guns
+4561,Latasha Nicole Walton,2019-03-12,shot,vehicle,32.0,F,Black,Miami,FL,False,other,Not fleeing,False,Vehicles
+4562,Brandon Stacey,2019-03-12,shot,gun,31.0,M,White,Kalamazoo,MI,False,attack,Not fleeing,False,Guns
+4563,Charles Ballard,2019-03-13,shot,vehicle,41.0,M,Black,Ashland,CA,False,attack,Car,True,Vehicles
+4564,Benjamin Melendez,2019-03-13,shot,knife,29.0,M,Hispanic,Grand Island,NE,False,attack,Not fleeing,False,Sharp objects
+4566,Nina Adams,2019-03-13,shot,gun,47.0,F,Black,Greensburg,PA,True,attack,Not fleeing,False,Guns
+4570,Henry Wayne Rivera,2019-03-13,shot,unarmed,30.0,M,Hispanic,Phoenix,AZ,False,other,Other,False,Unarmed
+4565,Shawn Taylor Waite,2019-03-14,shot,knife,27.0,M,Native,Sallisaw,OK,False,attack,Not fleeing,False,Sharp objects
+4569,Jerry Marrero,2019-03-14,shot,knife,38.0,M,Hispanic,Jacksonville,FL,True,other,Not fleeing,False,Sharp objects
+4571,George Wayne McCallum,2019-03-14,shot,gun,33.0,M,White,Monroe County,MS,True,other,Car,False,Guns
+4578,Victor J. Morales Zavala,2019-03-14,shot,gun,25.0,M,White,Ontario,OR,True,attack,Car,False,Guns
+4579,Michael Cohen,2019-03-15,shot,gun,47.0,M,White,Las Vegas,NV,False,attack,Not fleeing,True,Guns
+4577,Timothy John Beckwith,2019-03-16,shot,gun,49.0,M,White,Palmdale,CA,False,attack,Not fleeing,False,Guns
+4575,Jorge Luis Rivera-Melendez,2019-03-17,shot,gun,33.0,M,Hispanic,Clermont,FL,False,other,Other,False,Guns
+4580,Kenneth Cherry,2019-03-18,shot and Tasered,sharp object,36.0,M,White,Mansfield,OH,False,other,Not fleeing,False,Sharp objects
+4586,Thomas Johnson,2019-03-19,shot,gun,22.0,M,Black,Bastrop,LA,False,undetermined,Foot,False,Guns
+4590,Juan Manuel Flores Del Toro,2019-03-19,shot,gun,29.0,M,Hispanic,Kittitas,WA,False,attack,Car,False,Guns
+4596,Jesus Calderon,2019-03-19,shot,knife,52.0,M,Hispanic,Tampa,FL,True,other,Not fleeing,False,Sharp objects
+5411,James Hunn,2019-03-19,shot,gun,61.0,M,White,University City,MO,True,attack,Not fleeing,False,Guns
+4581,Osaze Osagie,2019-03-20,shot,knife,29.0,M,Black,State College,PA,True,attack,Not fleeing,False,Sharp objects
+4584,Stevie Garcia,2019-03-20,shot,gun,37.0,M,Hispanic,Las Vegas,NV,False,attack,Not fleeing,True,Guns
+4591,Hannah Westall,2019-03-20,shot,toy weapon,26.0,F,White,San Antonio,TX,False,attack,Not fleeing,False,Other unusual objects
+4585,Daishawn Brown,2019-03-21,shot,gun,19.0,M,Black,Modesto,CA,False,undetermined,Car,False,Guns
+4594,Bruce Puchel,2019-03-22,shot,gun,45.0,M,White,Ernul,NC,True,other,Not fleeing,False,Guns
+4595,Derek Smith,2019-03-22,shot,knife,22.0,M,Black,Walterboro,SC,False,other,Not fleeing,False,Sharp objects
+4589,Kevin Bruce Mason,2019-03-24,shot,unarmed,57.0,M,Black,Baltimore,MD,False,other,Not fleeing,True,Unarmed
+4592,Joseph David Durman,2019-03-24,shot,gun,46.0,M,White,Port St. Joe,FL,False,other,Car,False,Guns
+4587,Danquirs Napoleon Franklin,2019-03-25,shot,gun,27.0,M,Black,Charlotte,NC,True,other,Not fleeing,True,Guns
+4588,Abraham Arellano,2019-03-25,shot,gun,26.0,M,Hispanic,Thurmont,MD,True,other,Other,False,Guns
+4603,Brandon Coty Elliott,2019-03-25,shot,gun,30.0,M,White,Horry County,SC,True,other,Foot,False,Guns
+4657,Kaylon Robinson,2019-03-25,shot,gun,18.0,M,Black,St. Louis,MO,False,attack,Not fleeing,False,Guns
+4597,Brandon Michael Jacque,2019-03-27,shot,vehicle,25.0,M,White,Burnet,TX,False,attack,Not fleeing,True,Vehicles
+4600,Stephen Marshall,2019-03-27,shot,gun,51.0,M,White,Manchester,NH,False,attack,Not fleeing,False,Guns
+4601,Leonardo Gallegos,2019-03-27,shot,gun,40.0,M,Hispanic,Cochran County,TX,False,attack,Car,False,Guns
+4602,Kevin Samuel Capers,2019-03-27,shot,knife,47.0,M,White,Chickasha,OK,False,other,Not fleeing,False,Sharp objects
+4604,Chris Joseph,2019-03-27,shot,vehicle,38.0,M,Black,Terrytown,LA,False,attack,Not fleeing,False,Vehicles
+4605,Daviri Robertson,2019-03-27,shot,vehicle,39.0,M,Black,Terrytown,LA,False,attack,Car,False,Vehicles
+4671,Brian Leslie Statler,2019-03-27,shot,sword,30.0,M,Black,Inglewood,CA,False,other,Not fleeing,False,Sharp objects
+4607,Augustine Gutierrez,2019-03-28,shot,gun,42.0,M,Hispanic,San Antonio,TX,False,other,Car,False,Guns
+4606,Pierre J. Cher Frere,2019-03-30,shot,gun,25.0,M,Black,Miami,FL,False,attack,Other,False,Guns
+4610,Andrew John Mason,2019-03-30,shot,unarmed,22.0,M,White,Watuaga County,NC,False,attack,Not fleeing,False,Unarmed
+4669,Ondrae Levado Hutchinson,2019-03-30,shot and Tasered,gun,30.0,M,Black,Durham,NC,False,attack,Foot,True,Guns
+4608,Stacy William Kenny,2019-03-31,shot,vehicle,33.0,F,White,Springfield,OR,True,other,Car,False,Vehicles
+4611,Juan Padilla,2019-03-31,shot,knife,24.0,M,Hispanic,Marana,AZ,False,attack,Not fleeing,False,Sharp objects
+4612,Oscar Cain,2019-03-31,shot,gun,31.0,M,Black,Atlanta,GA,False,other,Foot,False,Guns
+4618,Kevin Ray McEnulty,2019-03-31,shot,gun,25.0,M,Native,Fairbanks,AK,False,other,Car,False,Guns
+4609,Lianna Renee London,2019-04-01,shot,gun,28.0,F,White,LaFollette,TN,False,attack,Not fleeing,False,Guns
+4620,Veltavious Griggs,2019-04-01,shot,gun,19.0,M,Black,Union City,GA,False,attack,Other,False,Guns
+4656,Bishar Hassan,2019-04-01,shot,BB gun,31.0,M,Black,Anchorage,AK,True,other,Foot,False,Guns
+4615,Donnell James Lang,2019-04-02,shot,unarmed,48.0,M,White,Redding,CA,True,attack,Not fleeing,False,Unarmed
+4613,Barry A. Rucker,2019-04-03,shot,gun,53.0,M,White,Brownstown,IN,False,other,Not fleeing,False,Guns
+4614,Alfonso Cervantes,2019-04-03,shot,gun,50.0,M,Hispanic,San Diego,CA,False,attack,Not fleeing,True,Guns
+4616,Jeffrey Garner,2019-04-03,shot,gun,55.0,M,Hispanic,Boynton Beach,FL,False,attack,Not fleeing,False,Guns
+4617,Zachary Kinard,2019-04-03,shot,gun,37.11793090137039,M,White,Pelion,SC,False,other,Car,False,Guns
+4619,Thomas Verile,2019-04-04,shot,unarmed,37.0,M,White,Kalamazoo,MI,True,other,Not fleeing,False,Unarmed
+4625,Daniel Robert Ramirez,2019-04-04,shot,gun,30.0,M,Hispanic,Anaheim,CA,False,other,Not fleeing,False,Guns
+4624,Benjamin B. Lucas,2019-04-06,shot,gun,36.0,M,White,New Albany,IN,True,attack,Not fleeing,False,Guns
+4621,Anthony Orlando Bowers,2019-04-07,shot,gun,24.0,M,Black,Greeneville,TN,False,attack,Not fleeing,False,Guns
+4622,Marzeus Scott,2019-04-07,shot,unarmed,35.0,M,Black,Blytheville,AR,True,attack,Foot,True,Unarmed
+4630,Charles Bradley Payne,2019-04-07,shot,knife,42.0,M,White,Hamilton County,TN,False,attack,Not fleeing,False,Sharp objects
+4631,Harold Vincent Robinson,2019-04-08,shot,gun,37.0,M,Black,Salt Lake City,UT,False,attack,Car,False,Guns
+4627,Michael Wray Hensley,2019-04-09,shot,gun,28.0,M,White,Pueblo,CO,False,attack,Foot,False,Guns
+4628,Michael Gulley,2019-04-09,shot,gun,32.0,M,White,Henry County,IN,False,attack,Not fleeing,False,Guns
+4629,Terry Davis,2019-04-09,shot,gun,33.0,M,Black,Louisville,KY,False,attack,Not fleeing,False,Guns
+4645,Trivenskey O. Odom,2019-04-10,shot,gun,27.0,M,Black,Shreveport,LA,False,attack,Car,False,Guns
+4658,Anthony Santana,2019-04-10,shot,gun,21.0,M,Hispanic,Indio,CA,False,other,Not fleeing,False,Guns
+4659,David Wittman,2019-04-10,shot,gun,47.0,M,White,Pinellas Park,FL,False,attack,Not fleeing,False,Guns
+4661,John Darlington,2019-04-10,shot,gun,57.0,M,White,Mexico Beach,FL,False,other,Not fleeing,False,Guns
+4662,Demetrious Brooks,2019-04-11,shot,gun,34.0,M,Black,St. Louis,MO,False,attack,Foot,False,Guns
+4664,Marcus McVae,2019-04-11,shot,unarmed,34.0,M,Black,Boerne,TX,False,attack,Foot,False,Unarmed
+4665,Phillip Thomas Marsh,2019-04-11,shot,gun,30.0,M,White,DeLand,FL,True,attack,Car,False,Guns
+4666,Theresa Medina-Thomas,2019-04-11,shot,vehicle,29.0,F,Hispanic,Ahwatukee,AZ,False,other,Car,False,Vehicles
+4640,Myron Flowers,2019-04-12,shot,gun,28.0,M,Black,Clinton,LA,False,attack,Not fleeing,False,Guns
+4643,Juan Torres,2019-04-12,shot,wrench,39.0,M,Hispanic,Buckeye,AZ,True,attack,Not fleeing,True,Blunt instruments
+4663,Luc Ciel,2019-04-12,shot,knife,54.0,M,Asian,Richmond,CA,False,attack,Not fleeing,False,Sharp objects
+4633,Augustus Combs,2019-04-14,shot,gun,27.0,M,White,Dalhart,TX,False,other,Foot,False,Guns
+4634,Kawaski Trawick,2019-04-14,shot,knife,32.0,M,Black,New York,NY,False,other,Not fleeing,True,Sharp objects
+4636,Clarence Leading Fighter,2019-04-14,shot,knife,32.0,M,Native,Rushville,NE,False,other,Foot,False,Sharp objects
+4639,William Crawford,2019-04-14,shot,gun,47.0,M,White,Los Angeles,CA,False,undetermined,Foot,False,Guns
+4655,Brian Dellaann Butts,2019-04-14,shot,gun,33.0,M,White,Portland,OR,False,attack,Not fleeing,False,Guns
+4635,Henry Lane,2019-04-14,shot and Tasered,walking stick,42.0,M,Native,Red Bluff,CA,True,other,Foot,False,Blunt instruments
+4632,Samuel Charles Talbott,2019-04-15,shot,knife,37.11793090137039,M,White,Pigeon Forge,TN,True,other,Not fleeing,False,Sharp objects
+4641,Chadwick Dale Martin,2019-04-16,shot,vehicle,24.0,M,White,Fountain Inn,SC,False,attack,Car,False,Vehicles
+5412,Patrick West,2019-04-16,shot,sword,42.0,M,White,Montesano,WA,True,other,Not fleeing,False,Sharp objects
+4642,Akeen Brown,2019-04-17,shot,gun,34.0,M,Black,Flint,MI,False,attack,Not fleeing,False,Guns
+4648,"John Stewart, Jr.",2019-04-17,shot,knife,46.0,M,White,Pentress,WV,True,attack,Foot,True,Sharp objects
+4637,John Duane Fairbanks,2019-04-18,shot,gun,40.0,M,Native,Coon Rapids,MN,False,attack,Foot,True,Guns
+4646,Michael Allen Felch,2019-04-18,shot,gun,30.0,M,White,Fremont,CA,False,attack,Not fleeing,True,Guns
+4647,Luiz Leizado,2019-04-18,shot,gun,42.0,M,Hispanic,New York,NY,False,attack,Foot,False,Guns
+4650,Soheil Antonio Mojarrad,2019-04-20,shot,knife,30.0,M,White,Raleigh,NC,False,attack,Not fleeing,False,Sharp objects
+4651,Carlton Steve Brooks,2019-04-20,shot,gun,63.0,M,White,Athens,GA,True,attack,Not fleeing,True,Guns
+4653,Anthony Jose Vega Cruz,2019-04-20,shot,vehicle,18.0,M,Hispanic,Wethersfield,CT,False,attack,Foot,False,Vehicles
+4891,Sean Michael Collins,2019-04-20,shot,gun,29.0,M,Hispanic,Colorado Springs,CO,False,attack,Not fleeing,True,Guns
+4652,Michael St. Clair,2019-04-21,shot,gun,42.0,M,White,Little Rock,AR,False,attack,Foot,False,Guns
+4649,David Flores Ramos,2019-04-22,shot,gun,32.0,M,Hispanic,Los Angeles,CA,False,attack,Other,True,Guns
+5413,Richard Allen Moench,2019-04-22,shot,gun,50.0,M,White,Shelby,MT,False,attack,Not fleeing,False,Guns
+4667,Emory Moore,2019-04-24,shot,unknown,29.0,M,White,Owingsville,KY,False,attack,Car,False,Unknown
+4892,Jonathan Patzel,2019-04-24,shot,knife,29.0,M,White,Colorado Springs,CO,False,attack,Not fleeing,False,Sharp objects
+4681,Stanley Edward Thompson,2019-04-25,shot,gun,51.0,M,White,Apex,NC,False,attack,Other,False,Guns
+5415,Kevin Leroy Beasley,2019-04-26,shot,rock,23.0,M,Black,Denver,CO,True,attack,Not fleeing,False,Blunt instruments
+4684,Jose Dominguez,2019-04-28,shot,gun,47.0,M,Hispanic,Sparks,NV,True,other,Not fleeing,False,Guns
+4685,Carlos Manuel Dodero,2019-04-28,shot,gun,45.0,M,Hispanic,Austin,TX,True,other,Not fleeing,True,Guns
+4683,Jeb Colin Brock,2019-04-29,shot,knife,42.0,M,White,Portland,OR,False,attack,Not fleeing,False,Sharp objects
+4693,Alejandro Hernandez,2019-04-29,shot,toy weapon,26.0,M,Hispanic,Phoenix,AZ,False,attack,Foot,False,Other unusual objects
+4694,Lawrence Bottoms,2019-04-29,shot,gun,29.0,M,White,Hancock County,MS,False,attack,Foot,False,Guns
+4695,Shawna Widemann,2019-04-29,shot,hammer,49.0,F,Asian,Welch,WV,False,other,Not fleeing,False,Blunt instruments
+4692,Isaiah Lewis,2019-04-29,shot and Tasered,unarmed,17.0,M,Black,Edmond,OK,False,attack,Foot,False,Unarmed
+4687,TK TK,2019-04-30,shot,gun,37.11793090137039,M,Hispanic,Los Angeles,CA,False,attack,Foot,False,Guns
+4690,April Robertson,2019-04-30,shot,knife,45.0,F,White,Welcome,NC,False,other,Not fleeing,False,Sharp objects
+4688,Reinaldo Gonzalez,2019-05-01,shot,knife,51.0,M,Hispanic,Miami,FL,False,other,Not fleeing,False,Sharp objects
+4689,Isaac Pineda,2019-05-01,shot,gun,37.0,M,Hispanic,Meadowlake,NM,False,attack,Not fleeing,False,Guns
+4712,Timothy Manuel,2019-05-01,shot,gun,28.0,M,White,Hiltons,VA,False,attack,Foot,False,Guns
+4696,David Wayne West,2019-05-02,shot,unarmed,52.0,M,White,Glenwood,GA,False,attack,Other,False,Unarmed
+4710,Jorge Albert Merino,2019-05-02,shot,gun,37.0,M,Hispanic,Cedar Hill,TX,False,other,Car,False,Guns
+4706,Timothy Russell Majchrzak,2019-05-04,shot,gun,37.0,M,White,Hermantown,MN,False,attack,Foot,False,Guns
+4708,Ethan Austin Murray,2019-05-04,shot,unarmed,25.0,M,White,Spokane,WA,True,other,Foot,False,Unarmed
+5416,Saoun Pol,2019-05-04,shot,baseball bat,35.0,M,Asian,Stockton,CA,False,attack,Not fleeing,False,Blunt instruments
+5417,Jason Demarcus Larkin,2019-05-04,shot and Tasered,knife,35.0,M,White,Phoenix,AZ,False,attack,Not fleeing,False,Sharp objects
+4707,George Herrera,2019-05-05,shot,knife,61.0,M,Hispanic,Angel Fire,NM,False,other,Not fleeing,False,Sharp objects
+4699,Pedro Colazo-villa,2019-05-06,shot,gun,33.0,M,Hispanic,Mesa,AZ,False,other,Not fleeing,False,Guns
+4698,Cesar Tomix Sarmiento-Molina,2019-05-07,shot,gun,34.0,M,Hispanic,Milwaukee,WI,False,other,Not fleeing,False,Guns
+4704,Aubrey Manning,2019-05-07,shot,gun,59.0,M,White,Lumberton,MS,False,other,Not fleeing,False,Guns
+4735,Francisco Anthony Alcaraz,2019-05-07,shot,gun,32.0,M,Hispanic,Goleta,CA,False,attack,Not fleeing,False,Guns
+4701,Eddie Herrera,2019-05-09,shot,gun,49.0,M,Hispanic,Montebello,CA,False,attack,Not fleeing,False,Guns
+4702,Ryan Smith,2019-05-09,shot,knife,31.0,M,Black,Seattle,WA,True,attack,Not fleeing,True,Sharp objects
+4703,Hector Lopez,2019-05-09,shot,gun,29.0,M,Hispanic,Phoenix,AZ,False,attack,Not fleeing,False,Guns
+4734,Derrec Jamal Shaw,2019-05-10,shot,gun,25.0,M,Black,Tulsa,OK,True,attack,Foot,True,Guns
+4713,Sharell Brown,2019-05-11,shot,gun,26.0,M,Black,Chicago,IL,False,attack,Foot,False,Guns
+4714,Edward Fuller,2019-05-11,shot,gun,37.11793090137039,M,Black,Savannah,GA,False,attack,Foot,False,Guns
+4715,Jeremy Potwin,2019-05-11,shot,gun,39.0,M,White,Tunbridge,VT,False,attack,Not fleeing,False,Guns
+4717,Luis Quinones Rosa,2019-05-11,shot,gun,26.0,M,Hispanic,South Sioux City,NE,False,attack,Not fleeing,False,Guns
+4718,Malik Ali Gresham,2019-05-13,shot,knife,36.0,M,Black,Gardena,CA,False,attack,Not fleeing,True,Sharp objects
+4719,Pamela Shantay Turner,2019-05-13,shot,Taser,45.0,F,Black,Baytown,TX,False,attack,Not fleeing,False,Electrical devices
+4720,James Douglas Meadows,2019-05-13,shot,gun,45.0,M,White,Rising Sun,MD,True,attack,Not fleeing,False,Guns
+4722,Alex Steward Underdown,2019-05-14,shot,gun,54.0,M,White,Las Vegas,NV,True,other,Not fleeing,False,Guns
+4721,Ronny Rodriguez,2019-05-15,shot,knife,43.0,M,Hispanic,Tamarac,FL,False,attack,Other,False,Sharp objects
+5227,Ruben Houston,2019-05-15,shot,gun,37.11793090137039,M,Black,Appleton,WI,True,attack,Not fleeing,True,Guns
+5418,Djuantez Anthony Mitchell,2019-05-15,shot,vehicle,30.0,M,Black,Louisville,KY,False,attack,Car,False,Vehicles
+4729,Michael Nieto,2019-05-16,shot,gun,37.11793090137039,M,Hispanic,Palm Beach Gardens,FL,False,attack,Not fleeing,False,Guns
+4733,Elizabeth Harris,2019-05-16,shot,gun,58.0,F,White,New Boston,TX,True,attack,Not fleeing,False,Guns
+4730,Luis Lomante,2019-05-17,shot,knife,39.0,M,Hispanic,Davie,FL,False,other,Not fleeing,False,Sharp objects
+4732,"Donald Davis, Jr.",2019-05-17,shot,gun,40.0,M,Black,New Orleans,LA,False,attack,Other,True,Guns
+5007,Daniel Warren,2019-05-17,shot,gun,36.0,M,Black,Pasadena,CA,False,attack,Not fleeing,True,Guns
+4728,Dion Grey Hat,2019-05-18,shot,unknown,27.0,M,Native,Tonalea,AZ,False,undetermined,Other,False,Unknown
+4731,Andrew Giovanni Meza,2019-05-18,shot,knife,20.0,M,Hispanic,Garden Grove,CA,True,attack,Not fleeing,False,Sharp objects
+4725,Robert Rabago,2019-05-19,shot,gun,17.0,M,Hispanic,Phoenix,AZ,False,attack,Foot,False,Guns
+4727,Esteban Martinez,2019-05-19,shot,unknown,59.0,M,Hispanic,Huron,CA,False,attack,Not fleeing,False,Unknown
+4736,Lori Markham,2019-05-19,shot,gun,47.0,F,White,Carlsbad,NM,False,attack,Not fleeing,False,Guns
+4742,Ronnie Churches,2019-05-19,shot,gun,45.0,M,Other,Miami Gardens,FL,False,attack,Not fleeing,False,Guns
+4723,Michael Ann Godsey,2019-05-20,shot,gun,34.0,F,White,Blackwell,OK,False,attack,Car,False,Guns
+4724,Carlos Javier Roman Santiago,2019-05-20,shot,knife,46.0,M,Hispanic,Archdale,NC,False,attack,Not fleeing,False,Sharp objects
+4726,Enosa Strickland,2019-05-20,shot,knife,26.0,M,Black,Auburn,WA,False,attack,Not fleeing,False,Sharp objects
+4741,Juan Antonio Sillas,2019-05-21,shot,hammer,21.0,M,Hispanic,Los Angeles,CA,False,other,Other,False,Blunt instruments
+5420,Steven Case,2019-05-21,shot,gun,29.0,M,White,Auburn,ME,False,attack,Not fleeing,False,Guns
+4755,Joseph M. Tedrick,2019-05-22,shot,gun,33.0,M,White,Ashland,WI,False,other,Car,False,Guns
+5422,David Marcus Reece,2019-05-22,shot,gun,47.0,M,White,Inman,SC,False,attack,Not fleeing,False,Guns
+5423,Myles Frazier,2019-05-22,shot,gun,22.0,M,Black,Chicago,IL,True,attack,Not fleeing,False,Guns
+4743,Luke H. Patterson,2019-05-23,shot,unarmed,41.0,M,White,Montgomery,NY,False,other,Not fleeing,False,Unarmed
+4760,Adam Michael McCoy,2019-05-23,shot,gun,28.0,M,White,Pearl River County,MS,True,attack,Car,False,Guns
+5438,Fred Burton,2019-05-23,shot,gun,56.0,M,White,Wichita,KS,True,attack,Not fleeing,False,Guns
+4740,Ryan Brett Thomas,2019-05-24,shot,gun,41.0,M,White,Indian River County,FL,False,attack,Car,False,Guns
+4744,Carlvon Mayo,2019-05-24,shot,gun,35.0,M,Hispanic,Houston,TX,False,other,Not fleeing,False,Guns
+5439,Hamid Ould-Rouis,2019-05-24,shot,unknown,59.0,M,Other,Fort Lauderdale,FL,False,other,Other,False,Unknown
+4737,Terrance Bridges,2019-05-26,shot,gun,30.0,M,Black,Kansas City,MO,False,attack,Foot,False,Guns
+4738,Robert Sabater,2019-05-27,shot,gun,49.0,M,White,Wichita,KS,True,attack,Foot,False,Guns
+4745,Nakia Smith,2019-05-27,shot,gun,41.0,M,Black,Joliet,IL,False,attack,Not fleeing,False,Guns
+4746,Curtis Stagger,2019-05-28,shot,gun,21.0,M,Black,Chicago,IL,False,other,Not fleeing,False,Guns
+4758,Gerald Tremblay,2019-05-29,shot,gun,62.0,M,White,Wilmington,NC,True,attack,Not fleeing,False,Guns
+4756,Crystal Danielle Ragland,2019-05-30,shot,gun,32.0,F,Black,Huntsville,AL,True,attack,Not fleeing,False,Guns
+4757,Isaac Ray Ruiz,2019-05-30,shot,gun,22.0,M,Hispanic,Amarillo,TX,False,attack,Foot,False,Guns
+4759,Steve Huff,2019-05-30,shot,gun,58.0,M,White,Havre de Grace,MD,True,other,Not fleeing,False,Guns
+4749,Kyle Needham,2019-05-31,shot,vehicle,32.0,M,White,Gorham,ME,False,attack,Car,False,Vehicles
+4753,Jesse Sarey,2019-05-31,shot,unarmed,26.0,M,Asian,Auburn,WA,True,other,Not fleeing,False,Unarmed
+4750,Thomas Goodeyes Gay,2019-06-01,shot,unarmed,35.0,M,Native,Bartlesville,OK,True,undetermined,Not fleeing,False,Unarmed
+4751,Nikolai Landry,2019-06-01,shot,gun,27.0,M,White,Anderson,CA,False,other,Not fleeing,False,Guns
+4752,Marcus Boles,2019-06-01,shot,knife,35.0,M,Black,Shreveport,LA,False,attack,Not fleeing,False,Sharp objects
+4748,Miles Hall,2019-06-02,shot,crowbar,23.0,M,Black,Walnut Creek,CA,True,attack,Not fleeing,True,Blunt instruments
+4747,David Hoal,2019-06-03,shot,gun,59.0,M,White,Collierville,TN,True,attack,Not fleeing,False,Guns
+4761,Travis James Eckstein,2019-06-03,shot,gun,23.0,M,White,San Ysidro,CA,True,attack,Car,False,Guns
+4762,Samuel Galberth,2019-06-03,shot,gun,43.0,M,Black,Ardsley,NY,False,attack,Other,False,Guns
+4803,Kevin Pudlik,2019-06-03,shot,unarmed,41.0,M,Black,Detroit,MI,False,other,Car,False,Unarmed
+4763,Martin Allen Goodier,2019-06-04,shot,knife,56.0,M,White,Davidsonville,MD,False,other,Not fleeing,False,Sharp objects
+4767,Erik Gebauer,2019-06-04,shot,gun,45.0,M,White,Indialantic,FL,False,attack,Not fleeing,False,Guns
+4764,Fabian Rivera,2019-06-05,shot,gun,28.0,M,Hispanic,Bernalillo,NM,False,other,Not fleeing,False,Guns
+4765,Jay Clem,2019-06-05,shot,gun,37.11793090137039,M,White,Jonesboro,AR,True,other,Not fleeing,False,Guns
+4766,Scott Hedgecock,2019-06-05,shot,knife,54.0,M,White,Trinity,NC,True,attack,Not fleeing,False,Sharp objects
+4776,Matthew Freeseha,2019-06-05,shot,gun,39.0,M,White,Escalon,CA,False,attack,Not fleeing,False,Guns
+4773,Ryan Twyman,2019-06-06,shot,unarmed,37.11793090137039,M,Black,Los Angeles,CA,False,other,Car,False,Unarmed
+4774,Jose De Santiago Media,2019-06-06,shot,sharp object,41.0,M,Hispanic,Los Angeles,CA,False,other,Not fleeing,True,Sharp objects
+4775,Edtwon Stamps,2019-06-06,shot,gun,27.0,M,Black,Los Angeles,CA,False,other,Not fleeing,False,Guns
+4804,Harry Gipson,2019-06-06,shot,gun,70.0,M,White,Braxton,MS,True,attack,Other,False,Guns
+4805,Jose Jesus Astorga,2019-06-06,shot,gun,37.11793090137039,M,Hispanic,Modesto,CA,False,attack,Not fleeing,False,Guns
+4829,Jose Salvador Meza,2019-06-06,shot,gun,35.0,M,Hispanic,San Gabriel,CA,False,attack,Not fleeing,False,Guns
+4830,Rodnell Cotton,2019-06-06,shot,gun,26.0,M,Black,St. Louis,MO,False,attack,Foot,False,Guns
+5446,Zendall Noble,2019-06-06,shot,gun,58.0,M,White,Bonnyman,KY,False,attack,Not fleeing,False,Guns
+4831,Jason Nash,2019-06-07,shot,gun,46.0,M,White,Bristol,TN,False,other,Not fleeing,False,Guns
+4769,Bryan Bernard Wallace,2019-06-08,shot,gun,39.0,M,Black,Clearwater,FL,False,other,Not fleeing,False,Guns
+4772,Krystal Arvizu,2019-06-08,shot,ax,33.0,F,Hispanic,Fresno,CA,True,attack,Not fleeing,True,Blunt instruments
+4768,JaQuavion Slaton,2019-06-09,shot,gun,20.0,M,Black,Fort Worth,TX,False,other,Foot,False,Guns
+4770,David Wayne Downs,2019-06-09,shot,knife,38.0,M,White,Portland,OR,False,other,Not fleeing,False,Sharp objects
+4832,William James Back,2019-06-09,shot,gun,41.0,M,White,Shirley,AR,False,attack,Not fleeing,False,Guns
+4833,Ysidro Osornio-Velasquez,2019-06-09,shot,gun,32.0,M,Hispanic,Menifee,CA,False,attack,Car,False,Guns
+4771,Terry Frost,2019-06-10,shot,vehicle,37.11793090137039,M,White,Kingsport,TN,False,attack,Not fleeing,False,Vehicles
+4778,"Vincense Williams, Jr.",2019-06-10,shot,gun,24.0,M,Black,Oklahoma City,OK,False,other,Not fleeing,True,Guns
+4779,Brent Durbin-Daniel,2019-06-10,shot,gun,19.0,M,Black,Lawton,OK,True,other,Car,False,Guns
+4777,Jaquan Derrick Diijon Thompson,2019-06-11,shot,knife,27.0,M,Black,Porteau,OK,False,attack,Not fleeing,False,Sharp objects
+4781,Eddie Humberto Segura,2019-06-11,shot,barstool,40.0,M,Hispanic,Orlando,FL,True,attack,Not fleeing,False,Other unusual objects
+4787,Jimmy De Odell,2019-06-11,shot,unknown,61.0,M,White,Hopkins County,TX,False,other,Not fleeing,False,Unknown
+4780,Brandon Webber,2019-06-12,shot,vehicle,20.0,M,Black,Memphis,TN,False,attack,Foot,False,Vehicles
+5449,Juan Manuel Moreno,2019-06-12,shot,unarmed,35.0,M,Hispanic,Farmers Branch,TX,False,other,Car,False,Unarmed
+4782,Marquis Weems,2019-06-13,shot,vehicle,17.0,M,Black,Rockville,MD,False,attack,Car,False,Vehicles
+4784,Tramon Savage,2019-06-13,shot,vehicle,22.0,M,Black,Jacksonville,AR,False,attack,Car,False,Vehicles
+4791,Michael Sheehan,2019-06-15,shot,gun,45.0,M,White,Belmont,NH,True,other,Not fleeing,False,Guns
+4792,Mantry Norris,2019-06-15,shot,knife,20.0,M,Black,Renton,WA,True,attack,Other,False,Sharp objects
+4793,Ty'Rese West,2019-06-15,shot,unknown,18.0,M,Black,Racine,WI,False,other,Other,False,Unknown
+4794,Jamarcus Dejun Moore,2019-06-15,shot,gun,28.0,M,Black,Birmingham,AL,False,attack,Car,False,Guns
+4796,Alfredo Chino,2019-06-15,shot,knife,38.0,M,Hispanic,Toppenish,WA,False,other,Not fleeing,False,Sharp objects
+4786,Eric Jack Logan,2019-06-16,shot,knife,53.0,M,Black,South Bend,IN,False,attack,Not fleeing,False,Sharp objects
+4790,Carlos Vale,2019-06-16,shot,gun,31.0,M,Hispanic,Tucson,AZ,False,attack,Other,False,Guns
+4795,Shawn Ray Wilson,2019-06-16,shot,gun,48.0,M,White,Fairbanks,AK,False,attack,Not fleeing,False,Guns
+4788,Mark Anthony Galvan,2019-06-17,shot,vehicle,20.0,M,Hispanic,Brownsville,TX,False,attack,Car,False,Vehicles
+4789,Francisco Tarin,2019-06-17,shot,gun,35.0,M,Hispanic,Las Cruces,NM,False,attack,Car,False,Guns
+4802,Brian Isaack Clyde,2019-06-17,shot,gun,22.0,M,White,Dallas,TX,True,attack,Foot,False,Guns
+4797,Josh Flores,2019-06-18,shot,knife,18.0,M,Hispanic,Centralia,WA,False,other,Not fleeing,False,Sharp objects
+4799,DeWayne Watkins,2019-06-18,shot,toy weapon,74.0,M,Black,Syracuse,NY,False,attack,Not fleeing,False,Other unusual objects
+4800,Juan Carlos Chapa,2019-06-20,shot,gun,33.0,M,Hispanic,Mission,TX,False,attack,Foot,False,Guns
+5451,Dewayne Tackett,2019-06-20,shot,gun,38.0,M,White,Ashville,OH,False,other,Car,False,Guns
+4806,Kevin Anthony Alaniz,2019-06-22,shot,gun,26.0,M,Hispanic,Big Sur,CA,False,attack,Other,False,Guns
+4807,Scott William Robertson,2019-06-22,shot,gun,41.0,M,White,Phoenix,MD,False,other,Other,True,Guns
+4811,Michael Spencer,2019-06-23,shot,knife,29.0,M,White,Springfield,OH,True,attack,Foot,False,Sharp objects
+4808,Jaymil Ellerbe,2019-06-24,shot,gun,19.0,M,Black,Boston,MA,False,attack,Car,True,Guns
+4812,Bradley Rundle,2019-06-24,shot,gun,61.0,M,Black,Englewood,FL,False,attack,Not fleeing,False,Guns
+5452,Peter Alexander Bohning,2019-06-24,shot,knife,34.0,M,White,Seminole,TX,False,attack,Not fleeing,False,Sharp objects
+4809,Tomas Hernandez,2019-06-25,shot,knife,35.0,M,Hispanic,San Antonio,TX,True,other,Not fleeing,False,Sharp objects
+4815,Shawn D. Blowers,2019-06-25,shot,knife,43.0,M,White,Menasha,WI,False,other,Not fleeing,False,Sharp objects
+4813,Michael Norquest,2019-06-26,shot,sword,50.0,M,White,Timberville,VA,False,attack,Not fleeing,False,Sharp objects
+4816,Elijah Collins III,2019-06-26,shot,sharp object,32.0,M,Black,Sugarcreek,OH,False,attack,Not fleeing,True,Sharp objects
+4814,Marvin Green,2019-06-27,shot,gun,50.0,M,Black,Springfield,FL,False,attack,Not fleeing,False,Guns
+4817,Benjamin Ray Smith,2019-06-27,shot,unknown,54.0,M,Black,Orangeburg,SC,False,undetermined,Other,False,Unknown
+4818,Stephen D. Sloan,2019-06-27,shot,gun,35.0,M,White,Wolfe County,KY,False,other,Not fleeing,False,Guns
+4819,Matthew Christian Smith,2019-06-27,shot,gun,33.0,M,White,Omaha,NE,True,attack,Not fleeing,False,Guns
+4820,Paul David Rea,2019-06-27,shot,unarmed,18.0,M,Hispanic,Los Angeles,CA,False,other,Not fleeing,False,Unarmed
+4821,William Aubrey Martin,2019-06-27,shot,vehicle,50.0,M,White,Tulsa,OK,False,attack,Car,False,Vehicles
+4822,Erik Sandoval,2019-06-27,shot,gun,41.0,M,Hispanic,Yucca Valley,CA,False,attack,Not fleeing,False,Guns
+4824,Gene Pool,2019-06-28,shot,gun,37.0,M,Black,Pueblo,CO,False,other,Car,False,Guns
+4827,William Lamb,2019-06-28,shot,gun,76.0,M,White,Smyrna,TN,False,attack,Not fleeing,False,Guns
+4840,Ryan Moody,2019-06-28,shot,gun,19.0,M,White,Pearl,MS,False,attack,Not fleeing,False,Guns
+5454,Zackary Ryan Hoppe,2019-06-28,shot,gun,40.0,M,White,Bacliff,TX,False,attack,Not fleeing,False,Guns
+4826,TK TK,2019-06-29,shot,gun,61.0,M,White,Denton County,TX,False,attack,Other,False,Guns
+5455,Jack Daniel West,2019-06-29,shot,gun,61.0,M,White,Lantana,TX,False,attack,Not fleeing,True,Guns
+4823,Christopher Barela,2019-07-01,shot,gun,22.0,M,Hispanic,Denver,CO,False,attack,Not fleeing,False,Guns
+4834,"Terry Allen ""Bubba"" Payne",2019-07-01,shot,gun,52.0,M,White,Pontotoc County,MS,False,attack,Car,False,Guns
+4835,Aaron Hong,2019-07-01,shot,knife,23.0,M,Asian,Athens,GA,True,attack,Not fleeing,True,Sharp objects
+4836,Ben Fields,2019-07-01,shot,knife,67.0,M,Black,Port St. Lucie,FL,False,other,Not fleeing,False,Sharp objects
+4837,Chad Williams,2019-07-02,shot,ax,44.0,M,White,Bagley Township,MI,True,attack,Other,False,Blunt instruments
+4838,Isak Abdirahman Aden,2019-07-02,shot,gun,23.0,M,Other,Eagan,MN,False,other,Foot,True,Guns
+4841,Isaiah Robinson,2019-07-02,shot,gun,39.0,M,Black,Elyria,OH,False,attack,Car,False,Guns
+4843,Mark A. Naugle,2019-07-03,shot,hammer,53.0,M,White,Salem,IN,False,other,Not fleeing,False,Blunt instruments
+4850,Stonechild Chiefstick,2019-07-03,shot,screwdriver,39.0,M,Native,Poulsbo,WA,True,other,Not fleeing,False,Piercing objects
+4855,Jonathan Pingel,2019-07-03,shot,knife,26.0,M,White,West Des Moines,IA,True,other,Not fleeing,False,Sharp objects
+4857,Christine Soto Venegas,2019-07-03,shot,toy weapon,38.0,F,Hispanic,El Paso,TX,False,attack,Not fleeing,False,Other unusual objects
+4979,Li Xi Wang,2019-07-03,shot,unarmed,49.0,M,Asian,Chino,CA,False,other,Not fleeing,True,Unarmed
+4856,Leonel Mendez,2019-07-04,shot,gun,34.0,M,Hispanic,Lakewood,CO,False,attack,Foot,False,Guns
+4854,Olivio Sandoval Diaz,2019-07-04,shot and Tasered,piece of wood,47.0,M,Hispanic,Roswell,GA,False,attack,Not fleeing,False,Other unusual objects
+4845,Jose Martinez,2019-07-05,shot,scissors,34.0,M,Hispanic,West Jordan,UT,False,other,Foot,False,Sharp objects
+4847,James C. Pinkston,2019-07-05,shot,gun,58.0,M,White,Mountain Grove,MO,False,attack,Not fleeing,False,Guns
+4848,Hannah Williams,2019-07-05,shot,toy weapon,17.0,F,White,Anaheim,CA,True,attack,Not fleeing,True,Other unusual objects
+4849,Joshua Ortiz,2019-07-05,shot,unarmed,21.0,M,White,Oak View,CA,False,attack,Not fleeing,False,Unarmed
+4852,Angel Ramos Otero,2019-07-05,shot,knife,37.0,M,Hispanic,Ruskin,FL,False,other,Not fleeing,False,Sharp objects
+4846,Kareem Omar Morgan,2019-07-06,shot,gun,43.0,M,Black,Rosedale,MD,False,attack,Other,False,Guns
+4842,Thomas Graham,2019-07-07,shot,knife,61.0,M,White,Jacksonville,AR,True,attack,Not fleeing,False,Sharp objects
+4844,Tymar Crawford,2019-07-07,shot,gun,28.0,M,Black,Pensacola,FL,False,attack,Car,False,Guns
+4851,Johnny W. Dellinger,2019-07-07,shot,gun,41.0,M,White,Timberville,VA,False,other,Not fleeing,False,Guns
+4866,Shawn Toney,2019-07-08,shot,gun,23.0,M,White,Brooklyn,OH,True,attack,Not fleeing,False,Guns
+4858,Anthony James Gonzales,2019-07-09,shot,unknown,36.0,M,Hispanic,Bakersfield,CA,False,undetermined,Not fleeing,False,Unknown
+4860,Sean Rambert,2019-07-09,shot,gun,23.0,M,Black,Greenville,NC,False,attack,Not fleeing,False,Guns
+4862,Grayson Schuessler,2019-07-09,shot,gun,26.0,M,White,Citrus Heights,CA,False,attack,Other,False,Guns
+4861,Darrell Allen,2019-07-10,shot,knife,32.0,M,Black,Adelanto,CA,False,attack,Foot,False,Sharp objects
+4865,Dennis Edwards,2019-07-10,shot,gun,62.0,M,White,Kansas City,KS,False,attack,Not fleeing,False,Guns
+4864,Frankie Feliciano,2019-07-11,shot,knife,33.0,M,Hispanic,Jacksonville,FL,False,attack,Not fleeing,False,Sharp objects
+4904,Logan O. Johnsrud,2019-07-11,shot,knife,32.0,M,White,Arpin,WI,True,attack,Not fleeing,False,Sharp objects
+4872,Willem Van Spronsen,2019-07-13,shot,gun,69.0,M,White,Tacoma,WA,False,other,Not fleeing,False,Guns
+4879,Derek Antonio-Sanchez,2019-07-13,shot,unarmed,35.0,M,Hispanic,Kirkland,WA,False,attack,Not fleeing,False,Unarmed
+4885,Brian H. Benfield,2019-07-13,shot,gun,46.0,M,White,Coleman,FL,False,attack,Not fleeing,False,Guns
+5460,Jamahl Smith,2019-07-13,shot,knife,46.0,M,Black,Orange,NJ,False,other,Foot,False,Sharp objects
+4870,Blige Sean Christopher Cypress,2019-07-14,shot,gun,22.0,M,Black,Hollywood,FL,False,attack,Car,False,Guns
+4877,Onaje Dickinson,2019-07-14,shot,gun,20.0,M,Black,Penn Hills,PA,False,attack,Foot,False,Guns
+5461,Dijon D. Watkins,2019-07-14,shot,gun,30.0,M,Black,Dallas,TX,False,attack,Not fleeing,False,Guns
+4869,Ashanti Pinkney,2019-07-15,shot,gun,49.0,M,Black,Baltimore,MD,False,attack,Not fleeing,True,Guns
+4876,Michael Anthony Brand,2019-07-15,shot,toy weapon,43.0,M,White,Salt Lake City,UT,True,other,Not fleeing,True,Other unusual objects
+4884,Jose Javier Gonzalez,2019-07-16,shot,knife,52.0,M,Hispanic,Chino Hills,CA,False,attack,Not fleeing,False,Sharp objects
+5462,Daryl Johannesson,2019-07-16,shot,gun,56.0,M,White,Porterdale,GA,False,attack,Not fleeing,False,Guns
+5463,Brandon Ray Stansel,2019-07-16,shot,gun,36.0,M,White,Lake Jackson,TX,False,attack,Car,False,Guns
+5465,Kelly Danielle Brumley,2019-07-16,shot,gun,40.0,F,White,Lake Jackson,TX,False,attack,Car,False,Guns
+4875,Stephen Murray,2019-07-17,shot,toy weapon,52.0,M,Black,Modesto,CA,False,attack,Not fleeing,True,Other unusual objects
+4882,Mark Anson Schoggins,2019-07-17,shot,gun,35.0,M,White,McAlester,OK,False,attack,Car,False,Guns
+4883,Roderick Wilson,2019-07-17,shot,gun,35.0,M,Black,Birmingham,AL,False,attack,Foot,False,Guns
+4874,Patrick Martinez,2019-07-18,shot,knife,53.0,M,Hispanic,Pueblo,CO,False,attack,Not fleeing,False,Sharp objects
+4880,Leo Brooks,2019-07-18,shot,gun,23.0,M,Black,Metairie,LA,False,other,Not fleeing,False,Guns
+5466,Makeyvion Devonte Cannon,2019-07-18,shot,gun,19.0,M,Black,Fort Worth,TX,False,attack,Not fleeing,True,Guns
+4867,Witney Rivera,2019-07-19,shot,garden tool,41.0,M,Hispanic,Pemberton,NJ,False,other,Other,False,Blunt instruments
+5467,Jeffrey Bodie,2019-07-19,shot,gun,39.0,M,White,League City,TX,True,attack,Not fleeing,False,Guns
+4889,Elisha Lucero,2019-07-21,shot,knife,28.0,F,Hispanic,Albuquerque,NM,True,other,Not fleeing,False,Sharp objects
+5468,Hashim Jibiri Wilson,2019-07-21,shot,gun,28.0,M,Black,Tacoma,WA,False,attack,Not fleeing,False,Guns
+4888,Shawan F. Allen,2019-07-22,shot,gun,37.11793090137039,M,Black,Wesson,MS,False,attack,Other,False,Guns
+4893,John David Brown,2019-07-22,shot,gun,53.0,M,White,Ranburne,AL,True,attack,Not fleeing,False,Guns
+4886,James Manzo,2019-07-23,shot,scissors,27.0,M,White,Asbury Park,NJ,True,other,Not fleeing,False,Sharp objects
+4887,Omari Thompson,2019-07-23,shot,gun,31.0,M,Black,Ross Township,PA,False,attack,Not fleeing,False,Guns
+4890,Joshua Vigil,2019-07-23,shot,gun,38.0,M,Hispanic,Colorado Springs,CO,False,other,Car,False,Guns
+4894,Josef Delon Richardson,2019-07-25,shot,unarmed,38.0,M,Black,Port Allen,LA,False,undetermined,Other,False,Unarmed
+4896,Alphonso Zaporta,2019-07-26,shot,gun,41.0,M,Hispanic,Hartford,CT,False,attack,Car,True,Guns
+4897,Todd Messner,2019-07-26,shot,gun,49.0,M,White,Three Springs,PA,False,attack,Not fleeing,False,Guns
+4901,Donald Williams Allamong,2019-07-26,shot,gun,56.0,M,White,Sun City,SC,True,other,Not fleeing,False,Guns
+4895,Adalberto Wolmar Rodriguez,2019-07-28,shot,gun,62.0,M,Hispanic,Boyton Beach,FL,False,attack,Not fleeing,False,Guns
+4902,Lane Christopher Martin,2019-07-30,shot,ax,31.0,M,White,Portland,OR,False,attack,Other,False,Blunt instruments
+4903,Donald Lee Joseph,2019-07-31,shot,unknown,37.0,M,White,Roy,UT,False,other,Other,False,Unknown
+4927,Jose Baca-Olivares,2019-07-31,shot,gun,37.11793090137039,M,Hispanic,San Antonio,TX,False,attack,Not fleeing,False,Guns
+4950,Troy Petersen,2019-07-31,shot,gun,28.0,M,White,Council Bluffs,IA,False,attack,Car,False,Guns
+4923,Mauris Nishanga DeSilva,2019-07-31,shot and Tasered,knife,46.0,M,Asian,Austin,TX,True,other,Not fleeing,False,Sharp objects
+4917,Jamaal Simpson,2019-08-01,shot,gun,21.0,M,Black,Los Angeles,CA,False,attack,Foot,False,Guns
+4922,Margarita Victoria Brooks,2019-08-01,shot,unarmed,30.0,F,White,Arlington,TX,False,other,Not fleeing,False,Unarmed
+4924,Eric Toon,2019-08-01,shot,gun,36.0,M,White,Charleston,WV,False,attack,Other,False,Guns
+4926,Lenny Blaine Griffin,2019-08-01,shot,knife,48.0,M,White,Tampa,FL,True,other,Not fleeing,False,Sharp objects
+4911,Mario Benjamin,2019-08-02,shot,gun,34.0,M,Black,Minneapolis,MN,False,attack,Not fleeing,True,Guns
+4913,Deshon Downing,2019-08-02,shot,gun,45.0,M,Black,Indianapolis,IN,False,attack,Not fleeing,False,Guns
+4912,De'Von Bailey,2019-08-03,shot,gun,19.0,M,Black,Colorado Springs,CO,False,other,Foot,True,Guns
+4915,Oscar Ventura-Gonzalez,2019-08-03,shot,gun,32.0,M,Hispanic,Revere,MA,False,attack,Car,False,Guns
+4919,Cortney Ronald Staley,2019-08-03,shot,gun,32.0,M,White,Carson City,NV,False,attack,Not fleeing,False,Guns
+4907,Connor Betts,2019-08-04,shot,gun,24.0,M,White,Dayton,OH,True,attack,Not fleeing,False,Guns
+4909,Robert Clay Wilsford,2019-08-04,shot,gun,65.0,M,White,Hanceville,AL,True,attack,Not fleeing,False,Guns
+4910,Riche Antonio Santiago,2019-08-05,shot,gun,29.0,M,Hispanic,Salt Lake City,UT,False,attack,Not fleeing,True,Guns
+4914,James Lee Kirkwood,2019-08-05,shot,knife,49.0,M,Black,Memphis,TN,False,attack,Foot,False,Sharp objects
+4916,Marvin Alexis Urbina,2019-08-05,shot,vehicle,19.0,M,Hispanic,Bakersfield,CA,False,other,Car,False,Vehicles
+4947,Derrick Davidson,2019-08-05,shot,gun,56.0,M,White,Lowell,AR,True,undetermined,Not fleeing,False,Guns
+4953,Kaizen Crossen,2019-08-05,shot,gun,39.0,M,Black,Irvington,NJ,False,attack,Not fleeing,False,Guns
+4954,William Biggs,2019-08-05,shot,gun,43.0,M,White,Pocahontas County,WV,False,attack,Car,False,Guns
+4955,Allan George,2019-08-05,shot,gun,57.0,M,White,Rifle,CO,True,other,Foot,False,Guns
+4936,Donald Babbit,2019-08-06,shot,gun,49.0,M,White,Shaler Township,PA,False,attack,Not fleeing,False,Guns
+4928,Detravian Allison,2019-08-07,shot,gun,18.0,M,Black,Longview,TX,False,attack,Not fleeing,False,Guns
+4930,Toussaint Diamon Sims,2019-08-08,shot,gun,27.0,M,Black,Moss Point,MS,False,attack,Foot,True,Guns
+4933,Jason Xavier Salas,2019-08-09,shot,machete,52.0,M,Hispanic,Garland,TX,False,attack,Not fleeing,False,Sharp objects
+4934,Jose Mendez,2019-08-09,shot,gun and vehicle,37.0,M,Hispanic,Kansas City,MO,False,attack,Foot,False,Multiple
+4938,Freddrick Andrews Hadden,2019-08-10,shot,gun,45.0,M,White,Augusta,GA,False,attack,Car,False,Guns
+4945,Aaron Luther,2019-08-12,shot,gun,49.0,M,White,Riverside,CA,False,attack,Not fleeing,False,Guns
+4949,Scott Souders,2019-08-12,shot,gun,38.0,M,White,Chetopa,KS,False,attack,Not fleeing,False,Guns
+4939,David Ingle,2019-08-13,shot,unarmed,31.0,M,White,Joplin,MO,False,attack,Not fleeing,False,Unarmed
+4940,Jerry Orlando Weaver,2019-08-13,shot,gun,51.0,M,Black,Clinton,TN,True,attack,Not fleeing,False,Guns
+4941,Anthony Wayne French,2019-08-13,shot,gun,37.11793090137039,M,White,Louisville,KY,False,attack,Not fleeing,False,Guns
+4943,Charles Roy Pearson,2019-08-13,shot,gun,51.0,M,Black,Kansas City,KS,False,attack,Not fleeing,False,Guns
+4983,Cole Steele Jessup,2019-08-13,shot,vehicle,20.0,M,White,Ramseur,NC,False,attack,Car,False,Vehicles
+4964,Jovany Mercado-Bedolla,2019-08-16,shot,knife,26.0,M,Hispanic,Ogden,UT,False,attack,Not fleeing,True,Sharp objects
+4956,Rashad Cunningham,2019-08-17,shot,gun,25.0,M,Black,Gary,IN,False,undetermined,Not fleeing,False,Guns
+4959,Uzzle Jerome,2019-08-17,shot,gun,37.11793090137039,M,Black,Newport News,VA,False,attack,Car,False,Guns
+4962,Mike Parsley,2019-08-17,shot,gun,62.0,M,White,Springville,IN,False,attack,Not fleeing,False,Guns
+4963,Schaston Theodore Lamarr Hodge,2019-08-17,shot,gun,27.0,M,Black,Dallas,TX,False,attack,Car,True,Guns
+4960,Roberto Rene Gabriel,2019-08-18,shot,gun,33.0,M,Hispanic,Los Angeles,CA,False,attack,Foot,True,Guns
+4968,Carlos Torres,2019-08-19,shot,gun,39.0,M,Hispanic,Los Angeles,CA,False,attack,Foot,False,Guns
+4976,Amari Malone,2019-08-21,shot,gun,18.0,M,Black,Fort Worth,TX,False,attack,Foot,True,Guns
+4978,James Crowe,2019-08-21,shot,unknown,27.0,M,White,Nicholasville,KY,False,undetermined,Not fleeing,False,Unknown
+4982,TK TK,2019-08-21,shot,unknown,50.0,M,Hispanic,Stanton,CA,False,undetermined,Other,False,Unknown
+4972,Roger Schafer,2019-08-22,shot,toy weapon,57.0,M,White,Albuquerque,NM,False,attack,Not fleeing,False,Other unusual objects
+4974,Michael Tuck,2019-08-22,shot,Taser,29.0,M,Black,Dayton,OH,False,attack,Foot,False,Electrical devices
+4975,Riley Eugene Peay,2019-08-22,shot,unarmed,39.0,M,White,Glennville,GA,False,attack,Not fleeing,False,Unarmed
+4980,Chad Michael Breinholt,2019-08-23,shot,unarmed,31.0,M,White,West Valley City,UT,False,other,Not fleeing,True,Unarmed
+5472,Larry Leonard Lowry,2019-08-23,shot,knife,34.0,M,White,Cottage Grove,OR,False,other,Not fleeing,False,Sharp objects
+4977,Dennis Carolino,2019-08-24,shot,shovel,52.0,M,Hispanic,El Cerrito,CA,True,attack,Not fleeing,True,Blunt instruments
+4981,Channara Tom Pheap,2019-08-26,shot,unarmed,33.0,M,Black,Knoxville,TN,False,attack,Not fleeing,False,Unarmed
+4986,Raymond Lewis Williams,2019-08-27,shot,gun,37.0,M,Black,Helena,AR,False,attack,Other,False,Guns
+5473,Keith Carter,2019-08-27,shot,gun,52.0,M,Black,Baton Rouge,LA,True,attack,Car,False,Guns
+4989,Wallace Wilder,2019-08-28,shot,knife,62.0,M,Black,Gordo,AL,True,other,Other,False,Sharp objects
+4990,Tyrone Domingo Banks,2019-08-28,shot,gun and car,30.0,M,Black,Baltimore,MD,False,attack,Car,False,Multiple
+4991,Jeremy Connolly,2019-08-28,shot,knife,28.0,M,White,Salina,KS,False,other,Not fleeing,False,Sharp objects
+5002,Rene Enrique Ruiz,2019-08-30,shot,gun and vehicle,51.0,M,Hispanic,Tolleson,AZ,False,attack,Other,False,Multiple
+4994,Terry Tillman,2019-08-31,shot,gun,23.0,M,Black,St. Louis,MO,False,other,Foot,False,Guns
+5006,Seth Aaron Ator,2019-08-31,shot,gun,36.0,M,White,Odessa,TX,True,attack,Car,False,Guns
+5031,Juan Carlos Macias,2019-08-31,shot,gun,37.0,M,Hispanic,Denver,CO,False,attack,Not fleeing,False,Guns
+4995,Robert Desjarlais,2019-09-01,shot,vehicle,49.0,M,White,Sand Springs,OK,False,attack,Car,True,Vehicles
+4996,Sidney J. Holst,2019-09-01,shot,gun,49.0,M,White,Caldwell,ID,False,attack,Not fleeing,False,Guns
+5005,Steven Cole Gill,2019-09-02,shot,grenade,35.0,M,White,Missoula,MT,True,attack,Not fleeing,False,Explosives
+5023,Tommy Luke Hranicky,2019-09-02,shot,knife,17.0,M,White,Kerrville,TX,False,other,Not fleeing,False,Sharp objects
+5004,Attillio Gilmartin,2019-09-03,shot,gun,30.0,M,White,Bluff City,TN,False,attack,Car,False,Guns
+5104,Eduard Alexis Lopez-Ucles,2019-09-03,shot,vehicle,34.0,M,Hispanic,Kaukauna,WI,False,other,Car,False,Vehicles
+5477,Terry Pierce,2019-09-03,shot,vehicle,46.0,M,White,Van Wert,OH,True,other,Car,False,Vehicles
+5009,Fares J. Al-Samno,2019-09-04,shot,knife,29.0,M,White,Coeur d'Alene,ID,False,attack,Not fleeing,False,Sharp objects
+5008,Cortez Shepherd,2019-09-05,shot,gun,28.0,M,Black,St. Louis,MO,False,attack,Not fleeing,False,Guns
+5020,John Carras,2019-09-05,shot,unarmed,43.0,M,White,East Hartford,CT,False,attack,Not fleeing,False,Unarmed
+5018,Vondarrow Dewayne Fisher,2019-09-06,shot,gun,42.0,M,Black,Glendora,CA,False,other,Foot,False,Guns
+5013,Brian Quinones,2019-09-07,shot,knife,30.0,M,Hispanic,Richfield,MN,True,other,Car,False,Sharp objects
+5016,Bennie Branch,2019-09-08,shot,toy weapon,24.0,M,Black,Tacoma,WA,False,undetermined,Foot,False,Other unusual objects
+5024,Quentin Broadus,2019-09-09,shot,gun,27.0,M,Black,Oklahoma City,OK,False,attack,Other,True,Guns
+5025,Kristopher Fitzpatrick,2019-09-09,shot,gun,41.0,M,White,Aberdeen,WA,False,attack,Foot,False,Guns
+5027,Hector Miranda,2019-09-09,shot,gun and knife,47.0,M,Hispanic,Phoenix,AZ,False,attack,Not fleeing,False,Multiple
+5022,Bobby Ray Duckworth,2019-09-10,shot,knife,26.0,M,Black,Wellington,UT,True,other,Not fleeing,True,Sharp objects
+5021,Caleb Daniel Peterson,2019-09-11,shot,gun,20.0,M,White,Burlington,IA,False,attack,Foot,False,Guns
+5026,Tasjon Tyreek Osbourne,2019-09-11,shot,gun,18.0,M,Black,Columbus,OH,False,other,Car,False,Guns
+5028,TK TK,2019-09-12,shot,gun,37.11793090137039,M,Black,Houston,TX,False,attack,Foot,False,Guns
+5029,Allen Cates,2019-09-12,shot,unknown,29.0,M,White,Independence,MO,False,attack,Other,False,Unknown
+5030,Alvaro Duran Venegas,2019-09-12,shot,piece of wood,35.0,M,Hispanic,Santa Clarita,CA,False,attack,Not fleeing,False,Other unusual objects
+5033,Robert E. Domine,2019-09-13,shot,gun,77.0,M,White,Loyal,WI,False,attack,Not fleeing,False,Guns
+5039,Nicholas Walker,2019-09-14,shot,toy weapon,31.0,M,Black,Arlington,TX,True,attack,Not fleeing,True,Other unusual objects
+5042,Melvin Watkins,2019-09-14,shot,unarmed,54.0,M,Black,Baton Rouge,LA,False,undetermined,Not fleeing,False,Unarmed
+5480,Jose Orona,2019-09-14,shot,gun,33.0,M,Hispanic,Plainview,TX,True,attack,Not fleeing,False,Guns
+5482,James Hilton Glaze,2019-09-14,shot,gun,76.0,M,White,Ooltewah,TN,True,attack,Not fleeing,False,Guns
+5036,Brian Dryer,2019-09-15,shot,knife,28.0,M,White,Oklahoma City,OK,True,attack,Not fleeing,True,Sharp objects
+5037,Ronald Davis,2019-09-15,shot,knife,31.0,M,Black,St. Paul,MN,False,attack,Not fleeing,True,Sharp objects
+5035,Eric Carter,2019-09-16,shot,gun,53.0,M,Black,Washington,DC,False,attack,Not fleeing,False,Guns
+5038,Jeffrey Michael Gibble,2019-09-16,shot,gun,33.0,M,White,Elizabethon,TN,False,attack,Foot,False,Guns
+5041,Kristopher Adams,2019-09-16,shot,gun,37.0,M,White,Sanger,TX,False,attack,Foot,False,Guns
+5032,Gay Ellen Plack,2019-09-17,shot,hatchet,57.0,F,White,Richmond,VA,True,attack,Not fleeing,True,Blunt instruments
+5486,Brian Rodden,2019-09-17,shot,samurai sword,36.0,M,White,Oceanside,NY,True,attack,Not fleeing,False,Sharp objects
+5248,Gregory Edwards,2019-09-17,shot and Tasered,gun,39.0,M,Black,New York,NY,False,attack,Foot,True,Guns
+5043,Scott Gabriel Spangler,2019-09-18,shot,gun,43.0,M,White,Salem,OR,False,attack,Not fleeing,False,Guns
+5487,Gabriel Rouse,2019-09-18,shot,gun,44.0,M,White,Tallahassee,FL,False,attack,Not fleeing,False,Guns
+5489,Willie Hudson,2019-09-18,shot,gun,33.0,M,Black,Memphis,TN,False,attack,Not fleeing,False,Guns
+5488,Shawn Stevens,2019-09-18,shot and Tasered,knife,49.0,M,Black,Wilkinsburg,PA,False,attack,Not fleeing,False,Sharp objects
+5044,Jordan Michael Griffin,2019-09-19,shot,pellet gun,18.0,M,Black,Long Beach,CA,False,attack,Not fleeing,False,Guns
+5058,Adam Paul English,2019-09-20,shot,gun,21.0,M,White,Gainesville,GA,True,attack,Not fleeing,True,Guns
+5492,Scott Johnson,2019-09-20,shot,gun,57.0,M,White,Lakewood,CO,False,attack,Not fleeing,False,Guns
+5049,Jeffrey Peterson,2019-09-21,shot,gun,29.0,M,White,Ada,OK,False,attack,Not fleeing,False,Guns
+5490,Anderson Antelope,2019-09-21,shot,knife,58.0,M,Native,Riverton,WY,True,attack,Not fleeing,False,Sharp objects
+5050,TK TK,2019-09-22,shot,gun,74.0,M,White,Austin,TX,False,attack,Not fleeing,False,Guns
+5046,Raymond Hernandez,2019-09-23,shot,gun,63.0,M,Hispanic,Los Angeles,CA,False,other,Other,False,Guns
+5047,Jeffery Tyler Aycock,2019-09-23,shot,gun,28.0,M,White,Floyd County,GA,False,attack,Foot,False,Guns
+5068,Haywood Cannon,2019-09-24,shot,gun,67.0,M,White,Richlands,NC,False,attack,Car,False,Guns
+5053,Daryl Strickland,2019-09-25,shot,gun,64.0,M,White,Hartsville,SC,False,attack,Not fleeing,False,Guns
+5067,Kevin Dudenhefer,2019-09-25,shot and Tasered,gun,32.0,M,White,Lacombe,LA,True,attack,Not fleeing,False,Guns
+5052,Leonard Shand,2019-09-26,shot,knife,49.0,M,Black,Hyattsville,MD,False,attack,Not fleeing,False,Sharp objects
+5054,Chad Willis Huggins,2019-09-26,shot,gun,28.0,M,White,Lexington County,SC,False,attack,Other,False,Guns
+5063,Jamaal Ramone Taylor,2019-09-28,shot,knife,31.0,M,Black,Baltimore,MD,False,attack,Foot,False,Sharp objects
+5061,David Page,2019-09-29,shot,toy weapon,20.0,M,White,Monument,CO,True,attack,Not fleeing,False,Other unusual objects
+5064,Antonio Williams,2019-09-29,shot,gun,27.0,M,Black,New York,NY,False,attack,Not fleeing,True,Guns
+5070,Angela Louise Perkins,2019-09-29,shot,vehicle,38.0,F,White,Cotter,MO,False,attack,Car,False,Vehicles
+5060,Dewayne Morgan,2019-09-29,shot and Tasered,unarmed,37.0,M,White,Longview,TX,False,attack,Foot,False,Unarmed
+5071,Anthony Watkins,2019-09-30,shot,gun and car,36.0,M,White,Yucca Valley,CA,False,attack,Car,False,Multiple
+5491,Raphael Michael Torres,2019-09-30,shot and Tasered,knife,35.0,M,Hispanic,Gainesville,GA,False,other,Foot,False,Sharp objects
+5072,Jack Thomas Naylor,2019-10-01,shot,gun,50.0,M,White,Drennen,WV,False,attack,Not fleeing,False,Guns
+5073,Roy Tucker,2019-10-01,shot,gun,75.0,M,White,Elkton,KY,False,attack,Not fleeing,False,Guns
+5074,Joseph Jesk,2019-10-01,shot,BB gun and vehicle,32.0,M,White,Bridgeview,IL,False,attack,Foot,False,Multiple
+5081,Christopher G. Louras,2019-10-01,shot,gun,34.0,M,White,Rutland,VT,False,attack,Car,False,Guns
+5082,Michael John,2019-10-03,shot,gun,24.0,M,Black,Oklahoma City,OK,False,attack,Not fleeing,True,Guns
+5079,Bruce William Clark,2019-10-04,shot,wasp spray,37.0,M,White,Jacksonville,FL,True,attack,Not fleeing,False,Other unusual objects
+5080,Christopher Massey,2019-10-05,shot,air pistol,33.0,M,White,Carrollton,TX,False,attack,Not fleeing,False,Guns
+5078,Antonio Vasquez,2019-10-06,shot,knife,37.0,M,Hispanic,Los Angeles,CA,True,other,Not fleeing,False,Sharp objects
+5088,Maurice Holley,2019-10-06,shot,gun,55.0,M,Black,Sacramento,CA,False,other,Not fleeing,True,Guns
+5085,Joshua Chase Conner,2019-10-07,shot,knife,31.0,M,White,Kountze,TX,False,other,Not fleeing,False,Sharp objects
+5475,Bobby Lee Vaughn,2019-10-07,shot,gun,54.0,M,White,Tahlequah,OK,True,attack,Not fleeing,True,Guns
+5086,Crederick Joseph,2019-10-08,shot,baton,37.0,M,Black,Beaumont,TX,False,attack,Not fleeing,False,Blunt instruments
+5087,Joseph Cimino,2019-10-08,shot,vehicle,48.0,M,White,Lincoln,NE,False,attack,Not fleeing,False,Vehicles
+5222,Zachary Aldrige Hall,2019-10-08,shot,vehicle,28.0,M,White,Layton,UT,False,attack,Car,False,Vehicles
+5083,Leo Craig,2019-10-09,shot,gun,31.0,M,Black,Oklahoma City,OK,False,attack,Other,True,Guns
+5084,Michael Uccello,2019-10-10,shot,vehicle,48.0,M,White,Los Angeles,CA,False,other,Car,False,Vehicles
+5098,Norbert Beyet,2019-10-10,shot,gun,58.0,M,White,Farmington,NM,False,attack,Not fleeing,True,Guns
+5100,Sayven Lane Rowland,2019-10-11,shot,gun,19.0,M,White,Pittsburg,OK,False,attack,Other,False,Guns
+5090,Atatiana Jefferson,2019-10-12,shot,unarmed,28.0,F,Black,Fort Worth,TX,False,other,Not fleeing,True,Unarmed
+5094,Sawandi Asad Toussaint,2019-10-12,shot,gun,21.0,M,Black,El Monte,CA,False,attack,Foot,False,Guns
+5095,Fernando Mora,2019-10-12,shot,machete,57.0,M,Hispanic,North Port,FL,False,attack,Not fleeing,False,Sharp objects
+5089,Levy Isacc Madueno Santibanez,2019-10-13,shot,gun,17.0,M,Hispanic,Glendale,AZ,False,attack,Not fleeing,False,Guns
+5093,Emilio Mojica,2019-10-13,shot,baseball bat,22.0,M,Hispanic,Corpus Christi,TX,False,other,Not fleeing,True,Blunt instruments
+5221,Jose Eduardo Flores,2019-10-13,shot,gun,26.0,M,Hispanic,Buckeye,AZ,False,attack,Other,False,Guns
+5099,Christopher Whitfield,2019-10-14,shot,unarmed,31.0,M,Black,Ethel,LA,True,undetermined,Foot,False,Unarmed
+5101,Victor Jarvis,2019-10-14,shot,gun,61.0,M,Black,High Point,NC,False,attack,Not fleeing,False,Guns
+5103,Bonny Thomas,2019-10-14,shot,knife,54.0,F,White,Athens,GA,False,attack,Not fleeing,True,Sharp objects
+5102,Dennis Patrick,2019-10-15,shot,gun,28.0,M,White,Jamestown,NC,True,attack,Not fleeing,False,Guns
+5105,Cameron Ely,2019-10-15,shot,unarmed,30.0,M,White,Hope Ranch,CA,False,other,Not fleeing,False,Unarmed
+5106,Nasheem Prioleau,2019-10-15,shot,gun,30.0,M,Black,New York,NY,False,attack,Not fleeing,False,Guns
+5110,David James Bamber,2019-10-15,shot,gun,28.0,M,White,Wendell,ID,False,other,Car,False,Guns
+5220,Akinyia Malik Jerome Gray,2019-10-15,shot,gun,26.0,M,Black,Stone Mountain,GA,False,attack,Not fleeing,False,Guns
+5107,Chase Andrew Austin,2019-10-16,shot,gun,28.0,M,White,Roanoke,VA,False,attack,Other,False,Guns
+5108,Lazzeri James Frazier,2019-10-16,shot,gun,21.0,M,Black,Sherman Oaks,CA,False,other,Not fleeing,False,Guns
+5109,Allan Feliz,2019-10-17,shot,vehicle,31.0,M,Black,New York,NY,False,attack,Not fleeing,False,Vehicles
+5111,Marcus Hartsfield,2019-10-17,shot,straight edge razor,27.0,M,White,Oakridge,OR,False,other,Not fleeing,False,Sharp objects
+5113,Christopher DeQuan Crosby,2019-10-17,shot,gun,34.0,M,Black,Warren,AR,False,attack,Car,False,Guns
+5476,Cameron Bennett,2019-10-17,shot,gun and vehicle,22.0,M,Black,Fayette,MS,False,attack,Car,False,Multiple
+5115,Malachi Crane,2019-10-18,shot,gun,29.0,M,White,Idaho Falls,ID,True,attack,Not fleeing,False,Guns
+5118,Charles Tsakiris,2019-10-18,shot,knife,38.0,M,White,Farmingdale,NJ,False,attack,Not fleeing,False,Sharp objects
+5217,McLemore Ronald,2019-10-19,shot,baseball bat and knife,51.0,M,White,Leesburg,FL,True,other,Not fleeing,False,Multiple
+5219,Terry Countryman,2019-10-19,shot,gun and vehicle,34.0,M,White,Palestine,TX,False,attack,Other,False,Multiple
+5116,Steven Day,2019-10-20,shot,gun,30.0,M,Black,St. Louis,MO,False,attack,Car,False,Guns
+5117,Amber Lea Dewitt,2019-10-20,shot,toy weapon,33.0,F,White,Boise,ID,True,attack,Not fleeing,True,Other unusual objects
+5114,Joseph Bernhard-Williams Kisar,2019-10-21,shot,gun,21.0,M,White,Trotwood,OH,False,attack,Car,False,Guns
+5120,Jason Livegood,2019-10-21,shot,gun,39.0,M,White,Hillsboro,OR,False,attack,Not fleeing,False,Guns
+5216,Claudia Nadia Rodriguez,2019-10-21,shot,gun,37.0,F,Hispanic,Henderson,NV,False,attack,Not fleeing,True,Guns
+5122,Jordan Wade Waldrop,2019-10-23,shot,gun,34.0,M,White,Sweetwater,TX,False,attack,Not fleeing,False,Guns
+5125,Matthew Wayne Sutton,2019-10-23,shot,vehicle,47.0,M,White,El Paso,TX,False,attack,Car,False,Vehicles
+5139,Victor Hernandez,2019-10-23,shot,gun,29.0,M,Black,New York,NY,False,attack,Not fleeing,True,Guns
+5140,Vincent Michael Smith,2019-10-23,shot,gun,29.0,M,White,Huntington,IN,True,attack,Foot,False,Guns
+5141,Delfon Kinney,2019-10-23,shot,gun,44.0,M,Black,Long Beach,CA,False,attack,Not fleeing,True,Guns
+5119,Michael Babcock,2019-10-24,shot,gun,53.0,M,White,Greenville,NC,False,other,Not fleeing,False,Guns
+5123,Shannon Gail Rupert,2019-10-25,shot,scissors,45.0,F,White,Bossier City,LA,False,other,Not fleeing,False,Sharp objects
+5124,Anthony John Michael Zapier,2019-10-25,shot,vehicle,19.0,M,White,Morristown,TN,False,attack,Not fleeing,False,Vehicles
+5128,Clayton Andrews,2019-10-25,shot,gun,40.0,M,White,Kansas,OK,False,attack,Not fleeing,False,Guns
+5132,Kwesi Ashun,2019-10-25,shot,chair,33.0,M,Black,New York,NY,False,attack,Not fleeing,False,Other unusual objects
+5131,Nan Zhao,2019-10-26,shot,gun,45.0,M,Asian,Athens,GA,False,attack,Foot,True,Guns
+5135,Clayton Andrews,2019-10-26,shot,gun,40.0,M,White,Creek County,OK,True,attack,Car,False,Guns
+5134,Johnathan Wayne Slattery,2019-10-26,shot and Tasered,gun,27.0,M,White,Walloon Lake,MI,True,attack,Not fleeing,False,Guns
+5126,Dean Thomas,2019-10-27,shot,gun,63.0,M,White,Madison,WI,False,attack,Not fleeing,False,Guns
+5129,Luis Arreguin-Lara,2019-10-27,shot,gun,50.0,M,Hispanic,Tulsa,OK,False,attack,Not fleeing,True,Guns
+5130,Earnest Easterling,2019-10-27,shot,gun,25.0,M,Black,Carmichael,CA,False,attack,Not fleeing,False,Guns
+5127,Dana Sherrod Fletcher,2019-10-27,shot and Tasered,gun,39.0,M,Black,Madison,AL,False,attack,Not fleeing,False,Guns
+5144,Arturo Moreno,2019-10-27,shot and Tasered,crowbar,42.0,M,Hispanic,Porterville,CA,True,attack,Not fleeing,False,Blunt instruments
+5143,Terry W. Chanley,2019-10-28,shot,hammer,25.0,M,White,Evansville,IN,False,attack,Not fleeing,True,Blunt instruments
+5146,John Feggins,2019-10-30,shot,gun,24.0,M,Black,Baltimore,MD,False,attack,Not fleeing,True,Guns
+5147,Michael Pinkerman,2019-10-30,shot,gun,37.11793090137039,M,White,Ona,WV,False,attack,Not fleeing,False,Guns
+5162,Billy Kongphouthakhoun,2019-10-30,shot,gun,37.11793090137039,M,Asian,Fresno,CA,False,other,Not fleeing,False,Guns
+5163,Ricardo Myers,2019-10-30,shot,ax,62.0,M,White,Lancaster,CA,False,other,Not fleeing,False,Blunt instruments
+5160,Danny James Hall,2019-10-31,shot,gun,34.0,M,White,Bascom,FL,False,attack,Car,False,Guns
+5161,Francis Calonge,2019-10-31,shot,toy weapon,33.0,M,White,San Jose,CA,True,attack,Not fleeing,True,Other unusual objects
+5479,Edward Roe,2019-10-31,shot,gun,56.0,M,White,Pearson,GA,False,attack,Not fleeing,False,Guns
+5150,Benjamin Diaz,2019-11-01,shot,sharp object,22.0,M,Hispanic,Alamogordo,NM,False,attack,Car,False,Sharp objects
+5158,Anthony Pena,2019-11-01,shot,gun,46.0,M,Hispanic,Adams County,CO,False,attack,Not fleeing,False,Guns
+5159,Luis Morales-Camacho,2019-11-01,shot,gun,41.0,M,Hispanic,Orlando,FL,False,attack,Not fleeing,False,Guns
+5173,Luis Fino Nabarrette,2019-11-01,shot,gun,38.0,M,Hispanic,Odessa,TX,False,attack,Car,False,Guns
+5191,Benjamin Diaz,2019-11-01,shot,box cutter,22.0,M,Hispanic,Alamogordo,NM,False,attack,Not fleeing,False,Sharp objects
+5157,John Hale,2019-11-02,shot,unknown,42.0,M,White,Dexter,KY,False,attack,Other,False,Unknown
+5155,Michael Kifer,2019-11-02,shot and Tasered,sword,29.0,M,White,Vero Beach,FL,False,attack,Not fleeing,False,Sharp objects
+5153,Curtis French,2019-11-03,shot,knife,56.0,M,White,Parkland,WA,True,other,Not fleeing,True,Sharp objects
+5154,Michael Austin,2019-11-03,shot,gun,32.0,M,Black,Phoenix,AZ,False,attack,Not fleeing,False,Guns
+5172,Matthew Rasmussen,2019-11-04,shot,sharp object,31.0,M,White,Glendale,AZ,True,attack,Not fleeing,True,Sharp objects
+5174,Daniel M. Munoz,2019-11-04,shot,gun,21.0,M,Hispanic,Las Cruces,NM,False,attack,Other,False,Guns
+5175,Nash Fiske,2019-11-04,shot,gun,31.0,M,White,Two Rivers,WI,False,other,Not fleeing,False,Guns
+5167,Maurice Brown,2019-11-05,shot,gun,48.0,M,Black,East Cleveland,OH,False,attack,Not fleeing,True,Guns
+5168,Jay P. Messer,2019-11-05,shot,gun,58.0,M,White,Pettis County,MO,False,attack,Not fleeing,False,Guns
+5169,Michael Lee Nguyen,2019-11-05,shot,gun,32.0,M,Asian,Leon,WI,False,other,Not fleeing,False,Guns
+5171,Christopher Alan Noe,2019-11-05,shot and Tasered,knife,45.0,M,White,Willis,TX,False,other,Car,False,Sharp objects
+5164,Eddie Ray Maxwell,2019-11-06,shot,gun,37.0,M,Black,Tahlequah,OK,False,attack,Not fleeing,False,Guns
+5165,Corben Hunter Jones,2019-11-06,shot,unknown,20.0,M,White,Henryetta,OK,False,undetermined,Other,False,Unknown
+5166,Raul Casas Campo,2019-11-06,shot,gun,34.0,M,Hispanic,San Antonio,TX,False,other,Other,False,Guns
+5170,Treva Smutherman,2019-11-06,shot,gun,31.0,M,Black,Fayetteville,NC,False,attack,Not fleeing,False,Guns
+5176,Guy Thomas Barnard,2019-11-07,shot,BB gun,26.0,M,White,Wadsworth,OH,False,attack,Other,False,Guns
+5177,Shelby Gazaway,2019-11-07,shot,gun,32.0,M,Black,Louisville,KY,False,attack,Other,False,Guns
+5178,Gerald Newton Allen,2019-11-07,shot,gun,66.0,M,White,Conyers,GA,False,attack,Not fleeing,False,Guns
+5179,Christopher Mills,2019-11-07,shot,gun,37.0,M,White,Ashtabula Township,OH,False,other,Not fleeing,False,Guns
+5185,Ray Correll,2019-11-08,shot,gun,38.0,M,White,Lincolnton,NC,True,attack,Not fleeing,False,Guns
+5481,Ryan D. Hemmingson,2019-11-09,shot,knife,44.0,M,White,Everett,WA,True,other,Not fleeing,False,Sharp objects
+5187,Daniel Thomas Childers,2019-11-09,shot and Tasered,knife,28.0,M,White,Union County,SC,False,other,Not fleeing,False,Sharp objects
+5180,John Luce,2019-11-11,shot,gun,22.0,M,White,Lakewood,CO,False,other,Foot,False,Guns
+5182,Tammy Pierce,2019-11-11,shot,gun,59.0,F,White,Loveland,CO,False,attack,Not fleeing,False,Guns
+5184,Sidney Alexis Renew,2019-11-11,shot,vehicle,20.0,F,White,Lakeland,FL,False,attack,Not fleeing,False,Vehicles
+5181,Justin Anderson,2019-11-12,shot,gun,39.0,M,White,Oklahoma City,OK,False,attack,Other,False,Guns
+5213,Michael Kahalehoe,2019-11-12,shot,vehicle and gun,30.0,M,Other,Honolulu,HI,False,other,Not fleeing,False,Multiple
+5195,Roy McAllister,2019-11-13,shot,gun,27.0,M,Black,Wilson,NC,False,attack,Foot,False,Guns
+5197,Chris Ervie,2019-11-13,shot,knife,37.11793090137039,M,White,Mandarin,FL,True,undetermined,Not fleeing,True,Sharp objects
+5203,Omar Enrique Garcia,2019-11-13,shot,sword,37.0,M,Hispanic,Los Angeles,CA,False,other,Foot,False,Sharp objects
+5204,Kennith Waynon Hooker,2019-11-14,shot,screwdriver,52.0,M,White,Beaumont,TX,False,attack,Not fleeing,False,Piercing objects
+5212,Michael  A. Jolly,2019-11-14,shot,gun,35.0,M,White,Fox Crossing,WI,True,other,Not fleeing,False,Guns
+5190,Treon McCoy,2019-11-15,shot,gun,33.0,M,Black,Charlotte,NC,False,attack,Not fleeing,False,Guns
+5193,Mark Sheppard,2019-11-15,shot,gun,27.0,M,Black,Cleveland,OH,False,other,Foot,False,Guns
+5189,Garrett Ryberg,2019-11-16,shot,gun,27.0,M,White,Mesa,AZ,False,attack,Not fleeing,False,Guns
+5196,Robert Sikon,2019-11-16,shot,unarmed,41.0,M,White,Alliance,OH,False,attack,Foot,False,Unarmed
+5194,Dante Redmond Jones,2019-11-18,shot,gun,28.0,M,Black,Franklin County,WA,False,attack,Car,False,Guns
+5201,Cody McClintick,2019-11-18,shot,gun,26.0,M,White,Kansas City,MO,False,attack,Other,False,Guns
+5198,Joel Avery,2019-11-19,shot,gun,37.11793090137039,M,White,Horn Lake,MS,False,other,Not fleeing,False,Guns
+5199,Alex Flores,2019-11-19,shot,knife,34.0,M,Hispanic,Los Angeles,CA,False,other,Other,False,Sharp objects
+5202,Jacob Cato,2019-11-19,shot,gun,34.0,M,White,San Bernardino,CA,False,attack,Not fleeing,False,Guns
+5226,Luis A. Cardona,2019-11-19,shot,gun,38.0,M,Hispanic,West Kewaunee,WI,False,attack,Other,False,Guns
+5483,Christopher Terrell Willis,2019-11-19,shot,gun,32.0,M,Black,Des Plaines,IL,False,attack,Not fleeing,False,Guns
+5205,Raul Antonio Menjivar Saabedra,2019-11-19,shot and Tasered,knife,50.0,M,Hispanic,Preston,ID,False,other,Not fleeing,False,Sharp objects
+5206,Paul Cheek,2019-11-20,shot,knife,55.0,M,White,Dahlonega,GA,False,other,Not fleeing,False,Sharp objects
+5207,William Harris,2019-11-20,shot,gun,51.0,M,White,Hampton,GA,False,attack,Not fleeing,False,Guns
+5208,Kenneth Simeus,2019-11-20,shot,gun,18.0,M,Black,Henderson,NV,False,attack,Other,True,Guns
+5263,Jessica Ann Beedles,2019-11-20,shot,gun,42.0,F,White,Los Angeles,CA,False,other,Not fleeing,False,Guns
+5224,Anthony Chilcott,2019-11-22,shot,vehicle,36.0,M,White,Black Diamond,WA,False,attack,Not fleeing,False,Vehicles
+5225,Lance Edward Smith,2019-11-22,shot,gun,37.0,M,Black,Elizabethtown,NC,False,attack,Not fleeing,False,Guns
+5209,Ariane Lamont McCree,2019-11-23,shot,gun,28.0,M,Black,Chester,SC,False,attack,Foot,True,Guns
+5210,Estevon Cruz,2019-11-23,shot,toy weapon,24.0,M,Hispanic,Pueblo,CO,False,attack,Not fleeing,False,Other unusual objects
+5211,Steven Forrest Saucier,2019-11-24,shot,gun,34.0,M,White,Gaines Township,MI,False,attack,Not fleeing,False,Guns
+5223,Nathaniel Pinnock,2019-11-25,shot,vehicle and machete,22.0,M,Black,Los Angeles,CA,False,attack,Foot,True,Multiple
+5244,Jason Quincey Niccum,2019-11-25,shot,gun,42.0,M,White,Great Falls,MT,False,other,Not fleeing,False,Guns
+5243,Eric Sopp,2019-11-26,shot,ice pick,48.0,M,White,Sparks,MD,True,attack,Car,True,Piercing objects
+5245,Hollis Lewis,2019-11-26,shot,gun,51.0,M,White,Greeneville,TN,False,attack,Not fleeing,True,Guns
+5484,Micduff Lamarco Robinson,2019-11-27,shot,sword,40.0,M,Black,Mansfield,OH,False,other,Not fleeing,False,Sharp objects
+5238,Jeremy Pelican,2019-11-28,shot,gun,34.0,M,White,Barton County,MO,False,other,Car,False,Guns
+5240,Derrick Everett,2019-11-28,shot,gun,30.0,M,Black,Tampa,FL,False,attack,Other,False,Guns
+5485,Nicholas Cantelmi,2019-11-28,shot,gun and vehicle,31.0,M,White,Jim Thorpe,PA,False,attack,Other,False,Multiple
+5236,Raymond Lee,2019-11-29,shot,toy weapon,54.0,M,White,Modesto,CA,False,attack,Other,True,Other unusual objects
+5239,Kenneth Layton,2019-11-29,shot,gun,60.0,M,White,Lakeland,FL,True,attack,Not fleeing,False,Guns
+5241,Keith Alan Bruce,2019-11-29,shot,gun,40.0,M,White,Watkins,CO,False,attack,Car,False,Guns
+5242,TK TK,2019-11-29,shot,unknown,37.11793090137039,M,White,Eatonville,WA,False,other,Car,False,Unknown
+5234,Eliborio Rodriguez,2019-11-30,shot,unarmed,40.0,M,Hispanic,Eugene,OR,False,attack,Not fleeing,False,Unarmed
+5228,Anthony Rosso,2019-12-01,shot,gun,68.0,M,White,Secaucus,NJ,False,attack,Other,False,Guns
+5229,Jimmie Phillips,2019-12-01,shot,gun,68.0,M,Black,Morrow,GA,False,attack,Not fleeing,False,Guns
+5232,Donald James Eversen,2019-12-01,shot,knife,60.0,M,White,Concord,CA,False,attack,Not fleeing,True,Sharp objects
+5233,Yemerson Melendez,2019-12-01,shot,gun and vehicle,16.0,M,Hispanic,Fort Pierce,FL,False,attack,Other,False,Multiple
+5235,Steven Kerr,2019-12-01,shot,vehicle,25.0,M,White,Plant City,FL,False,attack,Car,False,Vehicles
+5384,Jordan Oliver,2019-12-01,shot and Tasered,"car, knife and mace",20.0,M,White,Hanover Township,PA,False,attack,Car,False,Multiple
+5230,Jerric Harris,2019-12-02,shot,gun,21.0,M,Black,Daytona Beach,FL,False,attack,Foot,True,Guns
+5246,Dai Phuoc Nguyen,2019-12-02,shot,knife,38.0,M,Asian,Los Angeles,CA,False,other,Other,False,Sharp objects
+5249,Michael Dean,2019-12-02,shot,unarmed,28.0,M,Black,Temple,TX,False,undetermined,Not fleeing,False,Unarmed
+5388,Neil Chiago,2019-12-02,shot,gun,18.0,M,Native,Mesa,AZ,False,attack,Not fleeing,False,Guns
+5247,Thomas Cole Thompson,2019-12-03,shot,gun,37.11793090137039,M,White,Ada,OK,False,attack,Not fleeing,False,Guns
+5250,Cameron Lamb,2019-12-03,shot,gun,26.0,M,Black,Kansas City,MO,False,other,Not fleeing,False,Guns
+5257,Miguel Russo,2019-12-03,shot,gun,31.0,M,Black,Syracuse,NY,False,attack,Not fleeing,True,Guns
+5255,Alvern Donnell Walker,2019-12-05,shot,gun,58.0,M,Black,Avon,CO,False,attack,Car,False,Guns
+5256,Demetrius Williams,2019-12-05,shot,vehicle,31.0,M,Black,Marshall,TX,False,attack,Foot,False,Vehicles
+5260,Lamar Alexander,2019-12-05,shot,gun,41.0,M,Black,Miramar,FL,False,attack,Car,False,Guns
+5261,Ronnie Jerome Hill,2019-12-05,shot,gun,41.0,M,Black,Miramar,FL,False,attack,Car,False,Guns
+5390,Chad James Green,2019-12-05,shot,gun,41.0,M,White,San Bernardino,CA,False,other,Foot,False,Guns
+5252,Hunter Steven James Lowry,2019-12-06,shot,gun,23.0,M,White,Westminster,CO,False,other,Other,False,Guns
+5254,Dominick Matt,2019-12-06,shot,gun,17.0,M,Black,Bentonville,AR,False,other,Not fleeing,False,Guns
+5253,London T. Phillips,2019-12-07,shot,gun,35.0,M,White,Fayetteville,AR,False,attack,Not fleeing,False,Guns
+5264,Mark Richard Coleman,2019-12-07,shot,gun,65.0,M,White,Nokomis,FL,True,attack,Not fleeing,False,Guns
+5251,Koben S. Henriksen,2019-12-08,shot,knife,51.0,M,White,Portland,OR,True,other,Not fleeing,False,Sharp objects
+5262,Antonio Nichols,2019-12-09,shot,gun,47.0,M,Black,St. Helena Parish,LA,False,other,Not fleeing,False,Guns
+5265,Robert Allen Elfgen,2019-12-10,shot,gun,42.0,M,White,Fort Madison,IA,False,other,Other,False,Guns
+5266,Mauro Carrillo,2019-12-10,shot,baseball bat,42.0,M,Hispanic,Hesperia,CA,False,attack,Not fleeing,False,Blunt instruments
+5269,Kreed Cornell Bateman,2019-12-10,shot,gun,31.0,M,Black,Andrews,SC,False,attack,Other,False,Guns
+5270,Montay Steven Penning,2019-12-10,shot,gun,23.0,M,Black,Beloit,WI,False,other,Car,False,Guns
+5271,Francine Graham,2019-12-10,shot,gun,50.0,F,Black,Jersey City,NJ,False,attack,Not fleeing,False,Guns
+5272,David N. Anderson,2019-12-10,shot,gun,47.0,M,Black,Jersey City,NJ,False,attack,Not fleeing,False,Guns
+5392,Terrence Edward White,2019-12-10,shot,gun,66.0,M,White,Semmes,AL,True,attack,Not fleeing,False,Guns
+5267,Daniel E. Condon,2019-12-10,shot and Tasered,hatchet,55.0,M,White,Arietta,NY,True,attack,Other,False,Blunt instruments
+5268,Delos P. Lowe,2019-12-11,shot,gun,68.0,M,White,Nelson Township,PA,True,attack,Not fleeing,False,Guns
+5393,Matthew Jonathan Krupar,2019-12-11,shot,unarmed,31.0,M,White,League City,TX,False,attack,Not fleeing,False,Unarmed
+5280,Cortez Bufford,2019-12-12,shot,gun,24.0,M,Black,St. Louis,MO,False,other,Foot,False,Guns
+5281,Cade Humphrey,2019-12-12,shot,knife,30.0,M,White,Washita County,OK,False,attack,Car,False,Sharp objects
+5282,Taveonte Art Emmanuel,2019-12-12,shot,gun,34.0,M,Black,Anaheim,CA,False,other,Not fleeing,True,Guns
+5284,Bradley Cutchens,2019-12-12,shot,gun,23.0,M,White,Ozark,AL,True,attack,Not fleeing,False,Guns
+5286,Anthony Tovar,2019-12-12,shot,toy weapon,43.0,M,White,Renton,WA,False,other,Not fleeing,False,Other unusual objects
+5297,Romello Barnes,2019-12-12,shot,knife,22.0,M,Black,Tampa,FL,False,attack,Not fleeing,False,Sharp objects
+5273,Jamee Christopher Deonte Johnson,2019-12-14,shot,gun and car,22.0,M,Black,Jacksonville,FL,False,attack,Car,True,Multiple
+5277,Victor A. Parsons,2019-12-14,shot,gun,42.0,M,White,Tucson,AZ,False,attack,Not fleeing,False,Guns
+5278,Louis Patrick Veal,2019-12-14,shot,gun,65.0,M,Black,Redford Township,MI,False,attack,Not fleeing,False,Guns
+5279,Alejandro Betancourt-Mendoza,2019-12-14,shot,knife,18.0,M,Hispanic,Pasco,WA,False,attack,Not fleeing,False,Sharp objects
+5274,Kean Walker,2019-12-15,shot,gun,23.0,M,White,Milwaukee,WI,False,attack,Car,False,Guns
+5275,Chiasher Fong Vue,2019-12-15,shot,gun,52.0,M,Asian,Minneapolis,MN,False,attack,Not fleeing,True,Guns
+5276,Mohammad Jamal Isaifan,2019-12-15,shot,gun,40.0,M,Other,Akron,OH,True,other,Foot,False,Guns
+5293,Mario Alberto Torres,2019-12-15,shot,gun,27.0,M,Hispanic,Brownsville,TX,False,attack,Not fleeing,False,Guns
+5291,Dustin Spencer,2019-12-16,shot,gun,34.0,M,Other,Kalihi,HI,False,attack,Foot,False,Guns
+5292,Jorge Serrano,2019-12-16,shot,gun,25.0,M,Hispanic,Los Angeles,CA,False,attack,Foot,False,Guns
+5296,Bernie Rascon,2019-12-16,shot,unknown,28.0,M,Hispanic,San Bernardino,CA,False,undetermined,Car,False,Unknown
+5288,Kyle Horton,2019-12-17,shot,gun,37.11793090137039,M,White,Wilmington,NC,False,attack,Not fleeing,False,Guns
+5289,Clyde Jacob Sullivan,2019-12-17,shot,gun,27.0,M,White,Fort Walton Beach,FL,False,attack,Car,False,Guns
+5395,Ricky Lee Gardipee,2019-12-17,shot,gun,41.0,M,White,Great Falls,MT,False,attack,Foot,False,Guns
+5290,Dana Brown,2019-12-17,shot and Tasered,knife,27.0,M,Other,Honolulu,HI,False,attack,Other,True,Sharp objects
+5294,Gary Wayne Madewell,2019-12-19,shot,knife,38.0,M,White,Smith County,TN,False,other,Other,False,Sharp objects
+5295,Christopher Gray,2019-12-19,shot,knife,29.0,M,White,Davis,CA,True,attack,Not fleeing,True,Sharp objects
+5298,Jason Elliot Waterhouse,2019-12-19,shot,unknown,47.0,M,White,Lakewood,CO,True,attack,Not fleeing,False,Unknown
+5309,Kentrey Marquis Witherspoon,2019-12-19,shot,gun,28.0,M,Black,Lenoir,NC,False,attack,Foot,False,Guns
+5397,Jayson Arron Colvin,2019-12-19,shot,gun,38.0,M,White,Eustis,FL,False,attack,Foot,False,Guns
+5306,Emanuel Johnson,2019-12-19,shot and Tasered,gun,21.0,M,Black,Brentwood,NY,False,attack,Foot,False,Guns
+5307,John Resetar,2019-12-20,shot,gun,44.0,M,White,Randolph County,IN,False,attack,Not fleeing,False,Guns
+5308,Steven DeWayne Haizlip,2019-12-20,shot,gun,61.0,M,Black,Winston-Salem,NC,False,attack,Not fleeing,False,Guns
+5299,Mohamed Ahemed Al-Hashemi,2019-12-20,shot and Tasered,Taser,25.0,M,Black,Tempe,AZ,False,attack,Not fleeing,False,Electrical devices
+5301,Mark Stoddard,2019-12-21,shot,gun,40.0,M,White,Emery County,UT,False,attack,Car,False,Guns
+5303,Marc Denver Thompson,2019-12-21,shot,shovel,26.0,M,White,Carroll County,GA,False,attack,Foot,False,Blunt instruments
+5304,Michael DeCastro,2019-12-21,shot,knife,57.0,M,White,Ithaca,NY,False,attack,Not fleeing,False,Sharp objects
+5305,Brian Lee Mullen,2019-12-21,shot,gun,57.0,M,White,Evansville,IN,True,other,Not fleeing,False,Guns
+5300,Romir Talley,2019-12-22,shot,gun,24.0,M,Black,Wilkinsburg,PA,False,attack,Foot,False,Guns
+5327,Kenneth Collins,2019-12-22,shot,unknown,46.0,M,Black,Hattiesburg,MS,False,other,Other,False,Unknown
+5317,Richard Ruiz,2019-12-23,shot,gun and vehicle,38.0,M,Hispanic,Phoenix,AZ,False,attack,Car,False,Multiple
+5329,Austin Chase Swindle,2019-12-23,shot,gun,24.0,M,White,Bryant,AR,True,attack,Not fleeing,False,Guns
+5398,Macario Hernandez,2019-12-23,shot,gun,34.0,M,Hispanic,San Antonio,TX,False,other,Car,False,Guns
+5326,Harvey Cantrell,2019-12-24,shot,gun,65.0,M,White,Deltona,FL,True,attack,Not fleeing,True,Guns
+5331,Elray Barber,2019-12-24,shot,gun,60.0,M,Black,Oklahoma City,OK,False,attack,Car,False,Guns
+5328,Lori Jean Canada,2019-12-25,shot,gun,59.0,F,White,Ocala,FL,True,attack,Not fleeing,False,Guns
+5330,Deangelo Rashad Martin,2019-12-25,shot,vehicle,23.0,M,Black,Atlanta,GA,False,attack,Car,False,Vehicles
+5314,Antonio Smith,2019-12-26,shot,unknown,35.0,M,Black,Memphis,TN,False,other,Other,False,Unknown
+5325,Juan Rosa,2019-12-26,shot,gun,35.0,M,Hispanic,Auburndale,FL,True,attack,Not fleeing,False,Guns
+5322,Christopher Camacho,2019-12-27,shot,gun and knife,16.0,M,Hispanic,Limerick,ME,False,other,Other,False,Multiple
+5323,John Lowell Dollen,2019-12-27,shot,gun,37.11793090137039,M,White,Linthicum,MD,True,attack,Not fleeing,False,Guns
+5324,Frederick Jeremy Atkin,2019-12-27,shot,unknown,42.0,M,White,South Ogden,UT,False,undetermined,Car,False,Unknown
+5320,Henry Kistler Berry,2019-12-27,shot and Tasered,Taser,43.0,M,White,Newport News,VA,False,attack,Not fleeing,False,Electrical devices
+5315,Albert Benjamin Simon,2019-12-28,shot,gun,52.0,M,White,Houston,TX,False,other,Foot,False,Guns
+5316,A.B. Carr,2019-12-28,shot,unknown,31.0,M,White,Elizabethton,TN,False,attack,Not fleeing,False,Unknown
+5319,Heriberto Rodriguez,2019-12-28,shot,unknown,27.0,M,Hispanic,Bakersfield,CA,False,attack,Not fleeing,False,Unknown
+5321,Troy Kirk,2019-12-28,shot,knife,31.0,M,White,Lancaster,OH,True,attack,Not fleeing,True,Sharp objects
+5400,Craig Ellis See,2019-12-28,shot,knife,34.0,M,White,Clearlake Oaks,CA,False,attack,Foot,False,Sharp objects
+5311,Patrick Alden,2019-12-29,shot,gun,29.0,M,White,Rapid City,SD,True,attack,Not fleeing,False,Guns
+5313,Kelly Michael Stephens,2019-12-29,shot,chain,34.0,M,White,Juneau,AK,False,other,Not fleeing,False,Other unusual objects
+5318,Manuel Gonzales Verdugo,2019-12-29,shot,knife,37.11793090137039,M,Hispanic,El Centro,CA,False,other,Not fleeing,False,Sharp objects
+5312,TK TK,2019-12-30,shot,gun,18.0,M,Black,Houston,TX,False,attack,Other,False,Guns
+5402,Debra D. Arbuckle,2019-12-30,shot,vehicle,51.0,F,White,Wichita,KS,False,attack,Car,False,Vehicles
+5404,Cody McCaulou,2019-12-30,shot,vehicle,25.0,M,White,Fulton,MO,False,attack,Car,False,Vehicles
+5332,Eric M. Tellez,2019-12-31,shot,knife,28.0,M,White,Globe,AZ,False,other,Not fleeing,False,Sharp objects
+5333,Frederick Perkins,2019-12-31,shot,vehicle,37.0,M,Black,Chesterfield,MO,False,attack,Car,False,Vehicles
+5345,Dedrick Thomas,2019-12-31,shot,gun,37.11793090137039,M,Black,Forrest City,AR,False,attack,Other,False,Guns
+5358,Malik Williams,2019-12-31,shot,gun,23.0,M,Black,Federal Way,WA,False,attack,Not fleeing,False,Guns
+5359,Terry Hudson,2019-12-31,shot,gun,57.0,M,Black,Omaha,NE,False,attack,Not fleeing,True,Guns
+5374,Michael Vincent Davis,2019-12-31,shot,gun,49.0,M,White,Cross Lanes,WV,False,attack,Foot,False,Guns
+5344,Derrick A. Elseth,2020-01-01,shot,gun,24.0,M,White,Richmond County,VA,False,other,Not fleeing,False,Guns
+5403,Gerardo Antonio Conchas-Bustas,2020-01-01,shot,knife,20.0,M,Other,Denver,CO,False,attack,Not fleeing,True,Sharp objects
+5342,Gabriel Strickland,2020-01-01,shot and Tasered,toy weapon,25.0,M,White,Grass Valley,CA,True,attack,Not fleeing,False,Other unusual objects
+5339,Jeffery Dale Millsap,2020-01-02,shot,gun,26.0,M,White,Holt,MO,False,attack,Car,False,Guns
+5349,Jamari Daiwon Tarver,2020-01-02,shot,vehicle,26.0,M,Black,North Las Vegas,NV,False,attack,Car,True,Vehicles
+5350,Troy Sullenger,2020-01-02,shot,gun,41.0,M,White,Murrieta,CA,False,attack,Car,True,Guns
+5405,Mariano Ocon,2020-01-02,shot,gun,31.0,M,Hispanic,Chicago,IL,False,attack,Foot,False,Guns
+5340,Michael Gregory,2020-01-02,shot and Tasered,knife,30.0,M,Hispanic,Ansonia,CT,False,attack,Not fleeing,True,Sharp objects
+5341,Tyree Davis,2020-01-04,shot and Tasered,knife,25.0,M,Black,Chicago,IL,False,other,Not fleeing,False,Sharp objects
+5334,George Dison,2020-01-05,shot,gun,57.0,M,White,Elkmont,AL,False,attack,Not fleeing,False,Guns
+5335,Kwamae Jones,2020-01-05,shot,gun,17.0,M,Black,Jacksonville,FL,False,attack,Car,False,Guns
+5336,Brandon D. Roberts,2020-01-05,shot,knife,27.0,M,Black,Milford,DE,True,other,Not fleeing,False,Sharp objects
+5338,Drew Nichols Wallas-Flores,2020-01-05,shot,gun,30.0,M,Hispanic,Lubbock,TX,False,attack,Foot,False,Guns
+5352,Miciah Lee,2020-01-05,shot,gun,18.0,M,Black,Sparks,NV,True,other,Car,False,Guns
+5337,Samuel Lanham,2020-01-05,shot and Tasered,knife,50.0,M,White,Oklahoma City,OK,False,other,Not fleeing,False,Sharp objects
+5351,Troy Chase Caster,2020-01-06,shot,gun,21.0,M,White,Asheboro,NC,False,attack,Car,False,Guns
+5353,Xavier Jaime Rovie,2020-01-06,shot,gun,28.0,M,Hispanic,Phoenix,AZ,False,attack,Foot,False,Guns
+5354,Orlando Abeyta,2020-01-06,shot,gun,28.0,M,Hispanic,Albuquerque,NM,False,other,Not fleeing,False,Guns
+5356,Dallas Pearce,2020-01-06,shot,toy weapon,33.0,M,Asian,Honolulu,HI,False,other,Not fleeing,False,Other unusual objects
+5357,Daniel Duane Jensen,2020-01-07,shot,gun,59.0,M,White,North Pole,AK,False,attack,Not fleeing,False,Guns
+5361,Dustin M. Eaton,2020-01-08,shot,gun,34.0,M,White,Bismarck,MO,False,attack,Not fleeing,False,Guns
+5362,Earl Facey,2020-01-09,shot,gun,37.0,M,Black,New York,NY,False,attack,Foot,True,Guns
+5364,Cody Carnes,2020-01-09,shot,gun,30.0,M,White,Bismarck,ND,True,attack,Not fleeing,False,Guns
+5571,Claude Fain,2020-01-09,shot,gun,47.0,M,Black,Philadelphia,PA,True,attack,Not fleeing,False,Guns
+5360,Bernie Wade Johnson,2020-01-09,shot and Tasered,hammer,34.0,M,White,Semmes,AL,True,attack,Not fleeing,False,Blunt instruments
+5365,Juan Ayon-Ruiz,2020-01-10,shot,vehicle,24.0,M,Hispanic,Muscoy,CA,False,attack,Car,False,Vehicles
+5363,Clando Anitok,2020-01-10,shot and Tasered,unarmed,25.0,M,Asian,Spokane,WA,False,other,Car,False,Unarmed
+5366,Eric Reynolds,2020-01-11,shot,unknown,37.11793090137039,M,White,Glenwood Springs,CO,False,other,Car,False,Unknown
+5501,Henry Isaac Jones,2020-01-11,shot,gun,47.0,M,Black,Bainbridge,GA,False,attack,Not fleeing,False,Guns
+5369,Ryan O. Simms,2020-01-11,shot and Tasered,knife,49.0,M,Black,Miami Beach,FL,False,attack,Other,False,Sharp objects
+5367,Victor Valencia,2020-01-12,shot,toy weapon,31.0,M,Hispanic,Los Angeles,CA,True,attack,Other,False,Other unusual objects
+5368,Brad Stirewalt,2020-01-12,shot,gun,47.0,M,White,Carthage,MO,False,attack,Car,False,Guns
+5370,Thomas Charles Snyder,2020-01-12,shot,gun,52.0,M,White,Lakewood,CO,False,other,Not fleeing,False,Guns
+5371,Keenan McCain,2020-01-13,shot,gun,29.0,M,Black,Gary,IN,False,attack,Not fleeing,False,Guns
+5372,Randy Glen Goodale,2020-01-13,shot,vehicle,45.0,M,White,San Antonio,TX,False,attack,Not fleeing,False,Vehicles
+5373,Eliezer Perez,2020-01-14,shot,knife,51.0,M,Hispanic,The Villages,FL,False,attack,Not fleeing,False,Sharp objects
+5378,Renard Antonio Daniels,2020-01-15,shot,knife,55.0,M,Black,Cocoa,FL,False,attack,Not fleeing,True,Sharp objects
+5379,Frank Cogar,2020-01-15,shot,gun,35.0,M,White,Missoula,MT,False,other,Not fleeing,False,Guns
+5382,Landwell Vance McCall,2020-01-15,shot,gun,50.0,M,White,Fleetwood,NC,False,attack,Not fleeing,False,Guns
+5503,Aaron Phillips,2020-01-15,shot,gun,31.0,M,White,Mulberry,FL,False,other,Not fleeing,False,Guns
+5375,Albert Lee Hughes,2020-01-15,shot and Tasered,chair,47.0,M,Black,Lawrenceville,GA,False,attack,Not fleeing,False,Other unusual objects
+5380,Jack Bolinger,2020-01-16,shot,gun,35.0,M,White,Wausau,WI,False,attack,Other,False,Guns
+5381,Owen Barton,2020-01-16,shot,gun,66.0,M,White,Yerington,NV,False,other,Not fleeing,False,Guns
+5377,Murbarak Soulemane,2020-01-16,shot and Tasered,knife,19.0,M,Black,West Haven,CT,False,other,Car,True,Sharp objects
+5376,Samuel David Mallard,2020-01-17,shot,unknown,19.0,M,Black,Powder Springs,GA,False,undetermined,Car,False,Unknown
+5406,Dustin Alexander Nealis,2020-01-19,shot,unknown,43.0,M,White,Sebring,FL,False,undetermined,Not fleeing,False,Unknown
+5386,Edward Gendron,2020-01-20,shot,gun,57.0,M,White,Waterbury,CT,False,attack,Not fleeing,False,Guns
+5389,Miguel Mercado Segura,2020-01-20,shot,gun,31.0,M,Hispanic,Fountain Valley,CA,False,other,Foot,False,Guns
+5391,Jonathan David Messare,2020-01-20,shot,machete,41.0,M,White,Sedona,AZ,False,other,Not fleeing,False,Sharp objects
+5394,Dustin Furr,2020-01-20,shot,gun,39.0,M,White,Lafayette,IN,False,other,Not fleeing,False,Guns
+5383,Anthony Langley,2020-01-21,shot,gun,24.0,M,White,Atkins,AR,False,attack,Foot,False,Guns
+5407,Reginald Leon Boston,2020-01-21,shot,gun,20.0,M,Black,Jacksonville,FL,False,other,Foot,False,Guns
+5408,Rory Behling,2020-01-21,shot,gun,32.0,M,White,Fox Crossing,WI,False,other,Not fleeing,False,Guns
+5515,Miguel Mercado Segura,2020-01-21,shot,gun,31.0,M,Hispanic,Fountain Valley,CA,False,other,Foot,False,Guns
+5385,Darius J. Tarver,2020-01-21,shot and Tasered,meat cleaver,22.0,M,Black,Denton,TX,True,attack,Not fleeing,False,Sharp objects
+5387,Sok Chin Son,2020-01-21,shot and Tasered,knife,60.0,M,Asian,Lacey,WA,False,attack,Not fleeing,False,Sharp objects
+5432,Jon Phillip Bryant,2020-01-22,shot,knife,40.0,M,White,Arvada,CO,False,other,Not fleeing,False,Sharp objects
+5508,Armando Moreno Garcia,2020-01-22,shot,gun,37.0,M,Hispanic,Mesa,AZ,False,attack,Other,False,Guns
+5570,Adam Ray Hernandez,2020-01-22,shot,unknown,34.0,M,White,Moore,OK,False,other,Car,False,Unknown
+5429,Deandre Lee Seaborough-Patterson,2020-01-23,shot,gun,22.0,M,Black,Savannah,GA,False,other,Foot,False,Guns
+5430,James Lewis Mathis,2020-01-23,shot,knife,30.0,M,White,Paris,TX,False,other,Other,False,Sharp objects
+5431,Gage Scott Southard,2020-01-23,shot,gun,26.0,M,White,Wasilla,AK,False,attack,Car,False,Guns
+5433,Marquis Golden,2020-01-23,shot,gun,29.0,M,Black,St. Petersburg,FL,False,attack,Car,False,Guns
+5506,Andrew Smyrna,2020-01-23,shot,vehicle,32.0,M,Black,Atlanta,GA,False,attack,Car,False,Vehicles
+5507,Michael Rivera,2020-01-23,shot,vehicle,32.0,M,Black,Bloomingdale,NJ,False,attack,Car,False,Vehicles
+5427,Scott Joseph Weber,2020-01-24,shot,gun,27.0,M,White,San Angelo,TX,False,attack,Other,False,Guns
+5428,Toby Diller,2020-01-24,shot,gun,31.0,M,Hispanic,Oak Park,CA,False,attack,Foot,True,Guns
+5436,Rebecca Angel Alexander,2020-01-24,shot,gun,35.0,F,White,Coden,AL,True,attack,Not fleeing,False,Guns
+5425,D'ovion Semaj Perkins,2020-01-25,shot,gun,19.0,M,Black,Aurora,CO,False,other,Car,False,Guns
+5426,Joshua James Brown,2020-01-25,shot,gun,34.0,M,Black,Columbus,OH,False,other,Foot,False,Guns
+5424,Kevin Alan Smallman,2020-01-27,shot,vehicle,32.0,M,White,Chandler,AZ,False,attack,Car,False,Vehicles
+5434,William Howard Green,2020-01-27,shot,unarmed,43.0,M,Black,Temple Hills,MD,False,attack,Not fleeing,False,Unarmed
+5435,Aaron T. Booker,2020-01-27,shot,gun,22.0,M,Black,Aiken,SC,False,attack,Not fleeing,False,Guns
+5505,John Francis Tippett,2020-01-27,shot,gun,43.0,M,White,Lexington Park,MD,True,attack,Not fleeing,False,Guns
+5440,Joshua Greenleaf,2020-01-28,shot,knife,27.0,M,White,Scottsdale,AZ,True,attack,Not fleeing,False,Sharp objects
+5442,Robert Cocio,2020-01-28,shot,gun,39.0,M,Hispanic,Tuscson,AZ,False,attack,Not fleeing,False,Guns
+5569,Jonathan Bentley,2020-01-28,shot,vehicle,37.0,M,White,Shelby Gap,KY,False,attack,Not fleeing,False,Vehicles
+5441,Jaquyn Oneill Light,2020-01-29,shot,unknown,20.0,M,Black,Graham,NC,False,undetermined,Foot,False,Unknown
+5500,Clint Stevens,2020-01-29,shot,gun,34.0,M,White,Deposit,NY,True,attack,Not fleeing,False,Guns
+5502,Justin Leman,2020-01-29,shot,gun,32.0,M,White,Kasilof,AK,False,attack,Foot,False,Guns
+5456,Abdirahman Salad,2020-01-30,shot,gun,15.0,M,Black,Columbus,OH,False,attack,Not fleeing,False,Guns
+5457,Keith Dutree Collins,2020-01-30,shot,toy weapon,52.0,M,Black,Raleigh,NC,False,attack,Foot,True,Other unusual objects
+5493,Leonard Parker,2020-02-01,shot,vehicle,53.0,M,Black,Gulfport,MS,False,other,Not fleeing,False,Vehicles
+5497,Vincent Conti,2020-02-01,shot,gun,24.0,M,White,Spring Hill,FL,False,attack,Not fleeing,False,Guns
+5566,Ronnell Mouzon,2020-02-01,shot,gun,41.0,M,Black,Fort Myers,FL,False,attack,Not fleeing,False,Guns
+5495,Alvin Cole,2020-02-02,shot,gun,17.0,M,Black,Wauwatosa,WI,False,attack,Foot,False,Guns
+5496,Jason Gora,2020-02-02,shot,vehicle and gun,44.0,M,White,Minot,ME,False,attack,Foot,False,Multiple
+5494,Marc Dominic Neal,2020-02-03,shot,gun,56.0,M,Black,Millcreek,UT,False,other,Not fleeing,False,Guns
+5513,Darius Tarver,2020-02-04,shot,meat cleaver,23.0,M,Black,Denton,TX,False,other,Not fleeing,False,Sharp objects
+5516,Shawn Michael Taylor,2020-02-04,shot,gun,32.0,M,White,Allen,OK,False,attack,Foot,False,Guns
+5563,Dominique Antwon Anderson,2020-02-04,shot,machete,26.0,M,Black,Home Garden,CA,False,attack,Not fleeing,False,Sharp objects
+5564,Thomas Barbosa,2020-02-04,shot,knife,41.0,M,White,Ono,CA,True,other,Car,False,Sharp objects
+5523,Daniel Murillo,2020-02-05,shot,knife,56.0,M,White,Washoe,NV,False,other,Not fleeing,False,Sharp objects
+5565,Gaston A. Nava-Saucedo,2020-02-05,shot,vehicle,33.0,M,Hispanic,Topeka,KS,False,attack,Car,False,Vehicles
+5512,Sean Patrick Constance,2020-02-06,shot,gun,37.0,M,White,Port Charlotte,FL,False,attack,Car,False,Guns
+5514,Juston Root,2020-02-07,shot,gun,41.0,M,White,Brookline,MA,True,attack,Car,False,Guns
+5524,Michael Collins,2020-02-07,shot,knife,38.0,M,White,Sapulpa,OK,True,other,Not fleeing,False,Sharp objects
+5518,Douglas Harold Hart,2020-02-08,shot,gun,67.0,M,White,Vestavia Hills,AL,False,attack,Not fleeing,False,Guns
+5517,Gordon Whitaker,2020-02-09,shot,gun,45.0,M,White,Kennewick,WA,False,attack,Foot,False,Guns
+5520,Zane Blaisdell,2020-02-09,shot,knife,48.0,M,White,Saginaw,MI,False,attack,Not fleeing,False,Sharp objects
+5521,Jeremy Grayson,2020-02-09,shot,gun,31.0,M,Black,Chicago,IL,False,attack,Foot,False,Guns
+5561,Michael Leatherwood,2020-02-09,shot,gun,47.0,M,White,Byron,GA,False,attack,Not fleeing,False,Guns
+5527,Bobby Gibbs,2020-02-10,shot,gun,40.0,M,Black,Forrest City,AR,False,attack,Not fleeing,False,Guns
+5529,Jeremy Todd Baham,2020-02-10,shot,gun,40.0,M,White,Lafayette,LA,False,other,Not fleeing,False,Guns
+5530,Thomas Ray Chamblee,2020-02-10,shot,gun,34.0,M,White,Albertville,AL,False,attack,Other,True,Guns
+5525,Hans Alejandro Huitz,2020-02-12,shot,gun,51.0,M,Native,Virginia Beach,VA,False,attack,Not fleeing,False,Guns
+5526,Michael Marullo,2020-02-12,shot,gun,33.0,M,White,Baltimore,MD,False,attack,Not fleeing,False,Guns
+5528,Dakota Lee Chlarson,2020-02-13,shot,scissors,25.0,M,Native,Dickinson,ND,False,attack,Not fleeing,False,Sharp objects
+5546,Brian Francis Filion,2020-02-13,shot,gun,41.0,M,White,Salt Lake City,UT,False,other,Foot,False,Guns
+5549,Aaron Marcos Valdez,2020-02-13,shot,gun,19.0,M,Hispanic,Amarillo,TX,False,attack,Not fleeing,False,Guns
+5535,William Bluestone,2020-02-14,shot,gun,21.0,M,Hispanic,Silverton,OR,False,other,Not fleeing,True,Guns
+5537,Timothy Leroy Harrington,2020-02-14,shot,gun,58.0,M,White,Polkton,NC,False,other,Car,False,Guns
+5539,David Kent Heeke,2020-02-14,shot,gun,63.0,M,White,Commerce City,CO,True,other,Car,False,Guns
+5547,Christopher Gutierrez,2020-02-14,shot,knife,37.11793090137039,M,Hispanic,Rialto,CA,False,other,Not fleeing,False,Sharp objects
+5548,Timothy Leroy Harrington,2020-02-14,shot,gun,58.0,M,White,Polkton,NC,False,attack,Car,False,Guns
+5536,Daelyn Polu,2020-02-15,shot,gun,16.0,M,Asian,Achorage,AK,False,attack,Not fleeing,False,Guns
+5532,Thomas Murray,2020-02-16,shot,vehicle,31.0,M,White,Newbury,MA,False,attack,Car,False,Vehicles
+5533,Kerry Michael Bounsom,2020-02-16,shot,gun,33.0,M,Asian,Long Beach,CA,False,attack,Foot,False,Guns
+5545,Rudy Arenas,2020-02-16,shot,gun,40.0,M,Hispanic,Poinciana,FL,False,attack,Car,False,Guns
+5575,Brandon Lewis,2020-02-16,shot,gun,34.0,M,White,Harrison County,IN,False,attack,Car,False,Guns
+5534,Travis Mullins,2020-02-17,shot,gun,29.0,M,White,Greenville,TN,False,attack,Not fleeing,False,Guns
+5560,Jeremy Dewey,2020-02-17,shot,gun,27.0,M,Native,Pinetop,AZ,False,attack,Not fleeing,False,Guns
+5531,Kevin Adolphe,2020-02-18,shot,gun,23.0,M,Black,Orlando,FL,False,other,Foot,False,Guns
+5542,Alex Francisco Vazquez,2020-02-19,shot,gun,38.0,M,Hispanic,Red Bluff,CA,False,attack,Not fleeing,False,Guns
+5556,Joseph Jewell,2020-02-20,shot,gun,17.0,M,Black,Columbus,OH,False,attack,Not fleeing,False,Guns
+5557,John Daniel Dixon,2020-02-20,shot,gun,75.0,M,White,DeKalb County,GA,False,other,Not fleeing,False,Guns
+5555,Manuel Arebalo,2020-02-21,shot,sharp object,40.0,M,Hispanic,Arvada,CO,False,other,Not fleeing,False,Sharp objects
+5553,Rodrigo Ivan Aguirre,2020-02-22,shot,gun,36.0,M,Hispanic,Deming,NM,False,attack,Other,False,Guns
+5552,Lucas Alvarado,2020-02-24,shot,gun,27.0,M,White,Milwaukee,WI,False,other,Foot,False,Guns
+5574,Print Zutavern,2020-02-24,shot,gun,28.0,M,White,Arnold,NE,True,other,Not fleeing,False,Guns
+5576,Stephen O'Brien,2020-02-24,shot,unarmed,20.0,M,White,Floresville,TX,True,other,Not fleeing,False,Unarmed
+5573,Kenneth Sashington,2020-02-25,shot,gun,38.0,M,Black,Tuscumbia,AL,False,attack,Foot,False,Guns
+5592,Dylan Olmeda,2020-02-25,shot,gun,16.0,M,White,Georgetown,TX,False,attack,Not fleeing,False,Guns
+5593,Justin Lee Stackhouse,2020-02-26,shot,vehicle,30.0,M,Black,Bradenton,FL,False,attack,Car,False,Vehicles
+5595,Ramiro Carrasco,2020-02-26,shot,gun,30.0,M,Hispanic,Greeley,CO,False,other,Not fleeing,False,Guns
+5596,James Thomson,2020-02-26,shot,gun,30.0,M,White,Tahlequah,OK,False,attack,Car,False,Guns
+5578,Kent Richard Kruger,2020-02-27,shot,gun,36.0,M,White,Lakeville,MN,True,attack,Not fleeing,False,Guns
+5579,Joshua David Hernandez Lord,2020-02-27,shot,knife,33.0,M,White,Clarkdale,AZ,False,other,Other,False,Sharp objects
+5594,Dorgel Cisnero-Mesa,2020-02-27,shot,gun,39.0,M,Hispanic,Jacksonville,FL,True,attack,Other,False,Guns
+5586,Jose L. Rivera,2020-02-28,shot,gun,22.0,M,Hispanic,Moses Lake,WA,False,attack,Other,False,Guns
+5580,Anthony Taylor,2020-02-29,shot,gun,49.0,M,Black,Milwaukee,WI,False,other,Other,False,Guns
+5585,Richard Rodriguez,2020-02-29,shot,gun,45.0,M,Hispanic,San Antonio,TX,False,attack,Not fleeing,False,Guns
+5587,Stephen Douris,2020-02-29,shot,knife,45.0,M,White,Henderson,NV,False,other,Not fleeing,False,Sharp objects
+5577,Joshua Russell,2020-03-01,shot,gun,30.0,M,White,Pueblo,CO,False,attack,Car,False,Guns
+5581,Raymundo Aaron Ceja,2020-03-01,shot,gun,30.0,M,Hispanic,Santa Clarita,CA,False,other,Not fleeing,False,Guns
+5584,Ian Austin Wilson,2020-03-01,shot,gun,31.0,M,White,Mocksville,NC,False,attack,Other,False,Guns
+5601,Terry Cagle,2020-03-02,shot,BB gun,73.0,M,White,Sherman,TX,False,attack,Car,False,Guns
+5607,Ryan Bass,2020-03-03,shot,gun,39.0,M,White,Riverside,WA,False,attack,Other,False,Guns
+5605,Christopher Palmer,2020-03-04,shot,unarmed,37.0,M,White,Manila,AR,False,attack,Not fleeing,False,Unarmed
+5606,Gene Beasley,2020-03-05,shot,gun,37.11793090137039,M,White,Ariton,AL,False,other,Car,False,Guns
+5613,Ajay Kamil Ayseli,2020-03-05,shot,knife,31.0,M,Other,Henrico,VA,False,attack,Not fleeing,False,Sharp objects
+5656,Elijah Jamaal Brewer,2020-03-05,shot,gun,25.0,M,Black,Pittsburgh,PA,False,attack,Not fleeing,False,Guns
+5619,Tyler M. Jones,2020-03-06,shot,gun,24.0,M,Black,Fairfield,OH,False,other,Not fleeing,False,Guns
+5620,Barry Gedeus,2020-03-06,shot,unarmed,27.0,M,Black,Fort Lauderdale,FL,False,attack,Foot,False,Unarmed
+5621,Jerry Gaghins,2020-03-06,shot,knife,37.11793090137039,M,White,Tulsa,OK,False,attack,Not fleeing,False,Sharp objects
+5657,Kenneth Mullins,2020-03-06,shot,unarmed,32.0,M,White,Edison,CA,False,attack,Not fleeing,False,Unarmed
+5618,Gary Brown,2020-03-07,shot,vehicle,43.0,M,White,Harrison Township,OH,False,attack,Car,False,Vehicles
+5609,Lawson Edward Schaber,2020-03-08,shot,gun,84.0,M,White,Apache Junction,AZ,False,attack,Not fleeing,False,Guns
+5614,Desiree Nicole Garza,2020-03-08,shot,knife,29.0,F,Hispanic,Torrance,CA,False,other,Not fleeing,False,Sharp objects
+5615,Brian Marksberry,2020-03-08,shot,unarmed,31.0,M,White,Humble,TX,False,other,Foot,False,Unarmed
+5617,Keith P. Haux,2020-03-08,shot,gun,57.0,M,White,Backus,MN,False,other,Not fleeing,False,Guns
+5623,Aaron Tolen,2020-03-08,shot,unarmed,37.0,M,White,Wasilla,AK,False,attack,Not fleeing,False,Unarmed
+5622,Jennifer Taylor,2020-03-09,shot,gun,29.0,F,White,Dinuba,CA,False,attack,Not fleeing,False,Guns
+5633,Jesus Bonito Garcia,2020-03-09,shot,screwdriver,47.0,M,Hispanic,Elmendorf,TX,False,other,Other,False,Piercing objects
+5659,Pablo Elias,2020-03-10,shot,unarmed,44.0,M,Hispanic,Bell Gardens,CA,True,undetermined,Other,False,Unarmed
+5660,Joshua Christopher Noles,2020-03-11,shot,gun,38.0,M,White,Elkton,FL,False,attack,Car,False,Guns
+5661,Mary Kate Field,2020-03-11,shot,gun,32.0,F,White,Anchor Point,AK,False,attack,Other,False,Guns
+5626,Breonna Taylor,2020-03-12,shot,unarmed,26.0,F,Black,Louisville,KY,False,undetermined,Not fleeing,False,Unarmed
+5662,Duncan Socrates Lemp,2020-03-12,shot,gun,21.0,M,White,Potomac,MD,False,attack,Not fleeing,True,Guns
+5663,Donnie Sanders,2020-03-12,shot,unarmed,47.0,M,Black,Kansas City,MO,False,undetermined,Foot,False,Unarmed
+5628,Jorge Martinez,2020-03-13,shot,unknown,30.0,M,Hispanic,Claremore,OK,False,attack,Foot,False,Unknown
+5635,Marc Morgan,2020-03-13,shot,gun,62.0,M,White,New Kensington,PA,False,attack,Other,False,Guns
+5654,Rosario Angel Alvarado,2020-03-13,shot,toy weapon,41.0,M,Hispanic,Chandler,AZ,False,attack,Not fleeing,False,Other unusual objects
+5664,Dung Nguyen,2020-03-13,shot,gun,50.0,M,Asian,Garland,TX,False,attack,Not fleeing,False,Guns
+5665,Christopher Mullins,2020-03-13,shot,knife,37.11793090137039,M,White,Mufreesboro,TN,False,other,Not fleeing,False,Sharp objects
+5629,Jeremiah Medina,2020-03-14,shot,gun,31.0,M,Hispanic,Taos,NM,False,attack,Car,False,Guns
+5630,Justin Griggs,2020-03-14,shot,gun,30.0,M,White,Louisville,KY,False,attack,Foot,True,Guns
+5631,Chase Brooks,2020-03-14,shot,unknown,32.0,M,White,Springfield,OR,False,attack,Not fleeing,False,Unknown
+5634,Jesse Cadillo,2020-03-14,shot,gun,20.0,M,White,Pueblo,CO,False,attack,Foot,False,Guns
+5624,Michael Brandon Potter,2020-03-15,shot,gun,38.0,M,White,High Point,NC,False,attack,Other,False,Guns
+5625,Catherine Gomez,2020-03-15,shot,knife,25.0,F,Hispanic,Long Beach,CA,False,attack,Not fleeing,False,Sharp objects
+5640,Douglas J. Foster,2020-03-15,shot,gun,47.0,M,White,Lewistown,MT,False,attack,Car,False,Guns
+5666,Dakota Yancey,2020-03-15,shot,gun,19.0,M,White,Chase City,VA,False,other,Car,False,Guns
+5636,Darwin Foy,2020-03-16,shot,gun,35.0,M,Black,Webster City,IA,False,attack,Not fleeing,False,Guns
+5637,Juanito Ovalle,2020-03-16,shot,machete,58.0,M,Hispanic,San Antonio,TX,False,other,Not fleeing,False,Sharp objects
+5639,Dakota Wayne Yancey,2020-03-16,shot,gun,18.0,M,White,Mecklenburg,VA,False,attack,Other,False,Guns
+5709,Charity Thorne,2020-03-16,shot,vehicle,42.0,F,White,Myerstown,PA,False,attack,Car,False,Vehicles
+5711,William Simpkins,2020-03-17,shot,gun,39.0,M,Black,Atlanta,GA,False,attack,Foot,False,Guns
+5651,Harold Spencer,2020-03-18,shot,gun,61.0,M,Black,Iota,LA,False,other,Other,False,Guns
+5653,Steven Alire,2020-03-18,shot,gun,51.0,M,White,Orchard Mesa,CO,False,other,Foot,False,Guns
+5652,Lebarron Ballard,2020-03-18,shot and Tasered,knife,28.0,M,Black,Abilene,TX,False,attack,Foot,False,Sharp objects
+5643,Kyle Anthony Eichler,2020-03-19,shot,unknown,33.0,M,White,Wheeling,MO,False,undetermined,Other,False,Unknown
+5650,Charles Parker,2020-03-19,shot and Tasered,knife,47.0,M,White,Port Jervis,NY,True,other,Not fleeing,False,Sharp objects
+5646,Larry Millraney,2020-03-20,shot,gun,39.0,M,White,Franklin County,TN,False,attack,Car,False,Guns
+5647,Mycael Johnson,2020-03-20,shot,unarmed,31.0,M,Black,Tallahassee,FL,False,attack,Other,False,Unarmed
+5648,Kamall Koby Edwards,2020-03-20,shot,gun,18.0,M,Black,Cuthbert,GA,False,attack,Foot,False,Guns
+5649,Alvin Lamont Baum,2020-03-20,shot,gun,23.0,M,Black,Virginia Beach,VA,False,attack,Not fleeing,False,Guns
+5642,Carlos Delgado,2020-03-23,shot,pick-axe,46.0,M,Hispanic,San Antonio,TX,False,attack,Not fleeing,False,Piercing objects
+5683,Charles Edward Marsh,2020-03-23,shot,gun,50.0,M,White,Mojave,CA,False,attack,Not fleeing,False,Guns
+5684,Michael Wallace,2020-03-24,shot,gun,34.0,M,White,Schenectady,NY,True,attack,Not fleeing,False,Guns
+5685,Kathryn R. Hale,2020-03-24,shot,vehicle,32.0,F,White,Shelton,WA,False,attack,Car,False,Vehicles
+5686,Christopher Joel Mock,2020-03-24,shot,gun,45.0,M,White,WInston Salem,NC,False,attack,Car,False,Guns
+5687,Maurico Hernandez,2020-03-24,shot,gun,31.0,M,Hispanic,El Paso,TX,False,attack,Car,False,Guns
+5688,Matthew Moore,2020-03-25,shot,gun,19.0,M,White,Pahrump,NV,False,attack,Not fleeing,True,Guns
+5689,Glenn A. White,2020-03-25,shot,knife,53.0,M,White,London,AR,True,other,Not fleeing,False,Sharp objects
+5717,Deanna Marie Owsianiak,2020-03-26,shot,gun,55.0,F,White,Ormond Beach,FL,False,attack,Not fleeing,False,Guns
+5719,John Mark Hendrick,2020-03-26,shot,unarmed,32.0,M,White,Linwood,NC,False,other,Car,False,Unarmed
+5692,Robert Harman Sword,2020-03-27,shot,gun,46.0,M,White,Buchanan,VA,True,attack,Not fleeing,False,Guns
+5693,Tyrell Fincher,2020-03-27,shot,gun,26.0,M,Black,Newburgh,NY,False,attack,Other,True,Guns
+5696,Shane Farwell,2020-03-28,shot,gun,46.0,M,White,Caldwell,ID,False,attack,Not fleeing,False,Guns
+5697,Jacob  Emry Mcilveen,2020-03-29,shot,gun,22.0,M,White,Phoenix,AZ,True,attack,Not fleeing,False,Guns
+5698,Etonne Tanzymore,2020-03-30,shot,gun,38.0,M,Black,Baltimore,MD,False,attack,Not fleeing,True,Guns
+5699,Jessie Stringfield,2020-03-30,shot,gun,44.0,M,White,Louisville,KY,False,attack,Not fleeing,True,Guns
+5700,Anthony Eduardo Pacheco,2020-03-31,shot,sword,37.0,M,Hispanic,Pomona,CA,False,other,Not fleeing,False,Sharp objects
+5701,Valente Acosta-Bustillos,2020-03-31,shot,shovel,52.0,M,Hispanic,Albuquerque,NM,True,other,Not fleeing,False,Blunt instruments
+5702,Shane Tilman Kent,2020-03-31,shot,gun,29.0,M,White,Asheville,NC,False,attack,Not fleeing,False,Guns
+5704,Austin Hines,2020-04-01,shot,gun and vehicle,19.0,M,White,Columbus,MS,False,attack,Car,False,Multiple
+5706,Nathan R. Hodge,2020-04-02,shot,gun,66.0,M,Black,Ouachita Parish,LA,False,attack,Not fleeing,False,Guns
+5707,David A. Xanatos,2020-04-02,shot,knife,40.0,M,White,Lincoln CIty,OR,False,other,Not fleeing,False,Sharp objects
+5710,Jose Moreno,2020-04-02,shot,Taser,30.0,M,Hispanic,Mesa,AZ,False,attack,Other,False,Electrical devices
+5712,Joseph Zahaczewski,2020-04-02,shot,gun,69.0,M,White,Irving,TX,False,attack,Other,False,Guns
+5713,Jose Soto,2020-04-02,shot,unarmed,27.0,M,Hispanic,Manchester,CT,True,other,Not fleeing,False,Unarmed
+5716,Carl Manning,2020-04-05,shot,unknown,62.0,M,White,Manchester,NH,False,other,Not fleeing,False,Unknown
+5718,Michael Leon Hammett,2020-04-05,shot,knife,37.11793090137039,M,White,Ada,OK,True,attack,Not fleeing,False,Sharp objects
+5722,Philip Castonguay,2020-04-05,shot,metal pipe,39.0,M,White,Milford,MA,False,attack,Not fleeing,False,Blunt instruments
+5723,Richard Lee Kampstra,2020-04-05,shot,gun,67.0,M,White,Melbourne,FL,False,other,Other,False,Guns
+5724,Kelvin Parks,2020-04-06,shot,gun,54.0,M,White,Florence,AL,False,attack,Foot,False,Guns
+5725,Yamil Acevedo,2020-04-06,shot,vehicle,29.0,M,Hispanic,North Miami Beach,FL,False,attack,Car,False,Vehicles
+5727,Idris Abdus-Salaam,2020-04-07,shot,knife,33.0,M,Black,Knoxville,TN,False,other,Not fleeing,False,Sharp objects
+5728,Joshua Bacco,2020-04-07,shot,knife,31.0,M,White,El Mirage,AZ,True,attack,Not fleeing,False,Sharp objects
+5729,Jacob Matthew Dau,2020-04-07,shot,vehicle,38.0,M,White,Clinton,IA,False,other,Car,True,Vehicles
+5730,Derek T. Swanson,2020-04-07,shot,gun,28.0,M,White,Caddo Parish,LA,False,attack,Other,False,Guns
+5731,Dewayne Curtis Lafond,2020-04-07,shot,gun,45.0,M,Black,Refugio,TX,False,attack,Not fleeing,False,Guns
+5732,Rick Howell,2020-04-08,shot,gun,59.0,M,White,Salisbury,MD,True,attack,Not fleeing,False,Guns
+5733,Joshua Dariandre Ruffin,2020-04-08,shot,gun,17.0,M,Black,Columbia,SC,False,other,Foot,False,Guns
+5734,Zyon Romeir Wyche,2020-04-09,shot,gun,19.0,M,Black,Colonial Heights,VA,False,attack,Foot,False,Guns
+5735,Kenneth Jeremy Blair,2020-04-09,shot,Taser,36.0,M,White,Winchester,TN,False,attack,Foot,False,Electrical devices
+5736,Zachary Shane Gifford,2020-04-09,shot,unarmed,39.0,M,White,Brandon,CO,False,attack,Foot,False,Unarmed
+5737,Matt Goff,2020-04-10,shot,gun,37.11793090137039,M,White,Klamath Falls,OR,False,attack,Car,False,Guns
+5738,Giuseppe Particianone,2020-04-10,shot,unarmed,33.0,M,White,Philadelphia,PA,False,other,Not fleeing,False,Unarmed
+5739,Jonathan Lee Adams,2020-04-11,shot,gun,31.0,M,Black,Pottstown,PA,False,attack,Not fleeing,False,Guns
+5740,Leah Baker,2020-04-11,shot,knife,29.0,F,White,Jacksonville,FL,False,other,Not fleeing,False,Sharp objects
+5741,Errol Bolin,2020-04-11,shot,gun,51.0,M,White,West Terre Haute,IN,False,attack,Not fleeing,False,Guns
+5743,Justin Silvernale,2020-04-12,shot,knife,35.0,M,White,Daly City,CA,True,other,Car,False,Sharp objects
+5746,Javier Vidal,2020-04-13,shot,gun,36.0,M,Hispanic,Lamont,CA,False,attack,Car,False,Guns
+5681,Thomas A. Powell,2020-04-14,shot,gun,31.0,M,White,Old Town,ME,False,attack,Not fleeing,False,Guns
+5678,Leslie Flynn,2020-04-15,shot,gun,39.0,M,White,Blair,NE,False,attack,Not fleeing,False,Guns
+5679,Randy Ashland,2020-04-15,shot,gun,58.0,M,White,Waukesha,WI,False,attack,Not fleeing,False,Guns
+5748,Goldie Bellinger,2020-04-15,shot,gun,39.0,M,Black,Augusta,GA,True,attack,Not fleeing,False,Guns
+5670,Juan Ayon-Barraza,2020-04-16,shot,gun and car,24.0,M,Hispanic,Richmond,CA,False,attack,Car,False,Multiple
+5674,Salvatore Friscia,2020-04-16,shot,vehicle,48.0,M,White,Philipsburg,MT,False,attack,Not fleeing,False,Vehicles
+5749,Jasman Washington,2020-04-16,shot,vehicle,31.0,M,Black,Lubbock,TX,False,attack,Car,False,Vehicles
+5675,Derick L. Powe,2020-04-17,shot,gun,37.11793090137039,M,Black,Daphne,AL,True,attack,Not fleeing,False,Guns
+5750,Marcus Eugene Epps,2020-04-17,shot,knife,43.0,M,White,Anderson,SC,False,attack,Other,False,Sharp objects
+5671,Steven Taylor,2020-04-18,shot,baseball bat,33.0,M,Black,San Leandro,CA,False,other,Not fleeing,False,Blunt instruments
+5673,Austin Dean Heights,2020-04-18,shot,gun,24.0,M,White,Mankato,MN,True,attack,Other,False,Guns
+5669,Mason Workman,2020-04-19,shot,gun,40.0,M,White,Henderson,NV,False,attack,Not fleeing,True,Guns
+5761,Virgill Thrope,2020-04-19,shot,gun,28.0,M,Black,Colorado Springs,CO,False,attack,Not fleeing,False,Guns
+5756,Chase Rosa,2020-04-21,shot,gun,24.0,M,Black,Las Vegas,NV,False,attack,Car,True,Guns
+5762,Nicholas Chavez,2020-04-21,shot,sharp object,27.0,M,Hispanic,Houston,TX,True,other,Foot,False,Sharp objects
+5759,Elmer L. Mack,2020-04-22,shot,gun,40.0,M,Black,Florence,SC,False,attack,Not fleeing,False,Guns
+5917,Joshua Johnson,2020-04-22,shot,toy weapon,35.0,M,Black,Houston,TX,False,attack,Foot,False,Other unusual objects
+5758,Luan Agolli,2020-04-23,shot,gun,42.0,M,White,Paterson,NJ,True,attack,Not fleeing,False,Guns
+5751,Michael Ramos,2020-04-24,shot,unarmed,42.0,M,Hispanic,Austin,TX,False,undetermined,Car,False,Unarmed
+5753,Brandan Reid Nylander,2020-04-24,shot,gun,24.0,M,White,Napa,CA,False,other,Car,False,Guns
+5767,Reed Rickabaugh,2020-04-24,shot,gun,59.0,M,White,Hiram,ME,False,attack,Not fleeing,False,Guns
+5768,Farron Morris Hammond,2020-04-25,shot,gun,61.0,M,White,Hogansville,GA,False,attack,Not fleeing,False,Guns
+5766,De Quang Tran,2020-04-26,shot,gun,26.0,M,Asian,La Plata,MD,False,attack,Not fleeing,False,Guns
+5788,Robert Musser,2020-04-28,shot,gun,32.0,M,White,Buckeye,AZ,False,attack,Car,False,Guns
+5786,William E. Abbe,2020-04-28,shot and Tasered,sharp object,50.0,M,White,Vancouver,WA,False,attack,Not fleeing,False,Sharp objects
+5784,Jesus Caballero,2020-04-29,shot,gun,38.0,M,Hispanic,Las Vegas,NV,False,attack,Car,False,Guns
+5785,Artemio Mondragon Alfaro,2020-04-29,shot,vehicle,29.0,M,White,Madera County,CA,False,attack,Other,False,Vehicles
+5787,Malcolm Xavier Ray Williams,2020-04-29,shot,gun,27.0,M,Black,Jeffersonville,IN,False,attack,Not fleeing,False,Guns
+5783,Timothy Alan Gilbert,2020-04-30,shot,gun,43.0,M,White,Martin County,KY,False,attack,Car,False,Guns
+5776,William Debose,2020-05-01,shot,gun,21.0,M,Black,Denver,CO,False,other,Other,True,Guns
+5777,Nicholas Bils,2020-05-01,shot,unarmed,36.0,M,White,San Diego,CA,True,other,Foot,False,Unarmed
+5778,Shaun Lee Fuhr,2020-05-01,shot,unarmed,24.0,M,Black,Seattle,WA,False,attack,Foot,True,Unarmed
+5780,Brent Martin,2020-05-01,shot,gun,32.0,M,Black,Little Rock,AR,False,other,Not fleeing,False,Guns
+5781,Said Joquin,2020-05-01,shot,gun,26.0,M,Black,Lakewood,WA,False,attack,Not fleeing,False,Guns
+5769,Michael Ferguson,2020-05-03,shot,gun,54.0,M,White,Fort Lauderdale,FL,False,other,Not fleeing,False,Guns
+5770,Kortney Shawn Price,2020-05-03,shot,gun,44.0,M,White,Caldwell County,NC,False,other,Car,True,Guns
+5771,Michael Faries,2020-05-03,shot,gun,69.0,M,White,Oakland City,IN,False,other,Not fleeing,False,Guns
+5772,Filipe Periera,2020-05-03,shot,gun,45.0,M,White,Jacksonville,FL,False,attack,Not fleeing,False,Guns
+5773,Armando Salvatierra,2020-05-03,shot,knife,26.0,M,Hispanic,San Jose,CA,False,attack,Not fleeing,True,Sharp objects
+5774,Chad Adams,2020-05-03,shot,gun,43.0,M,White,Boerne,TX,False,attack,Not fleeing,False,Guns
+5871,Phillip Michael Carney,2020-05-03,shot,gun,38.0,M,White,Overland Park,KS,False,attack,Car,False,Guns
+5814,Demontre Bruner,2020-05-04,shot,gun,21.0,M,Black,Muskogee,OK,False,attack,Foot,False,Guns
+5807,Qavon Webb,2020-05-05,shot,gun,23.0,M,Black,Webster Groves,MO,False,attack,Not fleeing,False,Guns
+5808,Sandra Lee Harmon,2020-05-05,shot,gun,56.0,F,White,Half Moon Bay,CA,False,attack,Not fleeing,False,Guns
+5809,William Shimp,2020-05-05,shot,gun,33.0,M,White,Kansas City,MO,False,attack,Car,False,Guns
+5810,Justin Charland,2020-05-05,shot,samurai sword,40.0,M,White,Las Vegas,NV,True,other,Not fleeing,True,Sharp objects
+5812,Jah'Sean Iandie Hodge,2020-05-05,shot,knife,21.0,M,Black,St. Cloud,FL,False,other,Foot,False,Sharp objects
+5811,Alfredo Delarosa,2020-05-05,shot and Tasered,Taser,20.0,M,Hispanic,San Antonio,TX,False,attack,Other,False,Electrical devices
+5790,Dreasjon Reed,2020-05-06,shot,gun,21.0,M,Black,Indianapolis,IN,False,attack,Car,True,Guns
+5804,James Joseph James,2020-05-06,shot,knife,47.0,M,White,Graham,NC,False,attack,Car,False,Sharp objects
+5805,Vincent Ralph Pena,2020-05-06,shot,gun,38.0,M,Hispanic,Commerce City,CO,False,attack,Foot,False,Guns
+5800,Ruben Escarrega,2020-05-07,shot,knife,31.0,M,Hispanic,Long Beach,CA,False,other,Not fleeing,False,Sharp objects
+5803,James Pease,2020-05-07,shot,gun,51.0,M,White,Jean,NV,False,attack,Car,False,Guns
+5872,McHale Rose,2020-05-07,shot,gun,19.0,M,Black,Indianapolis,IN,False,attack,Not fleeing,False,Guns
+5887,Daniel Gomez,2020-05-07,shot,knife,21.0,M,Hispanic,Wasco,CA,False,attack,Not fleeing,False,Sharp objects
+5789,Adrian Medearis,2020-05-08,shot,Taser,48.0,M,Black,Houston,TX,False,attack,Not fleeing,True,Electrical devices
+5791,Edgar Melgar,2020-05-09,shot,gun,42.0,M,Hispanic,Green Bay,WI,False,attack,Not fleeing,False,Guns
+5792,Finan H. Berhe,2020-05-09,shot,knife,30.0,M,Black,Silver Spring,MD,False,other,Not fleeing,True,Sharp objects
+5794,Yassin Mohamed,2020-05-09,shot,rock,47.0,M,Black,Claxton,GA,False,attack,Foot,False,Blunt instruments
+5796,Darrin Jon Patterson,2020-05-09,shot,gun,57.0,M,White,Idaho Springs,CO,False,attack,Car,False,Guns
+5797,Jonathan Carter,2020-05-09,shot,unknown,27.0,M,White,Calypso,NC,False,other,Not fleeing,False,Unknown
+5795,David Urrea,2020-05-10,shot,knife,50.0,M,White,Joshua Tree,CA,False,other,Car,False,Sharp objects
+5818,Gregory Howe,2020-05-12,shot,gun,37.0,M,White,Deltona,FL,False,attack,Car,True,Guns
+5835,David Tylek Atkinson,2020-05-13,shot,gun,24.0,M,Black,Raleigh,NC,False,attack,Foot,False,Guns
+5889,David Tylek Atkinson,2020-05-13,shot,gun,24.0,M,Black,Raleigh,NC,False,attack,Foot,True,Guns
+5827,Rayshard Scales,2020-05-14,shot,toy weapon,30.0,M,Black,Houston,TX,False,attack,Not fleeing,False,Other unusual objects
+5831,Robert Tincher,2020-05-14,shot,knife,49.0,M,White,Union Township,OH,True,other,Not fleeing,False,Sharp objects
+5890,Donny Leek,2020-05-14,shot,gun,47.0,M,White,San Angelo,TX,True,attack,Not fleeing,False,Guns
+5832,Robert Avila,2020-05-15,shot,vehicle,31.0,M,White,Pueblo,CO,False,attack,Car,False,Vehicles
+5833,Hunter Carlstrom,2020-05-15,shot,gun,33.0,M,White,Oxford,MS,False,attack,Car,False,Guns
+5823,Robert Johnson,2020-05-16,shot,gun,29.0,M,Black,Essex,MD,False,other,Not fleeing,True,Guns
+5826,Wallace Dean Staples,2020-05-16,shot,gun,42.0,M,White,Greenville,GA,False,attack,Foot,False,Guns
+5828,Randy Roszell Lewis,2020-05-16,shot,knife,38.0,M,Black,Houston,TX,False,attack,Not fleeing,True,Sharp objects
+5822,Juan M. Montalvo,2020-05-17,shot,gun,25.0,M,Hispanic,Pasco,WA,False,attack,Other,False,Guns
+5895,Bernard Ledlow,2020-05-17,shot,gun,39.0,M,White,East Baton Rouge,LA,False,attack,Other,False,Guns
+5817,Robert Wayne Lawson,2020-05-18,shot,gun,64.0,M,White,St. Francis County,AR,False,attack,Not fleeing,False,Guns
+5821,Jacob Bubb,2020-05-18,shot,gun,28.0,M,White,Suring,WI,False,other,Not fleeing,False,Guns
+5819,Levi Morse,2020-05-19,shot,gun,32.0,M,White,Chunchula,AL,False,attack,Not fleeing,False,Guns
+5820,Wilbon Cleveland Woodard,2020-05-19,shot,unknown,69.0,M,White,Tallahassee,FL,False,other,Not fleeing,False,Unknown
+5824,Tyler Hays,2020-05-19,shot,unarmed,29.0,M,White,Sale Creek,TN,False,attack,Not fleeing,False,Unarmed
+5894,Tobby Wiggins,2020-05-20,shot,unknown,45.0,M,Black,Atmore,AL,False,other,Foot,False,Unknown
+5870,Ryan Whitaker,2020-05-21,shot,gun,40.0,M,White,Phoenix,AZ,False,other,Not fleeing,False,Guns
+5892,Willie Lee Quarles,2020-05-21,shot,gun,60.0,M,Black,Greenwood,SC,False,attack,Not fleeing,False,Guns
+5840,Bernardo Palacios-Carbajal,2020-05-23,shot,gun,22.0,M,Hispanic,Salt Lake City,UT,False,other,Foot,True,Guns
+5873,Maurice S. Gordon,2020-05-23,shot,unarmed,28.0,M,Black,Bass River,NJ,False,other,Not fleeing,False,Unarmed
+5839,Joe Louis Castillanos,2020-05-25,shot,gun,38.0,M,Hispanic,Houston,TX,False,attack,Not fleeing,False,Guns
+5841,Dion Johnson,2020-05-25,shot,unknown,28.0,M,Black,Phoenix,AZ,False,undetermined,Not fleeing,False,Unknown
+5857,Jason Jesse Gallegos,2020-05-26,shot,gun,37.0,M,White,Lansing,MI,True,attack,Not fleeing,True,Guns
+5864,John Alvarado,2020-05-26,shot,gun,22.0,M,Hispanic,Corpus Christi,TX,False,attack,Not fleeing,False,Guns
+5875,Tracy Drowne,2020-05-26,shot,gun,42.0,F,White,Orlando,FL,False,attack,Not fleeing,False,Guns
+5882,Robert Avitia,2020-05-26,shot,gun,18.0,M,Hispanic,Los Angeles,CA,False,attack,Foot,False,Guns
+5843,Tony McDade,2020-05-27,shot,gun,38.0,M,Black,Tallahassee,FL,False,other,Not fleeing,False,Guns
+5847,Joshua Blessed,2020-05-27,shot,vehicle and gun,58.0,M,White,Geneseo,NY,False,attack,Car,False,Multiple
+5856,Rommel Mendoza,2020-05-27,shot,sword,50.0,M,Hispanic,Los Angeles,CA,False,attack,Other,False,Sharp objects
+5858,Hector Hernandez,2020-05-27,shot,knife,31.0,M,Hispanic,Fullerton,CA,False,attack,Not fleeing,False,Sharp objects
+5846,Modesto Reyes,2020-05-27,shot and Tasered,gun,35.0,M,Black,Jefferson Parish,LA,False,attack,Other,True,Guns
+5853,John Benedict Coleman,2020-05-28,shot,gun,53.0,M,White,Ogden,UT,False,attack,Not fleeing,False,Guns
+5855,Steven Edward Ferguson,2020-05-28,shot,vehicle,31.0,M,White,Centennial,CO,False,attack,Car,False,Vehicles
+5906,Ruben Smith,2020-05-28,shot,gun,35.0,M,Black,North Little Rock,AR,False,other,Not fleeing,False,Guns
+5844,Heba Momtaz Al-Azhari,2020-05-29,shot,knife,22.0,F,Other,Temple Terrace,FL,True,attack,Not fleeing,False,Sharp objects
+5845,TK TK,2020-05-29,shot,toy weapon,37.11793090137039,M,White,Lancaster,CA,False,attack,Other,False,Other unusual objects
+5848,TK TK,2020-05-29,shot,gun,32.0,M,Asian,San Diego,CA,False,attack,Other,False,Guns
+5850,Momodou Lamin Sisay,2020-05-29,shot,gun,39.0,M,Black,Snellville,GA,False,attack,Car,False,Guns
+5879,Jarvis Sullivan,2020-05-29,shot,vehicle,44.0,M,Black,Yulee,FL,False,attack,Car,False,Vehicles
+5863,Derrick Thompson,2020-05-30,shot,gun,46.0,M,Black,Fountain,FL,False,attack,Not fleeing,False,Guns
+5852,Israel Berry,2020-05-31,shot,unknown,49.0,M,White,Portland,OR,False,undetermined,Other,False,Unknown
+5878,Thomas Sutherlin,2020-05-31,shot and Tasered,gun,32.0,M,White,Watertown,WI,False,attack,Not fleeing,False,Guns
+5842,David McAtee,2020-06-01,shot,gun,53.0,M,Black,Louisville,KY,False,attack,Other,True,Guns
+5866,Jorge Gomez,2020-06-01,shot,gun,25.0,M,Hispanic,Las Vegas,NV,False,attack,Not fleeing,False,Guns
+5867,Ryan Emblem Moore,2020-06-01,shot,unknown,36.0,M,White,Fayetteville,AR,False,undetermined,Not fleeing,False,Unknown
+5896,Sean Monterrosa,2020-06-02,shot,hammer,22.0,M,Hispanic,Vallejo,CA,False,other,Not fleeing,False,Blunt instruments
+5897,Tyquarn Graves,2020-06-02,shot,gun,33.0,M,Black,Brooklyn,NY,False,other,Not fleeing,True,Guns
+5898,Mary Lawrence,2020-06-03,shot,knife,39.0,F,White,Poteau,OK,False,other,Not fleeing,False,Sharp objects
+5902,Gregory W. Hallback,2020-06-03,shot,gun,44.0,M,White,Aiken,SC,False,attack,Not fleeing,False,Guns
+5904,Eric A. Galvan,2020-06-03,shot,gun,25.0,M,Hispanic,Corpus Christi,TX,False,attack,Not fleeing,False,Guns
+5905,Scott Anderson Hutton,2020-06-03,shot,unknown,36.0,M,White,Alexander,AR,False,undetermined,Not fleeing,False,Unknown
+5903,Benjamin Ballard,2020-06-05,shot,gun,42.0,M,White,Mustang,OK,False,attack,Not fleeing,False,Guns
+5899,Kamal Flowers,2020-06-06,shot,gun,24.0,M,Black,New Rochelle,NY,False,attack,Foot,False,Guns
+5900,Erik Salgado,2020-06-06,shot,unknown,22.0,M,Hispanic,Oakland,CA,False,undetermined,Not fleeing,False,Unknown
+5908,Jarrid Hurst,2020-06-07,shot,knife,35.0,M,White,Industry,CA,True,other,Not fleeing,False,Sharp objects
+5911,Lewis Ruffin,2020-06-09,shot,gun,38.0,M,Black,Orlando,FL,False,attack,Other,False,Guns
+5913,Gregorio Cruz Vanloo,2020-06-11,shot,gun,28.0,M,White,DeKalb County,TN,False,other,Other,False,Guns
+5914,Mason James Lira,2020-06-11,shot,gun,26.0,M,White,Paso Robles,CA,True,attack,Foot,False,Guns
+5915,Michael Thomas,2020-06-11,shot,unknown,62.0,M,Black,Lancaster,CA,False,undetermined,Not fleeing,False,Unknown
+5916,Rayshard Brooks,2020-06-12,shot,Taser,27.0,M,Black,Atlanta,GA,False,attack,Foot,True,Electrical devices
+5925,Caine Van Pelt,2020-06-12,shot,gun,23.0,M,Black,Crown Point,IN,False,attack,Car,False,Guns
+5918,Hannah Fizer,2020-06-13,shot,unarmed,25.0,F,White,Sedalia,MO,False,other,Not fleeing,False,Unarmed
+5921,William Slyter,2020-06-13,shot,gun,22.0,M,White,Kansas City,MO,False,other,Other,False,Guns
+5924,Nicholas Hirsh,2020-06-15,shot,gun,31.0,M,White,Lawrence,KS,False,attack,Car,False,Guns
