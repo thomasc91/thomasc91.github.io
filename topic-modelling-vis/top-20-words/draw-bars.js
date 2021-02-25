@@ -13,7 +13,7 @@ async function drawBars() {
       top: 10,
       right: 30,
       bottom: 50,
-      left: 60,
+      left: 30,
     },
   }
   dimensions.boundedWidth = dimensions.width
