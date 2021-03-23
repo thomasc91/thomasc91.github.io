@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+body {
+
+  font-family: Poppins;
+  color: white;
+  background-color: black;
+
+}
+
+h1 {
+    padding-left: 40px;
+}
+
+p {
+	  font-size: 18px;
+    padding-left: 40px;
+
+
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+text {
+    fill: white;
+    font-size: 14px;
+    font-family: Poppins;
+}
+
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+
+
+.column {
+  float: left;
+  height: ; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+
+/*Header*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    height: 10px;
+    z-index: 1000;
+
+}
+
+.header-wrapper {
+    margin: 20px;
+    width: 95%;
+
+}
+
+.chapter-nav {
+    padding-left: 0;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chapter-nav li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1em;
+}
+
+#hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    float: left;
+}
+
+
+#d3-portfolio-home,#display-chapter {
+    vertical-align: middle;
+    float: left;
+    display: block;
+
+}
+
+
+#d3-portfolio-home:hover, #display-chapter:hover {
+    cursor: pointer;
+}
+
+#display-chapter{
+    display: none;
+}
+
+
+/*Modal header*/
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    /* overflow-x: hidden;*/
+    transition: 0.5s;
+}
+
+
+/*.overlay-content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+
+.closebtn {
+    font-size: 50px;
+    display: inline-block;
+    line-height: 20px;
+    color: white;
+    vertical-align: middle;
+}
+
+.closebtn:hover {
+    cursor: pointer;
+}
+
+.modal-header {
+    border-bottom: 0.5px solid #5E5E5E;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    width: 92%;
+    margin: 0 auto;
+    display: table;
+}
+
+
+.modal-header ul {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+}
+
+.modal-header ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.modal-header ul li {
+    padding-left: 2em;
+    text-align: left;
+}
+
+.modal-header ul li select {
+    border: none;
+    background: transparent url('https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png') no-repeat;
+    font-size: 16px;
+    font-family: 'Assistant';
+    color: #4A4A4A;
+     -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.modal-wrapper {
+
+    text-align: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.modal-chapter,
+.modal-visualization {
+
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2% 6%;
+    text-align: left;
+}
+
+
+
+#chapter-text,
+#visualization-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.modal-chapter-titles {
+    padding: 0;
+    margin: 0;
+}
+
+
+.modal-chapter-titles li {
+    font-size: 24px;
+    line-height: 1.8em;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.chapter-highlighted {
+
+    color: white !important;
+}
+
+
+/*Tooltips*/
+
+.d3-tip {
+  background: white;
+  padding: 12px;
+  border-radius: 2px;
+  line-height: 1.2;
+  color: black;
+}
+
+/*Buttons*/
+button{
+  border: 2px solid white;
+  width: 60%;
+  font-size: 20px;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-family: 'Poppins';
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+
+button:hover{
+  color: black;
+  border: 2px solid white;
+  background-color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+#header_text {
+  padding-left: 120px;
+  margin: 10px;
+  font-style: italic;
+  font-size: 28px;
+}

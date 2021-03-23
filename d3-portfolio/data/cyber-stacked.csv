@@ -1,0 +1,7 @@
+Target,Scanning or reconnaissance,Low-level malicious attack ,Malware/beaconing or other active network intrusion,Exfiltration or deletion/damage of key sensitive data or IP,Sustained disruption of essential systems and services
+State Government/Academia/Large organisations/Supply Chain,236,257,231,12,6
+Medium-sized organisations/Schools,102,246,132,9,3
+Federal Government/National Infrastructure,115,236,79,7,0
+Members of the Public,96,126,43,13,0
+Small organisations/Sole traders,42,96,71,16,3
+National Security/Australian Essential Services,22,34,18,5,0

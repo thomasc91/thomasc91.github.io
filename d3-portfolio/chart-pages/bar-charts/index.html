@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+	<title>Cyber Incidents by Type 2019-2020</title>
+	<link rel="stylesheet" href="../../css/chart-styles.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+	<script src="../../js/portfolio.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.extensions.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css">
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			licenseKey: "49CE0F05-AD924860-B690DD3F-E5551133",
+			anchors:["firstPage", "secondPage", "3rdPage"]
+
+		});
+	});
+	</script>
+
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header-wrapper">
+            <ul class="chapter-nav">
+                <li>
+                    <span onclick="openNav()" id="hamburger">&#9776; </span>
+                </li>
+            </ul>
+        </div>
+</div>
+<div class="content" id="fullpage">
+		<div class="section" id="barChart">
+				<div class="row">
+		  		<div class="column left">
+			    	<h1>Cyber security incidents, by type 2019-2020</h1>
+			    	<p>The <a href="https://www.cyber.gov.au/sites/default/files/2020-09/ACSC-Annual-Cyber-Threat-Report-2019-20.pdf" target=”_blank”>ACSC Annual Cyber Threat Report 2019-2020</a> provided the data for the chart on the left. The most common types of cyber incidents in Australia are displayed, from July 2019 to June 2020. </p>
+						<p>The most common type of cyber security incident over the reported period was 'malicious email'. Phishing and
+							spearphishing emails have consistently remained the most common cyber security incidents reported to
+							the ACSC. Adversaries continue to use phishing as a means of obtaining initial access into a network
+							including through compromising user credentials or installing malware after a recipient clicks on a
+							malicious link or attachment. The second most common incident was a 'compromised system'. This category relates to incidents where an adversary has accessed or modified a network,
+							account, database or website without authorisation.
+			  	</div>
+		  	<div class="column right">
+					<div id="bar-box-1">
+					<div id="barWrapper"></div>
+					</div>
+		  	</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="row">
+	  		<div class="column left">
+		    	<h1>Cyber security incidents, by categorisation 2019-2020</h1>
+		    	<p>The ACSC categorises each incident we respond to on a scale of Category 1, the most severe, to
+					Category 6, the least severe. Of the 2,266 incidents reported, the largest proportion were assessed as being
+					‘Category 5 – Moderate Incident’ (36.5%, n=828) followed by ‘Category 4 – Substantial Incident’ (33.3%,
+					n=754). These categories broadly represented malicious cyber activity such as targeted reconnaissance,
+					phishing emails and malicious software impacting larger organisations, key supply chain and
+					Commonwealth and state government entities. </p>
+		  	</div>
+	  	<div class="column right">
+				<div id="bar-box-2">
+				<div id="stackedBarsWrapper"></div>
+				</div>
+				</div>
+	  	</div>
+	</div>
+</div>
+
+
+
+			<div id="overlay">
+				<div class="modal-header">
+					 <div class="closebtn" onclick="closeNav()">&times;</div>
+				</div>
+
+				<div class="modal-wrapper">
+					<div class="modal-chapter">
+                		<div id="chapter-text"><span>Visualisation Type</span></div>
+                		<ul class="modal-chapter-titles">
+		                    <li id="bc-li" class="chapter-highlighted">Bar Charts</li>
+		                    <li id="lc-li">Line Charts</li>
+		                    <li id="dc-li">Donut charts</li>
+		                    <li id="bw-li">Beeswarm Charts</li>
+		                    <li id="nc-li">Network Charts</li>
+                		</ul>
+            		</div>
+				</div>
+
+			</div>
+	<script src="../../js/draw-bars-responsive.js"></script>
+
+
+	</body>
+</html>
