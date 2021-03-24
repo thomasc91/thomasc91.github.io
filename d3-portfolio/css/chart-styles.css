@@ -271,3 +271,11 @@ button:hover{
   font-style: italic;
   font-size: 28px;
 }
+
+.scroll-down{
+  position: fixed;
+  bottom: 2%;
+  left:50%
+
+
+}
