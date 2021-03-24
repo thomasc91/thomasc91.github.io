@@ -1,5 +1,5 @@
 async function drawBeeswarm() {
-  data = await d3.csv("/data/fatal-police-shootings-data.csv")
+  data = await d3.csv("../../data/fatal-police-shootings-data.csv")
   var dateParse = d3.timeParse("%d/%m/%Y");
   var formatDate = d3.timeFormat("%d %B %Y")
 
@@ -274,5 +274,14 @@ async function drawBeeswarm() {
 
 
 };
-drawBeeswarm();
-$(window).on("resize", drawBeeswarm)
+
+var resizeTimer;
+window.onresize = function(event) {
+ clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function()
+  {
+    var s = d3.selectAll('svg');
+    s = s.remove();
+    drawBeeswarm();
+  }, 100);
+}
