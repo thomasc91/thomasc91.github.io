@@ -1,6 +1,6 @@
 async function drawBars() {
 
-  data = await d3.csv('/data/cyber_incidents.csv')
+  data = await d3.csv('../d3-portfolio/data/cyber_incidents.csv')
   // Access the data
   var yAccessor = d => d.incident
   var xAccessor = d => +d.frequency
@@ -108,7 +108,7 @@ return barWrapper.node()
 async function drawStackedBars() {
 
 		// Access data
-		dataset = await d3.csv("/data/cyber-stacked.csv", d3.autoType)	//todo get total and sort by total
+		dataset = await d3.csv("../d3-portfolio/data/cyber-stacked.csv", d3.autoType)
 
 		var series = d3.stack()
 			.keys(dataset.columns.slice(1))
