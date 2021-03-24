@@ -274,6 +274,7 @@ async function drawBeeswarm() {
 
 
 };
+drawBeeswarm();
 
 var resizeTimer;
 window.onresize = function(event) {
