@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	<title>Cryptocurrency prices</title>
+	<link rel="stylesheet" href="../../css/chart-styles.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+	<script src="../../js/portfolio.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+
+
+<div class="header">
+	<div class="header-wrapper">
+            <ul class="chapter-nav">
+                <li>
+                    <span onclick="openNav()" id="hamburger">&#9776; </span>
+                </li>
+								 <li><a href="../../index.html">D3.js Portfolio</a></li>
+            </ul>
+        </div>
+</div>
+			<div class="row">
+		  		<div class="column left">
+			    	<h1>Bitcoin Price 2013-2021</h1>
+			    	<p>Data source: <a href="https://www.coindesk.com/price/bitcoin">Coindesk</a></p>
+			  	</div>
+		  	<div class="column right">
+					<div id="lineChart"></div>
+					</div>
+				</div>
+
+
+
+			<div id="overlay">
+				<div class="modal-header">
+					 <div class="closebtn" onclick="closeNav()">&times;</div>
+				</div>
+
+				<div class="modal-wrapper">
+					<div class="modal-chapter">
+                		<div id="chapter-text"><span>Visualisation Type</span></div>
+                		<ul class="modal-chapter-titles">
+		                    <li id="bc-li">Bar Charts</li>
+		                    <li id="lc-li" class="chapter-highlighted">Line Charts</li>
+												<li id="mc-li">Multi-line Charts</li>
+		                    <li id="dc-li">Donut charts</li>
+		                    <li id="bw-li">Beeswarm Charts</li>
+		                    <li id="nc-li">Network Charts</li>
+                		</ul>
+            		</div>
+				</div>
+
+			</div>
+	<script src="../../js/draw-lines-responsive.js"></script>
+
+
+
+	</body>
+</html>

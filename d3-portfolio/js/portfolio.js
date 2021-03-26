@@ -17,8 +17,8 @@ function closeNav() {
     enableScroll();
 }
 
-var chapterlist = new Array("bc", "lc", "dc", "bw", "nc");
-var chapter_list = new Array("bar-charts", "line-charts", "donut-charts", "beeswarm-charts", "network-charts");
+var chapterlist = new Array("bc", "lc", "mc", "dc", "bw", "nc");
+var chapter_list = new Array("bar-charts", "line-charts", "multi-line-charts", "donut-charts", "beeswarm-charts", "network-charts");
 
 function modalTitleOnLoad() {
 

@@ -15,8 +15,6 @@ h1 {
 p {
 	  font-size: 18px;
     padding-left: 40px;
-
-
 }
 
 a:link {
@@ -33,8 +31,7 @@ text {
     font-family: Poppins;
 }
 
-ul,
-li {
+#menu ul, li {
     text-decoration: none;
     list-style-type: none;
     color: white;
@@ -48,10 +45,12 @@ li {
 }
 
 .left {
+  padding-top: 80px;
   width: 40%;
 }
 
 .right {
+  padding-top: 80px;
   width: 60%;
 }
 
@@ -82,10 +81,11 @@ li {
     display: inline-block;
     vertical-align: middle;
     padding-right: 1em;
+    font-size: 24px;
 }
 
 #hamburger {
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
     color: white;
     float: left;
@@ -276,6 +276,56 @@ button:hover{
   position: fixed;
   bottom: 2%;
   left:50%
+}
 
+/*Line chart styling*/
+.line {
+    fill: none;
+    stroke: #fcc117;
+    stroke-width: 2;
+}
+/*Multi-line chart styling*/
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
 
+#selectbox {
+  border: 2px solid white;
+  width: 60%;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-family: 'Poppins';
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+
+ul.thunderbolt{
+  margin-left: 40px;
+}
+
+ul.thunderbolt > li:nth-child(1) {
+  list-style: "😷   ";
+  list-style-position: outside;
+}
+ul.thunderbolt > li:nth-child(2) {
+  margin-top: 10px;
+  list-style: "🏀  ";
+  list-style-position: outside;
+}
+ul.thunderbolt > li:nth-child(3) {
+  margin-top: 10px;
+  list-style: "🤷‍♂️  ";
+  list-style-position: outside;
+}
+ul.thunderbolt > li:nth-child(4) {
+  margin-top: 10px;
+  list-style: "👩🏽  ";
+  list-style-position: outside;
+}
+ul.thunderbolt ul li {
+  margin-top: 10px;
+  list-style-type: circle;
 }
