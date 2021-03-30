@@ -41,7 +41,7 @@ text {
 
 .column {
   float: left;
-  height: ; /* Should be removed. Only for demonstration */
+  pointer-events: all;
 }
 
 .left {
@@ -328,4 +328,10 @@ ul.thunderbolt > li:nth-child(4) {
 ul.thunderbolt ul li {
   margin-top: 10px;
   list-style-type: circle;
+}
+
+.responsive {
+  max-width: 100%;
+  margin-top: 21.44px;
+  height: auto;
 }

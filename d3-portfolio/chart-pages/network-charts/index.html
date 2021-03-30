@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<title>Force directed network</title>
+	<link rel="stylesheet" href="../../css/chart-styles.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+	<script src="../../js/portfolio.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+	<link rel="shortcut icon" type="image/png" href="../../img/favicon.png" />
+
+<div class="header">
+	<div class="header-wrapper">
+            <ul class="chapter-nav">
+                <li>
+                    <span onclick="openNav()" id="hamburger">&#9776; </span>
+                </li>
+								 <li><a href="../../index.html">D3.js Portfolio</a></li>
+            </ul>
+        </div>
+</div>
+			<div class="row">
+		  		<div class="column left">
+			    	<h1>A song of nodes and edges: Network analysis in Game of Thrones</h1>
+						<h2>
+						<p>Data source: <a href="https://github.com/mathbeveridge/asoiaf">GitHub</a></p>
+						<p>To demonstrate the concept of network analysis, I built an interactive, force-directed graph of character relationships for the first novel of George R.R Martin's Game of Thrones series using D3.js. The <a href ="https://networkofthrones.wordpress.com/">Network of Thrones article</a> by Andrew Beveridge and Jie Shan inspired the work. The source data gathered from the novels can be found on Andrew Beveridge's <a href = "https://github.com/mathbeveridge/asoiaf">GitHub</a>. </p>
+						<p>The characters that feature in the novel are listed as the nodes in the network. A connection or 'edge' is counted when two character's names appear within 15 words of each other.</p>
+			  	</div>
+		  	<div class="column right">
+					<img src="../../img/game-of-thrones.png" alt="got-title" class="responsive">
+					<div id="networkChart"></div>
+					</div>
+				</div>
+
+
+
+			<div id="overlay">
+				<div class="modal-header">
+					 <div class="closebtn" onclick="closeNav()">&times;</div>
+				</div>
+
+				<div class="modal-wrapper">
+					<div class="modal-chapter">
+                		<div id="chapter-text"><span>Visualisation Type</span></div>
+                		<ul class="modal-chapter-titles">
+		                    <li id="bc-li">Bar Charts</li>
+												<li id="mc-li">Multi-line Charts</li>
+		                    <li id="lc-li">Line Charts</li>
+		                    <li id="dc-li">Donut charts</li>
+		                    <li id="bw-li">Beeswarm Charts</li>
+		                    <li id="nc-li" class="chapter-highlighted">Network Charts</li>
+                		</ul>
+            		</div>
+				</div>
+
+			</div>
+	<script src="../../js/draw-force-network-responsive.js"></script>
+
+
+
+	</body>
+</html>
