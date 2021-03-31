@@ -12,6 +12,10 @@ h1 {
     padding-left: 40px;
 }
 
+h3 {
+  margin: 0 auto;
+}
+
 p {
 	  font-size: 18px;
     padding-left: 40px;
@@ -334,4 +338,90 @@ ul.thunderbolt ul li {
   max-width: 100%;
   margin-top: 21.44px;
   height: auto;
+}
+
+.novel-responsive {
+  max-height: 120px;
+}
+
+.fp-tableCell{
+     vertical-align: top;
+}
+
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.2);
+}
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: white;
+  color: black;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 1fr 80px;
+
+  grid-template-areas:
+    "title-img title-img title-img click-section click-section"
+    "agot-img acok-img asos-img affc-img adwd-img"
+    "agot acok asos affc adwd";
+
+}
+
+.title-img { grid-area: title-img; }
+
+.click-section { grid-area: click-section; margin: 0 auto;}
+
+.agot { grid-area: agot; border-top: 1px solid white; border-bottom: 1px solid white; place-self: center; text-align: center; cursor: pointer;}
+
+.acok { grid-area: acok; border-top: 1px solid white; border-bottom: 1px solid white; place-self: center; text-align: center; cursor: pointer;}
+
+.asos { grid-area: asos; border-top: 1px solid white; border-bottom: 1px solid white; place-self: center; text-align: center; cursor: pointer;}
+
+.affc { grid-area: affc; border-top: 1px solid white; border-bottom: 1px solid white; place-self: center; text-align: center; cursor: pointer;}
+
+.adwd { grid-area: adwd; border-top: 1px solid white; border-bottom: 1px solid white; place-self: center; text-align: center; cursor: pointer;}
+
+.agot-img { grid-area: agot-img; margin: 10px auto; cursor: pointer;}
+
+.acok-img { grid-area: acok-img; margin: 10px auto; cursor: pointer;}
+
+.asos-img { grid-area: asos-img; margin: 10px auto; cursor: pointer;}
+
+.affc-img { grid-area: affc-img; margin: 10px auto; cursor: pointer;}
+
+.adwd-img { grid-area: adwd-img; margin: 10px auto; cursor: pointer;}
+
+.network-wrapper {
+  margin-left: 20px
 }

@@ -1,5 +1,6 @@
+function drawNetwork(novel) {
 var w = d3.select("#networkChart").node().clientWidth;
-var h = 700;
+var h = 400;
 var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
 var focus_node = null, highlight_node = null;
 var text_center = false;
@@ -34,7 +35,8 @@ var svg = d3.select("#networkChart").append("svg");
 var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom])
 var g = svg.append("g");
 svg.style("cursor","move");
-d3.json("a-game-of-thrones-graph.json", function(error, graph) {
+//"a-game-of-thrones-graph.json"
+d3.json(novel, function(error, graph) {
 var linkedByIndex = {};
     graph.links.forEach(function(d) {
 	linkedByIndex[d.source + "," + d.target] = true;
@@ -242,7 +244,7 @@ function set_highlight(d)
 	});
 
   function resize() {
-    var width = d3.select("#networkChart").node().clientWidth, height = window.innerHeight*.7;
+    var width = d3.select("#networkChart").node().clientWidth, height = window.innerHeight*.5;
 	svg.attr("width", width).attr("height", height);
 
 	force.size([force.size()[0]+(width-w)/zoom.scale(),force.size()[1]+(height-h)/zoom.scale()]).resume();
@@ -326,3 +328,79 @@ function vis_by_link_score(score)
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
+}
+
+var agot_button = d3.select("#agot-img")
+var acok_button = d3.select("#acok-img")
+var asos_button = d3.select("#asos-img")
+var affc_button = d3.select("#affc-img")
+var adwd_button = d3.select("#adwd-img")
+
+var agot_title = d3.select("#agot")
+var acok_title = d3.select("#acok")
+var asos_title = d3.select("#asos")
+var affc_title = d3.select("#affc")
+var adwd_title = d3.select("#adwd")
+
+
+agot_button.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-game-of-thrones.json")
+})
+
+acok_button.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-clash-of-kings.json")
+})
+
+asos_button.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-storm-of-swords.json")
+})
+
+affc_button.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-feast-for-crows.json")
+})
+
+adwd_button.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-dance-with-dragons.json")
+})
+
+agot_title.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-game-of-thrones.json")
+})
+
+acok_title.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-clash-of-kings.json")
+})
+
+asos_title.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-storm-of-swords.json")
+})
+
+affc_title.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-feast-for-crows.json")
+})
+
+adwd_title.on("click", function(d) {
+  var s = d3.selectAll('svg');
+  s = s.remove();
+  drawNetwork("a-dance-with-dragons.json")
+})
+
+drawNetwork("a-game-of-thrones.json")

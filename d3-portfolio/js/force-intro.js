@@ -1,19 +1,14 @@
 //Home Page Graphic
 //adapted from https://bl.ocks.org/mbostock/3231307
 
-//const width = 400
-//const height = 400
-var width = d3.select("#background").node().clientWidth;
-var height = d3.select("#background").node().clientHeight;
-
-const n = 100
+const n = 200
 
 const color = ['black', '#D81B60', '#D81B60'];
 
 function genData() {
-  const k = width / 200;
-  const r = d3.randomUniform(k, k * 4);
-  return Array.from({length: 200}, (_, i) => ({r: r(), group: i && (i % n + 1)}));
+  const k = width / 300;
+  const r = d3.randomUniform(k, k * 3);
+  return Array.from({length: n}, (_, i) => ({r: r(), group: i && (i % n + 1)}));
 }
 
 function drawChart(data){
@@ -22,14 +17,14 @@ function drawChart(data){
   var canvas = d3.select("#background").append("canvas")
     .attr("width", width)
     .attr("height", height);
-  //var canvas = document.getElementById('canvas'); 
-  //var context = canvas.getContext("2d"); 
+  //var canvas = document.getElementById('canvas');
+  //var context = canvas.getContext("2d");
   var context = canvas.node().getContext("2d");
 
 const nodes = genData()
   const simulation = d3.forceSimulation(nodes)
-      .alphaTarget(0.3) // stay hot
-      .velocityDecay(0.1) // low friction
+      .alphaTarget(0.5) // stay hot
+      .velocityDecay(0.4) // low friction
       .force("x", d3.forceX().strength(0.01))
       .force("y", d3.forceY().strength(0.01))
       .force("collide", d3.forceCollide().radius(d => d.r + 1).iterations(3))
@@ -40,13 +35,13 @@ const nodes = genData()
       .on("touchmove", event => event.preventDefault())
       .on("pointermove", pointed);
   //invalidation.then(() => simulation.stop());
-  
+
  function pointed(event) {
     const [x, y] = d3.pointer(event);
     nodes[0].fx = x - width / 2;
     nodes[0].fy = y - height / 2;
-  }  
-  
+  }
+
 function ticked() {
     context.clearRect(0, 0, width, height);
     context.save();
@@ -56,7 +51,7 @@ function ticked() {
       context.moveTo(d.x + d.r, d.y);
       context.arc(d.x, d.y, d.r, 0, 2 * Math.PI);
     context.fillStyle = color[d.group];
-    context.fill(); 
+    context.fill();
     }
     context.restore();
   }
@@ -69,7 +64,7 @@ drawChart(genData)
 
 $(window).on("resize", function () {
   width = d3.select("#background").node().clientWidth
-  height = d3.select("#background").node().clientHeight 
+  height = d3.select("#background").node().clientHeight
   d3.select(context.canvas)
     .attr("width", width)
     .attr("height", height);

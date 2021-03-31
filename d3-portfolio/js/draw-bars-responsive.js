@@ -13,7 +13,7 @@ async function drawBars() {
     height: 500,
     margin: {
       top: 10,
-      right: 30,
+      right: 50,
       bottom: 50,
       left: 300,
     },
@@ -123,7 +123,7 @@ async function drawStackedBars() {
 
 		// Create chart dimensions
     var width = d3.select('#stackedBarsWrapper').node().clientWidth;
-		var margin = ({top: 30, right: 10, bottom: 30, left: 350})
+    var margin = ({top: 10, right: 50, bottom: 50, left: 350})
 		var height = dataset.length * 70 + margin.top + margin.bottom
 
 		// Create axes
@@ -139,7 +139,6 @@ async function drawStackedBars() {
 		var xAxis = g => g
 			.style("transform", `translateY(${height - margin.bottom}px)`)
 			.call(d3.axisBottom(xScale).ticks(2, "s"))
-
 
 		var yAxis = g => g
 			.attr("transform", `translate(${margin.left},0)`)
@@ -180,12 +179,17 @@ async function drawStackedBars() {
 
 		svg.append("g")
 		  .call(xAxis);
-
-		svg.append("g")
-		  .call(yAxis)
-
+    svg.append("g")
+      .call(yAxis)
     svg.selectAll('text')
-    .call(wrap, 300)
+      .call(wrap, 300)
+
+    var xAxisLabel = svg.append("text")
+       .attr("x", margin.right + (width / 2))
+       .attr("y", height - 10)
+       .text("Event Frequency")
+
+
 
 	return svg.node()
 

@@ -136,3 +136,10 @@ ul, li{
 	cursor: pointer;
 	border: 2px solid white;
 }
+
+#aboutSection {
+	transition: all 0.8 ease-out;
+	background-color: rgb(0,0,0, 0.8);
+	pointer-events: auto;
+  padding: 40px;
+}

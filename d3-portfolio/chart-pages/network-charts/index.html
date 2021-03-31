@@ -24,14 +24,28 @@
 			<div class="row">
 		  		<div class="column left">
 			    	<h1>A song of nodes and edges: Network analysis in Game of Thrones</h1>
-						<h2>
 						<p>Data source: <a href="https://github.com/mathbeveridge/asoiaf">GitHub</a></p>
-						<p>To demonstrate the concept of network analysis, I built an interactive, force-directed graph of character relationships for the first novel of George R.R Martin's Game of Thrones series using D3.js. The <a href ="https://networkofthrones.wordpress.com/">Network of Thrones article</a> by Andrew Beveridge and Jie Shan inspired the work. The source data gathered from the novels can be found on Andrew Beveridge's <a href = "https://github.com/mathbeveridge/asoiaf">GitHub</a>. </p>
-						<p>The characters that feature in the novel are listed as the nodes in the network. A connection or 'edge' is counted when two character's names appear within 15 words of each other.</p>
+						<p>To demonstrate the concept of network analysis, the chart on the right shows an interactive, force-directed graph of character relationships for George R.R Martin's Game of Thrones series using D3.js. The <a href ="https://networkofthrones.wordpress.com/">Network of Thrones article</a> by Andrew Beveridge and Jie Shan inspired the work. The source data gathered from the novels can be found on Andrew Beveridge's <a href = "https://github.com/mathbeveridge/asoiaf">GitHub</a>. </p>
+						<p>The characters that feature in the novel are listed as the nodes in the network. A connection or 'edge' is counted when two character's names appear within 15 words of each other in each novel.</p>
 			  	</div>
 		  	<div class="column right">
-					<img src="../../img/game-of-thrones.PNG" alt="got-title" class="responsive">					
+					<div class="network-wrapper">
+					<div class="grid-container">
+					  <div class="title-img"><img src="../../img/game-of-thrones.png" alt="got-title" class="responsive"></div>
+					  <div class="click-section"><p>Click on the titles to show the characters from the novel</p></div>
+					  <div class="agot hvr-fade" id="agot"><h3>A Game of Thrones</h3></div>
+					  <div class="acok hvr-fade" id="acok"><h3>A Clash of Kings</h3></div>
+					  <div class="asos hvr-fade" id="asos"><h3>A Storm of Swords</h3></div>
+					  <div class="affc hvr-fade" id="affc"><h3>A Feast for Crows</h3></div>
+					  <div class="adwd hvr-fade" id="adwd"><h3>A Dance with Dragons</h3></div>
+					  <div class="agot-img" id="agot-img"><img src="../../img/agot-img.png" class="novel-responsive hvr-grow"></div>
+					  <div class="acok-img" id="acok-img"><img src="../../img/acok-img.png" class="novel-responsive hvr-grow"></div>
+					  <div class="asos-img" id="asos-img"><img src="../../img/asos-img.png" class="novel-responsive hvr-grow"></div>
+					  <div class="affc-img" id="affc-img"><img src="../../img/affc-img.png" class="novel-responsive hvr-grow"></div>
+					  <div class="adwd-img" id="adwd-img"><img src="../../img/adwd-img.png" class="novel-responsive hvr-grow"></div>
+					</div>
 					<div id="networkChart"></div>
+					</div>
 					</div>
 				</div>
 
@@ -49,7 +63,6 @@
 		                    <li id="bc-li">Bar Charts</li>
 												<li id="mc-li">Multi-line Charts</li>
 		                    <li id="lc-li">Line Charts</li>
-		                    <li id="dc-li">Donut charts</li>
 		                    <li id="bw-li">Beeswarm Charts</li>
 		                    <li id="nc-li" class="chapter-highlighted">Network Charts</li>
                 		</ul>
