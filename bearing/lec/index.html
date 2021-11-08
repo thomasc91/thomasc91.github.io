@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio Drill-down</title>
+  <link rel="stylesheet" type="text/css" href="../../../styles.css"/>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="drill-down-event-agg-loss">
+      <div class='drill-down-loss-event'></div>
+          <div class='currency'></div><div class="current-total-exposure"></div>
+          <div class=exposure-change>
+            <div class='exposure-change-value'>▼ $35,000 (15.9%)</div><div class='exposure-change-time'> 6M</div>
+          </div>
+        </div>
+      <div class="drill-down-lec">
+        <div class='drill-down-lec-title'>Loss-exceedance curve for </div><div class='drill-down-loss-event'></div><div class='drill-down-lec-title'> events</div>
+        <div id='lecLineChart'>
+      </div>
+      <p><i>Select an individual loss event to drill-down into the loss calculations.</i></p>
+      <select id="selectbox">
+          <option value='Ransomware'>Ransomware</option>
+          <option value='Data Exfiltration'>Data Exfiltration</option>
+          <option value='Business Email Compromise'>Business Email Compromise</option>
+        </select>
+    </div>
+
+
+  </article>
+<script src="./dropdown.js"></script>
+<script src="./draw-lec.js"></script>
+</body>
+</html>
