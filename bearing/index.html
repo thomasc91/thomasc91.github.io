@@ -3,26 +3,28 @@
 <head>
   <title>Bearing</title>
   <link rel="stylesheet" type="text/css" href="./styles.css"/>
-  <script src="https://d3js.org/d3.v4.min.js"></script>	
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-  
-    
-    
 
-      <div class="loss-vis-box">
-        <div id="bubble-vis">
 
-      </div>
+    <div class="loss-vis-box">
+      <div id="bubble-vis">
+    </div>
   </div>
-  
-  <h4>Click to see the breakdown by loss type</h4>
+  <div class="loss-overlay">
+    <h2>How a ransomware attack costs $1,049,200 in the worst case scenario</h2>
+  </div>
+  <div class="loss-vis-box-controls">
+
    <div class="loss-button-box">
       <div id ='toolbar'>
           <a href='#' id='All Costs' class ='loss-button active'>All Costs</a>
           <a href='#' id ='Types of Cost' class ='loss-button'>Types of Cost</a>
       </div>
     </div>
+    <p><i>Mouse over the nodes to see the cost details. Click the buttons to see the breakdown by loss type</i></p>  
+</div>
 <script src="./tooltip.js"></script>
 <script src="./draw-bubble-chart-worst.js"></script>
 

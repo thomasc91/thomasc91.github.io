@@ -8,15 +8,15 @@
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 700;
-  var height = 380;
+  var width = 800;
+  var height = 450;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
 
   // Locations to move bubbles towards, depending
   // on which view mode is selected.
-  var center = { x: width * 0.7, y: height * 0.4 };
+  var center = { x: width * 0.5, y: height * 0.5 };
 
   var yearCenters = {
     Response: { x: width * 0.2, y: height / 2 },
@@ -267,7 +267,7 @@ function bubbleChart() {
    * Shows Year title displays.
    */
   function showYearTitles() {
-    toggleAllCostsVisibility('hide')
+    //toggleAllCostsVisibility('hide')
 
     // Another way to do this would be to create
     // the year texts once and then just hide them.
