@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700&display=swap');
 
 body {
-  background-color: rgb(245, 244, 241);
+  background-color: black;
   overflow-x: hidden;
 }
 
@@ -89,6 +89,10 @@ svg circle:hover {
 
 .sizeLegend2 {
   opacity: 0.7
+}
+
+h1, h2, h3, h4, p, ul, li {
+  color: white;
 }
 
 a {
