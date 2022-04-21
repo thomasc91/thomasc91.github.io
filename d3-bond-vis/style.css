@@ -4,7 +4,9 @@
 
 body {
   background-color: black;
+  color: white;
   overflow-x: hidden;
+  margin: 0px;
 }
 
 #sections {
@@ -14,6 +16,7 @@ body {
   top: 60px;
   z-index: 90;
   margin-right: 50px;
+  margin-left: 50px;
 }
 
 .categoryLegend {
@@ -43,16 +46,15 @@ h1 {
   font-size: 35px;
 }
 
-strong {
-  color: rgb(245, 155, 155);
-}
+strong {}
 
 #graphic {
-  margin: auto;
-  width: 1500px;
+  margin: 0px;
+  width: 1250px;
+  /*
   flex-direction: row;
   align-items: top;
-  justify-content: space-around;
+  */
 }
 
 #vis {
@@ -61,8 +63,9 @@ strong {
   top: 0px;
   z-index: 1;
   margin-left: 0;
-  height: 1000px;
-  width: 1000px;
+  margin-right: 0px;
+  height: 700px;
+  width: 600px;
 }
 
 #tooltip {
@@ -87,9 +90,7 @@ svg circle:hover {
   fill: #939393;
 }
 
-.sizeLegend2 {
-  opacity: 0.7
-}
+.sizeLegend2 {}
 
 h1, h2, h3, h4, p, ul, li {
   color: white;
@@ -98,8 +99,4 @@ h1, h2, h3, h4, p, ul, li {
 a {
   color: rgb(221, 0, 255);
   text-decoration: none;
-}
-
-img {
-  display: none;
 }

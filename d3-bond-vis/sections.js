@@ -10,6 +10,15 @@ const margin = {
 const width = 800
 const height = 900
 
+const topVehicles = [
+  '1_1964 Aston Martin DB5',
+  '2_Parachute',
+  '3_Skis',
+  '4_Train',
+  '5_Horse',
+  '0_Other'
+]
+
 const vehicleClasses = [
   'Airplane',
   'Jetpack',
@@ -87,17 +96,17 @@ const landBasedXY = {
 }
 
 const landBasedLabelXY = {
-  'Car': [430, 630], //big
+  'Car': [430, 600], //big
   'Truck': [50, 470],
   'Train': [150, 620],
   'Animal': [500, 270],
   'Sleigh': [170, 740],
   'Cable car': [690, 300],
   'Skis': [690, 700],
-  'Hovercraft': [550, 640],
+  'Hovercraft': [550, 660],
   'Motorcycle': [200, 310],
   'Bus': [690, 500],
-  'Rickshaw': [300, 680],
+  'Rickshaw': [300, 690],
   'Snowmobile': [50, 740],
   'Tram': [690, 400],
   'Cello case': [350, 770],
@@ -184,7 +193,7 @@ const waterBasedLabelXY = {
   'Space station': [2000, 450],
   'Balloon': [2000, 450],
 
-  'Boat': [430, 600], //big
+  'Boat': [430, 580], //big
   'Submarine': [150, 620],
   'Life raft': [700, 500],
   'Wetbike': [550, 660],
@@ -244,15 +253,15 @@ const airBasedLabelXY = {
   'Ferris wheel': [2000, 800],
   'Tank': [2000, 750],
 
-  'Airplane': [440, 550],
-  'Jetpack': [210, 450],
+  'Airplane': [430, 550],
+  'Jetpack': [200, 450],
   'Helicopter': [650, 490],
-  'Skyhook': [210, 550],
+  'Skyhook': [200, 550],
   'Parachute': [600, 650],
-  'Paraglider': [210, 640],
-  'Space shuttle': [410, 310],
-  'Space station': [260, 310],
-  'Balloon': [410, 640],
+  'Paraglider': [200, 640],
+  'Space shuttle': [400, 310],
+  'Space station': [250, 310],
+  'Balloon': [400, 640],
 
   'Boat': [2000, 600], //big
   'Submarine': [2000, 620],
@@ -271,11 +280,14 @@ d3.csv('data/james-bond-data.csv', function(d) {
     movieActor: d.movieActor,
     bondImg: d.bondImg,
     vehicleName: d.momentVehicle,
+    momentVehicleTop: d.momentVehicleTop,
     momentIn: +d.momentIn,
     momentDuration: +d.momentDuration,
+    movieDuration: +d.movieDuration,
     momentDurationStacked: +d.momentDurationStacked,
     momentVehicleClass: d.momentVehicleClass,
-    momentType: d.momentType
+    momentType: d.momentType,
+    movieYear: +d.movieYear
 
   };
 }).then(data => {
@@ -285,107 +297,83 @@ d3.csv('data/james-bond-data.csv', function(d) {
   setTimeout(drawInitial(), 100)
 })
 
+
 const colors = [
-  '#800832',
-  '#8b253f',
-  '#96394d',
-  '#a14b5b',
-  '#ab5d6a',
-  '#b56e79',
-  '#be7f88',
-  '#c79198',
-  '#d0a2a8',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
+  '#968148',
 
-  '#193d70',
-  '#193d70',
-  '#28497f',
-  '#28497f',
-  '#36568f',
-  '#36568f',
-  '#44639f',
-  '#44639f',
-  '#5270af',
-  '#5270af',
-  '#5f7ebf',
-  '#5f7ebf',
-  '#6d8cd0',
-  '#6d8cd0',
-  '#7b9ae1',
-  '#7b9ae1',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
+  '#848484',
 
-  '#707070',
-  '#838383',
-  '#969696',
-  '#bebebe',
-  '#aaaaaa'
+  '#5584AC',
+  '#5584AC',
+  '#5584AC',
+  '#5584AC',
+  '#5584AC',
+]
+
+const colorsTop = [
+  '#848484',
+  '#968148',
+  '#848484',
+  '#848484',
+  '#848484',
+  'black'
 ]
 
 //Create all the scales and save to global variables
 
 function createScales() {
-  durationScale = d3.scaleLinear(d3.extent(dataset, d => d.momentDuration), [5, 20])
-  durationStackedXScale = d3.scaleLinear(d3.extent(dataset, d => d.momentDurationStacked), [margin.left, width - margin.right])
+  durationScale = d3.scaleLinear(d3.extent(dataset, d => d.momentDuration), [6, 18])
+  durationStackedXScale = d3.scaleLinear(d3.extent(dataset, d => d.momentDurationStacked), [margin.left, width - margin.right - 80])
+  movieYearXScale = d3.scaleLinear(d3.extent(dataset, d => d.movieYear), [margin.left, width - margin.right - 80]).nice()
   momentInXScale = d3.scaleLinear(d3.extent(dataset, d => d.momentIn), [margin.left, width - margin.right])
   movieNameYScale = d3.scalePoint().domain(dataset.map(d => d.movieName)).range([margin.top, height - margin.bottom]).padding(0.5)
+  vehicleImgYScale = d3.scalePoint().domain(dataset.map(d => d.momentVehicleTop)).range([margin.top, height - margin.bottom]).padding(0.5)
   bondImgYScale = d3.scalePoint().domain(dataset.map(d => d.movieActor)).range([margin.top, height - margin.bottom]).padding(0.5)
-  //salaryYScale = d3.scaleLinear([20000, 110000], [margin.top + height, margin.top])
   categoryColorScale = d3.scaleOrdinal(vehicleClasses, colors)
+  categoryColorScaleTop = d3.scaleOrdinal(topVehicles, colorsTop)
 
-  //shareWomenXScale = d3.scaleLinear(d3.extent(dataset, d => d.ShareWomen), [margin.left, margin.left + width])
-  //enrollmentScale = d3.scaleLinear(d3.extent(dataset, d => d.Total), [margin.left + 120, margin.left + width - 50])
-  //enrollmentSizeScale = d3.scaleLinear(d3.extent(dataset, d => d.Total), [10, 60])
-  //histXScale = d3.scaleLinear(d3.extent(dataset, d => d.Midpoint), [margin.left, margin.left + width])
-  //histYScale = d3.scaleLinear(d3.extent(dataset, d => d.HistCol), [margin.top + height, margin.top])
 }
-
-function createLegend(x, y) {
-  let svg = d3.select('#legend')
-
-  svg.append('g')
-    .attr('class', 'categoryLegend')
-    .attr('transform', `translate(${x},${y})`)
-
-  categoryLegend = d3.legendColor()
-    .shape('path', d3.symbol().type(d3.symbolCircle).size(100)())
-    .shapePadding(10)
-    .scale(categoryColorScale)
-
-  d3.select('.categoryLegend')
-    .call(categoryLegend)
-}
-
-function createSizeLegend() {
-  let svg = d3.select('#legend2')
-  svg.append('g')
-    .attr('class', 'sizeLegend')
-    .attr('transform', `translate(100,50)`)
-
-  sizeLegend2 = d3.legendSize()
-    .scale(durationScale)
-    .shape('circle')
-    .shapePadding(15)
-    .title('Duration Scale')
-    .labelFormat(d3.format("$,.2r"))
-    .cells(7)
-
-  d3.select('.sizeLegend')
-    .call(sizeLegend2)
-}
+var formatSeconds = d3.format(".1f")
+var formatSeconds2 = d3.format(".0f")
 
 function createSizeLegend2() {
   let svg = d3.select('#legend3')
   svg.append('g')
     .attr('class', 'sizeLegend2')
     .attr('transform', `translate(50,100)`)
+    .attr('stroke', 'white')
 
   sizeLegend2 = d3.legendSize()
-    .scale(enrollmentSizeScale)
+    .scale(durationScale)
     .shape('circle')
-    .shapePadding(55)
-    .orient('horizontal')
-    .title('Enrolment Scale')
-    .labels(['1000', '200000', '400000'])
-    .labelOffset(30)
+    .shapePadding(20)
+    .orient('vertical')
+    .title('Vehicle screen time')
+    .labels(['2 seconds', '1 minute', '20 minutes'])
+    .labelOffset(50)
     .cells(3)
 
   d3.select('.sizeLegend2')
@@ -399,7 +387,7 @@ function createSizeLegend2() {
 
 function drawInitial() {
   //createSizeLegend()
-  //createSizeLegend2()
+  createSizeLegend2()
 
   let svg = d3.select("#vis")
     .append('svg')
@@ -407,26 +395,60 @@ function drawInitial() {
     .attr('height', height)
     .attr('opacity', 1)
 
-  let xAxisGenerator = d3.axisBottom()
-    .scale(momentInXScale)
+  let xAxisGeneratorYear = d3.axisBottom()
+    .scale(movieYearXScale)
+    .tickFormat(d3.format("d"))
+    .tickSize(0)
 
-  let yAxisGenerator = d3.axisLeft()
-    .scale(movieNameYScale)
+  let xAxisYear = svg.append('g')
+    .call(xAxisGeneratorYear.ticks(5))
+    .style("font", "16px Domine")
+    .attr('class', 'x-axis-movie-year')
+    .attr('transform', `translate(0, ${height - margin.top})`)
+    .call(g => g.select(".domain")
+      .remove())
+    .attr('opacity', 0)
+
+  let xAxisYearLabel = svg.append("text")
+    .attr("x", width / 2 - 20)
+    .attr("y", height)
+    .style("font", "16px Domine")
+    .attr("class", "x-axis-movie-year-label")
+    .style("fill", "white")
+    .text('Film Release Year')
+    .attr('opacity', 0)
 
   let yAxisGeneratorBondImg = d3.axisLeft()
     .scale(bondImgYScale)
-
-  let yAxis = svg.append('g')
-    .call(yAxisGenerator)
-    .attr('class', 'y-axis-film-name')
-    .attr('transform', `translate(${margin.left}, 0)`)
-    .attr("stroke", "white")
+    .tickSize(0)
 
   let yAxisBondImg = svg.append('g')
     .call(yAxisGeneratorBondImg)
     .attr('class', 'y-axis-bond-img')
-    .attr('transform', `translate(${margin.left}, 0)`)
+    .attr('transform', `translate(${margin.left - 20}, 0)`)
+    .call(g => g.select(".domain")
+      .remove())
     .attr('opacity', 0)
+
+  let yAxisGeneratorVehicleImg = d3.axisLeft()
+    .scale(vehicleImgYScale)
+    .tickSize(0)
+
+  let yAxisVehicle = svg.append('g')
+    .call(yAxisGeneratorVehicleImg)
+    .attr('class', 'y-axis-vehicle-img')
+    .attr('transform', `translate(${margin.left - 20}, 0)`)
+    .call(g => g.select(".domain")
+      .remove())
+
+    .attr('opacity', 0)
+
+  let barrelImg = svg.append('image')
+    .attr('class', 'barrelImg')
+    .attr('xlink:href', 'barrel.png')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('opacity', 1)
 
   svg.select(".y-axis-bond-img").selectAll("text").remove();
 
@@ -440,15 +462,17 @@ function drawInitial() {
     .attr("x", -90)
     .attr("y", -50)
 
+  svg.select(".y-axis-vehicle-img").selectAll("text").remove();
 
-
-  let xAxis = svg.append('g')
-    .call(xAxisGenerator)
-    .attr('class', 'x-axis-moment-in')
-    .attr('transform', `translate(0, ${height - margin.bottom})`)
-    .attr("stroke", "white")
-  // Instantiates the force simulation
-  // Has no forces. Actual forces are added and removed as required
+  var ticksVehicle = svg.select(".y-axis-vehicle-img").selectAll(".tick")
+    .append("svg:image")
+    .attr("xlink:href", function(d, i) {
+      return i + '_vehicle' + '.PNG'
+    })
+    .attr("width", 120)
+    .attr("height", 100)
+    .attr("x", -150)
+    .attr("y", -50)
 
   simulation = d3.forceSimulation(dataset)
 
@@ -458,6 +482,14 @@ function drawInitial() {
       .attr('cx', d => d.x)
       .attr('cy', d => d.y)
   })
+  simulation
+    .force('charge', d3.forceManyBody().strength([0.01]))
+    .force('forceX', d3.forceX(580))
+    .force('forceY', d3.forceY(480))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
+    .alphaDecay([0.02])
+
+  simulation.tick(50)
 
   // Stop the simulation until later
   simulation.stop()
@@ -468,11 +500,16 @@ function drawInitial() {
     .data(dataset)
     .enter()
     .append('circle')
-    .attr('fill', 'white')
-    .attr('r', 3)
-    .attr('cx', (d, i) => momentInXScale(d.momentIn) + 5)
-    .attr('cy', (d, i) => movieNameYScale(d.movieName))
-    .attr('opacity', 0.8)
+    .attr('r', d => durationScale(d.momentDuration))
+    .attr('cx', (d, i) => 580)
+    .attr('cy', (d, i) => 480)
+    .attr('opacity', 1)
+    .attr('stroke', 'black')
+    .attr('stroke-width', 0.5)
+    .attr('fill', d => categoryColorScale(d.momentVehicleClass))
+
+
+  simulation.alpha(0.2).restart()
 
   // Add mouseover and mouseout events for all circles
   // Changes opacity and adds border
@@ -494,9 +531,13 @@ function drawInitial() {
       .style('top', (d3.event.pageY - 25) + 'px')
       .style('display', 'inline-block')
       .html(`<strong>Film:</strong> ${d.movieName}
+        <br> <strong>Year:</strong> ${d.movieYear}
             <br> <strong>Vehicle:</strong> ${d.vehicleName}
             <br> <strong>Vehicle type:</strong> ${d.momentVehicleClass}
-                `)
+            <br> <strong>Actor: </strong> ${d.movieActor}
+            <br> <strong>Time in vehicle: </strong> ${formatSeconds(d.momentDuration/60)} minutes
+            <br> <strong>Film duration: </strong> ${formatSeconds2(d.movieDuration/60)} minutes
+            `)
   }
 
   function mouseOut(d, i) {
@@ -505,8 +546,10 @@ function drawInitial() {
 
     d3.select(this)
       .transition('mouseout').duration(100)
-      .attr('opacity', 0.8)
-      .attr('stroke-width', 0)
+      .attr('opacity', 1)
+      .attr('stroke-width', 0.5)
+      .attr('stroke', 'black')
+
   }
 
   //All the required components for the small multiples charts
@@ -543,33 +586,26 @@ function drawInitial() {
 
 function clean(chartType) {
   let svg = d3.select('#vis').select('svg')
-  if (chartType !== "isScatter") {
-    svg.select('.scatter-x').transition().attr('opacity', 0)
-    svg.select('.scatter-y').transition().attr('opacity', 0)
-    svg.select('.best-fit').transition().duration(200).attr('opacity', 0)
-  }
   if (chartType !== "isMultiples") {
     svg.selectAll('.lab-text').transition().attr('opacity', 0)
-    //.attr('x', 1800)
     svg.selectAll('.cat-rect').transition().attr('opacity', 0)
-    //.attr('x', 1800)
   }
   if (chartType !== "isFirst") {
-    svg.select('.y-axis-film-name').transition().attr('opacity', 0)
-    svg.select('.x-axis-moment-in').transition().attr('opacity', 0)
-    svg.selectAll('.small-text').transition().attr('opacity', 0)
-      .attr('x', -200)
+    svg.select('.barrelImg').transition().attr('opacity', 0)
   }
   if (chartType !== "isBondImg") {
     svg.select('.y-axis-bond-img').transition().attr('opacity', 0)
+  }
+  if (chartType !== "isVehicleImg") {
+    svg.select('.y-axis-vehicle-img').transition().attr('opacity', 0)
+    svg.select('.x-axis-movie-year').transition().attr('opacity', 0)
+    svg.select('.x-axis-movie-year-label').transition().attr('opacity', 0)
   }
 }
 
 //First draw function
 
 function draw1() {
-  //Stop simulation
-  simulation.stop()
 
   let svg = d3.select("#vis")
     .select('svg')
@@ -578,24 +614,33 @@ function draw1() {
 
   clean('isFirst')
 
+  d3.select('.barrelImg')
+    .transition()
+    .attr('opacity', 1)
+
   d3.select('.categoryLegend').transition().remove()
 
-  svg.select('.y-axis-film-name')
-    .attr('opacity', 1)
-  svg.select('.x-axis-moment-in')
-    .attr('opacity', 1)
-
   svg.selectAll('circle')
-    .transition().duration(500).delay(100)
-    .attr('fill', 'white')
-    .attr('r', 3)
-    .attr('cx', (d, i) => momentInXScale(d.momentIn) + 5)
-    .attr('cy', (d, i) => movieNameYScale(d.movieName))
+    .transition().duration(200).delay((d, i) => i * 2)
+    .attr('r', d => durationScale(d.momentDuration))
+    .attr('fill', d => categoryColorScale(d.momentVehicleClass))
 
-  svg.selectAll('.small-text').transition()
-    .attr('opacity', 1)
-    .attr('x', margin.left)
-    .attr('y', (d, i) => i * 5.2 + 30)
+  simulation
+    .force('charge', d3.forceManyBody().strength([0.01]))
+    .force('forceX', d3.forceX(580))
+    .force('forceY', d3.forceY(480))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
+    .alphaDecay([0.02])
+
+  //Reheat simulation and restart
+  simulation.alpha(0.5).restart()
+
+  //createLegend(20, 10)
+
+  //  svg.selectAll('.small-text').transition()
+  //    .attr('opacity', 1)
+  //    .attr('x', margin.left)
+  //    .attr('y', (d, i) => i * 5.2 + 30)
 }
 
 
@@ -606,20 +651,20 @@ function draw2() {
 
   svg.selectAll('circle')
     .transition().duration(200).delay((d, i) => i * 2)
-    .attr('r', d => durationScale(d.momentDuration) * 1.1)
+    .attr('r', d => durationScale(d.momentDuration))
     .attr('fill', d => categoryColorScale(d.momentVehicleClass))
 
   simulation
-    .force('charge', d3.forceManyBody().strength([2]))
+    .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(d => vehicleMomentsXY[d.momentType][0] + 200))
     .force('forceY', d3.forceY(d => vehicleMomentsXY[d.momentType][1] - 50))
-    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration) + 1))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alphaDecay([0.02])
 
   //Reheat simulation and restart
-  simulation.alpha(0.9).restart()
+  simulation.alpha(0.5).restart()
 
-  createLegend(20, 10)
+  //createLegend(20, 50)
 }
 
 function draw3() {
@@ -642,10 +687,10 @@ function draw3() {
     .attr('opacity', 1)
 
   simulation
-    .force('charge', d3.forceManyBody().strength([2]))
+    .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(d => landBasedXY[d.momentVehicleClass][0])) //+ filterCar(d))) //move non-cars off the screen
     .force('forceY', d3.forceY(d => landBasedXY[d.momentVehicleClass][1] - 50))
-    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration) + 1))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alpha(0.7).alphaDecay(0.02).restart()
 
 }
@@ -669,10 +714,10 @@ function draw4() {
     .attr('opacity', 1)
 
   simulation
-    .force('charge', d3.forceManyBody().strength([2]))
+    .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(d => waterBasedXY[d.momentVehicleClass][0])) //+ filterCar(d))) //move non-cars off the screen
     .force('forceY', d3.forceY(d => waterBasedXY[d.momentVehicleClass][1] - 50))
-    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration) + 1))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alpha(0.7).alphaDecay(0.02).restart()
 }
 
@@ -681,8 +726,8 @@ function draw5() {
   clean('isMultiples')
 
   svg.selectAll('circle')
-    .transition().duration(400).delay((d, i) => i * 5)
-    .attr('r', d => durationScale(d.momentDuration) * 1.1)
+    .transition() //.duration(400).delay((d, i) => i * 5)
+    .attr('r', d => durationScale(d.momentDuration))
     .attr('fill', d => categoryColorScale(d.momentVehicleClass))
 
   svg.selectAll('.cat-rect').transition().duration(100)
@@ -696,10 +741,10 @@ function draw5() {
     .attr('opacity', 1)
 
   simulation
-    .force('charge', d3.forceManyBody().strength([2]))
+    .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(d => airBasedXY[d.momentVehicleClass][0])) //+ filterCar(d))) //move non-cars off the screen
     .force('forceY', d3.forceY(d => airBasedXY[d.momentVehicleClass][1] - 50))
-    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration) + 1))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alpha(0.7).alphaDecay(0.02).restart()
 }
 
@@ -707,28 +752,18 @@ function draw6() {
   //Stop simulation
   simulation.stop()
 
-  let svg = d3.select("#vis")
-    .select('svg')
-    .attr('width', width)
-    .attr('height', height)
-
   clean('isBondImg')
-
-
-  d3.select('.categoryLegend').transition().remove()
-
+  let svg = d3.select("#vis").select('svg')
   svg.select('.y-axis-bond-img')
     .attr('opacity', 1)
 
   svg.selectAll('circle')
     .transition().duration(100).delay(50)
-    .attr('r', d => durationScale(d.momentDuration) * 1)
+    .attr('r', d => durationScale(d.momentDuration))
     .attr('fill', d => categoryColorScale(d.momentVehicleClass))
-  //.attr('cx', (d, i) => durationStackedXScale(d.momentDurationStacked) + 5)
-  //.attr('cy', (d, i) => bondImgYScale(d.movieActor))
 
   simulation
-    .force('charge', d3.forceManyBody().strength([2]))
+    .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(d => durationStackedXScale(d.momentDurationStacked) + 20)) //+ filterCar(d))) //move non-cars off the screen
     .force('forceY', d3.forceY(d => bondImgYScale(d.movieActor)))
     .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
@@ -736,6 +771,65 @@ function draw6() {
 
 }
 
+function draw7() {
+  //Stop simulation
+  simulation.stop()
+
+  clean('isVehicleImg')
+  let svg = d3.select("#vis").select('svg')
+  svg.select('.y-axis-vehicle-img')
+    .attr('opacity', 1)
+  svg.select('.x-axis-movie-year')
+    .attr('opacity', 1)
+  svg.select('.x-axis-movie-year-label')
+    .attr('opacity', 1)
+
+  svg.selectAll('circle')
+    .transition()
+    .attr('r', d => durationScale(d.momentDuration))
+    .attr('fill', d => categoryColorScaleTop(d.momentVehicleTop))
+
+  simulation
+    .force('charge', d3.forceManyBody().strength([0.01]))
+    .force('forceX', d3.forceX(d => movieYearXScale(d.movieYear)))
+    .force('forceY', d3.forceY(d => vehicleImgYScale(d.momentVehicleTop)))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
+    .alpha(0.7).alphaDecay(0.02).restart()
+
+}
+
+function draw8() {
+
+  let svg = d3.select("#vis")
+    .select('svg')
+    .attr('width', width)
+    .attr('height', height)
+
+  clean('isLast')
+
+
+  svg.selectAll('circle')
+    .transition().duration(200).delay((d, i) => i * 2)
+    .attr('r', d => durationScale(d.momentDuration))
+    .attr('fill', d => categoryColorScale(d.momentVehicleClass))
+
+  simulation
+    .force('charge', d3.forceManyBody().strength([0.01]))
+    .force('forceX', d3.forceX(580))
+    .force('forceY', d3.forceY(480))
+    .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
+    .alphaDecay([0.02])
+
+  //Reheat simulation and restart
+  simulation.alpha(0.5).restart()
+
+  //createLegend(20, 10)
+
+  //  svg.selectAll('.small-text').transition()
+  //    .attr('opacity', 1)
+  //    .attr('x', margin.left)
+  //    .attr('y', (d, i) => i * 5.2 + 30)
+}
 
 //Array of all the graph functions
 //Will be called from the scroller functionality
@@ -743,10 +837,12 @@ function draw6() {
 let activationFunctions = [
   draw1,
   draw2,
+  draw6,
+  draw7,
+  draw5,
   draw3,
   draw4,
-  draw5,
-  draw6
+  draw8
 
 ]
 
