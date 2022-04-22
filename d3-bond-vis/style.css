@@ -51,10 +51,16 @@ strong {}
 #graphic {
   margin: 0px;
   width: 1250px;
-  /*
   flex-direction: row;
   align-items: top;
-  */
+}
+
+#graphic {
+  margin: auto;
+  width: 1250px;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-around;
 }
 
 #vis {

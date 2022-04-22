@@ -815,8 +815,8 @@ function draw8() {
 
   simulation
     .force('charge', d3.forceManyBody().strength([0.01]))
-    .force('forceX', d3.forceX(580))
-    .force('forceY', d3.forceY(480))
+    .force('forceX', d3.forceX(width / 2))
+    .force('forceY', d3.forceY(height / 2))
     .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alphaDecay([0.02])
 
