@@ -9,6 +9,13 @@ body {
   margin: 0px;
 }
 
+.scroll-down {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+}
+
 #sections {
   position: relative;
   display: inline-block;

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src='d3.js'></script>
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js'></script>
 
   <meta property='og:title' content='Vehicles of James Bond' />
@@ -12,6 +15,13 @@
 
   <title>Every James Bond vehicle, visualised</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.scroll-down').show("fade");
+      $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
+    });
+  </script>
 </head>
 
 
@@ -28,11 +38,14 @@
         <br><br>
         <h1>Every James Bond vehicle, visualised</h1>
         <p>By <a href='https://www.linkedin.com/in/thomas-a-colin/'>Thomas Colin</a></p>
-        <p>(Note: If the visualisation doesn't fit your screen, try zooming out with ctrl + - / Cmd + -.) </p>
-        <p>
-
-          Data was provided by Koen Van den Eeckhout of Baryon.
-        </p>
+        <p>Data was provided by Koen Van den Eeckhout of baryon.be</p>
+        <hr>
+        <p>Hover over the nodes to see the details of the vehicles.</p>
+        <img src="hover.png">
+        <br><br>
+        <hr>
+        <p style="text-align:center"><i>Scroll down to see more</i></p>
+        <img src="down_arrow.png" class="scroll-down">
 
       </section>
       <section class="step">
@@ -66,15 +79,16 @@
         <p><i>M's orders, 007. You'll be using this Aston Martin DB5 with modifications. Now, pay attention please. Windscreen - bulletproof. As are the side and the rear windows. Revolving number plates, naturally. Valid - all countries.</i></p>
         <p>Q - Goldfinger (1964)</p>
         <hr>
-        <p>The legendary 1964 Aston Martin DB5 appears 22 separate scenes across 8 of the Bond Films.</p>
+        <p>The legendary 1964 Aston Martin DB5 appears 22 separate scenes across 8 of the Bond Films. The DB5 appeared in all but one of Daniel Craig's films.</p>
       </section>
       <section class='step'>
         <div class="title"></div>
         <br><br>
         <h1>Bond <span style="color:#968148;">in the air</span></h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+        <p>The films feature Bond in 67 different types of aircraft.</p>
         <img src="sean-connery-autogyro.jpg" style="height:225px;">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+        <p>The longest scene was in Moonraker (1979), where Roger Moore's Bond follows the villain Hugo Drax into space. The climax of the film features a laser battle on Drax's space station. Moonraker holds the world record for the largest number
+          of zero gravity wires in one scene.</p>
       </section>
       <section class='step'>
         <div class="title"></div>

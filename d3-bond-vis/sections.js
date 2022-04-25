@@ -75,7 +75,7 @@ const landBasedXY = {
   'Rickshaw': [300, 700],
   'Snowmobile': [50, 750],
   'Tram': [700, 400],
-  'Cello case': [350, 800],
+  'Cello case': [350, 790],
   'Ferris wheel': [560, 800],
   'Tank': [430, 750],
 
@@ -273,7 +273,9 @@ const airBasedLabelXY = {
 //Read Data, convert numerical categories into floats
 //Create the initial visualisation
 
-
+function downArrowShow() {
+  $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
+}
 d3.csv('data/james-bond-data.csv', function(d) {
   return {
     movieName: d.movieName,
