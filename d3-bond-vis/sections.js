@@ -8,7 +8,7 @@ const margin = {
   right: 20
 }
 const width = 800
-const height = 900
+const height = 650
 
 const topVehicles = [
   '1_1964 Aston Martin DB5',
@@ -56,23 +56,23 @@ const vehicleClasses = [
 
 //5 along the top row, 6 down
 const vehicleMomentsXY = {
-  'air-based': [50, 300],
-  'land-based': [400, 500], //big
-  'water-based': [50, 700], //big
+  'air-based': [50, 200],
+  'land-based': [400, 400], //big
+  'water-based': [50, 500], //big
 }
 
 const landBasedXY = {
-  'Car': [430, 500], //big
+  'Car': [430, 470], //big
   'Truck': [50, 450],
   'Train': [150, 600],
   'Animal': [500, 250],
   'Sleigh': [170, 750],
   'Cable car': [700, 300],
-  'Skis': [700, 700],
-  'Hovercraft': [550, 680],
+  'Skis': [680, 630],
+  'Hovercraft': [550, 600],
   'Motorcycle': [200, 300],
   'Bus': [700, 500],
-  'Rickshaw': [300, 700],
+  'Rickshaw': [300, 600],
   'Snowmobile': [50, 750],
   'Tram': [700, 400],
   'Cello case': [350, 790],
@@ -96,17 +96,17 @@ const landBasedXY = {
 }
 
 const landBasedLabelXY = {
-  'Car': [430, 600], //big
+  'Car': [430, 570], //big
   'Truck': [50, 470],
   'Train': [150, 620],
   'Animal': [500, 270],
   'Sleigh': [170, 740],
   'Cable car': [690, 300],
-  'Skis': [690, 700],
-  'Hovercraft': [550, 660],
+  'Skis': [680, 630],
+  'Hovercraft': [550, 600],
   'Motorcycle': [200, 310],
   'Bus': [690, 500],
-  'Rickshaw': [300, 690],
+  'Rickshaw': [300, 600],
   'Snowmobile': [50, 740],
   'Tram': [690, 400],
   'Cello case': [350, 770],
@@ -158,11 +158,11 @@ const waterBasedXY = {
   'Space station': [2000, 450],
   'Balloon': [2000, 450],
 
-  'Boat': [430, 500], //big
-  'Submarine': [150, 600],
-  'Life raft': [700, 500],
-  'Wetbike': [550, 680],
-  'Surfboard': [300, 700]
+  'Boat': [430, 350], //big
+  'Submarine': [150, 400],
+  'Life raft': [680, 400],
+  'Wetbike': [550, 480],
+  'Surfboard': [300, 480]
 }
 
 const waterBasedLabelXY = {
@@ -193,11 +193,11 @@ const waterBasedLabelXY = {
   'Space station': [2000, 450],
   'Balloon': [2000, 450],
 
-  'Boat': [430, 580], //big
-  'Submarine': [150, 620],
-  'Life raft': [700, 500],
-  'Wetbike': [550, 660],
-  'Surfboard': [300, 690]
+  'Boat': [430, 400], //big
+  'Submarine': [150, 410],
+  'Life raft': [680, 400],
+  'Wetbike': [550, 470],
+  'Surfboard': [300, 470]
 }
 
 const airBasedXY = {
@@ -222,7 +222,7 @@ const airBasedXY = {
   'Jetpack': [200, 450],
   'Helicopter': [650, 450],
   'Skyhook': [200, 550],
-  'Parachute': [600, 650],
+  'Parachute': [600, 620],
   'Paraglider': [200, 650],
   'Space shuttle': [400, 300],
   'Space station': [250, 300],
@@ -257,7 +257,7 @@ const airBasedLabelXY = {
   'Jetpack': [200, 450],
   'Helicopter': [650, 490],
   'Skyhook': [200, 550],
-  'Parachute': [600, 650],
+  'Parachute': [600, 620],
   'Paraglider': [200, 640],
   'Space shuttle': [400, 310],
   'Space station': [250, 310],
@@ -459,8 +459,8 @@ function drawInitial() {
     .attr("xlink:href", function(d, i) {
       return i + '.PNG'
     })
-    .attr("width", 100)
-    .attr("height", 100)
+    .attr("width", 80)
+    .attr("height", 80)
     .attr("x", -90)
     .attr("y", -50)
 
@@ -487,7 +487,7 @@ function drawInitial() {
   simulation
     .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(580))
-    .force('forceY', d3.forceY(480))
+    .force('forceY', d3.forceY(360))
     .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alphaDecay([0.02])
 
@@ -630,7 +630,7 @@ function draw1() {
   simulation
     .force('charge', d3.forceManyBody().strength([0.01]))
     .force('forceX', d3.forceX(580))
-    .force('forceY', d3.forceY(480))
+    .force('forceY', d3.forceY(360))
     .force('collide', d3.forceCollide(d => durationScale(d.momentDuration)))
     .alphaDecay([0.02])
 
