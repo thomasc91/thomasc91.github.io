@@ -1,0 +1,32 @@
+body {
+    font-family: "Courier New", Georgia;
+    background: #e8e8e8;
+}
+#main-wrapper {
+    margin: 40px auto;
+}
+#chart {
+    margin: 0px auto;
+}
+h1 {
+	font-size: 2em;
+	padding: 3px 0px;
+	font-weight: normal;
+    text-align: center;
+}
+text {
+    fill: #000;
+/*    display: none;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
