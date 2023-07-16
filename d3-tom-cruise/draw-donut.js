@@ -1,4 +1,4 @@
-d3.dsv('|', 'tom_cruise_Data.csv').then(function(data) {
+d3.dsv('|', 'tom_cruise_data.csv').then(function(data) {
 
   var pad = 10;
   var h = 700
@@ -70,7 +70,7 @@ d3.dsv('|', 'tom_cruise_Data.csv').then(function(data) {
   var g2 = svg.append("g")
     .attr("transform", "translate(" + w * 0.05 + "," + h * 0.9 + ")")
 
-  var title_default = "Nic Cage";
+  var title_default = "Tom Cruise's Film Career";
   var title = g2.append("text")
     .text(title_default)
     .attr('class', 'donut-title')
@@ -231,7 +231,7 @@ d3.dsv('|', 'tom_cruise_Data.csv').then(function(data) {
     .attr("y", 30)
     .attr("font-size", "40px")
     .attr("fill", "white")
-    .text("Tom Cruise Film Career")
+    .text("Tom Cruise's Film Career")
 
   var subTitle = svg.append("text")
     .attr("x", 10)
