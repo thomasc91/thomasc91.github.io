@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="./styles.css">
+  </link>
+
+  <title>Tom Cruise Film Career</title>
+</head>
+
+<body>
+  <div class="eye eye-left">
+    <div class="eye-inner"></div>
+  </div>
+  <div class="eye eye-right">
+    <div class="eye-inner"></div>
+  </div>
+
+  <img src="tcruise.png" class="face-image">
+</body>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+<script>
+  const container = document.querySelector("body");
+  container.addEventListener("mousemove", (e) => {
+    const eyes = document.querySelectorAll(".eye");
+    [].forEach.call(eyes, function(eye) {
+      let mouseX = eye.getBoundingClientRect().right;
+      if (eye.classList.contains("eye-left")) {
+        mouseX = eye.getBoundingClientRect().left;
+      }
+      let mouseY = eye.getBoundingClientRect().top;
+      let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
+      let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 230;
+      eye.style.transform = `rotate(${rotationDegrees}deg)`;
+    });
+  });
+</script>
+<script src="draw-donut.js"></script>
+
+</html>

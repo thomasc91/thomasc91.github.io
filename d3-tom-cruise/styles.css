@@ -1,0 +1,71 @@
+html, body {
+  font-family: 'Poppins';
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: black;
+  padding: 0;
+}
+
+h3, p {
+  margin: 0;
+}
+
+.gross {
+  color: mediumseagreen;
+}
+
+.rt-score {
+  color: orange;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  pointer-events: none;
+}
+
+.eye-left {
+  display: flex;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 341px;
+  left: 271px;
+  background: #fff;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+.eye-right {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 339px;
+  left: 332px;
+  background: #fff;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+.eye-inner {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: black;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #75726f;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+.face-image {
+  position: absolute;
+  top: 227px;
+  left: 205px;
+  width: 200px;
+}
