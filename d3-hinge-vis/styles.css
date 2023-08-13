@@ -39,7 +39,12 @@ html, body {
 
 }
 
-.line-label-first-matches {
+.line-label-matches {
     font-size: 12px;
+}
 
+
+.x-axis {
+    font-size: 10px;
+    font-family: 'Inconsolata', monospace;
 }

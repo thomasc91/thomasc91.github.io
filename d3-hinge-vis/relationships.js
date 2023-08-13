@@ -175,7 +175,7 @@ let cumulativeMatches = 0;
 let cumulativeFirstDates = 0;
 
 function initializeSimulation() {
-  const stages = d3.csv("data/stages_all.csv", d3.autoType);
+  const stages = d3.csv("stages_all.csv", d3.autoType);
 
   stages.then(function (data) {
     let startdate = new Date("2022-08-28");    
