@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap">
+<link rel="stylesheet" href="./styles.css"></link>
+  
+<title>Hinge vis</title>
+</head>
+<body>
+<div id="main-wrapper">
+
+    <div id="chart">
+
+
+    <div id="tooltip" style="position: absolute; opacity: 0;">
+        <p><strong>ID:</strong> <span id="value"></span></p>
+    </div>
+    
+</div><!-- @end #main-wrapper -->
+</body>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="relationships.js"></script>
+
+
+    <div class="button-container">
+        <button id="slow-btn">Slow</button>
+        <button id="medium-btn">Medium</button>
+        <button id="fast-btn">Fast</button>
+    </div>

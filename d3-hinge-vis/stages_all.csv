@@ -1,0 +1,2449 @@
+pid,grp,duration
+1,Pre-liked me status,1
+1,Liked me,-99
+2,Pre-like status,1
+2,Sent like,-99
+3,Pre-liked me status,1
+3,Liked me,1
+3,Match,8
+3,Conversation in app,13
+3,First date,-99
+4,Pre-liked me status,3
+4,Liked me,-99
+5,Pre-liked me status,4
+5,Liked me,-99
+6,Pre-liked me status,4
+6,Liked me,-99
+7,Pre-liked me status,4
+7,Liked me,-99
+8,Pre-liked me status,4
+8,Liked me,-99
+9,Pre-liked me status,4
+9,Liked me,-99
+10,Pre-liked me status,4
+10,Liked me,-99
+11,Pre-liked me status,4
+11,Liked me,-99
+12,Pre-liked me status,4
+12,Liked me,-99
+13,Pre-liked me status,4
+13,Liked me,-99
+14,Pre-liked me status,4
+14,Liked me,-99
+15,Pre-liked me status,4
+15,Liked me,-99
+16,Pre-liked me status,4
+16,Liked me,-99
+17,Pre-liked me status,4
+17,Liked me,-99
+18,Pre-liked me status,4
+18,Liked me,-99
+19,Pre-liked me status,5
+19,Liked me,-99
+20,Pre-liked me status,5
+20,Liked me,-99
+21,Pre-liked me status,5
+21,Liked me,1
+21,Match,11
+21,Conversation in app,5
+21,First date,7
+21,Second date,7
+21,Dating,56
+21,Ended,-99
+22,Pre-liked me status,5
+22,Liked me,1
+22,Match,0
+22,Conversation in app,-99
+23,Pre-liked me status,5
+23,Liked me,-99
+24,Pre-liked me status,6
+24,Liked me,-99
+25,Pre-liked me status,6
+25,Liked me,-99
+26,Pre-like status,7
+26,Sent like,1
+26,Match,-99
+27,Pre-liked me status,7
+27,Liked me,-99
+28,Pre-like status,9
+28,Sent like,-99
+29,Pre-liked me status,9
+29,Liked me,1
+29,Match,-99
+30,Pre-liked me status,9
+30,Liked me,-99
+31,Pre-liked me status,9
+31,Liked me,-99
+32,Pre-liked me status,9
+32,Liked me,1
+32,Match,1
+32,Conversation in app,4
+32,First date,-99
+33,Pre-like status,9
+33,Sent like,-99
+34,Pre-like status,9
+34,Sent like,-99
+35,Pre-like status,9
+35,Sent like,-99
+36,Pre-like status,9
+36,Sent like,1
+36,Match,0
+36,Conversation in app,-99
+37,Pre-like status,11
+37,Sent like,-99
+38,Pre-liked me status,11
+38,Liked me,-99
+39,Pre-liked me status,11
+39,Liked me,-99
+40,Pre-like status,11
+40,Sent like,-99
+41,Pre-liked me status,12
+41,Liked me,1
+41,Match,1
+41,Conversation in app,-99
+42,Pre-like status,12
+42,Sent like,3
+42,Match,-99
+43,Pre-like status,12
+43,Sent like,-99
+44,Pre-like status,12
+44,Sent like,1
+44,Match,-99
+45,Pre-liked me status,13
+45,Liked me,-99
+46,Pre-liked me status,13
+46,Liked me,-99
+47,Pre-liked me status,13
+47,Liked me,-99
+48,Pre-liked me status,13
+48,Liked me,-99
+49,Pre-like status,14
+49,Sent like,-99
+50,Pre-like status,14
+50,Sent like,-99
+51,Pre-liked me status,14
+51,Liked me,-99
+52,Pre-liked me status,14
+52,Liked me,-99
+53,Pre-liked me status,14
+53,Liked me,-99
+54,Pre-liked me status,14
+54,Liked me,-99
+55,Pre-liked me status,15
+55,Liked me,-99
+56,Pre-liked me status,15
+56,Liked me,-99
+57,Pre-liked me status,15
+57,Liked me,1
+57,Match,1
+57,Conversation in app,-99
+58,Pre-like status,16
+58,Sent like,5
+58,Match,1
+58,Conversation in app,-99
+59,Pre-like status,16
+59,Sent like,1
+59,Match,6
+59,Conversation in app,-99
+60,Pre-like status,16
+60,Sent like,-99
+61,Pre-like status,16
+61,Sent like,-99
+62,Pre-like status,16
+62,Sent like,-99
+63,Pre-like status,16
+63,Sent like,1
+63,Match,1
+63,Conversation in app,-99
+64,Pre-liked me status,16
+64,Liked me,-99
+65,Pre-like status,16
+65,Sent like,-99
+66,Pre-like status,16
+66,Sent like,-99
+67,Pre-like status,16
+67,Sent like,-99
+68,Pre-like status,17
+68,Sent like,-99
+69,Pre-like status,18
+69,Sent like,-99
+70,Pre-liked me status,18
+70,Liked me,1
+70,Match,0
+70,Conversation in app,-99
+71,Pre-like status,19
+71,Sent like,-99
+72,Pre-like status,19
+72,Sent like,1
+72,Match,-99
+73,Pre-liked me status,19
+73,Liked me,-99
+74,Pre-like status,20
+74,Sent like,-99
+75,Pre-liked me status,20
+75,Liked me,-99
+76,Pre-liked me status,22
+76,Liked me,-99
+77,Pre-liked me status,22
+77,Liked me,-99
+78,Pre-liked me status,22
+78,Liked me,-99
+79,Pre-like status,23
+79,Sent like,-99
+80,Pre-liked me status,23
+80,Liked me,-99
+81,Pre-liked me status,23
+81,Liked me,-99
+82,Pre-liked me status,23
+82,Liked me,-99
+83,Pre-like status,24
+83,Sent like,-99
+84,Pre-like status,24
+84,Sent like,-99
+85,Pre-liked me status,24
+85,Liked me,-99
+86,Pre-liked me status,24
+86,Liked me,-99
+87,Pre-liked me status,24
+87,Liked me,-99
+88,Pre-like status,24
+88,Sent like,-99
+89,Pre-liked me status,25
+89,Liked me,-99
+90,Pre-liked me status,28
+90,Liked me,-99
+91,Pre-liked me status,28
+91,Liked me,-99
+92,Pre-liked me status,28
+92,Liked me,-99
+93,Pre-like status,30
+93,Sent like,-99
+94,Pre-liked me status,28
+94,Match,1
+94,Conversation in app,-99
+95,Pre-liked me status,32
+95,Liked me,-99
+96,Pre-liked me status,39
+96,Liked me,-99
+97,Pre-liked me status,85
+97,Liked me,-99
+98,Pre-liked me status,85
+98,Liked me,-99
+99,Pre-liked me status,85
+99,Liked me,1
+99,Match,1
+99,Conversation in app,7
+99,First date,-99
+100,Pre-liked me status,85
+100,Liked me,-99
+101,Pre-liked me status,85
+101,Liked me,-99
+102,Pre-liked me status,85
+102,Liked me,-99
+103,Pre-liked me status,85
+103,Liked me,-99
+104,Pre-liked me status,85
+104,Liked me,-99
+105,Pre-liked me status,85
+105,Liked me,1
+105,Match,0
+105,Conversation in app,-99
+106,Pre-liked me status,85
+106,Liked me,-99
+107,Pre-liked me status,85
+107,Liked me,-99
+108,Pre-liked me status,86
+108,Liked me,-99
+109,Pre-like status,86
+109,Sent like,12
+109,Match,1
+109,Conversation in app,-99
+110,Pre-like status,86
+110,Sent like,-99
+111,Pre-like status,86
+111,Sent like,-99
+112,Pre-like status,86
+112,Sent like,-99
+113,Pre-like status,87
+113,Sent like,1
+113,Match,1
+113,Conversation in app,-99
+114,Pre-like status,87
+114,Sent like,-99
+115,Pre-like status,87
+115,Sent like,-99
+116,Pre-like status,87
+116,Sent like,-99
+117,Pre-like status,87
+117,Sent like,-99
+118,Pre-liked me status,87
+118,Liked me,-99
+119,Pre-liked me status,87
+119,Liked me,1
+119,Match,1
+119,Conversation in app,-99
+120,Pre-like status,87
+120,Sent like,-99
+121,Pre-like status,87
+121,Sent like,-99
+122,Pre-like status,87
+122,Sent like,-99
+123,Pre-like status,87
+123,Sent like,-99
+124,Pre-like status,88
+124,Sent like,-99
+125,Pre-like status,88
+125,Sent like,-99
+126,Pre-like status,88
+126,Sent like,-99
+127,Pre-like status,88
+127,Sent like,-99
+128,Pre-like status,88
+128,Sent like,-99
+129,Pre-like status,88
+129,Sent like,-99
+130,Pre-like status,88
+130,Sent like,-99
+131,Pre-like status,88
+131,Sent like,-99
+132,Pre-like status,88
+132,Sent like,-99
+133,Pre-like status,89
+133,Sent like,-99
+134,Pre-like status,89
+134,Sent like,1
+134,Match,-99
+135,Pre-like status,89
+135,Sent like,-99
+136,Pre-like status,89
+136,Sent like,2
+136,Match,1
+136,Conversation in app,-99
+137,Pre-like status,89
+137,Sent like,1
+137,Match,0
+137,Conversation in app,-99
+138,Pre-like status,89
+138,Sent like,2
+138,Match,-99
+139,Pre-like status,89
+139,Sent like,-99
+140,Pre-like status,90
+140,Sent like,-99
+141,Pre-like status,90
+141,Sent like,24
+141,Match,1
+141,Conversation in app,-99
+142,Pre-like status,90
+142,Sent like,-99
+143,Pre-like status,90
+143,Sent like,-99
+144,Pre-liked me status,90
+144,Liked me,1
+144,Match,1
+144,Conversation in app,-99
+145,Pre-like status,90
+145,Sent like,-99
+146,Pre-like status,90
+146,Sent like,-99
+147,Pre-like status,90
+147,Sent like,-99
+148,Pre-like status,90
+148,Sent like,-99
+149,Pre-like status,90
+149,Sent like,-99
+150,Pre-like status,90
+150,Sent like,2
+150,Match,1
+150,Conversation in app,-99
+151,Pre-like status,90
+151,Sent like,-99
+152,Pre-like status,90
+152,Sent like,8
+152,Match,-99
+153,Pre-like status,91
+153,Sent like,-99
+154,Pre-like status,91
+154,Sent like,-99
+155,Pre-like status,91
+155,Sent like,-99
+156,Pre-like status,91
+156,Sent like,-99
+157,Pre-like status,91
+157,Sent like,-99
+158,Pre-like status,91
+158,Sent like,-99
+159,Pre-like status,91
+159,Sent like,-99
+160,Pre-like status,91
+160,Sent like,1
+160,Match,0
+160,Conversation in app,-99
+161,Pre-like status,91
+161,Sent like,-99
+162,Pre-like status,91
+162,Sent like,-99
+163,Pre-like status,91
+163,Sent like,-99
+164,Pre-like status,91
+164,Sent like,-99
+165,Pre-like status,91
+165,Sent like,1
+165,Match,1
+165,Conversation in app,-99
+166,Pre-like status,91
+166,Sent like,-99
+167,Pre-like status,92
+167,Sent like,-99
+168,Pre-like status,92
+168,Sent like,-99
+169,Pre-like status,92
+169,Sent like,-99
+170,Pre-like status,92
+170,Sent like,-99
+171,Pre-like status,92
+171,Sent like,-99
+172,Pre-like status,92
+172,Sent like,-99
+173,Pre-like status,92
+173,Sent like,1
+173,Match,-99
+174,Pre-like status,92
+174,Sent like,-99
+175,Pre-like status,92
+175,Sent like,-99
+176,Pre-like status,92
+176,Sent like,-99
+177,Pre-like status,92
+177,Sent like,-99
+178,Pre-like status,93
+178,Sent like,-99
+179,Pre-like status,93
+179,Sent like,-99
+180,Pre-like status,93
+180,Sent like,-99
+181,Pre-like status,93
+181,Sent like,-99
+182,Pre-like status,93
+182,Sent like,-99
+183,Pre-like status,93
+183,Sent like,-99
+184,Pre-like status,93
+184,Sent like,-99
+185,Pre-like status,93
+185,Sent like,7
+185,Match,-99
+186,Pre-like status,93
+186,Sent like,-99
+187,Pre-like status,93
+187,Sent like,-99
+188,Pre-like status,93
+188,Sent like,-99
+189,Pre-like status,93
+189,Sent like,-99
+190,Pre-like status,94
+190,Sent like,-99
+191,Pre-liked me status,94
+191,Liked me,1
+191,Match,-99
+192,Pre-like status,94
+192,Sent like,-99
+193,Pre-like status,94
+193,Sent like,-99
+194,Pre-like status,94
+194,Sent like,-99
+195,Pre-like status,94
+195,Sent like,-99
+196,Pre-like status,94
+196,Sent like,-99
+197,Pre-like status,94
+197,Sent like,-99
+198,Pre-like status,94
+198,Sent like,-99
+199,Pre-like status,95
+199,Sent like,-99
+200,Pre-like status,95
+200,Sent like,-99
+201,Pre-like status,95
+201,Sent like,-99
+202,Pre-like status,95
+202,Sent like,-99
+203,Pre-like status,95
+203,Sent like,-99
+204,Pre-like status,95
+204,Sent like,-99
+205,Pre-like status,95
+205,Sent like,1
+205,Match,1
+205,Conversation in app,3
+205,First date,-99
+206,Pre-like status,95
+206,Sent like,-99
+207,Pre-like status,95
+207,Sent like,-99
+208,Pre-like status,95
+208,Sent like,-99
+209,Pre-like status,95
+209,Sent like,-99
+210,Pre-like status,95
+210,Sent like,-99
+211,Pre-like status,95
+211,Sent like,-99
+212,Pre-like status,95
+212,Sent like,-99
+213,Pre-like status,95
+213,Sent like,-99
+214,Pre-like status,95
+214,Sent like,-99
+215,Pre-like status,95
+215,Sent like,-99
+216,Pre-like status,95
+216,Sent like,-99
+217,Pre-like status,95
+217,Sent like,-99
+218,Pre-like status,95
+218,Sent like,-99
+219,Pre-like status,95
+219,Sent like,-99
+220,Pre-like status,95
+220,Sent like,-99
+221,Pre-like status,95
+221,Sent like,-99
+222,Pre-like status,95
+222,Sent like,-99
+223,Pre-like status,95
+223,Sent like,-99
+224,Pre-like status,96
+224,Sent like,-99
+225,Pre-like status,96
+225,Sent like,-99
+226,Pre-like status,96
+226,Sent like,-99
+227,Pre-like status,96
+227,Sent like,-99
+228,Pre-like status,96
+228,Sent like,-99
+229,Pre-like status,96
+229,Sent like,-99
+230,Pre-like status,96
+230,Sent like,-99
+231,Pre-like status,96
+231,Sent like,-99
+232,Pre-like status,96
+232,Sent like,-99
+233,Pre-like status,96
+233,Sent like,-99
+234,Pre-like status,96
+234,Sent like,-99
+235,Pre-like status,96
+235,Sent like,-99
+236,Pre-like status,96
+236,Sent like,-99
+237,Pre-like status,96
+237,Sent like,-99
+238,Pre-like status,96
+238,Sent like,-99
+239,Pre-like status,96
+239,Sent like,-99
+240,Pre-like status,96
+240,Sent like,-99
+241,Pre-like status,96
+241,Sent like,-99
+242,Pre-like status,96
+242,Sent like,-99
+243,Pre-like status,97
+243,Sent like,-99
+244,Pre-like status,97
+244,Sent like,-99
+245,Pre-like status,97
+245,Sent like,-99
+246,Pre-liked me status,98
+246,Liked me,1
+246,Match,1
+246,Conversation in app,-99
+247,Pre-like status,99
+247,Sent like,-99
+248,Pre-like status,99
+248,Sent like,-99
+249,Pre-like status,100
+249,Sent like,-99
+250,Pre-like status,100
+250,Sent like,-99
+251,Pre-like status,100
+251,Sent like,-99
+252,Pre-like status,100
+252,Sent like,-99
+253,Pre-like status,100
+253,Sent like,-99
+254,Pre-like status,100
+254,Sent like,-99
+255,Pre-like status,100
+255,Sent like,-99
+256,Pre-like status,100
+256,Sent like,-99
+257,Pre-like status,100
+257,Sent like,-99
+258,Pre-like status,101
+258,Sent like,-99
+259,Pre-like status,101
+259,Sent like,-99
+260,Pre-liked me status,101
+260,Liked me,-99
+261,Pre-like status,101
+261,Sent like,-99
+262,Pre-like status,101
+262,Sent like,-99
+263,Pre-like status,101
+263,Sent like,6
+263,Match,1
+263,Conversation in app,-99
+264,Pre-like status,101
+264,Sent like,-99
+265,Pre-like status,101
+265,Sent like,-99
+266,Pre-like status,101
+266,Sent like,1
+266,Match,-99
+267,Pre-like status,102
+267,Sent like,4
+267,Match,-99
+268,Pre-like status,102
+268,Sent like,-99
+269,Pre-like status,102
+269,Sent like,1
+269,Match,1
+269,Conversation in app,-99
+270,Pre-like status,102
+270,Sent like,-99
+271,Pre-like status,102
+271,Sent like,-99
+272,Pre-like status,102
+272,Sent like,-99
+273,Pre-like status,102
+273,Sent like,-99
+274,Pre-like status,102
+274,Sent like,-99
+275,Pre-like status,102
+275,Sent like,-99
+276,Pre-like status,102
+276,Sent like,-99
+277,Pre-like status,103
+277,Sent like,-99
+278,Pre-like status,103
+278,Sent like,-99
+279,Pre-like status,103
+279,Sent like,-99
+280,Pre-like status,103
+280,Sent like,-99
+281,Pre-like status,103
+281,Sent like,-99
+282,Pre-like status,103
+282,Sent like,-99
+283,Pre-like status,103
+283,Sent like,-99
+284,Pre-like status,103
+284,Sent like,-99
+285,Pre-like status,103
+285,Sent like,-99
+286,Pre-like status,103
+286,Sent like,-99
+287,Pre-like status,103
+287,Sent like,-99
+288,Pre-like status,103
+288,Sent like,1
+288,Match,1
+288,Conversation in app,-99
+289,Pre-like status,103
+289,Sent like,-99
+290,Pre-like status,103
+290,Sent like,-99
+291,Pre-like status,103
+291,Sent like,-99
+292,Pre-like status,103
+292,Sent like,-99
+293,Pre-liked me status,103
+293,Liked me,-99
+294,Pre-like status,104
+294,Sent like,-99
+295,Pre-like status,104
+295,Sent like,-99
+296,Pre-like status,104
+296,Sent like,-99
+297,Pre-like status,104
+297,Sent like,-99
+298,Pre-like status,104
+298,Sent like,-99
+299,Pre-like status,104
+299,Sent like,1
+299,Match,1
+299,Conversation in app,7
+299,First date,7
+299,Second date,-99
+300,Pre-like status,104
+300,Sent like,-99
+301,Pre-like status,104
+301,Sent like,-99
+302,Pre-like status,104
+302,Sent like,-99
+303,Pre-like status,104
+303,Sent like,-99
+304,Pre-like status,104
+304,Sent like,-99
+305,Pre-like status,104
+305,Sent like,-99
+306,Pre-like status,104
+306,Sent like,-99
+307,Pre-like status,105
+307,Sent like,-99
+308,Pre-like status,105
+308,Sent like,-99
+309,Pre-like status,105
+309,Sent like,4
+309,Match,1
+309,Conversation in app,-99
+310,Pre-like status,105
+310,Sent like,-99
+311,Pre-like status,106
+311,Sent like,-99
+312,Pre-like status,106
+312,Sent like,-99
+313,Pre-like status,106
+313,Sent like,-99
+314,Pre-like status,106
+314,Sent like,-99
+315,Pre-like status,106
+315,Sent like,-99
+316,Pre-like status,106
+316,Sent like,1
+316,Match,1
+316,Conversation in app,4
+316,First date,7
+316,Second date,7
+316,Dating,46
+316,Ended,-99
+317,Pre-like status,106
+317,Sent like,-99
+318,Pre-like status,106
+318,Sent like,-99
+319,Pre-like status,106
+319,Sent like,-99
+320,Pre-like status,106
+320,Sent like,-99
+321,Pre-liked me status,107
+321,Liked me,-99
+322,Pre-like status,107
+322,Sent like,-99
+323,Pre-like status,107
+323,Sent like,1
+323,Match,1
+323,Conversation in app,-99
+324,Pre-liked me status,107
+324,Liked me,-99
+325,Pre-like status,107
+325,Sent like,-99
+326,Pre-like status,107
+326,Sent like,-99
+327,Pre-like status,107
+327,Sent like,-99
+328,Pre-like status,107
+328,Sent like,-99
+329,Pre-like status,107
+329,Sent like,-99
+330,Pre-like status,108
+330,Sent like,-99
+331,Pre-like status,108
+331,Sent like,-99
+332,Pre-like status,108
+332,Sent like,-99
+333,Pre-like status,108
+333,Sent like,-99
+334,Pre-liked me status,108
+334,Liked me,1
+334,Match,1
+334,Conversation in app,-99
+335,Pre-liked me status,108
+335,Liked me,-99
+336,Pre-like status,109
+336,Sent like,-99
+337,Pre-like status,109
+337,Sent like,-99
+338,Pre-like status,109
+338,Sent like,-99
+339,Pre-like status,110
+339,Sent like,-99
+340,Pre-liked me status,110
+340,Liked me,1
+340,Match,-99
+341,Pre-like status,110
+341,Sent like,-99
+342,Pre-like status,111
+342,Sent like,-99
+343,Pre-like status,111
+343,Sent like,-99
+344,Pre-liked me status,111
+344,Liked me,-99
+345,Pre-liked me status,111
+345,Liked me,-99
+346,Pre-liked me status,112
+346,Liked me,-99
+347,Pre-liked me status,112
+347,Liked me,-99
+348,Pre-like status,112
+348,Sent like,-99
+349,Pre-liked me status,112
+349,Liked me,-99
+350,Pre-like status,112
+350,Sent like,-99
+351,Pre-like status,112
+351,Sent like,-99
+352,Pre-like status,112
+352,Sent like,-99
+353,Pre-like status,112
+353,Sent like,-99
+354,Pre-like status,112
+354,Sent like,-99
+355,Pre-like status,112
+355,Sent like,-99
+356,Pre-liked me status,113
+356,Liked me,-99
+357,Pre-like status,113
+357,Sent like,1
+357,Match,-99
+358,Pre-like status,113
+358,Sent like,-99
+359,Pre-like status,113
+359,Sent like,-99
+360,Pre-like status,113
+360,Sent like,-99
+361,Pre-like status,113
+361,Sent like,-99
+362,Pre-like status,113
+362,Sent like,1
+362,Match,1
+362,Conversation in app,3
+362,First date,-99
+363,Pre-like status,113
+363,Sent like,-99
+364,Pre-like status,113
+364,Sent like,-99
+365,Pre-like status,113
+365,Sent like,1
+365,Match,1
+365,Conversation in app,-99
+366,Pre-like status,113
+366,Sent like,-99
+367,Pre-like status,113
+367,Sent like,-99
+368,Pre-like status,113
+368,Sent like,-99
+369,Pre-like status,113
+369,Sent like,-99
+370,Pre-like status,114
+370,Sent like,-99
+371,Pre-like status,114
+371,Sent like,-99
+372,Pre-like status,114
+372,Sent like,-99
+373,Pre-like status,114
+373,Sent like,-99
+374,Pre-like status,114
+374,Sent like,-99
+375,Pre-like status,114
+375,Sent like,9
+375,Match,-99
+376,Pre-like status,114
+376,Sent like,-99
+377,Pre-like status,115
+377,Sent like,-99
+378,Pre-like status,115
+378,Sent like,-99
+379,Pre-liked me status,116
+379,Liked me,-99
+380,Pre-like status,117
+380,Sent like,-99
+381,Pre-like status,117
+381,Sent like,-99
+382,Pre-like status,117
+382,Sent like,-99
+383,Pre-like status,117
+383,Sent like,1
+383,Match,-99
+384,Pre-liked me status,117
+384,Liked me,-99
+385,Pre-liked me status,118
+385,Liked me,-99
+386,Pre-like status,119
+386,Sent like,-99
+387,Pre-liked me status,120
+387,Liked me,-99
+388,Pre-like status,134
+388,Sent like,-99
+389,Pre-like status,135
+389,Sent like,-99
+390,Pre-like status,135
+390,Sent like,-99
+391,Pre-liked me status,135
+391,Liked me,-99
+392,Pre-liked me status,135
+392,Liked me,-99
+393,Pre-liked me status,135
+393,Liked me,-99
+394,Pre-liked me status,135
+394,Liked me,-99
+395,Pre-liked me status,135
+395,Liked me,-99
+396,Pre-liked me status,135
+396,Liked me,-99
+397,Pre-liked me status,135
+397,Liked me,-99
+398,Pre-liked me status,135
+398,Liked me,-99
+399,Pre-liked me status,135
+399,Liked me,-99
+400,Pre-liked me status,135
+400,Liked me,-99
+401,Pre-liked me status,135
+401,Liked me,-99
+402,Pre-liked me status,135
+402,Liked me,-99
+403,Pre-liked me status,135
+403,Liked me,-99
+404,Pre-liked me status,135
+404,Liked me,-99
+405,Pre-liked me status,135
+405,Liked me,-99
+406,Pre-liked me status,135
+406,Liked me,-99
+407,Pre-liked me status,135
+407,Liked me,-99
+408,Pre-liked me status,135
+408,Liked me,-99
+409,Pre-liked me status,135
+409,Liked me,-99
+410,Pre-liked me status,136
+410,Liked me,-99
+411,Pre-liked me status,136
+411,Liked me,-99
+412,Pre-liked me status,137
+412,Liked me,-99
+413,Pre-like status,137
+413,Sent like,-99
+414,Pre-liked me status,137
+414,Liked me,-99
+415,Pre-liked me status,137
+415,Liked me,-99
+416,Pre-like status,137
+416,Sent like,1
+416,Match,1
+416,Conversation in app,-99
+417,Pre-like status,138
+417,Sent like,-99
+418,Pre-like status,139
+418,Sent like,-99
+419,Pre-liked me status,139
+419,Liked me,-99
+420,Pre-liked me status,155
+420,Liked me,-99
+421,Pre-liked me status,155
+421,Liked me,-99
+422,Pre-liked me status,155
+422,Liked me,-99
+423,Pre-liked me status,155
+423,Liked me,-99
+424,Pre-liked me status,167
+424,Liked me,2
+424,Match,1
+424,Conversation in app,-99
+425,Pre-liked me status,168
+425,Liked me,1
+425,Match,0
+425,Conversation in app,-99
+426,Pre-liked me status,168
+426,Liked me,-99
+427,Pre-liked me status,168
+427,Liked me,-99
+428,Pre-liked me status,168
+428,Liked me,-99
+429,Pre-liked me status,168
+429,Liked me,-99
+430,Pre-liked me status,168
+430,Liked me,-99
+431,Pre-liked me status,169
+431,Liked me,-99
+432,Pre-liked me status,169
+432,Liked me,-99
+433,Pre-like status,169
+433,Sent like,-99
+434,Pre-liked me status,169
+434,Liked me,1
+434,Match,1
+434,Conversation in app,-99
+435,Pre-like status,169
+435,Sent like,-99
+436,Pre-like status,169
+436,Sent like,-99
+437,Pre-like status,169
+437,Sent like,5
+437,Match,0
+437,Conversation in app,-99
+438,Pre-like status,169
+438,Sent like,-99
+439,Pre-like status,169
+439,Sent like,-99
+440,Pre-liked me status,169
+440,Liked me,-99
+441,Pre-like status,169
+441,Sent like,-99
+442,Pre-like status,169
+442,Sent like,-99
+443,Pre-like status,170
+443,Sent like,1
+443,Match,0
+443,Conversation in app,-99
+444,Pre-like status,170
+444,Sent like,-99
+445,Pre-like status,170
+445,Sent like,1
+445,Match,-99
+446,Pre-like status,170
+446,Sent like,-99
+447,Pre-like status,170
+447,Sent like,-99
+448,Pre-like status,170
+448,Sent like,-99
+449,Pre-like status,170
+449,Sent like,-99
+450,Pre-like status,170
+450,Sent like,-99
+451,Pre-like status,170
+451,Sent like,-99
+452,Pre-like status,170
+452,Sent like,-99
+453,Pre-like status,170
+453,Sent like,-99
+454,Pre-like status,170
+454,Sent like,-99
+455,Pre-like status,170
+455,Sent like,1
+455,Match,1
+455,Conversation in app,-99
+456,Pre-like status,170
+456,Sent like,-99
+457,Pre-like status,170
+457,Sent like,-99
+458,Pre-like status,170
+458,Sent like,-99
+459,Pre-like status,170
+459,Sent like,-99
+460,Pre-like status,170
+460,Sent like,-99
+461,Pre-like status,170
+461,Sent like,-99
+462,Pre-like status,170
+462,Sent like,-99
+463,Pre-like status,171
+463,Sent like,-99
+464,Pre-like status,171
+464,Sent like,6
+464,Match,1
+464,Conversation in app,-99
+465,Pre-like status,171
+465,Sent like,-99
+466,Pre-like status,171
+466,Sent like,-99
+467,Pre-like status,171
+467,Sent like,-99
+468,Pre-like status,171
+468,Sent like,-99
+469,Pre-like status,171
+469,Sent like,-99
+470,Pre-like status,171
+470,Sent like,-99
+471,Pre-like status,171
+471,Sent like,-99
+472,Pre-like status,171
+472,Sent like,-99
+473,Pre-like status,171
+473,Sent like,-99
+474,Pre-like status,171
+474,Sent like,-99
+475,Pre-like status,171
+475,Sent like,-99
+476,Pre-like status,171
+476,Sent like,-99
+477,Pre-like status,171
+477,Sent like,-99
+478,Pre-like status,171
+478,Sent like,1
+478,Match,1
+478,Conversation in app,-99
+479,Pre-like status,172
+479,Sent like,-99
+480,Pre-like status,172
+480,Sent like,-99
+481,Pre-like status,172
+481,Sent like,-99
+482,Pre-like status,172
+482,Sent like,-99
+483,Pre-like status,172
+483,Sent like,-99
+484,Pre-like status,172
+484,Sent like,-99
+485,Pre-liked me status,172
+485,Liked me,-99
+486,Pre-like status,172
+486,Sent like,-99
+487,Pre-like status,172
+487,Sent like,25
+487,Match,1
+487,Conversation in app,6
+487,First date,-99
+488,Pre-like status,172
+488,Sent like,-99
+489,Pre-like status,172
+489,Sent like,-99
+490,Pre-like status,173
+490,Sent like,-99
+491,Pre-like status,173
+491,Sent like,-99
+492,Pre-like status,173
+492,Sent like,-99
+493,Pre-like status,173
+493,Sent like,-99
+494,Pre-like status,173
+494,Sent like,-99
+495,Pre-like status,173
+495,Sent like,-99
+496,Pre-liked me status,173
+496,Liked me,-99
+497,Pre-liked me status,173
+497,Liked me,-99
+498,Pre-liked me status,173
+498,Liked me,-99
+499,Pre-like status,173
+499,Sent like,-99
+500,Pre-like status,173
+500,Sent like,-99
+501,Pre-like status,173
+501,Sent like,3
+501,Match,1
+501,Conversation in app,-99
+502,Pre-like status,173
+502,Sent like,-99
+503,Pre-like status,173
+503,Sent like,-99
+504,Pre-like status,173
+504,Sent like,-99
+505,Pre-liked me status,173
+505,Liked me,-99
+506,Pre-liked me status,173
+506,Liked me,-99
+507,Pre-like status,173
+507,Sent like,-99
+508,Pre-liked me status,173
+508,Liked me,-99
+509,Pre-like status,174
+509,Sent like,-99
+510,Pre-like status,174
+510,Sent like,-99
+511,Pre-like status,174
+511,Sent like,-99
+512,Pre-like status,174
+512,Sent like,-99
+513,Pre-like status,174
+513,Sent like,-99
+514,Pre-like status,174
+514,Sent like,-99
+515,Pre-like status,174
+515,Sent like,-99
+516,Pre-like status,174
+516,Sent like,-99
+517,Pre-like status,174
+517,Sent like,-99
+518,Pre-like status,174
+518,Sent like,1
+518,Match,0
+518,Conversation in app,-99
+519,Pre-like status,174
+519,Sent like,-99
+520,Pre-like status,174
+520,Sent like,-99
+521,Pre-like status,174
+521,Sent like,-99
+522,Pre-like status,174
+522,Sent like,-99
+523,Pre-like status,174
+523,Sent like,-99
+524,Pre-like status,174
+524,Sent like,-99
+525,Pre-like status,174
+525,Sent like,-99
+526,Pre-like status,174
+526,Sent like,-99
+527,Pre-like status,174
+527,Sent like,-99
+528,Pre-like status,175
+528,Sent like,-99
+529,Pre-like status,175
+529,Sent like,-99
+530,Pre-like status,175
+530,Sent like,-99
+531,Pre-like status,176
+531,Sent like,-99
+532,Pre-like status,176
+532,Sent like,-99
+533,Pre-like status,176
+533,Sent like,-99
+534,Pre-like status,176
+534,Sent like,2
+534,Match,1
+534,Conversation in app,-99
+535,Pre-like status,176
+535,Sent like,1
+535,Match,-99
+536,Pre-like status,176
+536,Sent like,1
+536,Match,1
+536,Conversation in app,2
+536,First date,7
+536,Second date,7
+536,Dating,15
+536,Ended,-99
+537,Pre-like status,176
+537,Sent like,-99
+538,Pre-like status,176
+538,Sent like,-99
+539,Pre-like status,176
+539,Sent like,-99
+540,Pre-like status,176
+540,Sent like,-99
+541,Pre-like status,176
+541,Sent like,-99
+542,Pre-like status,176
+542,Sent like,-99
+543,Pre-like status,176
+543,Sent like,-99
+544,Pre-like status,176
+544,Sent like,-99
+545,Pre-like status,177
+545,Sent like,9
+545,Match,1
+545,Conversation in app,-99
+546,Pre-like status,179
+546,Sent like,-99
+547,Pre-like status,179
+547,Sent like,-99
+548,Pre-like status,179
+548,Sent like,-99
+549,Pre-like status,179
+549,Sent like,-99
+550,Pre-like status,179
+550,Sent like,-99
+551,Pre-like status,179
+551,Sent like,-99
+552,Pre-like status,179
+552,Sent like,-99
+553,Pre-liked me status,179
+553,Liked me,-99
+554,Pre-liked me status,179
+554,Liked me,-99
+555,Pre-liked me status,179
+555,Liked me,-99
+556,Pre-like status,179
+556,Sent like,-99
+557,Pre-like status,180
+557,Sent like,-99
+558,Pre-like status,180
+558,Sent like,-99
+559,Pre-like status,180
+559,Sent like,-99
+560,Pre-like status,180
+560,Sent like,-99
+561,Pre-liked me status,180
+561,Liked me,-99
+562,Pre-liked me status,180
+562,Liked me,-99
+563,Pre-liked me status,180
+563,Liked me,-99
+564,Pre-liked me status,180
+564,Liked me,1
+564,Match,1
+564,Conversation in app,-99
+565,Pre-liked me status,180
+565,Liked me,-99
+566,Pre-liked me status,180
+566,Liked me,-99
+567,Pre-like status,181
+567,Sent like,-99
+568,Pre-like status,181
+568,Sent like,-99
+569,Pre-liked me status,181
+569,Liked me,-99
+570,Pre-liked me status,181
+570,Liked me,-99
+571,Pre-like status,181
+571,Sent like,-99
+572,Pre-like status,181
+572,Sent like,-99
+573,Pre-like status,181
+573,Sent like,-99
+574,Pre-like status,181
+574,Sent like,6
+574,Match,0
+574,Conversation in app,-99
+575,Pre-liked me status,181
+575,Liked me,-99
+576,Pre-like status,181
+576,Sent like,-99
+577,Pre-like status,181
+577,Sent like,-99
+578,Pre-like status,181
+578,Sent like,-99
+579,Pre-like status,182
+579,Sent like,-99
+580,Pre-liked me status,182
+580,Liked me,-99
+581,Pre-liked me status,182
+581,Liked me,-99
+582,Pre-liked me status,182
+582,Liked me,-99
+583,Pre-liked me status,182
+583,Liked me,-99
+584,Pre-liked me status,182
+584,Liked me,-99
+585,Pre-liked me status,182
+585,Liked me,-99
+586,Pre-like status,182
+586,Sent like,-99
+587,Pre-like status,182
+587,Sent like,-99
+588,Pre-like status,182
+588,Sent like,1
+588,Match,1
+588,Conversation in app,-99
+589,Pre-like status,182
+589,Sent like,-99
+590,Pre-like status,182
+590,Sent like,-99
+591,Pre-like status,182
+591,Sent like,-99
+592,Pre-like status,182
+592,Sent like,-99
+593,Pre-like status,183
+593,Sent like,-99
+594,Pre-like status,183
+594,Sent like,-99
+595,Pre-like status,183
+595,Sent like,-99
+596,Pre-like status,184
+596,Sent like,-99
+597,Pre-like status,184
+597,Sent like,-99
+598,Pre-like status,184
+598,Sent like,2
+598,Match,1
+598,Conversation in app,8
+598,First date,-99
+599,Pre-like status,184
+599,Sent like,-99
+600,Pre-like status,185
+600,Sent like,-99
+601,Pre-liked me status,185
+601,Liked me,-99
+602,Pre-liked me status,185
+602,Liked me,-99
+603,Pre-liked me status,185
+603,Liked me,-99
+604,Pre-like status,186
+604,Sent like,-99
+605,Pre-like status,186
+605,Sent like,-99
+606,Pre-like status,187
+606,Sent like,-99
+607,Pre-like status,187
+607,Sent like,-99
+608,Pre-like status,187
+608,Sent like,1
+608,Match,-99
+609,Pre-liked me status,190
+609,Liked me,-99
+610,Pre-liked me status,190
+610,Liked me,-99
+611,Pre-liked me status,191
+611,Liked me,-99
+612,Pre-like status,191
+612,Sent like,-99
+613,Pre-like status,191
+613,Sent like,-99
+614,Pre-like status,191
+614,Sent like,-99
+615,Pre-like status,192
+615,Sent like,-99
+616,Pre-like status,192
+616,Sent like,1
+616,Match,1
+616,Conversation in app,-99
+617,Pre-like status,192
+617,Sent like,-99
+618,Pre-like status,194
+618,Sent like,-99
+619,Pre-like status,194
+619,Sent like,-99
+620,Pre-liked me status,194
+620,Liked me,1
+620,Match,-99
+621,Pre-like status,195
+621,Sent like,-99
+622,Pre-like status,195
+622,Sent like,-99
+623,Pre-like status,195
+623,Sent like,-99
+624,Pre-like status,195
+624,Sent like,-99
+625,Pre-like status,196
+625,Sent like,-99
+626,Pre-like status,196
+626,Sent like,-99
+627,Pre-like status,196
+627,Sent like,-99
+628,Pre-like status,196
+628,Sent like,-99
+629,Pre-liked me status,196
+629,Liked me,-99
+630,Pre-like status,197
+630,Sent like,1
+630,Match,-99
+631,Pre-like status,197
+631,Sent like,-99
+632,Pre-like status,197
+632,Sent like,-99
+633,Pre-like status,197
+633,Sent like,-99
+634,Pre-like status,198
+634,Sent like,-99
+635,Pre-liked me status,198
+635,Liked me,-99
+636,Pre-like status,198
+636,Sent like,-99
+637,Pre-like status,198
+637,Sent like,-99
+638,Pre-liked me status,199
+638,Liked me,-99
+639,Pre-liked me status,199
+639,Liked me,-99
+640,Pre-like status,199
+640,Sent like,-99
+641,Pre-like status,200
+641,Sent like,-99
+642,Pre-like status,200
+642,Sent like,-99
+643,Pre-liked me status,200
+643,Liked me,-99
+644,Pre-liked me status,201
+644,Liked me,-99
+645,Pre-liked me status,201
+645,Liked me,-99
+646,Pre-like status,202
+646,Sent like,1
+646,Match,1
+646,Conversation in app,-99
+647,Pre-like status,202
+647,Sent like,-99
+648,Pre-like status,202
+648,Sent like,-99
+649,Pre-like status,202
+649,Sent like,-99
+650,Pre-like status,203
+650,Sent like,-99
+651,Pre-liked me status,205
+651,Liked me,-99
+652,Pre-liked me status,205
+652,Liked me,-99
+653,Pre-liked me status,206
+653,Liked me,-99
+654,Pre-liked me status,206
+654,Liked me,-99
+655,Pre-liked me status,206
+655,Liked me,-99
+656,Pre-liked me status,206
+656,Liked me,-99
+657,Pre-liked me status,207
+657,Liked me,-99
+658,Pre-like status,207
+658,Sent like,1
+658,Match,1
+658,Conversation in app,2
+658,First date,-99
+659,Pre-like status,207
+659,Sent like,-99
+660,Pre-like status,208
+660,Sent like,-99
+661,Pre-like status,208
+661,Sent like,-99
+662,Pre-like status,208
+662,Sent like,-99
+663,Pre-like status,209
+663,Sent like,-99
+664,Pre-like status,209
+664,Sent like,-99
+665,Pre-like status,209
+665,Sent like,-99
+666,Pre-like status,209
+666,Sent like,-99
+667,Pre-like status,209
+667,Sent like,-99
+668,Pre-like status,209
+668,Sent like,-99
+669,Pre-like status,209
+669,Sent like,-99
+670,Pre-like status,209
+670,Sent like,-99
+671,Pre-liked me status,210
+671,Liked me,-99
+672,Pre-like status,210
+672,Sent like,-99
+673,Pre-like status,210
+673,Sent like,-99
+674,Pre-like status,210
+674,Sent like,2
+674,Match,0
+674,Conversation in app,-99
+675,Pre-liked me status,210
+675,Liked me,-99
+676,Pre-like status,210
+676,Sent like,-99
+677,Pre-like status,210
+677,Sent like,-99
+678,Pre-like status,210
+678,Sent like,-99
+679,Pre-liked me status,211
+679,Liked me,-99
+680,Pre-liked me status,211
+680,Liked me,-99
+681,Pre-liked me status,211
+681,Liked me,-99
+682,Pre-liked me status,211
+682,Liked me,-99
+683,Pre-like status,211
+683,Sent like,-99
+684,Pre-like status,211
+684,Sent like,-99
+685,Pre-like status,211
+685,Sent like,-99
+686,Pre-like status,211
+686,Sent like,-99
+687,Pre-like status,211
+687,Sent like,-99
+688,Pre-like status,211
+688,Sent like,-99
+689,Pre-like status,211
+689,Sent like,-99
+690,Pre-liked me status,211
+690,Liked me,1
+690,Match,0
+690,Conversation in app,-99
+691,Pre-like status,211
+691,Sent like,-99
+692,Pre-like status,211
+692,Sent like,-99
+693,Pre-like status,211
+693,Sent like,-99
+694,Pre-like status,211
+694,Sent like,-99
+695,Pre-like status,211
+695,Sent like,-99
+696,Pre-like status,212
+696,Sent like,1
+696,Match,0
+696,Conversation in app,-99
+697,Pre-like status,212
+697,Sent like,-99
+698,Pre-like status,212
+698,Sent like,1
+698,Match,1
+698,Conversation in app,-99
+699,Pre-like status,212
+699,Sent like,-99
+700,Pre-like status,213
+700,Sent like,-99
+701,Pre-like status,213
+701,Sent like,-99
+702,Pre-like status,214
+702,Sent like,1
+702,Match,1
+702,Conversation in app,-99
+703,Pre-liked me status,214
+703,Liked me,-99
+704,Pre-liked me status,214
+704,Liked me,-99
+705,Pre-like status,215
+705,Sent like,-99
+706,Pre-like status,215
+706,Sent like,-99
+707,Pre-like status,215
+707,Sent like,-99
+708,Pre-like status,215
+708,Sent like,-99
+709,Pre-like status,215
+709,Sent like,-99
+710,Pre-like status,216
+710,Sent like,-99
+711,Pre-like status,216
+711,Sent like,-99
+712,Pre-like status,216
+712,Sent like,-99
+713,Pre-like status,217
+713,Sent like,-99
+714,Pre-like status,217
+714,Sent like,-99
+715,Pre-like status,217
+715,Sent like,-99
+716,Pre-like status,217
+716,Sent like,-99
+717,Pre-like status,217
+717,Sent like,-99
+718,Pre-like status,217
+718,Sent like,-99
+719,Pre-like status,217
+719,Sent like,-99
+720,Pre-like status,217
+720,Sent like,-99
+721,Pre-like status,217
+721,Sent like,-99
+722,Pre-liked me status,217
+722,Liked me,-99
+723,Pre-liked me status,217
+723,Liked me,-99
+724,Pre-liked me status,217
+724,Liked me,-99
+725,Pre-like status,217
+725,Sent like,-99
+726,Pre-like status,217
+726,Sent like,-99
+727,Pre-liked me status,217
+727,Liked me,-99
+728,Pre-liked me status,217
+728,Liked me,-99
+729,Pre-like status,217
+729,Sent like,-99
+730,Pre-like status,217
+730,Sent like,-99
+731,Pre-like status,217
+731,Sent like,-99
+732,Pre-like status,218
+732,Sent like,-99
+733,Pre-like status,218
+733,Sent like,-99
+734,Pre-liked me status,218
+734,Liked me,-99
+735,Pre-liked me status,218
+735,Liked me,1
+735,Match,1
+735,Conversation in app,-99
+736,Pre-like status,219
+736,Sent like,-99
+737,Pre-like status,219
+737,Sent like,-99
+738,Pre-like status,220
+738,Sent like,-99
+739,Pre-like status,220
+739,Sent like,-99
+740,Pre-like status,220
+740,Sent like,-99
+741,Pre-like status,220
+741,Sent like,-99
+742,Pre-like status,220
+742,Sent like,-99
+743,Pre-like status,220
+743,Sent like,1
+743,Match,2
+743,Conversation in app,-99
+744,Pre-like status,220
+744,Sent like,-99
+745,Pre-like status,220
+745,Sent like,-99
+746,Pre-like status,220
+746,Sent like,-99
+747,Pre-like status,220
+747,Sent like,-99
+748,Pre-like status,220
+748,Sent like,-99
+749,Pre-like status,220
+749,Sent like,-99
+750,Pre-like status,220
+750,Sent like,-99
+751,Pre-like status,221
+751,Sent like,-99
+752,Pre-like status,221
+752,Sent like,-99
+753,Pre-like status,221
+753,Sent like,-99
+754,Pre-like status,221
+754,Sent like,1
+754,Match,1
+754,Conversation in app,0
+754,First date,-99
+755,Pre-like status,221
+755,Sent like,-99
+756,Pre-like status,221
+756,Sent like,-99
+757,Pre-like status,221
+757,Sent like,0
+757,Match,0
+757,Conversation in app,-99
+758,Pre-like status,221
+758,Sent like,-99
+759,Pre-like status,221
+759,Sent like,-99
+760,Pre-like status,221
+760,Sent like,-99
+761,Pre-like status,221
+761,Sent like,-99
+762,Pre-like status,221
+762,Sent like,-99
+763,Pre-like status,221
+763,Sent like,-99
+764,Pre-like status,221
+764,Sent like,-99
+765,Pre-like status,222
+765,Sent like,-99
+766,Pre-like status,222
+766,Sent like,-99
+767,Pre-like status,222
+767,Sent like,0
+767,Match,1
+767,Conversation in app,-99
+768,Pre-like status,222
+768,Sent like,-99
+769,Pre-like status,223
+769,Sent like,-99
+770,Pre-like status,223
+770,Sent like,1
+770,Match,-99
+771,Pre-like status,224
+771,Sent like,1
+771,Match,-99
+772,Pre-like status,224
+772,Sent like,-99
+773,Pre-like status,224
+773,Sent like,-99
+774,Pre-like status,224
+774,Sent like,-99
+775,Pre-like status,224
+775,Sent like,-99
+776,Pre-like status,224
+776,Sent like,-99
+777,Pre-like status,224
+777,Sent like,1
+777,Match,1
+777,Conversation in app,2
+777,First date,-99
+778,Pre-liked me status,224
+778,Liked me,-99
+779,Pre-liked me status,224
+779,Liked me,-99
+780,Pre-like status,224
+780,Sent like,-99
+781,Pre-liked me status,225
+781,Liked me,-99
+782,Pre-liked me status,225
+782,Liked me,-99
+783,Pre-like status,225
+783,Sent like,-99
+784,Pre-like status,225
+784,Sent like,-99
+785,Pre-like status,225
+785,Sent like,-99
+786,Pre-like status,225
+786,Sent like,-99
+787,Pre-like status,225
+787,Sent like,-99
+788,Pre-like status,225
+788,Sent like,-99
+789,Pre-like status,225
+789,Sent like,-99
+790,Pre-like status,225
+790,Sent like,-99
+791,Pre-like status,225
+791,Sent like,-99
+792,Pre-like status,226
+792,Sent like,1
+792,Match,1
+792,Conversation in app,-99
+793,Pre-like status,226
+793,Sent like,-99
+794,Pre-like status,226
+794,Sent like,-99
+795,Pre-like status,226
+795,Sent like,-99
+796,Pre-like status,226
+796,Sent like,1
+796,Match,1
+796,Conversation in app,-99
+797,Pre-liked me status,227
+797,Liked me,1
+797,Match,-99
+798,Pre-like status,228
+798,Sent like,1
+798,Match,21
+798,Conversation in app,-99
+799,Pre-like status,228
+799,Sent like,-99
+800,Pre-like status,228
+800,Sent like,-99
+801,Pre-like status,228
+801,Sent like,-99
+802,Pre-liked me status,230
+802,Liked me,-99
+803,Pre-liked me status,230
+803,Liked me,-99
+804,Pre-liked me status,230
+804,Liked me,-99
+805,Pre-like status,230
+805,Sent like,-99
+806,Pre-like status,231
+806,Sent like,-99
+807,Pre-liked me status,232
+807,Liked me,-99
+808,Pre-liked me status,233
+808,Liked me,-99
+809,Pre-liked me status,233
+809,Liked me,-99
+810,Pre-liked me status,233
+810,Liked me,-99
+811,Pre-liked me status,233
+811,Liked me,-99
+812,Pre-liked me status,234
+812,Liked me,-99
+813,Pre-like status,234
+813,Sent like,-99
+814,Pre-like status,234
+814,Sent like,-99
+815,Pre-like status,234
+815,Sent like,-99
+816,Pre-like status,234
+816,Sent like,1
+816,Match,0
+816,Conversation in app,-99
+817,Pre-liked me status,234
+817,Liked me,-99
+818,Pre-like status,234
+818,Sent like,-99
+819,Pre-like status,234
+819,Sent like,-99
+820,Pre-like status,234
+820,Sent like,-99
+821,Pre-like status,234
+821,Sent like,1
+821,Match,1
+821,Conversation in app,-99
+822,Pre-like status,235
+822,Sent like,-99
+823,Pre-like status,235
+823,Sent like,1
+823,Match,-99
+824,Pre-like status,235
+824,Sent like,-99
+825,Pre-like status,235
+825,Sent like,-99
+826,Pre-like status,235
+826,Sent like,1
+826,Match,1
+826,Conversation in app,-99
+827,Pre-like status,235
+827,Sent like,-99
+828,Pre-like status,235
+828,Sent like,-99
+829,Pre-like status,235
+829,Sent like,1
+829,Match,1
+829,Conversation in app,-99
+830,Pre-like status,235
+830,Sent like,-99
+831,Pre-like status,235
+831,Sent like,-99
+832,Pre-like status,235
+832,Sent like,1
+832,Match,1
+832,Conversation in app,-99
+833,Pre-like status,235
+833,Sent like,-99
+834,Pre-like status,235
+834,Sent like,-99
+835,Pre-like status,235
+835,Sent like,-99
+836,Pre-like status,236
+836,Sent like,-99
+837,Pre-like status,236
+837,Sent like,-99
+838,Pre-like status,236
+838,Sent like,1
+838,Match,-99
+839,Pre-like status,236
+839,Sent like,-99
+840,Pre-like status,236
+840,Sent like,-99
+841,Pre-like status,236
+841,Sent like,-99
+842,Pre-like status,237
+842,Sent like,-99
+843,Pre-like status,237
+843,Sent like,-99
+844,Pre-like status,237
+844,Sent like,-99
+845,Pre-like status,237
+845,Sent like,-99
+846,Pre-like status,237
+846,Sent like,-99
+847,Pre-like status,237
+847,Sent like,-99
+848,Pre-like status,237
+848,Sent like,-99
+849,Pre-like status,237
+849,Sent like,-99
+850,Pre-like status,237
+850,Sent like,-99
+851,Pre-like status,238
+851,Sent like,-99
+852,Pre-like status,238
+852,Sent like,-99
+853,Pre-like status,238
+853,Sent like,-99
+854,Pre-like status,238
+854,Sent like,-99
+855,Pre-like status,238
+855,Sent like,-99
+856,Pre-liked me status,238
+856,Liked me,-99
+857,Pre-like status,239
+857,Sent like,-99
+858,Pre-like status,239
+858,Sent like,-99
+859,Pre-like status,239
+859,Sent like,-99
+860,Pre-like status,239
+860,Sent like,-99
+861,Pre-like status,239
+861,Sent like,-99
+862,Pre-liked me status,239
+862,Liked me,1
+862,Match,1
+862,Conversation in app,1
+862,First date,-99
+863,Pre-like status,239
+863,Sent like,-99
+864,Pre-like status,239
+864,Sent like,-99
+865,Pre-like status,239
+865,Sent like,-99
+866,Pre-like status,239
+866,Sent like,-99
+867,Pre-like status,239
+867,Sent like,-99
+868,Pre-like status,239
+868,Sent like,-99
+869,Pre-like status,239
+869,Sent like,-99
+870,Pre-like status,239
+870,Sent like,-99
+871,Pre-like status,240
+871,Sent like,-99
+872,Pre-like status,240
+872,Sent like,1
+872,Match,2
+872,Conversation in app,-99
+873,Pre-like status,240
+873,Sent like,-99
+874,Pre-like status,240
+874,Sent like,1
+874,Match,1
+874,Conversation in app,-99
+875,Pre-like status,241
+875,Sent like,-99
+876,Pre-like status,241
+876,Sent like,-99
+877,Pre-like status,241
+877,Sent like,-99
+878,Pre-like status,242
+878,Sent like,-99
+879,Pre-like status,242
+879,Sent like,-99
+880,Pre-like status,243
+880,Sent like,1
+880,Match,1
+880,Conversation in app,-99
+881,Pre-like status,243
+881,Sent like,-99
+882,Pre-like status,243
+882,Sent like,-99
+883,Pre-liked me status,243
+883,Liked me,-99
+884,Pre-like status,243
+884,Sent like,-99
+885,Pre-liked me status,243
+885,Liked me,-99
+886,Pre-like status,243
+886,Sent like,-99
+887,Pre-like status,243
+887,Sent like,-99
+888,Pre-like status,243
+888,Sent like,-99
+889,Pre-like status,243
+889,Sent like,-99
+890,Pre-like status,243
+890,Sent like,-99
+891,Pre-like status,243
+891,Sent like,-99
+892,Pre-like status,243
+892,Sent like,-99
+893,Pre-like status,244
+893,Sent like,1
+893,Match,3
+893,Conversation in app,-99
+894,Pre-like status,244
+894,Sent like,-99
+895,Pre-like status,244
+895,Sent like,1
+895,Match,1
+895,Conversation in app,-99
+896,Pre-liked me status,244
+896,Liked me,-99
+897,Pre-liked me status,244
+897,Liked me,-99
+898,Pre-like status,244
+898,Sent like,-99
+899,Pre-like status,244
+899,Sent like,-99
+900,Pre-like status,244
+900,Sent like,-99
+901,Pre-like status,244
+901,Sent like,-99
+902,Pre-like status,245
+902,Sent like,1
+902,Match,-99
+903,Pre-like status,245
+903,Sent like,-99
+904,Pre-like status,245
+904,Sent like,-99
+905,Pre-like status,245
+905,Sent like,-99
+906,Pre-like status,245
+906,Sent like,-99
+907,Pre-like status,245
+907,Sent like,1
+907,Match,-99
+908,Pre-like status,245
+908,Sent like,-99
+909,Pre-like status,245
+909,Sent like,-99
+910,Pre-like status,245
+910,Sent like,-99
+911,Pre-like status,246
+911,Sent like,-99
+912,Pre-like status,246
+912,Sent like,-99
+913,Pre-like status,246
+913,Sent like,-99
+914,Pre-like status,246
+914,Sent like,-99
+915,Pre-like status,246
+915,Sent like,-99
+916,Pre-like status,246
+916,Sent like,-99
+917,Pre-like status,246
+917,Sent like,-99
+918,Pre-like status,247
+918,Sent like,-99
+919,Pre-like status,247
+919,Sent like,-99
+920,Pre-like status,247
+920,Sent like,-99
+921,Pre-like status,247
+921,Sent like,-99
+922,Pre-like status,247
+922,Sent like,-99
+923,Pre-like status,247
+923,Sent like,-99
+924,Pre-like status,247
+924,Sent like,1
+924,Match,1
+924,Conversation in app,-99
+925,Pre-like status,247
+925,Sent like,-99
+926,Pre-liked me status,247
+926,Liked me,1
+926,Match,1
+926,Conversation in app,2
+926,First date,-99
+927,Pre-like status,247
+927,Sent like,1
+927,Match,1
+927,Conversation in app,-99
+928,Pre-like status,247
+928,Sent like,-99
+929,Pre-like status,247
+929,Sent like,1
+929,Match,1
+929,Conversation in app,5
+929,First date,25
+929,Second date,-99
+930,Pre-like status,247
+930,Sent like,-99
+931,Pre-like status,247
+931,Sent like,-99
+932,Pre-like status,247
+932,Sent like,-99
+933,Pre-like status,249
+933,Sent like,-99
+934,Pre-like status,249
+934,Sent like,-99
+935,Pre-like status,249
+935,Sent like,-99
+936,Pre-like status,249
+936,Sent like,1
+936,Match,1
+936,Conversation in app,-99
+937,Pre-like status,249
+937,Sent like,1
+937,Match,1
+937,Conversation in app,-99
+938,Pre-like status,249
+938,Sent like,-99
+939,Pre-like status,249
+939,Sent like,-99
+940,Pre-like status,249
+940,Sent like,-99
+941,Pre-like status,249
+941,Sent like,-99
+942,Pre-like status,249
+942,Sent like,-99
+943,Pre-like status,249
+943,Sent like,-99
+944,Pre-like status,249
+944,Sent like,-99
+945,Pre-like status,249
+945,Sent like,-99
+946,Pre-like status,249
+946,Sent like,-99
+947,Pre-like status,249
+947,Sent like,1
+947,Match,-99
+948,Pre-like status,249
+948,Sent like,-99
+949,Pre-like status,249
+949,Sent like,-99
+950,Pre-like status,249
+950,Sent like,-99
+951,Pre-like status,250
+951,Sent like,-99
+952,Pre-like status,250
+952,Sent like,1
+952,Match,1
+952,Conversation in app,-99
+953,Pre-like status,250
+953,Sent like,-99
+954,Pre-like status,250
+954,Sent like,-99
+955,Pre-liked me status,250
+955,Liked me,1
+955,Match,1
+955,Conversation in app,4
+955,First date,22
+955,Second date,10
+955,Dating,7
+955,Ended,-99
+956,Pre-like status,250
+956,Sent like,-99
+957,Pre-like status,250
+957,Sent like,-99
+958,Pre-liked me status,252
+958,Liked me,-99
+959,Pre-liked me status,252
+959,Liked me,-99
+960,Pre-like status,252
+960,Sent like,-99
+961,Pre-liked me status,252
+961,Liked me,-99
+962,Pre-liked me status,253
+962,Liked me,-99
+963,Pre-like status,255
+963,Sent like,-99
+964,Pre-like status,256
+964,Sent like,1
+964,Match,-99
+965,Pre-liked me status,256
+965,Liked me,-99
+966,Pre-liked me status,258
+966,Liked me,-99
+967,Pre-like status,258
+967,Sent like,-99
+968,Pre-like status,258
+968,Sent like,1
+968,Match,-99
+969,Pre-like status,258
+969,Sent like,-99
+970,Pre-liked me status,259
+970,Liked me,-99
+971,Pre-liked me status,259
+971,Liked me,-99
+972,Pre-liked me status,259
+972,Liked me,-99
+973,Pre-like status,261
+973,Sent like,-99
+974,Pre-liked me status,261
+974,Liked me,-99
+975,Pre-like status,263
+975,Sent like,-99
+976,Pre-like status,263
+976,Sent like,-99
+977,Pre-like status,263
+977,Sent like,-99
+978,Pre-like status,263
+978,Sent like,-99
+979,Pre-liked me status,263
+979,Liked me,-99
+980,Pre-like status,263
+980,Sent like,-99
+981,Pre-like status,263
+981,Sent like,-99
+982,Pre-like status,263
+982,Sent like,-99
+983,Pre-like status,263
+983,Sent like,-99
+984,Pre-like status,263
+984,Sent like,-99
+985,Pre-like status,263
+985,Sent like,-99
+986,Pre-like status,263
+986,Sent like,-99
+987,Pre-like status,264
+987,Sent like,-99
+988,Pre-like status,264
+988,Sent like,-99
+989,Pre-like status,264
+989,Sent like,-99
+990,Pre-like status,264
+990,Sent like,-99
+991,Pre-like status,264
+991,Sent like,-99
+992,Pre-like status,264
+992,Sent like,-99
+993,Pre-like status,266
+993,Sent like,1
+993,Match,1
+993,Conversation in app,-99
+994,Pre-liked me status,269
+994,Liked me,-99
+995,Pre-like status,270
+995,Sent like,-99
+996,Pre-like status,270
+996,Sent like,-99
+997,Pre-like status,270
+997,Sent like,-99
+998,Pre-like status,270
+998,Sent like,-99
+999,Pre-like status,270
+999,Sent like,-99
+1000,Pre-like status,270
+1000,Sent like,-99
+1001,Pre-like status,270
+1001,Sent like,-99
+1002,Pre-like status,270
+1002,Sent like,-99
+1003,Pre-like status,270
+1003,Sent like,-99
+1004,Pre-like status,270
+1004,Sent like,-99
+1005,Pre-liked me status,271
+1005,Liked me,-99
+1006,Pre-liked me status,275
+1006,Liked me,-99
+1007,Pre-liked me status,275
+1007,Liked me,-99
+1008,Pre-liked me status,275
+1008,Liked me,-99
+1009,Pre-liked me status,275
+1009,Liked me,-99
+1010,Pre-like status,276
+1010,Sent like,1
+1010,Match,-99
+1011,Pre-like status,276
+1011,Sent like,-99
+1012,Pre-like status,276
+1012,Sent like,-99
+1013,Pre-like status,276
+1013,Sent like,1
+1013,Match,1
+1013,Conversation in app,-99
+1014,Pre-like status,276
+1014,Sent like,-99
+1015,Pre-like status,276
+1015,Sent like,-99
+1016,Pre-like status,276
+1016,Sent like,-99
+1017,Pre-liked me status,276
+1017,Liked me,1
+1017,Match,-99
+1018,Pre-liked me status,276
+1018,Liked me,1
+1018,Match,-99
+1019,Pre-liked me status,276
+1019,Liked me,1
+1019,Match,1
+1019,Conversation in app,-99
+1020,Pre-like status,277
+1020,Sent like,-99
+1021,Pre-like status,277
+1021,Sent like,-99
+1022,Pre-like status,277
+1022,Sent like,-99
+1023,Pre-like status,277
+1023,Sent like,-99
+1024,Pre-like status,277
+1024,Sent like,-99
+1025,Pre-like status,277
+1025,Sent like,-99
+1026,Pre-like status,277
+1026,Sent like,-99
+1027,Pre-like status,277
+1027,Sent like,-99
+1028,Pre-like status,277
+1028,Sent like,-99
+1029,Pre-like status,277
+1029,Sent like,-99
+1030,Pre-like status,277
+1030,Sent like,-99
+1031,Pre-like status,277
+1031,Sent like,-99
+1032,Pre-like status,277
+1032,Sent like,1
+1032,Match,-99
+1033,Pre-like status,277
+1033,Sent like,-99
+1034,Pre-liked me status,277
+1034,Liked me,-99
+1035,Pre-liked me status,278
+1035,Liked me,1
+1035,Match,1
+1035,Conversation in app,-99
+1036,Pre-like status,278
+1036,Sent like,-99
+1037,Pre-like status,278
+1037,Sent like,1
+1037,Match,1
+1037,Conversation in app,1
+1037,First date,5
+1037,Second date,7
+1037,Dating,30
+1037,Deleted the app,-99
+1038,Pre-like status,278
+1038,Sent like,-99
+1039,Pre-like status,279
+1039,Sent like,-99
+1040,Pre-like status,279
+1040,Sent like,-99
+1041,Pre-like status,280
+1041,Sent like,-99
+1042,Pre-like status,280
+1042,Sent like,-99
+1043,Pre-like status,280
+1043,Sent like,-99
+1044,Pre-liked me status,280
+1044,Liked me,-99
+1045,Pre-like status,282
+1045,Sent like,-99
+1046,Pre-like status,282
+1046,Sent like,-99
+1047,Pre-like status,282
+1047,Sent like,-99
+1048,Pre-like status,282
+1048,Sent like,-99
+1049,Pre-like status,282
+1049,Sent like,1
+1049,Match,-99
+1050,Pre-liked me status,282
+1050,Liked me,-99
+1051,Pre-liked me status,282
+1051,Liked me,-99
+1052,Pre-liked me status,282
+1052,Liked me,-99
+1053,Pre-like status,282
+1053,Sent like,-99
+1054,Pre-like status,282
+1054,Sent like,-99
+1055,Pre-like status,282
+1055,Sent like,-99
+1056,Pre-like status,282
+1056,Sent like,-99
+1057,Pre-like status,282
+1057,Sent like,-99
+1058,Pre-like status,282
+1058,Sent like,-99
+1059,Pre-like status,282
+1059,Sent like,-99
+1060,Pre-like status,282
+1060,Sent like,-99
+1061,Pre-like status,282
+1061,Sent like,-99
+1062,Pre-like status,283
+1062,Sent like,-99
+1063,Pre-liked me status,283
+1063,Liked me,1
+1063,Match,1
+1063,Conversation in app,-99
+1064,Pre-like status,283
+1064,Sent like,-99
+1065,Pre-like status,283
+1065,Sent like,-99
+1066,Pre-liked me status,285
+1066,Liked me,-99
+1067,Pre-like status,285
+1067,Sent like,1
+1067,Match,1
+1067,Conversation in app,-99
+1068,Pre-like status,285
+1068,Sent like,1
+1068,Match,1
+1068,Conversation in app,-99
+1069,Pre-liked me status,286
+1069,Liked me,-99
+1070,Pre-like status,286
+1070,Sent like,1
+1070,Match,-99
+1071,Pre-liked me status,289
+1071,Liked me,-99
+1072,Pre-liked me status,290
+1072,Liked me,1
+1072,Match,-99
+1073,Pre-like status,290
+1073,Sent like,-99
+1074,Pre-like status,290
+1074,Sent like,-99
+1075,Pre-liked me status,290
+1075,Liked me,-99
+1076,Pre-liked me status,291
+1076,Liked me,-99
+1077,Pre-liked me status,291
+1077,Liked me,-99
+1078,Pre-liked me status,292
+1078,Liked me,-99
+1079,Pre-liked me status,292
+1079,Liked me,-99
+1080,Pre-liked me status,292
+1080,Liked me,-99
+1081,Pre-liked me status,292
+1081,Liked me,-99
+1082,Pre-liked me status,294
+1082,Liked me,-99
+1083,Pre-liked me status,294
+1083,Liked me,-99
+1084,Pre-liked me status,294
+1084,Liked me,-99
+1085,Pre-liked me status,294
+1085,Liked me,-99
+1086,Pre-liked me status,180
+1086,Liked me,1
+1086,Match,1
+1086,Conversation in app,1
+1086,First date,5
+1086,Second date,-99

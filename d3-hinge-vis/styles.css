@@ -1,0 +1,45 @@
+#tooltip {
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    pointer-events: none; /* This makes sure the tooltip doesn't interfere with mouse events. */
+}
+
+#heading {
+    font-family: 'Inconsolata', monospace;
+
+}
+
+html, body {
+    font-family: 'Inconsolata', monospace;
+  }
+
+ 
+  #speed {
+    font-family: inconsolata,Monaco,lucida console,Consolas,courier new;
+    font-size: .9rem;
+    text-transform: uppercase;
+    margin: 10px auto 6px;
+    width: 203px;
+}
+
+
+.button-container {
+    padding: 3px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    float: left;
+    width: 60px;
+}
+
+.line-label-first-dates {
+    font-size: 12px;
+
+}
+
+.line-label-first-matches {
+    font-size: 12px;
+
+}
