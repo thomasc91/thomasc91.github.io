@@ -355,17 +355,12 @@ function initializeSimulation() {
 
       svg.selectAll(".grpcnt").text((d) => groups[d].cnt);
       document
-        .getElementById("slow-btn")
+        .getElementById("slow-button")
         .addEventListener("click", function () {
           speed = 600;
-        });
+        });      
       document
-        .getElementById("medium-btn")
-        .addEventListener("click", function () {
-          speed = 300;
-        });
-      document
-        .getElementById("fast-btn")
+        .getElementById("fast-button")
         .addEventListener("click", function () {
           speed = 50;
         });
