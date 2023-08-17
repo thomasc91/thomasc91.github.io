@@ -1,50 +1,86 @@
 #tooltip {
-    background-color: white;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    pointer-events: none; /* This makes sure the tooltip doesn't interfere with mouse events. */
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  pointer-events: none; /* This makes sure the tooltip doesn't interfere with mouse events. */
 }
 
 #heading {
-    font-family: 'Inconsolata', monospace;
-
+  font-family: "Inconsolata", monospace;
 }
 
-html, body {
-    font-family: 'Inconsolata', monospace;
+html,
+body {
+  font-family: "Inconsolata", monospace;
+}
+
+#chart {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#speed {
+  font-family: inconsolata, Monaco, lucida console, Consolas, courier new;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 10px auto 6px;
+  width: 203px;
+}
+#header {
+    /* If you want to center the content of the entire header */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#title {
+    font-size: 30px;
+    margin-bottom: 10px;    
   }
 
- 
-  #speed {
-    font-family: inconsolata,Monaco,lucida console,Consolas,courier new;
-    font-size: .9rem;
-    text-transform: uppercase;
-    margin: 10px auto 6px;
-    width: 203px;
+#subtitle {
+    font-size: 14px;   
+    margin-bottom: 10px;     
+  }
+  #monthsCounter {
+    font-size: 35px;  
+    margin-bottom: 10px;      
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons within the container */
+    gap: 0px; /* Optional: Add some gap between the buttons */
+    margin: auto; /* Horizontally center the button-container within its parent */
 }
-
-
-.button-container {
+#pause-button, #slow-button, #fast-button  {
     padding: 3px;
     text-align: center;
     border: 1px solid #ccc;
     cursor: pointer;
     float: left;
     width: 60px;
+    font-size: 14px;
+
+}
+
+#chart svg {
+  display: block;
+  margin: auto;
 }
 
 .line-label-first-dates {
-    font-size: 12px;
-
+  font-size: 12px;
 }
 
 .line-label-matches {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-
 .x-axis {
-    font-size: 10px;
-    font-family: 'Inconsolata', monospace;
+  font-size: 10px;
+  font-family: "Inconsolata", monospace;
 }

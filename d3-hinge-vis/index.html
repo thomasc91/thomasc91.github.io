@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap">
@@ -8,6 +7,18 @@
 </head>
 <body>
 <div id="main-wrapper">
+    <div id="header">
+    <div id="title">TIME AFTER SWIPING ON HINGE</div>
+    <div id="subtitle">Every <svg width="10" height="10" class="inline-svg">
+        <circle cx="5" cy="5" r="3" fill="#8d5e86"></circle>
+    </svg> represents one of the 1,036 women I had an interaction with on the app</div>
+    <div id="monthsCounter">0 months, 0 days</div>
+    <div class="button-container">
+        <div class="flex-button" id="pause-button">PAUSE</div>
+        <div class="flex-button" id="slow-button">SLOW</div>
+        <div class="flex-button" id="fast-button">FAST</div>
+    </div>    
+</div>
 
     <div id="chart">
 
@@ -21,10 +32,3 @@
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="relationships.js"></script>
-
-
-    <div class="button-container">
-        <button id="slow-btn">Slow</button>
-        <button id="medium-btn">Medium</button>
-        <button id="fast-btn">Fast</button>
-    </div>
