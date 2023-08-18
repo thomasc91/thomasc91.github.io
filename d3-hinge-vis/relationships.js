@@ -150,10 +150,9 @@ let cumulativeDating = 0;
 let cumulativeEnded = 0;
 let cumulativeDeleted = 0;
 
-function initializeSimulation() {
-  const stages = d3.csv("stages_all.csv", d3.autoType);
-
-  stages.then(function (data) {
+async function initializeSimulation() {
+  const data = await d3.csv("stages_all.csv", d3.autoType);
+  
     let startdate = new Date("2022-08-28");    
       lineWidth = width;
       lineHeight = 200;
@@ -226,18 +225,7 @@ function initializeSimulation() {
         stages: people[d],
       };
     });
-    function mouseover(d) {
-      d3.select("#tooltip")
-        .style("left", d3.event.pageX + 5 + "px")
-        .style("top", d3.event.pageY - 28 + "px")
-        .style("opacity", 1);
-
-      d3.select("#value").text(d.id.replace("node", ""));
-    }
-
-    function mouseout(d) {
-      d3.select("#tooltip").style("opacity", 0);
-    }
+   
 
     const circle = svg
       .append("g")
@@ -247,8 +235,6 @@ function initializeSimulation() {
       .attr("cx", (d) => d.x)
       .attr("cy", (d) => d.y)
       .attr("fill", (d) => d.color)
-      .on("mouseover", mouseover)
-      .on("mouseout", mouseout);
 
     circle
       .transition()
@@ -303,17 +289,40 @@ function initializeSimulation() {
     
     document.getElementById("slow-button").style.backgroundColor = "black";
     document.getElementById("slow-button").style.color = "white";
-    document
-      .getElementById("pause-button")
-      .addEventListener("click", function () {
-        resetButtonColors();
-        this.style.backgroundColor = "black";
-        this.style.color = "white";
-        isPaused = !isPaused; // Toggle the paused state
-        if (!isPaused) {
+ 
+        // Pause Button Event Listener
+    document.getElementById("pause-button").addEventListener("click", function () {
+      resetButtonColors();
+      this.style.backgroundColor = "black";
+      this.style.color = "white";
+      isPaused = !isPaused; // Toggle the paused state
+      if (!isPaused) {
           timer(); // If unpausing, restart the timer
-        }
-      });
+      }
+  });
+
+  // Slow Button Event Listener
+  document.getElementById("slow-button").addEventListener("click", function () {
+      resetButtonColors();
+      this.style.backgroundColor = "black";
+      this.style.color = "white";
+      if (isPaused) {
+          isPaused = !isPaused; // Toggle the paused state
+          timer(); // If unpausing, restart the timer
+      }
+      speed = 500;
+  });
+
+  // Fast Button Event Listener
+  document.getElementById("fast-button").addEventListener("click", function () {
+      resetButtonColors();
+      this.style.backgroundColor = "black";
+      this.style.color = "white";
+      speed = 50;
+  });
+       
+   timer(); // If unpausing, restart the timer
+       
     function timer() {
       if (isPaused) return; // If paused, do not continue with the timer
       nodes.forEach(function (o, i) {
@@ -452,26 +461,7 @@ function initializeSimulation() {
       d3.select("#timecount .cnt").text(time_so_far);
 
       svg.selectAll(".grpcnt").text((d) => groups[d].cnt);
-      document
-        .getElementById("slow-button")
-        .addEventListener("click", function () {
-          resetButtonColors();
-          this.style.backgroundColor = "black";
-          this.style.color = "white";
-          if (isPaused) {
-            isPaused = !isPaused; // Toggle the paused state
-            timer(); // If unpausing, restart the timer
-          }
-          speed = 500;
-        });
-      document
-        .getElementById("fast-button")
-        .addEventListener("click", function () {
-          resetButtonColors();
-          this.style.backgroundColor = "black";
-          this.style.color = "white";
-          speed = 50;
-        });
+      
 
       if (currdate < new Date("2023-08-29")) {
         d3.timeout(timer, speed);
@@ -576,8 +566,7 @@ function initializeSimulation() {
     }
 
     d3.timeout(timer, 500);
-  });
-}
+  };
 
 function forceCluster() {
   const strength = 0.04;
