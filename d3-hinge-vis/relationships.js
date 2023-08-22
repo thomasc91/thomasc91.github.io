@@ -6,8 +6,8 @@ const radius = 3,
   cluster_padding = 2;
 
 const margin = { top: 0, right: 20, bottom: 20, left: 20 },
-  width = 600 - margin.left - margin.right,
-  height = 600 - margin.top - margin.bottom;
+  width = 549 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 const rowWidth = 7;
 const columnWidth = 2;
 
@@ -51,10 +51,10 @@ const monthsCounter = d3.select("#monthsCounter");
      .style("fill", "black");
     
      svg.append("text")
-     .attr("x", width+10)  // adjust positioning as needed
+     .attr("x", width+9)  // adjust positioning as needed
      .attr("y", (arrowStartY + arrowEndY) / 2)
      .style("fill", "black")
-     .style("font-size", "14px")
+     .style("font-size", "16px")
      .style("text-anchor", "middle")
      .style("dominant-baseline", "middle")
      .style("writing-mode", "tb")  // This makes the text vertical
@@ -76,7 +76,7 @@ const groups = {
     fullname: "Pre-liked me status",
   },
   "Sent like": {
-    x: width / 2 - 100,
+    x: width / 2 - 130,
     y: (1 * height) / rowWidth,
     color: "#a9a9a9",
     cnt: 0,
@@ -97,7 +97,7 @@ const groups = {
     fullname: "Match",
   },
   "Conversation in app": {
-    x: width / 2,
+    x: width / 2 ,
     y: (3 * height) / rowWidth,
     color: "#8d5e86",
     cnt: 0,
@@ -111,21 +111,21 @@ const groups = {
     fullname: "First date",
   },
   "Second date": {
-    x: width / 2,
+    x: width / 2 ,
     y: (5 * height) / rowWidth,
     color: "#FFA4B6",
     cnt: 0,
     fullname: "Second date",
   },
   Dating: {
-    x: width / 2 - 100,
+    x: width / 2 -100,
     y: (6 * height) / rowWidth,
     color: "#FFA4B6",
     cnt: 0,
-    fullname: "Dating",
+    fullname: "Dated",
   },
   Ended: {
-    x: (width / 2) + 80,
+    x: (width / 2) + 70,
     y: (6 * height) / rowWidth,
     color: "black",
     cnt: 0,
@@ -136,7 +136,7 @@ const groups = {
     y: (7 * height) / rowWidth,
     color: "#DE3163",
     cnt: 0,
-    fullname: "Deleted the app",
+    fullname: "Dating",
   },
 };
 
@@ -155,8 +155,8 @@ async function initializeSimulation() {
   
     let startdate = new Date("2022-08-28");    
       lineWidth = width;
-      lineHeight = 200;
-      lineRightMargin = 110
+      lineHeight = 120;
+      lineRightMargin = 145
       lineTopMargin = 20
       lineBottomMargin = 20
 
@@ -254,7 +254,7 @@ async function initializeSimulation() {
       .attr("x", (d) => (d === "Liked me" || d === "Ended" ? width - 50 : 0))
       .attr("y", (d) => groups[d].y)
       .text((d) => groups[d].fullname.toUpperCase())
-      .attr("font-size", "18px");
+      .attr("font-size", "16px");
 
       const simulation = d3
       .forceSimulation(nodes)
@@ -463,7 +463,7 @@ async function initializeSimulation() {
       svg.selectAll(".grpcnt").text((d) => groups[d].cnt);
       
 
-      if (currdate < new Date("2023-08-29")) {
+      if (currdate < new Date("2023-08-28")) {
         d3.timeout(timer, speed);
       }
 

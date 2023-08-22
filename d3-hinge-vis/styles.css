@@ -4,9 +4,22 @@
   font-family: "Inconsolata", monospace;
 }
 
-html,
-body {
+
+body, html {
+  height: 100%;
   font-family: "Inconsolata", monospace;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  background-color: gre;  /* Just to distinguish the main content area */
+}
+
+.main-wrapper {
+  width: calc(100vh * 16 / 9); /* width is calculated based on the viewport height */
+  max-width: 100%;             /* ensuring it doesn't exceed the viewport width */
+  height: 100vh;               /* take full viewport height */
+  background-color: white;     /* optional: just to visually distinguish content area */
+  overflow: hidden;            /* optional: to ensure content doesn't spill out */
 }
 
 
@@ -53,20 +66,16 @@ body {
 
 }
 
-#chart svg {
-  display: block;
-  margin: auto;
-}
 
 .line-label-first-dates {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .line-label-matches {
-  font-size: 12px;
+  font-size: 16x;
 }
 
 .x-axis {
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Inconsolata", monospace;
 }
