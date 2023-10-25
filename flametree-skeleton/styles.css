@@ -223,13 +223,21 @@ article {
 
 .attribution-tree-box {
   background-color: fff1e5;
-  color: black;
-  
-  padding: 30px;
+  color: black;  
   height: 1000px;
   text-align: left;
   grid-column: 2 / span 2;
   grid-row: 2 / span 4;
   position: relative; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#treeWrapper text {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none;    /* For Firefox */
+  -ms-user-select: none;     /* For IE/Edge */
 }
