@@ -9,19 +9,20 @@ const marginLeft = 100;
 let svg, gLink, gNode;
 
 // Set up the initial treeData
-let treeData = constructJSON();
+let treeData, jsonAPISettings = constructJSON();
+
 
 document
   .getElementById("carryReturnAnalysisDropdown")
   .addEventListener("change", function () {
-    treeData = constructJSON(); // Update the treeData when dropdown changes    
+    treeData, jsonAPISettings = constructJSON(); // Update the treeData when dropdown changes    
     update(null, treeData); // Pass new treeData to update function
   });
 
   document
   .getElementById("riskFreeCurveAnalysisDropdown")
   .addEventListener("change", function () {
-    treeData = constructJSON(); // Update the treeData when dropdown changes    
+    treeData, jsonAPISettings = constructJSON(); // Update the treeData when dropdown changes    
     update(null, treeData); // Pass new treeData to update function
   });
 
@@ -34,10 +35,15 @@ function constructJSON() {
     "riskFreeCurveAnalysisDropdown"
   ).value;
 
+  //Tree data is always emptied then refilled with the values in the dropdowns
   let jsonData = {
     name: "Total return",
     children: [],
   };
+
+  
+  let jsonSettings = {}
+
   if (carryReturnAnalysisValue === "none") {
     jsonData.children.push({ name: "FX return" });
     jsonData.children.push({ name: "Residual return" });
@@ -115,7 +121,7 @@ function constructJSON() {
 
 
 
-  return jsonData;
+  return jsonData, jsonSettings;
 }
 
 // The code for the tree visualization follows

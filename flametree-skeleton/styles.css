@@ -1,32 +1,37 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
 
 /* Style the sidebar - fixed full height */
 .sidebar {
   height: 100%;
-  width: 220px;
+  width: 280px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  padding-top: 45px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: #111111;
+  padding-top: 27px;  
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* takes the full height of the viewport */
+
+  background-color: #1e1e1e;
   overflow-x: hidden;
+  box-sizing: border-box; /* Add this */
 }
 
 .sidebar a {
   text-decoration: none;
   font-size: 15px;
   text-align: left;
-  color: white;
+  color: #fbf6f1;
 }
 
 /* Style sidebar links */
 .dropdown-btn {
-  padding: 20px 5px;
-  color: white;
+  padding: 25px 20px;
+  color: #ababab;
   display: block;
   border: none;
   background: none;
@@ -34,22 +39,69 @@
   cursor: pointer;
   outline: none;
   text-align: left;
-  font-size: 15px;
+  font-size: 18px;
+  box-sizing: border-box;
 }
+
+.dropdown-btn-selected {
+  padding: 25px 20px;
+  color: #ababab;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-right: 2px solid #0d6efd;  
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
+  box-sizing: border-box;
+}
+
+.user-section {
+  padding: 20px ;
+  margin-top: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center; /* vertically center items in case of varying heights */
+  border-top: 0.8px solid #ababab; /* top border */
+  padding: 10px 10px; /* vertical and horizontal padding */
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
+
+.user-name {
+  color: #ababab;
+  font-weight: bold;
+}
+
+
 .logo {
+  padding: 0px 20px;
   display: flex;
   align-items: center; /* vertically align items */
-  padding-bottom: 70px;
+  padding-bottom: 20px;
+  border-bottom: 2px white;
 }
 
 .logo a {
   /* Removed absolute positioning */
   padding-left: 5px;
   font-size: 24px;
+  border-bottom: 2px white;
 }
 
 .logo-img {
-  max-height: 25px; 
+  max-height: 39px; 
   margin-right: 10px; 
 }
 
@@ -91,9 +143,7 @@ span {
 }
 
 body {
-  font-family: 'Open Sans';
-  color: black;
-  background-color: #fff1e5;
+  background-color: #121212;
 }
 
 .material-icons-outlined {
@@ -124,59 +174,6 @@ article {
 }
 
 
-/*LANDING PAGE START */
-#title-card {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  position: absolute;
-}
-
-.start-button {
-  font-size: 20px;
-  width: 50%;
-  border: 2px solid white;
-  display: inline-block;
-  padding: 2% 16%;
-  margin-bottom: 10px;
-  color: black;
-  background-color: rgb(255, 255, 255, 0.9);
-  pointer-events: auto;
-  -webkit-transition: background-color 0.5s ease-out;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 1em;
-}
-
-/*Button*/
-.button {
-  font-size: 20px;
-  width: 60%;
-  border: 2px solid white;
-  display: inline-block;
-  padding: 2% 16%;
-  margin-bottom: 10px;
-  color: black;
-  background-color: rgb(255, 255, 255, 0.9);
-  pointer-events: auto;
-  -webkit-transition: background-color 0.5s ease-out;
-  border-radius: 20px;
-  text-align: left;
-  font-size: 1em;
-}
-
-.button:hover {
-  color: black;
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-}
-
-.button a:hover {
-  color: black;
-}
-
 /*Attribution page */
 .summary-grid-container {
   display: grid;
@@ -185,59 +182,36 @@ article {
 }
 
 .summary-title {
-  background-color: #fff1e5;
-  border-bottom: 2px solid black;  
-  padding: 10px;
+  background-color: #121212;
+  border-bottom: 1px solid #ababab;  
+  padding: 19px 0px;
   grid-column: 1 / span 3;
   grid-row: 1;
   
 }
 
 .summary-grid-text-box-1 {
-  background-color: #fff1e5;
-  color: black;  
+  background-color: #1e1e1e;
+  color: #fbf6f1;  
   padding: 30px;
-  
+  border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
   text-align: left;
   grid-column: 1;
   grid-row: 2 / span 4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
-
-#choicesDropdown {
-        padding: 8px;
-        width: 200px;        
-    }
-
-
-.summary-grid-text-box-2 {
-  background-color: #0e0e10;
-  color: white;
-  border-radius: 30px;
-  padding: 30px;
-  text-align: left;
-  grid-column: 1;
-  grid-row: 4 / span 2;
-}
-
 
 .attribution-tree-box {
-  background-color: fff1e5;
-  color: black;  
+  background-color: #1e1e1e;
+  color: #fbf6f1;  
   height: 1000px;
   text-align: left;
   grid-column: 2 / span 2;
   grid-row: 2 / span 4;
   position: relative; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-#treeWrapper text {
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none;    /* For Firefox */
-  -ms-user-select: none;     /* For IE/Edge */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
 }
