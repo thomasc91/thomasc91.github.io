@@ -1,5 +1,79 @@
 const width = 712;
-const height = 1000;
+const height = 400;
+
+function fetchJSONData() {
+  // Assuming the file is named "data.json" and is in the "levecq" folder
+  // You can replace 'levecq/data.json' with the actual path if different
+  return fetch('../API/levecq/PORTFOLIO_SUMMARY_ATTRIBUTION_REPORT_0.json')
+      .then(response => response.json())
+      .catch(error => console.error("Error fetching JSON:", error));
+}
+
+function disableAndShowLoading() {
+  let button = $("#runPythonFunction");
+  button.prop("disabled", true);
+  button.find(".spinner-grow, .loading-text").show();
+  button.find(".original-text").hide();
+}
+
+function enableAndHideLoading() {
+  let button = $("#runPythonFunction");
+  button.prop("disabled", false);
+  button.find(".spinner-grow, .loading-text").hide();
+  button.find(".original-text").show();
+}
+
+function fiaAPICall() {
+   console.log('Running fiaAPICall start')  
+   return new Promise((resolve, reject) => {
+    $.ajax({
+      url: "http://127.0.0.1:5000/API/run_python_function",
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(jsonSettings),
+      success: function(data) {
+          alert(data.message);
+          resolve(data); // Resolve the promise with the data.
+      },
+      error: function(error) {
+          console.error("Error in API call:", error);
+          reject(error);
+      }
+    });
+  });
+}
+
+async function updateChartFromJSON() {
+  // Clear the existing contents of the SVG
+  d3.select("#reportResultsWrapper").selectAll('*').remove();;
+
+  disableAndShowLoading();
+
+  // Start the timer
+  const startTime = performance.now();
+
+  try {
+      await fiaAPICall();
+      const jsonDataSummary = await fetchJSONData();
+      drawSummaryAttributionBars(jsonDataSummary);
+
+      // End the timer
+      const endTime = performance.now();
+      const calculationTime = ((endTime - startTime) / 1000).toFixed(1); // This will give time in seconds, rounded to one decimal place
+
+      // Display the time
+      $('#calculationTime').text(`File upload, attribution calculation and download took ${calculationTime}s`);
+
+      enableAndHideLoading();
+  } catch (error) {
+      enableAndHideLoading();
+      console.error("Error updating chart:", error);
+  }
+}
+
+$(document).ready(function() {
+  $("#runPythonFunction").off().click(updateChartFromJSON);  
+});
 
 // Set up the initial treeData
 ({treeData, jsonSettings} = constructJSON());
@@ -16,10 +90,11 @@ function update(treeData) {
   
     svg.append("text")
     .attr("x", -350)  // sets the x position of the text, adjust as necessary
-    .attr("y", -455)  // sets the y position of the text, adjust as necessary
+    .attr("y", -155)  // sets the y position of the text, adjust as necessary
     .text("Attribution Tree")
     .attr("font-size", "24px")
     .attr("fill", "#ababab")
+    
     
 
 let root = d3.hierarchy(treeData);
@@ -39,15 +114,15 @@ let simulation = d3.forceSimulation(nodes)
 nodes.forEach((node) => {
   if (node.data.name === "Total return") {
       node.fx = -300; // center x (because of viewBox setup)
-      node.fy = -400; // center y (because of viewBox setup)
+      node.fy = -100; // center y (because of viewBox setup)
   }
   if (node.data.name === "Residual return") {
     node.fx = -300; // center x (because of viewBox setup)
-    node.fy = -linkLength * 2; // center y (because of viewBox setup)
+    node.fy = 100; // center y (because of viewBox setup)
 }
 if (node.data.name === "FX return") {
   node.fx = -10; // center x (because of viewBox setup)
-  node.fy = -400; // center y (because of viewBox setup)
+  node.fy = -100; // center y (because of viewBox setup)
 }
 });
 
@@ -445,5 +520,95 @@ return { treeData: jsonData, jsonSettings: jsonSettings };
 }
 
 
+function drawSummaryAttributionBars(data) { 
+  
+      const totalData = data.Total;
+      const entries = Object.entries(totalData);
+  
+      const margin = { top: 40, right: 80, bottom: 40, left: 20 },
+            width = 400 - margin.left - margin.right,
+            height = 200 - margin.top - margin.bottom;
+  
+      // Define the bar transition duration
+      const barTransitionDuration = 1000;
+      d3.select("#reportResultsWrapper").append("text")
+        .attr("x", 10)  // sets the x position of the text, adjust as necessary
+        .attr("y", 25)  // sets the y position of the text, adjust as necessary
+        .text("Total returns")
+        .attr("font-size", "24px")
+        .attr("fill", "#ababab")
+          const svg = d3.select("#reportResultsWrapper")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+  
+      const x = d3.scaleLinear()
+          .domain([-Math.max(...entries.map(d => Math.abs(d[1]))), Math.max(...entries.map(d => Math.abs(d[1])))])
+          .range([0, width]);
+  
+      const y = d3.scaleBand()
+          .domain(entries.map(d => d[0]))
+          .range([height, 0])
+          .padding(0.1);
+  
+        // Interpolation functions for gradient color
+        const greenInterpolator = d3.interpolate("#d9fcd9", "#006400"); // from very light green to dark green
+          const redInterpolator = d3.interpolate("#ffd9d9", "#8b0000"); // from very light red to dark red
+  
+         // Initial bar width set to 0
+      const bars = svg.selectAll(".bar")
+      .data(entries)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .attr("y", d => y(d[0]))
+      .attr("height", y.bandwidth())
+      .attr("x", d => x(0))
+      .attr("width", 0)  
+      .attr("fill", d => {
+          const scaledValue = (d[1]) * 10; // this scales the value between 0 and 1
+          if (d[1] > 0) {
+              return greenInterpolator(scaledValue);
+          } else {
+              return redInterpolator(Math.abs(scaledValue));
+          }
+      })
+      .transition()
+      .duration(barTransitionDuration)
+      .attr("x", d => x(Math.min(0, d[1])))
+      .attr("width", d => Math.abs(x(d[1]) - x(0)))
+  
+      // Add the formatted values at the end of each bar, starting from 0 and counting up
+      const labels = svg.selectAll(".label")
+      .data(entries)
+      .enter().append("text")
+      .attr("class", "label")
+      .attr("y", d => y(d[0]) + y.bandwidth() / 2)
+      .attr("x", x(0))  // Start at the Y-axis
+      .attr("dy", ".35em")
+      .attr("text-anchor", d => d[1] > 0 ? "start" : "end")
+      .attr("fill", "#ffffff")
+      .text("0.00%");
+  
+  labels.transition()
+      .duration(barTransitionDuration)
+      .attr("x", d => d[1] > 0 ? x(d[1]) + 5 : x(d[1]) - 5)
+      .tween("text", function(d) {
+          const i = d3.interpolateNumber(0, d[1] * 100);
+          return function(t) {
+              d3.select(this).text(`${i(t).toFixed(2)}%`);
+          };
+      });
+  
+      svg.append("g")
+      .attr("class", "axis")
+      .attr("transform", `translate(${x(0)},0)`)
+      .call(d3.axisLeft(y))
+      .selectAll("text")
+      .attr("fill", "#ffffff")
+      .attr("font-size", "16px")  // Adjust font size as needed
+      .attr("font-family", "Segoe UI");  // Set the font
+    
+  }
 
 

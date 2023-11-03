@@ -119,11 +119,6 @@ i {
   float: left
 }
 
-span {
-  padding-left: 30px;
-  display: block;
-  /* to make span a block element */
-}
 
 /* Optional: Style the caret down icon */
 .fa-caret-down {
@@ -199,19 +194,54 @@ article {
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
   text-align: left;
   grid-column: 1;
-  grid-row: 2 / span 4;
+  grid-row: 2 / span 2 ;
   
 }
 
 .attribution-tree-box {
   background-color: #1e1e1e;
   color: #fbf6f1;  
-  height: 1000px;
+  padding: 30px;
   text-align: left;
   grid-column: 2 / span 2;
-  grid-row: 2 / span 4;
+  grid-row: 2 / span 1;
   position: relative; 
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+.reportResults {
+  background-color: #1e1e1e;
+  color: #fbf6f1;  
+  padding: 30px;
+  text-align: left;
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  position: relative; 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+
+#runPythonFunction {
+  width: 100%; /* adjust this value as per your requirement */
+  height: 50px;
+  position: relative; /* establishes a positioning context for absolutely positioned children */
+  display: flex;
+  justify-content: center; /* horizontally centers the text */
+  align-items: center; /* vertically centers the text */
+}
+
+
+.spinner-grow {
+  position: absolute; /* takes the spinner out of the normal document flow */
+  left: 60px; /* positions the spinner towards the left of the button; adjust as needed */
+}
+
+
+#runPythonFunction .spinner-grow, 
+#runPythonFunction .loading-text {
+    display: none;
 }
