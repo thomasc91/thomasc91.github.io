@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas Colin — D3.js Portfolio</title>
+  <link rel="shortcut icon" type="image/png" href="d3-portfolio/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+
+    /* Animated particle background */
+    #bg-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff 0%, #888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      color: #888;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero .scroll-hint {
+      font-size: 0.85rem;
+      color: #555;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* Projects grid */
+    .projects {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem 8rem;
+    }
+
+    .projects h2 {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-preview {
+      height: 200px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+    }
+
+    .card-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      color: #777;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #888;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #444;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .card-preview { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="content">
+  <section class="hero">
+    <h1>D3.js Portfolio</h1>
+    <p class="subtitle">Interactive data visualisations built with D3.js — exploring networks, scrollytelling, animation, and creative data stories.</p>
+    <p class="scroll-hint">↓ Scroll to explore</p>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <a class="card" href="d3-bond-vis/">
+        <div class="card-preview">🚗</div>
+        <div class="card-body">
+          <h3>Every James Bond Vehicle</h3>
+          <p>A scrollytelling visualisation of every vehicle driven across the Bond franchise. Hover to explore each one.</p>
+          <div class="card-tags">
+            <span class="tag">Scrollytelling</span>
+            <span class="tag">Force Layout</span>
+            <span class="tag">Interactive</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-hinge-vis/">
+        <div class="card-preview">💜</div>
+        <div class="card-body">
+          <h3>Time After Swiping on Hinge</h3>
+          <p>Animated bubble visualisation tracking 1,036 interactions on the dating app over time. Play, pause, and control speed.</p>
+          <div class="card-tags">
+            <span class="tag">Animation</span>
+            <span class="tag">Bubble Chart</span>
+            <span class="tag">Personal Data</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-portfolio/chart-pages/network-charts/">
+        <div class="card-preview">⚔️</div>
+        <div class="card-body">
+          <h3>Game of Thrones Networks</h3>
+          <p>Force-directed network graphs of character relationships across all five books in the series.</p>
+          <div class="card-tags">
+            <span class="tag">Network Graph</span>
+            <span class="tag">Force Simulation</span>
+            <span class="tag">5 Books</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-nic-cage/">
+        <div class="card-preview">🎬</div>
+        <div class="card-body">
+          <h3>Nicolas Cage's Film Career</h3>
+          <p>An interactive donut chart exploring Nic Cage's filmography — with eyes that follow your cursor.</p>
+          <div class="card-tags">
+            <span class="tag">Donut Chart</span>
+            <span class="tag">CSS Animation</span>
+            <span class="tag">Fun</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-tom-cruise/">
+        <div class="card-preview">🛩️</div>
+        <div class="card-body">
+          <h3>Tom Cruise's Film Career</h3>
+          <p>Same concept, different legend. Interactive filmography donut chart with eye-tracking effect.</p>
+          <div class="card-tags">
+            <span class="tag">Donut Chart</span>
+            <span class="tag">CSS Animation</span>
+            <span class="tag">Fun</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-portfolio/chart-pages/bar-charts/">
+        <div class="card-preview">📊</div>
+        <div class="card-body">
+          <h3>Bar & Stacked Bar Charts</h3>
+          <p>Responsive bar chart examples with tooltips and transitions, including stacked variants.</p>
+          <div class="card-tags">
+            <span class="tag">Bar Chart</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">Reference</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-portfolio/chart-pages/line-charts/">
+        <div class="card-preview">📈</div>
+        <div class="card-body">
+          <h3>Line & Multi-Line Charts</h3>
+          <p>Time series visualisations with interactive tooltips. Single and multi-line variants.</p>
+          <div class="card-tags">
+            <span class="tag">Line Chart</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Reference</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="d3-portfolio/chart-pages/beeswarm-charts/">
+        <div class="card-preview">🐝</div>
+        <div class="card-body">
+          <h3>Beeswarm Chart</h3>
+          <p>Force-based beeswarm plot for visualising distributions with individual data points.</p>
+          <div class="card-tags">
+            <span class="tag">Beeswarm</span>
+            <span class="tag">Force Layout</span>
+            <span class="tag">Reference</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by <a href="https://www.linkedin.com/in/thomas-a-colin/" target="_blank">Thomas Colin</a> · <a href="https://github.com/thomasc91" target="_blank">GitHub</a></p>
+  </footer>
+</div>
+
+<script>
+// Animated particle background — force simulation
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const n = 150;
+  const color = '#D81B60';
+
+  function genNodes() {
+    const k = canvas.width / 300;
+    return Array.from({length: n}, (_, i) => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: d3.randomUniform(k * 0.5, k * 2)(),
+      group: i === 0 ? 0 : 1
+    }));
+  }
+
+  let nodes = genNodes();
+  let mouseX = canvas.width / 2;
+  let mouseY = canvas.height / 2;
+
+  document.addEventListener('pointermove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  const simulation = d3.forceSimulation(nodes)
+    .alphaTarget(0.3)
+    .velocityDecay(0.4)
+    .force("x", d3.forceX(canvas.width / 2).strength(0.005))
+    .force("y", d3.forceY(canvas.height / 2).strength(0.005))
+    .force("collide", d3.forceCollide().radius(d => d.r + 1).iterations(2))
+    .force("charge", d3.forceManyBody().strength((d, i) => i ? 0 : -canvas.width / 2))
+    .on("tick", () => {
+      nodes[0].x = mouseX;
+      nodes[0].y = mouseY;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const d of nodes) {
+        if (d.group === 0) continue;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.globalAlpha = 0.15;
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    });
+
+  window.addEventListener('resize', () => {
+    nodes = genNodes();
+    simulation.nodes(nodes);
+    simulation.force("x", d3.forceX(canvas.width / 2).strength(0.005));
+    simulation.force("y", d3.forceY(canvas.height / 2).strength(0.005));
+    simulation.alpha(1).restart();
+  });
+})();
+</script>
+
+</body>
+</html>
