@@ -91,13 +91,6 @@ a:hover { color: var(--navy-ink); }
   line-height: 1.6;
 }
 .hero .lede b { color: var(--ink); font-weight: 500; }
-.hero .blurb {
-  margin-top: -0.4rem;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-.hero .blurb::before { content: "· "; color: var(--navy); }
 
 /* ---------- Filters ---------- */
 .filters {
