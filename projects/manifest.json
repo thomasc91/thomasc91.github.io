@@ -8,7 +8,7 @@
     {
       "slug": "bond-vehicles",
       "title": "Every James Bond Vehicle",
-      "description": "A scrollytelling journey through sixty years of Bond — every vehicle driven across the franchise, stepped through one era at a time.",
+      "description": "A scrollytelling journey through every vehicle driven across the Bond franchise.",
       "tags": ["Scrollytelling", "Force Layout", "Interactive"],
       "focus": "story",
       "stack": ["D3", "Scrollama", "JavaScript"],
@@ -20,7 +20,7 @@
     {
       "slug": "hinge-swipes",
       "title": "Time After Swiping on Hinge",
-      "description": "1,036 real interactions from the dating app, animated as a timed bubble chart — play, pause, and control the speed through the timeline.",
+      "description": "An animated bubble chart of 1,036 real interactions from the dating app.",
       "tags": ["Animation", "Bubble Chart", "Personal Data"],
       "focus": "personal",
       "stack": ["D3", "JavaScript"],
@@ -32,7 +32,7 @@
     {
       "slug": "got-networks",
       "title": "Game of Thrones Networks",
-      "description": "Force-directed network graphs of character relationships across all five books of A Song of Ice and Fire.",
+      "description": "Force-directed network graphs of character relationships across all five books.",
       "tags": ["Network Graph", "Force Simulation", "5 Books"],
       "focus": "network",
       "stack": ["D3", "Force Layout", "JavaScript"],
@@ -44,7 +44,7 @@
     {
       "slug": "nic-cage",
       "title": "Nicolas Cage's Film Career",
-      "description": "An interactive donut chart of Cage's filmography — with eyes that follow your cursor around the slice you're hovering.",
+      "description": "An interactive donut chart of Nicolas Cage's filmography.",
       "tags": ["Donut Chart", "Creative", "Animation"],
       "focus": "fun",
       "stack": ["D3", "CSS Animation"],
@@ -56,25 +56,13 @@
     {
       "slug": "tom-cruise",
       "title": "Tom Cruise's Film Career",
-      "description": "The same concept, a different legend — an interactive filmography donut with the eye-tracking effect.",
+      "description": "An interactive donut chart of Tom Cruise's filmography.",
       "tags": ["Donut Chart", "Creative", "Animation"],
       "focus": "fun",
       "stack": ["D3", "CSS Animation"],
       "thumbnail": "/thumbnails/tom-cruise.jpg",
       "entry": "/projects/tom-cruise/index.html",
       "sourceDir": "projects/tom-cruise",
-      "year": 2025
-    },
-    {
-      "slug": "chart-library",
-      "title": "Chart Reference Library",
-      "description": "A documented reference of responsive charts — bar, stacked, line, multi-line, beeswarm, and network — each reusable and annotated.",
-      "tags": ["Reference", "Responsive Charts", "Reusable"],
-      "focus": "reference",
-      "stack": ["D3", "Responsive"],
-      "thumbnail": "/thumbnails/bar-charts.jpg",
-      "entry": "/projects/chart-library/chart-pages/bar-charts/index.html",
-      "sourceDir": "projects/chart-library",
       "year": 2025
     }
   ]
