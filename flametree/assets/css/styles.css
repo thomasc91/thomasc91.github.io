@@ -291,5 +291,14 @@ button { font: inherit; cursor: pointer; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Skip link (keyboard/AT) ---------- */
+.skip-link {
+  position: absolute; left: 1rem; top: -100px; z-index: 100;
+  background: var(--ink); color: #fff; padding: 0.7rem 1.1rem;
+  border-radius: 0 0 10px 10px; font-size: var(--fs-sm); font-weight: 600;
+  transition: top var(--dur) var(--ease);
+}
+.skip-link:focus { top: 0; }

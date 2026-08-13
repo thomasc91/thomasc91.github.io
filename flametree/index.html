@@ -33,6 +33,7 @@
 
 </head>
 <body>
+  <a class="skip-link" href="#page">Skip to content</a>
   <header class="nav">
     <div class="container nav__inner">
       <a class="brand" href="index.html" aria-label="Flametree Technologies home">
@@ -191,9 +192,9 @@
         <p>Attribution and risk thinking, plus news from Flametree — delivered occasionally, straight to your inbox.</p>
         <form class="form" data-netlify="true" name="newsletter-home" data-success="Thanks for subscribing — we’ll be in touch.">
           <input type="hidden" name="form-name" value="newsletter-home">
-          <label class="honey" for="nlh-bot">Company</label>
-          <input class="honey" id="nlh-bot" name="company" tabindex="-1" autocomplete="off">
-          <input class="form__input" type="email" name="email" placeholder="you@firm.com" required autocomplete="email">
+          <label class="honey" for="nlh-bot" aria-hidden="true">Company</label>
+          <input class="honey" id="nlh-bot" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input class="form__input" type="email" name="email" placeholder="you@firm.com" required autocomplete="email" aria-label="Email address">
           <button class="btn btn--dark" type="submit">Subscribe</button>
           <p class="form__status"></p>
         </form>
@@ -229,9 +230,9 @@
           <p style="margin-top:0.6rem;">Fast, flexible attribution that can be tailored to match any investment process.</p>
           <form data-netlify="true" name="newsletter">
             <input type="hidden" name="form-name" value="newsletter">
-            <label class="honey" for="nl-bot">Company</label>
-            <input class="honey" id="nl-bot" name="company" tabindex="-1" autocomplete="off">
-            <input class="form__input" type="email" name="email" placeholder="Email for newsletter" required autocomplete="email">
+            <label class="honey" for="nl-bot" aria-hidden="true">Company</label>
+            <input class="honey" id="nl-bot" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input class="form__input" type="email" name="email" placeholder="Email for newsletter" required autocomplete="email" aria-label="Email address">
             <button class="btn btn--primary" type="submit" data-nl>Subscribe</button>
             <p class="form__status"></p>
           </form>
