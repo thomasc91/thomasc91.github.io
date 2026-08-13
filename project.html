@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Thomas Colin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/portfolio.css">
+  <link rel="shortcut icon" type="image/png" href="/projects/chart-library/img/favicon.png">
+</head>
+<body data-page="project">
+
+  <nav class="project-nav" id="projectNav">
+    <a class="back" href="/">← All projects</a>
+    <a class="source-link" href="#" target="_blank" rel="noopener">View source on GitHub</a>
+  </nav>
+
+  <header class="project-head" id="projectHead"></header>
+
+  <main class="viz-stage" id="projectStage"></main>
+
+  <footer style="max-width:1280px;">
+    <p>© <span id="yr"></span> Thomas Colin</p>
+    <div class="right">
+      <a href="/">Portfolio</a>
+      <a href="https://github.com/thomasc91" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="/assets/portfolio.js"></script>
+</body>
+</html>

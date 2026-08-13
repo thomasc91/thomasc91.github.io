@@ -1,27 +1,40 @@
-# D3.js Portfolio
+# data-viz-portfolio
 
-Interactive data visualisations built with [D3.js](https://d3js.org/) — exploring networks, scrollytelling, animation, and creative data stories.
+Single source of truth for Thomas Colin's interactive data visualizations, exhibited at
+[**thomasc91.github.io**](https://thomasc91.github.io).
 
-**🔗 [View Live Portfolio](https://thomasc91.github.io)**
+Every visualization lives self-contained under `projects/<slug>/`. The site is driven by
+**one registry** — `projects/manifest.json` — which builds the gallery and every project page.
+Add a viz: drop a folder in `projects/`, add one object to the manifest, and it appears everywhere.
 
-## Projects
+## Structure
 
-| Project | Description | Techniques |
-|---------|-------------|------------|
-| [James Bond Vehicles](https://thomasc91.github.io/d3-bond-vis/) | Scrollytelling viz of every vehicle across the Bond franchise | Scrollytelling, Force Layout |
-| [Hinge Dating Data](https://thomasc91.github.io/d3-hinge-vis/) | Animated bubbles tracking 1,036 interactions over time | Animation, Bubble Chart |
-| [Game of Thrones Networks](https://thomasc91.github.io/d3-portfolio/chart-pages/network-charts/) | Character relationship networks across all 5 books | Force-Directed Graph |
-| [Nicolas Cage Filmography](https://thomasc91.github.io/d3-nic-cage/) | Interactive donut chart with eye-tracking effect | Donut Chart, CSS Animation |
-| [Tom Cruise Filmography](https://thomasc91.github.io/d3-tom-cruise/) | Interactive donut chart with eye-tracking effect | Donut Chart, CSS Animation |
-| [Chart Reference](https://thomasc91.github.io/d3-portfolio/chart-pages/bar-charts/) | Bar, line, multi-line, and beeswarm chart examples | Responsive Charts |
+```
+index.html          → gallery, rendered from the manifest
+project.html        → uniform per-project page (?slug=<slug>)
+projects/
+  manifest.json     → THE single source of truth
+  bond-vehicles/    scrollytelling force layout
+  hinge-swipes/     animated bubble timeline
+  nic-cage/         donut + eye-tracking
+  tom-cruise/       donut + eye-tracking
+  chart-library/    bar / line / multi-line / beeswarm / network reference
+  got-books/        per-book GoT network data + pages
+  lab/              experimental work (Three.js, flametree, …)
+assets/             shared shell (portfolio.css, portfolio.js)
+archive/            previous site files for reference
+```
 
-## Built With
+## Stack
 
-- [D3.js](https://d3js.org/) (v3–v7)
-- Vanilla JavaScript, HTML, CSS
-- Hosted on GitHub Pages
+Static HTML/CSS/JS. No build step. D3 v3–v7. Deploys to GitHub Pages from `master`.
+Three.js / R3F experiments land in `projects/lab/`.
 
-## Author
+## Run locally
 
-**Thomas Colin** — Data Scientist  
-[LinkedIn](https://www.linkedin.com/in/thomas-a-colin/) · [GitHub](https://github.com/thomasc91)
+```
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+(For historical data-vis viz work and approaches see the gallery.)
