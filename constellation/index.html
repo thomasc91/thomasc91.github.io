@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constellation Demo | Content Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="constellation.css">
+</head>
+<body>
+
+  <canvas id="starfield"></canvas>
+  <svg id="constellation"></svg>
+
+  <header class="overlay-header">
+    <span class="logo">Constellation</span>
+    <span class="dept-badge">Content Strategy</span>
+  </header>
+
+  <div class="legend" id="legend">
+    <div class="leg-item"><span class="leg-dot knowledge"></span>Knowledge</div>
+    <div class="leg-item"><span class="leg-dot data"></span>Data</div>
+    <div class="leg-item"><span class="leg-dot agent"></span>Agent</div>
+  </div>
+
+  <aside class="panel" id="panel">
+    <button class="panel-close" id="panelClose">&times;</button>
+    <div class="panel-head" id="panelHead"></div>
+    <div class="panel-body" id="panelBody"></div>
+    <div class="panel-uses" id="panelUses"></div>
+  </aside>
+
+  <div class="zoom-controls">
+    <button id="zoomIn" title="Zoom in">+</button>
+    <button id="zoomOut" title="Zoom out">-</button>
+    <button id="zoomFit" title="Fit to view">Fit</button>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="constellation.js"></script>
+</body>
+</html>
