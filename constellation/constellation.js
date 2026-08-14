@@ -162,7 +162,7 @@ function render() {
     const tgt = state.sourceNodes[e.target];
     if (!src || !tgt) return;
     g.append('line')
-      .attr('class', 'edge-line dimmed')
+      .attr('class', 'edge-line')
       .attr('data-source', e.source)
       .attr('data-target', e.target)
       .attr('x1', src.x).attr('y1', src.y)
@@ -178,7 +178,7 @@ function render() {
 
   // Center the viewport on the hub
   const initialX = W / 2, initialY = H / 2;
-  g.attr('transform', `translate(${initialX},${initialY}) scale(0.85)`);
+  g.attr('transform', `translate(${initialX},${initialY}) scale(0.50)`);
 
   // Setup zoom
   state.rootG = g;
@@ -310,7 +310,7 @@ function highlightAgentConnections(agentId) {
 function clearHighlights() {
   const g = state.rootG;
   g.selectAll('.node-circle').classed('node-faded', false);
-  g.selectAll('.edge-line').classed('active', false).classed('dimmed', true);
+  g.selectAll('.edge-line').classed('active', false).classed('dimmed', false);
 }
 
 // ─── DRILL-DOWN PANEL ─────────────────────────────────────
@@ -389,7 +389,7 @@ function bindZoom() {
     const W = window.innerWidth, H = window.innerHeight;
     svg.transition().duration(500).call(
       zoom.transform,
-      d3.zoomIdentity.translate(W / 2, H / 2).scale(0.85)
+      d3.zoomIdentity.translate(W / 2, H / 2).scale(0.50)
     );
   });
 

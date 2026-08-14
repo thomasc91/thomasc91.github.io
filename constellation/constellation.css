@@ -229,14 +229,14 @@ body {
   text-anchor: middle;
 }
 .edge-line {
-  stroke: var(--edge);
+  stroke: rgba(255,255,255,0.14);
   stroke-width: 1;
   fill: none;
   pointer-events: none;
-  transition: stroke 0.3s;
+  transition: stroke 0.3s, opacity 0.3s;
 }
-.edge-line.active { stroke: var(--edge-active); stroke-width: 1.5; }
-.edge-line.dimmed { stroke: rgba(255,255,255,0.03); }
+.edge-line.active { stroke: rgba(255,255,255,0.55); stroke-width: 1.8; }
+.edge-line.dimmed { stroke: rgba(255,255,255,0.02); }
 .node-faded { opacity: 0.18; }
 
 /* hub glow */
