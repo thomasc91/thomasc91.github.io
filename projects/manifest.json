@@ -64,6 +64,18 @@
       "entry": "/projects/tom-cruise/index.html",
       "sourceDir": "projects/tom-cruise",
       "year": 2025
+    },
+    {
+      "slug": "constellation",
+      "title": "Constellation",
+      "description": "An interactive map of how data, departments, skills and outputs connect.",
+      "tags": ["Network Graph", "Force Simulation", "Agents"],
+      "focus": "network",
+      "stack": ["D3", "Force Layout", "JavaScript"],
+      "thumbnail": "/thumbnails/constellation.jpg",
+      "entry": "/projects/constellation/index.html",
+      "sourceDir": "projects/constellation",
+      "year": 2026
     }
   ]
 }

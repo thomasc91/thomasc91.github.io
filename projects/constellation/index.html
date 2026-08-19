@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Constellation — Agentic Analytics Scaffold</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  :root {
+    --bg: #1a1f2e;
+    --star: #6b7a9a;
+    --line: rgba(180, 195, 220, 0.28);
+    --text: #cdd6e6;
+    --text-dim: #8b97ad;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+  body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  #stage { position: absolute; inset: 0; }
+
+  /* starfield */
+  #stars { position: absolute; inset: 0; }
+
+  /* header bar */
+  #bar {
+    position: absolute; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; gap: 18px;
+    padding: 14px 22px; z-index: 10; pointer-events: none;
+  }
+  #bar .title { color: var(--text); font-size: 14px; letter-spacing: 0.14em; font-weight: 600; }
+  #bar .title span { color: var(--text-dim); font-weight: 400; }
+  .pill {
+    pointer-events: auto; cursor: pointer;
+    padding: 6px 14px; border-radius: 999px; font-size: 12px; letter-spacing: 0.08em;
+    color: var(--text-dim); border: 1px solid rgba(140,155,180,0.25);
+    background: rgba(26,31,46,0.5); transition: all .15s ease;
+  }
+  .pill.active { color: #fff; border-color: rgba(200,210,230,0.5); background: rgba(255,255,255,0.08); }
+  .pill:hover { color: #fff; }
+
+  /* legend */
+  #legend {
+    position: absolute; left: 22px; bottom: 22px; z-index: 10;
+    display: flex; flex-direction: column; gap: 7px; pointer-events: none;
+  }
+  .lg { display: flex; align-items: center; gap: 9px; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); }
+  .lg .dot { width: 10px; height: 10px; border-radius: 50%; box-shadow: 0 0 10px var(--c), 0 0 4px var(--c); background: var(--c); }
+
+  /* zoom controls */
+  #zoom {
+    position: absolute; right: 22px; bottom: 22px; z-index: 10;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  #zoom button {
+    pointer-events: auto; cursor: pointer; width: 34px; height: 34px; border-radius: 8px;
+    border: 1px solid rgba(140,155,180,0.25); background: rgba(26,31,46,0.6);
+    color: var(--text-dim); font-size: 15px; transition: all .15s ease;
+  }
+  #zoom button:hover { color: #fff; border-color: rgba(200,210,230,0.5); }
+
+  /* tooltip */
+  #tip {
+    position: absolute; z-index: 20; pointer-events: none;
+    padding: 7px 12px; border-radius: 8px; font-size: 12px;
+    color: #fff; background: rgba(20,24,36,0.92);
+    border: 1px solid rgba(140,155,180,0.3);
+    opacity: 0; transition: opacity .12s ease; white-space: nowrap;
+  }
+  #tip .lvl { color: var(--text-dim); font-size: 10px; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+  <svg id="stage"></svg>
+  <canvas id="stars"></canvas>
+
+  <div id="bar">
+    <div class="title">CONSTELLATION <span>· agentic analytics scaffold</span></div>
+    <div class="pill active">MAP</div>
+  </div>
+
+  <div id="legend"></div>
+
+  <div id="zoom">
+    <button id="zin" title="Zoom in">+</button>
+    <button id="zfit" title="Fit">⤢</button>
+    <button id="zout" title="Zoom out">−</button>
+  </div>
+
+  <div id="tip"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------------------------------------------------------
+   *  DATA — four levels, SkillTree radial layout.
+   *  Level 0 (data) = center core, L1 (department) = hub ring,
+   *  L2 (skill) = leaf fan, L3 (output) = outer terminal tips.
+   * --------------------------------------------------------------- */
+
+  const LEVELS = [
+    { key: 0, name: "DATA",        color: "#5aa9ff" },  // blue
+    { key: 1, name: "DEPARTMENT",  color: "#ffc24b" },  // gold
+    { key: 2, name: "SKILL",       color: "#b07bff" },  // purple
+    { key: 3, name: "OUTPUT",      color: "#41d27a" }   // green
+  ];
+
+  // Level 0 — data at the core
+  const DATA_SOURCES = [
+    "CRM", "ERP", "Spreadsheets", "SQL Warehouse", "Email / Inbox", "Social Analytics"
+  ];
+
+  // Level 1 — departments, each with skills (L2) -> outputs (L3)
+  const DEPARTMENTS = [
+    { name: "Operations",  skills: [ { s:"Forecast Agent",   o:"Demand Dashboard" },
+                                     { s:"Anomaly Agent",    o:"Alert List" },
+                                     { s:"Repair Agent",     o:"Dispatch Queue" } ] },
+    { name: "Marketing",   skills: [ { s:"Growth Agent",     o:"Campaign Board" },
+                                     { s:"Content Agent",    o:"Content Calendar" },
+                                     { s:"Paid Media Agent", o:"Spend Report" } ] },
+    { name: "Sales",       skills: [ { s:"Pricing Agent",    o:"Quote Engine" },
+                                     { s:"Outreach Agent",   o:"Outreach Targets" },
+                                     { s:"Win/Loss Agent",   o:"Deal Memo" } ] },
+    { name: "Finance",     skills: [ { s:"Reconciler Agent", o:"Close Pack" },
+                                     { s:"Cashflow Agent",   o:"Runway Report" },
+                                     { s:"Audit Agent",      o:"Audit Trail" } ] },
+    { name: "Customer",    skills: [ { s:"Churn Agent",      o:"Churn Playlist" },
+                                     { s:"Sentiment Agent",  o:"Voice Report" },
+                                     { s:"NPS Agent",        o:"NPS Tracker" } ] },
+    { name: "Intelligence",skills: [ { s:"Cluster Agent",    o:"Segment Map" },
+                                     { s:"Report Agent",     o:"KPI Board" },
+                                     { s:"Risk Agent",       o:"Risk Register" } ] },
+    { name: "Back Office", skills: [ { s:"HR Agent",         o:"People Dashboard" },
+                                     { s:"Vendor Agent",     o:"Vendor List" },
+                                     { s:"Compliance Agent", o:"Compliance Log" } ] }
+  ];
+
+  /* ---------------------------------------------------------------
+   *  BUILD NODE / LINK OBJECTS (for d3-force)
+   * --------------------------------------------------------------- */
+
+  const nodes = [], links = [];
+
+  // Level 0 core nodes
+  DATA_SOURCES.forEach((name, i) => {
+    nodes.push({
+      id: "D_" + i, name, level: 0,
+      // tight cluster around center
+      x0: Math.cos(i / DATA_SOURCES.length * Math.PI * 2) * 46,
+      y0: Math.sin(i / DATA_SOURCES.length * Math.PI * 2) * 46
+    });
+  });
+
+  const N_DEPT = DEPARTMENTS.length;
+  const HUB_R = 210; // ring radius for departments
+
+  DEPARTMENTS.forEach((d, di) => {
+    const ang = (di / N_DEPT) * Math.PI * 2 - Math.PI / 2;
+    const hx = Math.cos(ang) * HUB_R;
+    const hy = Math.sin(ang) * HUB_R;
+    const hubId = "H_" + di;
+    nodes.push({ id: hubId, name: d.name, level: 1, x0: hx, y0: hy, hub: true });
+
+    // connect core -> department (thin)
+    links.push({ source: "D_" + (di % DATA_SOURCES.length), target: hubId });
+
+    const NS = d.skills.length;
+    d.skills.forEach((sk, si) => {
+      const sid = hubId + "_S" + si;
+      // fan away from center: base angle + spread
+      const spread = 0.8;
+      const a = ang + (si - (NS - 1) / 2) * (spread / (NS - 1 || 1));
+      const sr = HUB_R + 120;
+      const sx = Math.cos(a) * sr;
+      const sy = Math.sin(a) * sr;
+      nodes.push({ id: sid, name: sk.s, level: 2, x0: sx, y0: sy });
+      links.push({ source: hubId, target: sid });
+
+      // output terminal tip
+      const oid = sid + "_O";
+      const orr = sr + 82;
+      const ox = Math.cos(a) * orr;
+      const oy = Math.sin(a) * orr;
+      nodes.push({ id: oid, name: sk.o, level: 3, x0: ox, y0: oy });
+      links.push({ source: sid, target: oid });
+    });
+  });
+
+  /* ---------------------------------------------------------------
+   *  D3 SETUP
+   * --------------------------------------------------------------- */
+
+  const W = window.innerWidth, H = window.innerHeight;
+  const svg = d3.select("#stage").attr("width", W).attr("height", H);
+  const g = svg.append("g"); // world group (for zoom/pan)
+
+  const defs = svg.append("defs");
+
+  const simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id)
+        .distance(d => d.source.level === 0 || d.target.level === 0 ? 70 : 64)
+        .strength(0.7))
+    .force("charge", d3.forceManyBody().strength(-90))
+    .force("center", d3.forceCenter(0, 0))
+    .force("collision", d3.forceCollide().radius(d => rFor(d) + 4))
+    .force("x", d3.forceX(d => d.x0 || 0).strength(0.35))
+    .force("y", d3.forceY(d => d.y0 || 0).strength(0.35));
+
+  function rFor(d) {
+    if (d.level === 0) return 14;
+    if (d.hub) return 26;
+    if (d.level === 2) return 9;
+    return 7; // output
+  }
+
+  // links
+  const link = g.append("g").selectAll("line")
+    .data(links).join("line")
+    .attr("stroke", "var(--line)")
+    .attr("stroke-width", d => d.source.level === 0 ? 1.1 : 0.8)
+    .attr("stroke-opacity", 0.55);
+
+  // nodes
+  const node = g.append("g").selectAll("g")
+    .data(nodes).join("g")
+    .call(d3.drag()
+      .on("start", (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+  // halo (glow) behind each node
+  node.append("circle")
+    .attr("r", d => rFor(d) + 9)
+    .attr("fill", d => LEVELS[d.level].color)
+    .attr("opacity", 0.14)
+    .attr("filter", haloFilter());
+
+  // core node body
+  node.append("circle")
+    .attr("r", d => rFor(d))
+    .attr("fill", d => d.level === 0 ? LEVELS[0].color : "#0f1520")
+    .attr("stroke", d => LEVELS[d.level].color)
+    .attr("stroke-width", d => d.level === 0 ? 0 : 1.4)
+    .attr("stroke-opacity", d => d.level === 0 ? 0 : 0.9);
+
+  function haloFilter() {
+    const f = defs.append("filter")
+      .attr("id", "glow-" + Math.floor(Math.random() * 1e6))
+      .attr("x", "-60%").attr("y", "-60%").attr("width", "220%").attr("height", "220%");
+    f.append("feGaussianBlur").attr("stdDeviation", 7).attr("result", "b");
+    f.append("feMerge").selectAll("feMergeNode")
+      .data(["b", "SourceGraphic"]).enter()
+      .append("feMergeNode").attr("in", d => d);
+    return "url(#" + f.attr("id") + ")";
+  }
+
+  // labels (hub + data only, to keep it clean; skill/output on hover)
+  node.append("text")
+    .text(d => (d.hub) ? d.name : "")
+    .attr("dy", d => d.hub ? -34 : 0)
+    .attr("text-anchor", "middle")
+    .attr("fill", "var(--text)")
+    .attr("font-size", 11)
+    .attr("letter-spacing", "0.06em")
+    .attr("pointer-events", "none");
+
+  // tooltip + click interactions
+  const tip = d3.select("#tip");
+  node
+    .style("cursor", "pointer")
+    .on("mouseover", function (e, d) {
+      d3.select(this).selectAll("circle").filter((dd) => !dd || true).transition().duration(120).attr("filter", haloFilter());
+      tip.html('<div class="lvl">' + LEVELS[d.level].name + '</div>' + d.name)
+        .style("opacity", 1)
+        .style("left", (e.pageX + 14) + "px")
+        .style("top", (e.pageY + 14) + "px");
+    })
+    .on("mousemove", function (e) {
+      tip.style("left", (e.pageX + 14) + "px").style("top", (e.pageY + 14) + "px");
+    })
+    .on("mouseout", function () {
+      d3.select(this).selectAll("circle").filter((d, i) => i === 0).attr("filter", null);
+      tip.style("opacity", 0);
+    })
+    .on("click", function (e, d) {
+      e.stopPropagation();
+      // toggle children visibility for this node
+      d._open = !d._open;
+      const childIds = links.filter(l => l.source.id === d.id).map(l => l.target.id);
+      if (d._open) {
+        // (children already visible by default in layout; expand = highlight)
+        node.selectAll("circle").filter(n => childIds.includes(n.id))
+          .attr("fill", "#1a2430").attr("stroke-opacity", 1);
+      }
+    });
+
+  svg.on("click", () => tip.style("opacity", 0));
+
+  // tick
+  simulation.on("tick", () => {
+    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    node.attr("transform", d => "translate(" + d.x + "," + d.y + ")");
+  });
+
+  /* ---------------------------------------------------------------
+   *  ZOOM / PAN
+   * --------------------------------------------------------------- */
+  const zoom = d3.zoom().scaleExtent([0.25, 4]).on("zoom", (e) => {
+    g.attr("transform", e.transform);
+  });
+  svg.call(zoom);
+
+  // center the world on the middle of the screen (nudged up so bottom fans aren't cropped)
+  const startTransform = d3.zoomIdentity.translate(W / 2, H / 2 - 40);
+  svg.call(zoom.transform, startTransform);
+
+  d3.select("#zin").on("click", () => svg.transition().call(zoom.scaleBy, 1.35));
+  d3.select("#zout").on("click", () => svg.transition().call(zoom.scaleBy, 1 / 1.35));
+  d3.select("#zfit").on("click", () => svg.transition().call(zoom.transform, startTransform));
+
+  /* ---------------------------------------------------------------
+   *  LEGEND
+   * --------------------------------------------------------------- */
+  const legend = d3.select("#legend");
+  LEVELS.forEach(L => {
+    legend.append("div").attr("class", "lg")
+      .style("--c", L.color)
+      .append("span").attr("class", "dot");
+    legend.select(".lg:last-child").append("span").text(L.name);
+  });
+
+  /* ---------------------------------------------------------------
+   *  STARFIELD (canvas, subtle)
+   * --------------------------------------------------------------- */
+  const c = document.getElementById("stars");
+  const cx = c.getContext("2d");
+  function sizeStars() {
+    c.width = W; c.height = H;
+    const n = Math.floor((W * H) / 9000);
+    for (let i = 0; i < n; i++) {
+      const x = Math.random() * W, y = Math.random() * H;
+      const r = Math.random() * 1.1 + 0.2;
+      const a = Math.random() * 0.5 + 0.1;
+      cx.beginPath();
+      cx.arc(x, y, r, 0, Math.PI * 2);
+      cx.fillStyle = "rgba(160,180,210," + a + ")";
+      cx.fill();
+    }
+  }
+  sizeStars();
+  window.addEventListener("resize", () => sizeStars());
+
+})();
+</script>
+</body>
+</html>
