@@ -30,6 +30,12 @@
   }
   #bar .title { color: var(--text); font-size: 14px; letter-spacing: 0.14em; font-weight: 600; }
   #bar .title span { color: var(--text-dim); font-weight: 400; }
+  #bar .build {
+    margin-left: 2px; padding: 2px 8px; border-radius: 99px;
+    font-size: 10px; letter-spacing: 0.06em; color: var(--text-dim);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(140,155,180,0.18);
+    font-variant-numeric: tabular-nums;
+  }
   .pill {
     pointer-events: auto; cursor: pointer;
     padding: 6px 14px; border-radius: 999px; font-size: 12px; letter-spacing: 0.08em;
@@ -76,6 +82,7 @@
 
   <div id="bar">
     <div class="title">CONSTELLATION <span>· agentic analytics scaffold</span></div>
+    <div class="build" id="buildTag">build —</div>
     <div class="pill active">MAP</div>
   </div>
 
@@ -92,6 +99,11 @@
 <script>
 (function () {
   "use strict";
+
+  // --- build stamp: bump this on every deploy so the browser shows the latest ---
+  const BUILD_TS = "2026-08-19 12:24";
+  const buildTag = document.getElementById("buildTag");
+  if (buildTag) buildTag.textContent = "build " + BUILD_TS;
 
   /* ---------------------------------------------------------------
    *  DATA — four levels, SkillTree radial layout.
