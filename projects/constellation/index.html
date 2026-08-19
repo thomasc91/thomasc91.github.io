@@ -17,10 +17,12 @@
   html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
   body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
 
-  #stage { position: absolute; inset: 0; }
+  #stage { position: absolute; inset: 0; z-index: 1; }
 
-  /* starfield */
-  #stars { position: absolute; inset: 0; }
+  /* Starfield. Must sit *behind* the stage and never take pointer events —
+     as a later sibling it was painting over the network and swallowing every
+     hover / drag / wheel event before the SVG could see them. */
+  #stars { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 
   /* header bar */
   #bar {
@@ -74,6 +76,87 @@
     opacity: 0; transition: opacity .12s ease; white-space: nowrap;
   }
   #tip .lvl { color: var(--text-dim); font-size: 10px; letter-spacing: 0.08em; }
+
+  /* ---------------- side panel (click the nucleus) ---------------- */
+  #panel {
+    position: absolute; top: 0; right: 0; bottom: 0; z-index: 30;
+    width: min(430px, 94vw);
+    background: #0d121c;
+    border-left: 1px solid rgba(140,155,180,0.18);
+    box-shadow: -24px 0 60px rgba(0,0,0,0.5);
+    overflow-y: auto; overscroll-behavior: contain;
+    padding: 34px 30px 56px;
+    transform: translateX(101%);
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+    color: var(--text);
+  }
+  #panel.open { transform: none; }
+
+  #panel .close {
+    position: absolute; top: 22px; right: 24px;
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent; cursor: pointer;
+    border: 1px solid rgba(140,155,180,0.28);
+    color: var(--text); font-size: 19px; line-height: 1;
+    transition: all .15s ease;
+  }
+  #panel .close:hover { color: #fff; border-color: rgba(200,210,230,0.6); background: rgba(255,255,255,0.05); }
+
+  .p-kicker {
+    font-size: 12px; letter-spacing: 0.22em; font-weight: 600;
+    color: var(--text); margin-bottom: 14px; padding-right: 56px;
+  }
+  .p-title {
+    font-size: 38px; line-height: 1.1; font-weight: 300;
+    color: #f2f5fb; letter-spacing: -0.01em; margin-bottom: 14px;
+  }
+  .p-badge {
+    display: inline-block; vertical-align: middle;
+    margin-left: 12px; padding: 7px 14px; border-radius: 8px;
+    font-size: 12px; letter-spacing: 0.16em; font-weight: 600;
+    color: var(--text); border: 1px solid rgba(140,155,180,0.34);
+    white-space: nowrap;
+  }
+  .p-sub { font-size: 16px; color: var(--text-dim); margin-bottom: 22px; }
+  .p-sub b { color: var(--text); font-weight: 400; }
+  .p-body { font-size: 15.5px; line-height: 1.62; color: var(--text); margin-bottom: 26px; }
+
+  .p-ships {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 18px; margin-bottom: 30px;
+    border: 1px solid rgba(140,155,180,0.22); border-radius: 12px;
+  }
+  .p-ships .ico {
+    flex: 0 0 auto; width: 42px; height: 42px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(140,155,180,0.22); color: var(--text-dim);
+  }
+  .p-ships .txt { flex: 1 1 auto; font-size: 15px; line-height: 1.35; color: var(--text-dim); }
+  .p-ships .txt b { color: #f2f5fb; font-weight: 600; }
+  .p-ships .act {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 7px;
+    padding: 10px 18px; border-radius: 999px; cursor: pointer;
+    font-size: 14px; font-weight: 600; color: var(--text);
+    background: transparent; border: 1px solid rgba(140,155,180,0.34);
+    transition: all .15s ease;
+  }
+  .p-ships .act:hover { color: #fff; border-color: rgba(200,210,230,0.6); background: rgba(255,255,255,0.05); }
+
+  .p-sec {
+    font-size: 12px; letter-spacing: 0.2em; font-weight: 600;
+    color: var(--text-dim); margin-bottom: 14px;
+  }
+  .p-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+  .p-chips span {
+    padding: 9px 15px; border-radius: 9px; font-size: 14px; color: var(--text);
+    border: 1px solid rgba(140,155,180,0.22);
+  }
+  .p-quote {
+    padding: 20px 22px; border-radius: 12px;
+    border: 1px solid rgba(140,155,180,0.22);
+    font-size: 15.5px; line-height: 1.6; color: var(--text);
+  }
 </style>
 </head>
 <body>
@@ -96,12 +179,14 @@
 
   <div id="tip"></div>
 
+  <aside id="panel" aria-hidden="true"></aside>
+
 <script>
 (function () {
   "use strict";
 
   // --- build stamp: bump this on every deploy so the browser shows the latest ---
-  const BUILD_TS = "2026-08-19 12:24";
+  const BUILD_TS = "2026-08-19 13:56";
   const buildTag = document.getElementById("buildTag");
   if (buildTag) buildTag.textContent = "build " + BUILD_TS;
 
@@ -115,7 +200,8 @@
     { key: 0, name: "DATA",        color: "#5aa9ff" },  // blue
     { key: 1, name: "DEPARTMENT",  color: "#ffc24b" },  // gold
     { key: 2, name: "SKILL",       color: "#b07bff" },  // purple
-    { key: 3, name: "OUTPUT",      color: "#41d27a" }   // green
+    { key: 3, name: "OUTPUT",      color: "#41d27a" },  // green
+    { key: 4, name: "CORE",        color: "#e6ecfa" }   // near-white nucleus
   ];
 
   // Level 0 — data at the core
@@ -149,19 +235,105 @@
   ];
 
   /* ---------------------------------------------------------------
+   *  GLYPHS - line art drawn in a 24x24 box centred on (0,0), so each
+   *  one drops straight into a node group and scales to fit. Stroked
+   *  rather than filled, to sit in the same hairline register as the
+   *  rest of the map. Keys are department names; CORE is the nucleus.
+   * --------------------------------------------------------------- */
+
+  const GLYPHS = {
+    // nucleus - hexagon shell around a solid centre
+    CORE: {
+      paths: ["M11,0L5.5,9.5L-5.5,9.5L-11,0L-5.5,-9.5L5.5,-9.5Z"],
+      dots:  [[0, 0, 3.6]]
+    },
+    // gear
+    "Operations": {
+      circles: [[0, 0, 6]],
+      paths: ["M0,-11V-8M0,8V11M-11,0H-8M8,0H11" +
+              "M-7.8,-7.8L-5.7,-5.7M7.8,-7.8L5.7,-5.7" +
+              "M-7.8,7.8L-5.7,5.7M7.8,7.8L5.7,5.7"]
+    },
+    // megaphone
+    "Marketing": {
+      paths: ["M-9,-4h5l8,-6v20l-8,-6h-5z", "M7,-4a5,5 0 0,1 0,8"]
+    },
+    // rising trend line with an arrow head
+    "Sales": {
+      paths: ["M-10,7L-3,0L1,4L9,-6", "M4,-6h5v5"]
+    },
+    // balance scales
+    "Finance": {
+      paths: ["M0,-10V8M-9,-8H9", "M-9,-8l-3.5,7h7z", "M9,-8l-3.5,7h7z", "M-5,8h10"],
+      dots:  [[0, -10, 1.8]]
+    },
+    // person
+    "Customer": {
+      circles: [[0, -5, 4]],
+      paths: ["M-8,9a8,8 0 0,1 16,0"]
+    },
+    // lightbulb
+    "Intelligence": {
+      circles: [[0, -3, 6.5]],
+      paths: ["M-3.2,4.4v3.2h6.4V4.4", "M-2.2,9.6h4.4"]
+    },
+    // filing cabinet
+    "Back Office": {
+      paths: ["M-8,-10h16v20h-16z", "M-8,-3h16", "M-8,4h16",
+              "M-2.5,-6.8h5", "M-2.5,0.2h5", "M-2.5,7.2h5"]
+    }
+  };
+
+  /* ---------------------------------------------------------------
+   *  PANEL CONTENT - keyed by node id. Only the nucleus has a panel
+   *  today; add an entry here to give any other node one.
+   * --------------------------------------------------------------- */
+
+  const PANELS = {
+    CORE: {
+      kicker: "NODE ZERO",
+      title: "Company Knowledge Base",
+      badge: "BEFORE EVERYTHING",
+      sub: "<b>The hub</b> \u00b7 every department reads &amp; writes",
+      body: "The single place every agent reads from and writes to. Not software " +
+            "you buy \u00b7 plain files with a strict convention: who the company is, " +
+            "what it sells, how it speaks, what is true right now. An agent with " +
+            "this context writes like a colleague. An agent without it writes " +
+            "like a stranger.",
+      ships: { lead: "2 runnable skill files", tail: "ships with this job", action: "Preview" },
+      livesIn: ["company.md", "offer.md", "voice.md", "clients/*",
+                "meetings/*", "playbooks/*", "STATE.md"],
+      replaces: "Re-briefing every tool, agency, hire, and AI session from scratch, " +
+                "forever. The context tax is invisible because everyone pays it \u00b7 " +
+                "until one company stops paying it and starts compounding instead."
+    }
+  };
+
+  /* ---------------------------------------------------------------
    *  BUILD NODE / LINK OBJECTS (for d3-force)
    * --------------------------------------------------------------- */
 
   const nodes = [], links = [];
 
-  // Level 0 core nodes
+  const CORE_ID = "CORE";
+  const DATA_R = 118; // radius of the data ring around the nucleus
+
+  // The nucleus, pinned dead centre - everything else orbits it.
+  nodes.push({
+    id: CORE_ID, name: "Company Knowledge Base", level: 4, core: true,
+    x0: 0, y0: 0, fx: 0, fy: 0
+  });
+
+  // Level 0 - data sources on a ring around the nucleus, one spoke each,
+  // so the middle of the map reads as a proper radial wheel.
   DATA_SOURCES.forEach((name, i) => {
+    const ang = (i / DATA_SOURCES.length) * Math.PI * 2 - Math.PI / 2;
     nodes.push({
       id: "D_" + i, name, level: 0,
-      // tight cluster around center
-      x0: Math.cos(i / DATA_SOURCES.length * Math.PI * 2) * 46,
-      y0: Math.sin(i / DATA_SOURCES.length * Math.PI * 2) * 46
+      x0: Math.cos(ang) * DATA_R,
+      y0: Math.sin(ang) * DATA_R
     });
+    links.push({ source: CORE_ID, target: "D_" + i, spoke: true });
   });
 
   const N_DEPT = DEPARTMENTS.length;
@@ -203,23 +375,42 @@
    *  D3 SETUP
    * --------------------------------------------------------------- */
 
-  const W = window.innerWidth, H = window.innerHeight;
+  let W = window.innerWidth, H = window.innerHeight;
   const svg = d3.select("#stage").attr("width", W).attr("height", H);
   const g = svg.append("g"); // world group (for zoom/pan)
 
   const defs = svg.append("defs");
 
+  // Node halos are radial gradients, one per level, not SVG blur filters.
+  // 56 nodes each carrying an feGaussianBlur made a large filtered region that
+  // Chrome had to re-rasterise every time the world transform moved - which
+  // left stale tiles painted behind the live scene (the map appearing twice).
+  // A gradient gives the same soft falloff with nothing to invalidate.
+  LEVELS.forEach((L, i) => {
+    const grad = defs.append("radialGradient").attr("id", "halo-" + i);
+    grad.append("stop").attr("offset", "0%")
+      .attr("stop-color", L.color).attr("stop-opacity", 1);
+    grad.append("stop").attr("offset", "40%")
+      .attr("stop-color", L.color).attr("stop-opacity", 0.55);
+    grad.append("stop").attr("offset", "100%")
+      .attr("stop-color", L.color).attr("stop-opacity", 0);
+  });
+
   const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id)
-        .distance(d => d.source.level === 0 || d.target.level === 0 ? 70 : 64)
+        .distance(d => d.spoke ? DATA_R
+                     : (d.source.level === 0 || d.target.level === 0 ? 70 : 64))
         .strength(0.7))
     .force("charge", d3.forceManyBody().strength(-90))
     .force("center", d3.forceCenter(0, 0))
     .force("collision", d3.forceCollide().radius(d => rFor(d) + 4))
-    .force("x", d3.forceX(d => d.x0 || 0).strength(0.35))
-    .force("y", d3.forceY(d => d.y0 || 0).strength(0.35));
+    // hold the nucleus and its data ring firmly on station so the middle
+    // reads as an even wheel; let the outer layers breathe
+    .force("x", d3.forceX(d => d.x0 || 0).strength(d => (d.core || d.level === 0) ? 0.9 : 0.35))
+    .force("y", d3.forceY(d => d.y0 || 0).strength(d => (d.core || d.level === 0) ? 0.9 : 0.35));
 
   function rFor(d) {
+    if (d.core) return 22;
     if (d.level === 0) return 14;
     if (d.hub) return 26;
     if (d.level === 2) return 9;
@@ -230,47 +421,60 @@
   const link = g.append("g").selectAll("line")
     .data(links).join("line")
     .attr("stroke", "var(--line)")
-    .attr("stroke-width", d => d.source.level === 0 ? 1.1 : 0.8)
+    .attr("stroke-width", d => d.spoke ? 1.3 : (d.source.level === 0 ? 1.1 : 0.8))
     .attr("stroke-opacity", 0.55);
 
   // nodes
   const node = g.append("g").selectAll("g")
     .data(nodes).join("g")
     .call(d3.drag()
-      .on("start", (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-      .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
-      .on("end", (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+      .on("start", (e, d) => { if (d.core) return; if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { if (d.core) return; d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (d.core) return; if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
 
   // halo (glow) behind each node
   node.append("circle")
-    .attr("r", d => rFor(d) + 9)
-    .attr("fill", d => LEVELS[d.level].color)
-    .attr("opacity", 0.14)
-    .attr("filter", haloFilter());
+    .attr("class", "halo")
+    .attr("r", d => rFor(d) + 18)
+    .attr("fill", d => "url(#halo-" + d.level + ")")
+    .attr("opacity", 0.32);
 
   // core node body
   node.append("circle")
     .attr("r", d => rFor(d))
     .attr("fill", d => d.level === 0 ? LEVELS[0].color : "#0f1520")
     .attr("stroke", d => LEVELS[d.level].color)
-    .attr("stroke-width", d => d.level === 0 ? 0 : 1.4)
+    .attr("stroke-width", d => d.level === 0 ? 0 : (d.core ? 1.8 : 1.4))
     .attr("stroke-opacity", d => d.level === 0 ? 0 : 0.9);
 
-  function haloFilter() {
-    const f = defs.append("filter")
-      .attr("id", "glow-" + Math.floor(Math.random() * 1e6))
-      .attr("x", "-60%").attr("y", "-60%").attr("width", "220%").attr("height", "220%");
-    f.append("feGaussianBlur").attr("stdDeviation", 7).attr("result", "b");
-    f.append("feMerge").selectAll("feMergeNode")
-      .data(["b", "SourceGraphic"]).enter()
-      .append("feMergeNode").attr("in", d => d);
-    return "url(#" + f.attr("id") + ")";
-  }
+  // glyphs - nucleus and department hubs only
+  node.each(function (d) {
+    const glyph = GLYPHS[d.core ? "CORE" : (d.level === 1 ? d.name : "")];
+    if (!glyph) return;
+    const box = d.core ? 30 : 25;          // on-screen size of the 24-unit box
+    const k = box / 24;
+    const gl = d3.select(this).append("g")
+      .attr("class", "glyph")
+      .attr("transform", "scale(" + k + ")")
+      .attr("fill", "none")
+      .attr("stroke", LEVELS[d.level].color)
+      .attr("stroke-width", 1.5 / k)
+      .attr("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-opacity", 0.95)
+      .attr("pointer-events", "none");
+    (glyph.paths || []).forEach(dd => gl.append("path").attr("d", dd));
+    (glyph.circles || []).forEach(c =>
+      gl.append("circle").attr("cx", c[0]).attr("cy", c[1]).attr("r", c[2]));
+    (glyph.dots || []).forEach(c =>
+      gl.append("circle").attr("cx", c[0]).attr("cy", c[1]).attr("r", c[2])
+        .attr("fill", LEVELS[d.level].color).attr("stroke", "none"));
+  });
 
   // labels (hub + data only, to keep it clean; skill/output on hover)
   node.append("text")
-    .text(d => (d.hub) ? d.name : "")
-    .attr("dy", d => d.hub ? -34 : 0)
+    .text(d => (d.hub || d.core) ? d.name : "")
+    .attr("dy", d => d.core ? 42 : (d.hub ? -34 : 0))
     .attr("text-anchor", "middle")
     .attr("fill", "var(--text)")
     .attr("font-size", 11)
@@ -290,7 +494,8 @@
   // map department hub id -> set of all node ids in its subtree (hub + skills + outputs)
   const deptMembers = {};
   // map data node id -> the full list of data node ids
-  const allDataIds = nodes.filter(n => n.level === 0).map(n => n.id);
+  // the wheel = nucleus + every data source spoked off it
+  const wheelIds = nodes.filter(n => n.level === 0 || n.core).map(n => n.id);
 
   // seed department memberships from the hub/skill/output link structure
   nodes.forEach(n => { if (n.level === 1) { deptMembers[n.id] = new Set([n.id]); } });
@@ -321,70 +526,159 @@
 
   // For any node, return the set of ids to highlight (or null).
   function highlightSet(d) {
-    if (d.level === 0) return new Set(allDataIds);
+    if (d.level === 0 || d.core) return new Set(wheelIds);
     const root = d.level === 1 ? d.id : deptRootOf[d.id];
     if (root && deptMembers[root]) return new Set(deptMembers[root]);
     return null;
   }
 
+  // Dim the node <g> as a whole rather than each circle inside it. Writing
+  // opacity onto the circles clobbered the halo's own 0.14, so after the first
+  // hover every halo snapped to fully opaque and stayed there.
+  // Pass null to reset.
   function applyHighlight(ids) {
-    // dim everything, then brighten the target set
-    node.each(function (n) {
-      const sel = d3.select(this);
-      const inSet = ids && ids.has(n.id);
-      sel.selectAll("circle")
-        .transition().duration(140)
-        .attr("opacity", inSet ? 1 : 0.22);
-      sel.selectAll("text")
-        .transition().duration(140)
-        .attr("opacity", inSet ? 1 : 0.22);
-    });
+    node.transition().duration(140)
+      .attr("opacity", n => (!ids || ids.has(n.id)) ? 1 : 0.22);
     link.transition().duration(140)
-      .attr("stroke-opacity", ids ? 0.12 : 0.55);
+      .attr("stroke-opacity", l => {
+        if (!ids) return 0.55;
+        return (ids.has(l.source.id) && ids.has(l.target.id)) ? 0.7 : 0.12;
+      });
   }
 
-  function clearHighlight() {
-    node.each(function () {
-      const sel = d3.select(this);
-      sel.selectAll("circle").transition().duration(140).attr("opacity", 1);
-      sel.selectAll("text").transition().duration(140).attr("opacity", 1);
+  function clearHighlight() { applyHighlight(null); }
+
+  /* ---------------------------------------------------------------
+   *  SIDE PANEL
+   * --------------------------------------------------------------- */
+
+  const panelEl = document.getElementById("panel");
+
+  const ICON_DOWNLOAD =
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' +
+    '<path d="M12 4v12M6.5 11.5 12 17l5.5-5.5M5 20h14"/></svg>';
+
+  const ICON_LOCK =
+    '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
+    '<rect x="4.5" y="10.5" width="15" height="10" rx="2"/>' +
+    '<path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>';
+
+  function renderPanel(cfg) {
+    let html = '<button class="close" aria-label="Close">&#10005;</button>';
+    html += '<div class="p-kicker">' + cfg.kicker + '</div>';
+    html += '<h2 class="p-title">' + cfg.title +
+            (cfg.badge ? '<span class="p-badge">' + cfg.badge + '</span>' : '') + '</h2>';
+    if (cfg.sub) html += '<div class="p-sub">' + cfg.sub + '</div>';
+    if (cfg.body) html += '<p class="p-body">' + cfg.body + '</p>';
+    if (cfg.ships) {
+      html += '<div class="p-ships">' +
+                '<div class="ico">' + ICON_DOWNLOAD + '</div>' +
+                '<div class="txt"><b>' + cfg.ships.lead + '</b> ' + cfg.ships.tail + '</div>' +
+                '<button class="act">' + ICON_LOCK + cfg.ships.action + '</button>' +
+              '</div>';
+    }
+    if (cfg.livesIn) {
+      html += '<div class="p-sec">WHAT LIVES IN IT</div><div class="p-chips">' +
+              cfg.livesIn.map(f => '<span>' + f + '</span>').join('') + '</div>';
+    }
+    if (cfg.replaces) {
+      html += '<div class="p-sec">WHAT IT REPLACES</div>' +
+              '<div class="p-quote">' + cfg.replaces + '</div>';
+    }
+    panelEl.innerHTML = html;
+    panelEl.querySelector(".close").addEventListener("click", (e) => {
+      e.stopPropagation();
+      closePanel();
     });
-    link.transition().duration(140).attr("stroke-opacity", 0.55);
   }
+
+  function openPanel(id) {
+    const cfg = PANELS[id];
+    if (!cfg) return false;
+    renderPanel(cfg);
+    panelEl.classList.add("open");
+    panelEl.setAttribute("aria-hidden", "false");
+    panelEl.scrollTop = 0;
+    if (!userAdjusted) fitNow(300); // reflow into the narrower stage
+    return true;
+  }
+
+  // just hide the panel, leaving highlight state alone
+  function hidePanel() {
+    if (!panelIsOpen()) return;
+    panelEl.classList.remove("open");
+    panelEl.setAttribute("aria-hidden", "true");
+    if (!userAdjusted) fitNow(300);
+  }
+
+  function closePanel() {
+    hidePanel();
+    pinnedId = null;
+    clearHighlight();
+  }
+
+  function panelIsOpen() { return panelEl.classList.contains("open"); }
+
+  // clicks inside the panel must not fall through to the svg background handler
+  panelEl.addEventListener("click", (e) => e.stopPropagation());
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && panelIsOpen()) closePanel();
+  });
 
   // tooltip + interactions
   const tip = d3.select("#tip");
+
+  // id of the node whose highlight is pinned by a click, or null
+  let pinnedId = null;
+
+  function showTip(e, d) {
+    tip.html('<div class="lvl">' + LEVELS[d.level].name + '</div>' + d.name)
+      .style("opacity", 1)
+      .style("left", (e.pageX + 14) + "px")
+      .style("top", (e.pageY + 14) + "px");
+  }
+
   node
     .style("cursor", "pointer")
     .on("mouseover", function (e, d) {
-      d3.select(this).selectAll("circle").filter((dd) => !dd || true).transition().duration(120).attr("filter", haloFilter());
-      applyHighlight(highlightSet(d));
-      tip.html('<div class="lvl">' + LEVELS[d.level].name + '</div>' + d.name)
-        .style("opacity", 1)
-        .style("left", (e.pageX + 14) + "px")
-        .style("top", (e.pageY + 14) + "px");
+      // brighten this node's own halo
+      d3.select(this).select("circle.halo").transition().duration(120).attr("opacity", 0.7);
+      if (!pinnedId) applyHighlight(highlightSet(d));
+      showTip(e, d);
     })
     .on("mousemove", function (e) {
       tip.style("left", (e.pageX + 14) + "px").style("top", (e.pageY + 14) + "px");
     })
-    .on("mouseout", function (e, d) {
-      d3.select(this).selectAll("circle").filter((dd, i) => i === 0).attr("filter", null);
-      clearHighlight();
+    .on("mouseout", function () {
+      d3.select(this).select("circle.halo").transition().duration(120).attr("opacity", 0.32);
+      if (!pinnedId) clearHighlight();
       tip.style("opacity", 0);
     })
     .on("click", function (e, d) {
       e.stopPropagation();
-      // toggle children visibility for this node
-      d._open = !d._open;
-      const childIds = links.filter(l => l.source.id === d.id).map(l => l.target.id);
-      if (d._open) {
-        // (children already visible by default in layout; expand = highlight)
-        node.selectAll("circle").filter(n => childIds.includes(n.id))
-          .attr("fill", "#1a2430").attr("stroke-opacity", 1);
+      // click pins the highlight so it survives mouseout; click again to release
+      if (pinnedId === d.id) {
+        pinnedId = null;
+        clearHighlight();
+        if (panelIsOpen()) closePanel();
+      } else {
+        pinnedId = d.id;
+        applyHighlight(highlightSet(d));
+        // nodes with panel content open the side panel too (the nucleus, today)
+        if (!openPanel(d.id)) hidePanel();
       }
+      tip.style("opacity", 0);
     });
 
-  svg.on("click", () => tip.style("opacity", 0));
+  svg.on("click", () => {
+    pinnedId = null;
+    clearHighlight();
+    tip.style("opacity", 0);
+    hidePanel();
+  });
 
   // tick
   simulation.on("tick", () => {
@@ -405,6 +699,7 @@
     })
     .on("zoom", (event) => {
       g.attr("transform", event.transform);
+      if (event.sourceEvent) userAdjusted = true; // drag-pan, not a programmatic fit
     });
 
   svg.call(zoom);
@@ -424,22 +719,87 @@
     const nx = gp[0] - k * (gp[0] - transform.x) / transform.k;
     const ny = gp[1] - k * (gp[1] - transform.y) / transform.k;
     const next = d3.zoomIdentity.translate(nx, ny).scale(k);
+    userAdjusted = true; // routed through zoom.transform, so flag it by hand
     svg.call(zoom.transform, next);
   }, { passive: false });
 
-  // center the world on the middle of the screen (nudged up so bottom fans aren't cropped)
-  const startTransform = d3.zoomIdentity.translate(W / 2, H / 2 - 40);
-  svg.call(zoom.transform, startTransform);
+  /* ---------------------------------------------------------------
+   *  FIT TO VIEWPORT
+   *  The view used to be a hardcoded translate at scale 1, which ignored
+   *  both the size of the graph and the size of the window - so a tall or
+   *  small window left the wheel stranded with dead space under it. Now we
+   *  measure the settled graph and scale it into whatever room there is.
+   * --------------------------------------------------------------- */
 
-  d3.select("#zin").on("click", () => svg.transition().duration(200).call(zoom.scaleBy, 1.35));
-  d3.select("#zout").on("click", () => svg.transition().duration(200).call(zoom.scaleBy, 1 / 1.35));
-  d3.select("#zfit").on("click", () => svg.transition().duration(200).call(zoom.transform, startTransform));
+  // keeps the graph clear of the header bar, the legend and the zoom controls
+  const INSET = { top: 76, right: 30, bottom: 64, left: 30 };
+
+  // true once the viewer has panned or zoomed by hand; we stop auto-refitting
+  // after that so a resize never yanks the view out from under them
+  let userAdjusted = false;
+
+  function graphBounds() {
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    nodes.forEach(n => {
+      // hub labels sit ~34px above their circle, so give those extra headroom
+      const r = rFor(n) + (n.hub ? 44 : 14);
+      if (n.x - r < x0) x0 = n.x - r;
+      if (n.x + r > x1) x1 = n.x + r;
+      if (n.y - r < y0) y0 = n.y - r;
+      if (n.y + r > y1) y1 = n.y + r;
+    });
+    return { x0, y0, x1, y1 };
+  }
+
+  function fitTransform() {
+    const b = graphBounds();
+    const gw = Math.max(1, b.x1 - b.x0);
+    const gh = Math.max(1, b.y1 - b.y0);
+    // an open panel eats into the usable width
+    const right = INSET.right +
+      (panelIsOpen() ? panelEl.getBoundingClientRect().width : 0);
+    // Measure the viewport here rather than trusting W/H: those are captured at
+    // script start and can already be stale by first paint (the layout viewport
+    // settles late, scrollbars appear). A fit that measures itself can't drift.
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const availW = Math.max(80, vw - INSET.left - right);
+    const availH = Math.max(80, vh - INSET.top - INSET.bottom);
+    // contain, never blow past the zoom extent
+    const k = Math.max(0.25, Math.min(4, Math.min(availW / gw, availH / gh)));
+    const cx = (b.x0 + b.x1) / 2, cy = (b.y0 + b.y1) / 2;
+    return d3.zoomIdentity
+      .translate(INSET.left + availW / 2 - k * cx, INSET.top + availH / 2 - k * cy)
+      .scale(k);
+  }
+
+  function fitNow(duration) {
+    const t = fitTransform();
+    if (duration) svg.transition().duration(duration).call(zoom.transform, t);
+    else svg.call(zoom.transform, t);
+    userAdjusted = false;
+  }
+
+  fitNow(0);
+  // re-fit after the first frame and again after load, in case the viewport
+  // was still settling when the script ran
+  requestAnimationFrame(() => { if (!userAdjusted) fitNow(0); });
+  window.addEventListener("load", () => { if (!userAdjusted) relayout(false); });
+
+  d3.select("#zin").on("click", () => {
+    userAdjusted = true;
+    svg.transition().duration(200).call(zoom.scaleBy, 1.35);
+  });
+  d3.select("#zout").on("click", () => {
+    userAdjusted = true;
+    svg.transition().duration(200).call(zoom.scaleBy, 1 / 1.35);
+  });
+  d3.select("#zfit").on("click", () => fitNow(260));
 
   /* ---------------------------------------------------------------
    *  LEGEND
    * --------------------------------------------------------------- */
   const legend = d3.select("#legend");
-  LEVELS.forEach(L => {
+  [4, 0, 1, 2, 3].map(i => LEVELS[i]).forEach(L => {
     legend.append("div").attr("class", "lg")
       .style("--c", L.color)
       .append("span").attr("class", "dot");
@@ -465,7 +825,35 @@
     }
   }
   sizeStars();
-  window.addEventListener("resize", () => sizeStars());
+
+  // Keep the SVG viewport, the starfield and the "fit" target in step with the
+  // window. Previously W/H were captured once at load, so resizing left the
+  // stage at its original size and redrew the stars into the stale box.
+  let resizeTimer = null;
+  function relayout(animate) {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    svg.attr("width", W).attr("height", H);
+    sizeStars();
+    // refit once the drag settles, unless the viewer has taken manual control
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if (!userAdjusted) fitNow(animate ? 200 : 0); }, 120);
+  }
+
+  window.addEventListener("resize", () => relayout(true));
+
+  // A resize event is not the only way the stage can change size (the layout
+  // viewport can settle after first paint, scrollbars can come and go). Watch
+  // the box itself so the fit is never left measuring a stale viewport.
+  if (window.ResizeObserver) {
+    let last = window.innerWidth + "x" + window.innerHeight;
+    new ResizeObserver(() => {
+      const now = window.innerWidth + "x" + window.innerHeight;
+      if (now === last) return;
+      last = now;
+      relayout(true);
+    }).observe(document.documentElement);
+  }
 
 })();
 </script>
