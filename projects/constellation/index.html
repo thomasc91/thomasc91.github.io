@@ -7,11 +7,13 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
   :root {
-    --bg: #1a1f2e;
-    --star: #6b7a9a;
-    --line: rgba(180, 195, 220, 0.28);
-    --text: #cdd6e6;
-    --text-dim: #8b97ad;
+    /* Anthropic palette, dark. Slate ground, cloud/ivory type, and the warm
+       book-cloth -> kraft -> manilla ramp for everything that carries data. */
+    --bg: #191917;
+    --star: #6b665e;
+    --line: rgba(240, 238, 230, 0.22);
+    --text: #E5E4DF;
+    --text-dim: #91918D;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
@@ -35,17 +37,17 @@
   #bar .build {
     margin-left: 2px; padding: 2px 8px; border-radius: 99px;
     font-size: 10px; letter-spacing: 0.06em; color: var(--text-dim);
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(140,155,180,0.18);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(240,238,230,0.18);
     font-variant-numeric: tabular-nums;
   }
   .pill {
     pointer-events: auto; cursor: pointer;
     padding: 6px 14px; border-radius: 999px; font-size: 12px; letter-spacing: 0.08em;
-    color: var(--text-dim); border: 1px solid rgba(140,155,180,0.25);
-    background: rgba(26,31,46,0.5); transition: all .15s ease;
+    color: var(--text-dim); border: 1px solid rgba(240,238,230,0.25);
+    background: rgba(32,31,29,0.5); transition: all .15s ease;
   }
-  .pill.active { color: #fff; border-color: rgba(200,210,230,0.5); background: rgba(255,255,255,0.08); }
-  .pill:hover { color: #fff; }
+  .pill.active { color: #FAFAF7; border-color: rgba(240,238,230,0.5); background: rgba(255,255,255,0.08); }
+  .pill:hover { color: #FAFAF7; }
 
   /* legend */
   #legend {
@@ -62,17 +64,17 @@
   }
   #zoom button {
     pointer-events: auto; cursor: pointer; width: 34px; height: 34px; border-radius: 8px;
-    border: 1px solid rgba(140,155,180,0.25); background: rgba(26,31,46,0.6);
+    border: 1px solid rgba(240,238,230,0.25); background: rgba(32,31,29,0.6);
     color: var(--text-dim); font-size: 15px; transition: all .15s ease;
   }
-  #zoom button:hover { color: #fff; border-color: rgba(200,210,230,0.5); }
+  #zoom button:hover { color: #FAFAF7; border-color: rgba(240,238,230,0.5); }
 
   /* tooltip */
   #tip {
     position: absolute; z-index: 20; pointer-events: none;
     padding: 7px 12px; border-radius: 8px; font-size: 12px;
-    color: #fff; background: rgba(20,24,36,0.92);
-    border: 1px solid rgba(140,155,180,0.3);
+    color: #FAFAF7; background: rgba(25,24,22,0.94);
+    border: 1px solid rgba(240,238,230,0.3);
     opacity: 0; transition: opacity .12s ease; white-space: nowrap;
   }
   #tip .lvl { color: var(--text-dim); font-size: 10px; letter-spacing: 0.08em; }
@@ -81,8 +83,8 @@
   #panel {
     position: absolute; top: 0; right: 0; bottom: 0; z-index: 30;
     width: min(430px, 94vw);
-    background: #0d121c;
-    border-left: 1px solid rgba(140,155,180,0.18);
+    background: #201F1D;
+    border-left: 1px solid rgba(240,238,230,0.18);
     box-shadow: -24px 0 60px rgba(0,0,0,0.5);
     overflow-y: auto; overscroll-behavior: contain;
     padding: 34px 30px 56px;
@@ -97,11 +99,11 @@
     width: 44px; height: 44px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     background: transparent; cursor: pointer;
-    border: 1px solid rgba(140,155,180,0.28);
+    border: 1px solid rgba(240,238,230,0.28);
     color: var(--text); font-size: 19px; line-height: 1;
     transition: all .15s ease;
   }
-  #panel .close:hover { color: #fff; border-color: rgba(200,210,230,0.6); background: rgba(255,255,255,0.05); }
+  #panel .close:hover { color: #FAFAF7; border-color: rgba(240,238,230,0.6); background: rgba(255,255,255,0.05); }
 
   .p-kicker {
     font-size: 12px; letter-spacing: 0.22em; font-weight: 600;
@@ -109,13 +111,13 @@
   }
   .p-title {
     font-size: 38px; line-height: 1.1; font-weight: 300;
-    color: #f2f5fb; letter-spacing: -0.01em; margin-bottom: 14px;
+    color: #F0EEE6; letter-spacing: -0.01em; margin-bottom: 14px;
   }
   .p-badge {
     display: inline-block; vertical-align: middle;
     margin-left: 12px; padding: 7px 14px; border-radius: 8px;
     font-size: 12px; letter-spacing: 0.16em; font-weight: 600;
-    color: var(--text); border: 1px solid rgba(140,155,180,0.34);
+    color: var(--text); border: 1px solid rgba(240,238,230,0.34);
     white-space: nowrap;
   }
   .p-sub { font-size: 16px; color: var(--text-dim); margin-bottom: 22px; }
@@ -125,23 +127,23 @@
   .p-ships {
     display: flex; align-items: center; gap: 16px;
     padding: 16px 18px; margin-bottom: 30px;
-    border: 1px solid rgba(140,155,180,0.22); border-radius: 12px;
+    border: 1px solid rgba(240,238,230,0.22); border-radius: 12px;
   }
   .p-ships .ico {
     flex: 0 0 auto; width: 42px; height: 42px; border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    border: 1px solid rgba(140,155,180,0.22); color: var(--text-dim);
+    border: 1px solid rgba(240,238,230,0.22); color: var(--text-dim);
   }
   .p-ships .txt { flex: 1 1 auto; font-size: 15px; line-height: 1.35; color: var(--text-dim); }
-  .p-ships .txt b { color: #f2f5fb; font-weight: 600; }
+  .p-ships .txt b { color: #F0EEE6; font-weight: 600; }
   .p-ships .act {
     flex: 0 0 auto; display: flex; align-items: center; gap: 7px;
     padding: 10px 18px; border-radius: 999px; cursor: pointer;
     font-size: 14px; font-weight: 600; color: var(--text);
-    background: transparent; border: 1px solid rgba(140,155,180,0.34);
+    background: transparent; border: 1px solid rgba(240,238,230,0.34);
     transition: all .15s ease;
   }
-  .p-ships .act:hover { color: #fff; border-color: rgba(200,210,230,0.6); background: rgba(255,255,255,0.05); }
+  .p-ships .act:hover { color: #FAFAF7; border-color: rgba(240,238,230,0.6); background: rgba(255,255,255,0.05); }
 
   .p-sec {
     font-size: 12px; letter-spacing: 0.2em; font-weight: 600;
@@ -150,11 +152,11 @@
   .p-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
   .p-chips span {
     padding: 9px 15px; border-radius: 9px; font-size: 14px; color: var(--text);
-    border: 1px solid rgba(140,155,180,0.22);
+    border: 1px solid rgba(240,238,230,0.22);
   }
   .p-quote {
     padding: 20px 22px; border-radius: 12px;
-    border: 1px solid rgba(140,155,180,0.22);
+    border: 1px solid rgba(240,238,230,0.22);
     font-size: 15.5px; line-height: 1.6; color: var(--text);
   }
 </style>
@@ -186,7 +188,7 @@
   "use strict";
 
   // --- build stamp: bump this on every deploy so the browser shows the latest ---
-  const BUILD_TS = "2026-08-19 13:56";
+  const BUILD_TS = "2026-08-19 17:46";
   const buildTag = document.getElementById("buildTag");
   if (buildTag) buildTag.textContent = "build " + BUILD_TS;
 
@@ -197,42 +199,116 @@
    * --------------------------------------------------------------- */
 
   const LEVELS = [
-    { key: 0, name: "DATA",        color: "#5aa9ff" },  // blue
-    { key: 1, name: "DEPARTMENT",  color: "#ffc24b" },  // gold
-    { key: 2, name: "SKILL",       color: "#b07bff" },  // purple
-    { key: 3, name: "OUTPUT",      color: "#41d27a" },  // green
-    { key: 4, name: "CORE",        color: "#e6ecfa" }   // near-white nucleus
+    { key: 0, name: "DATA",        color: "#B0AEA6" },  // warm grey, so the roots
+                                                       // stay clear of the source hues
+    { key: 1, name: "DEPARTMENT",  color: "#D97757" },  // Claude orange
+    { key: 2, name: "SKILL",       color: "#EBDBBC" },  // manilla
+    { key: 3, name: "OUTPUT",      color: "#CC785C" },  // book cloth
+    { key: 4, name: "CORE",        color: "#FAFAF7" },  // cloud, the brightest thing here
+    { key: 5, name: "EXAMPLE",     color: "#91918D" }   // fallback if a source has no hue
   ];
 
   // Level 0 — data at the core
+  // Each source hangs a few concrete instances of what it actually holds, so
+  // the abstract label has something real under it. `vol` is an order-of-
+  // magnitude weight for how much data that thing is in practice - a handful
+  // of rows is 1, a warehouse fact table is 10 - and it drives the node size,
+  // so a SQL table reads as a heavy body and a spreadsheet as a speck.
   const DATA_SOURCES = [
-    "CRM", "ERP", "Spreadsheets", "SQL Warehouse", "Email / Inbox", "Social Analytics"
+    { name: "CRM", hue: "#D97757", egs: [
+      { name: "Activity log",      vol: 7 },
+      { name: "Deal history",      vol: 6 },
+      { name: "Contacts",          vol: 5 },
+      { name: "Renewal dates",     vol: 2 } ] },
+    { name: "ERP", hue: "#D4A27F", egs: [
+      { name: "Stock levels",      vol: 6 },
+      { name: "Purchase orders",   vol: 5 },
+      { name: "Bill of materials", vol: 3 } ] },
+    { name: "Spreadsheets", hue: "#EBDBBC", egs: [
+      { name: "Budget model",      vol: 2 },
+      { name: "Pricing sheet",     vol: 2 },
+      { name: "Headcount plan",    vol: 1 } ] },
+    { name: "SQL Warehouse", hue: "#CC785C", egs: [
+      { name: "Event stream",      vol: 10 },
+      { name: "Order history",     vol: 10 },
+      { name: "Sessions",          vol: 9 },
+      { name: "Customer table",    vol: 8 },
+      { name: "Product catalogue", vol: 5 } ] },
+    { name: "Email / Inbox", hue: "#B08968", egs: [
+      { name: "Supplier threads",  vol: 5 },
+      { name: "Customer complaints", vol: 4 },
+      { name: "Quotes sent",       vol: 3 },
+      { name: "Internal notes",    vol: 3 },
+      { name: "Newsletters",       vol: 2 } ] },
+    { name: "Social Analytics", hue: "#8F8B84", egs: [
+      { name: "Comment sentiment", vol: 6 },
+      { name: "Post reach",        vol: 5 },
+      { name: "Follower growth",   vol: 2 } ] }
   ];
 
+  // Volume reads as node size. Linear in the magnitude weight, which is itself
+  // roughly logarithmic in row count, so a warehouse table is an obvious body
+  // and a spreadsheet an obvious speck without either end running away.
+  function volRadius(vol) { return 2 + (vol || 1) * 0.7; }   // 2.7 -> 9
+
+  const VOL_WORDS = ["", "tiny", "tiny", "small", "small", "medium",
+                     "medium", "large", "large", "very large", "very large"];
+
   // Level 1 — departments, each with skills (L2) -> outputs (L3)
+  // Each department is a set of BRANCHES of differing length, rather than the
+  // same three skill/output pairs repeated seven times. Every node in a branch
+  // but the last is a SKILL; the last one is the OUTPUT it terminates in. Vary
+  // the counts and the lengths here and the layout follows automatically.
   const DEPARTMENTS = [
-    { name: "Operations",  skills: [ { s:"Forecast Agent",   o:"Demand Dashboard" },
-                                     { s:"Anomaly Agent",    o:"Alert List" },
-                                     { s:"Repair Agent",     o:"Dispatch Queue" } ] },
-    { name: "Marketing",   skills: [ { s:"Growth Agent",     o:"Campaign Board" },
-                                     { s:"Content Agent",    o:"Content Calendar" },
-                                     { s:"Paid Media Agent", o:"Spend Report" } ] },
-    { name: "Sales",       skills: [ { s:"Pricing Agent",    o:"Quote Engine" },
-                                     { s:"Outreach Agent",   o:"Outreach Targets" },
-                                     { s:"Win/Loss Agent",   o:"Deal Memo" } ] },
-    { name: "Finance",     skills: [ { s:"Reconciler Agent", o:"Close Pack" },
-                                     { s:"Cashflow Agent",   o:"Runway Report" },
-                                     { s:"Audit Agent",      o:"Audit Trail" } ] },
-    { name: "Customer",    skills: [ { s:"Churn Agent",      o:"Churn Playlist" },
-                                     { s:"Sentiment Agent",  o:"Voice Report" },
-                                     { s:"NPS Agent",        o:"NPS Tracker" } ] },
-    { name: "Intelligence",skills: [ { s:"Cluster Agent",    o:"Segment Map" },
-                                     { s:"Report Agent",     o:"KPI Board" },
-                                     { s:"Risk Agent",       o:"Risk Register" } ] },
-    { name: "Back Office", skills: [ { s:"HR Agent",         o:"People Dashboard" },
-                                     { s:"Vendor Agent",     o:"Vendor List" },
-                                     { s:"Compliance Agent", o:"Compliance Log" } ] }
+    { name: "Operations", branches: [
+      ["Forecast Agent", "Demand Model", "Demand Dashboard"],
+      ["Anomaly Agent", "Alert List"],
+      ["Repair Agent", "Fault Triage", "Dispatch Queue"],
+      ["Capacity Agent", "Shift Plan"] ] },
+    { name: "Marketing", branches: [
+      ["Growth Agent", "Channel Mix", "Campaign Board"],
+      ["Content Agent", "Content Calendar"],
+      ["Paid Media Agent", "Bid Model", "Spend Report"] ] },
+    { name: "Sales", branches: [
+      ["Pricing Agent", "Quote Engine"],
+      ["Outreach Agent", "Sequence Builder", "Outreach Targets"],
+      ["Win/Loss Agent", "Deal Memo"],
+      ["Territory Agent", "Patch Map"] ] },
+    { name: "Finance", branches: [
+      ["Reconciler Agent", "Ledger Match", "Close Pack"],
+      ["Cashflow Agent", "Runway Report"],
+      ["Audit Agent", "Control Tests", "Audit Trail"] ] },
+    { name: "Customer", branches: [
+      ["Churn Agent", "Risk Scores", "Churn Playlist"],
+      ["Sentiment Agent", "Voice Report"],
+      ["NPS Agent", "NPS Tracker"],
+      ["Onboarding Agent", "Ramp Plan", "Adoption Curve"] ] },
+    { name: "Intelligence", branches: [
+      ["Cluster Agent", "Segment Map"],
+      ["Report Agent", "Metric Store", "KPI Board"],
+      ["Risk Agent", "Risk Register"] ] },
+    { name: "Back Office", branches: [
+      ["HR Agent", "People Dashboard"],
+      ["Vendor Agent", "Spend Cube", "Vendor List"],
+      ["Compliance Agent", "Policy Check", "Compliance Log"],
+      ["Payroll Agent", "Pay Run"],
+      ["Facilities Agent", "Site Log"] ] }
   ];
+
+  // Seeded PRNG. The branch walk needs to look wandering but must be identical
+  // on every load - otherwise the map reshuffles itself each refresh and the
+  // fit lands somewhere new every time. Change the seed to redraw the tree.
+  function mulberry32(seed) {
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  const rand = mulberry32(20260819);
+  const randSolid = mulberry32(7788);  // separate stream: picking which skills
+                                       // are solid must not shift the geometry
 
   /* ---------------------------------------------------------------
    *  GLYPHS - line art drawn in a 24x24 box centred on (0,0), so each
@@ -242,11 +318,6 @@
    * --------------------------------------------------------------- */
 
   const GLYPHS = {
-    // nucleus - hexagon shell around a solid centre
-    CORE: {
-      paths: ["M11,0L5.5,9.5L-5.5,9.5L-11,0L-5.5,-9.5L5.5,-9.5Z"],
-      dots:  [[0, 0, 3.6]]
-    },
     // gear
     "Operations": {
       circles: [[0, 0, 6]],
@@ -316,7 +387,7 @@
   const nodes = [], links = [];
 
   const CORE_ID = "CORE";
-  const DATA_R = 118; // radius of the data ring around the nucleus
+  const DATA_R = 112; // radius of the data ring around the nucleus
 
   // The nucleus, pinned dead centre - everything else orbits it.
   nodes.push({
@@ -326,18 +397,43 @@
 
   // Level 0 - data sources on a ring around the nucleus, one spoke each,
   // so the middle of the map reads as a proper radial wheel.
-  DATA_SOURCES.forEach((name, i) => {
+  DATA_SOURCES.forEach((src, i) => {
     const ang = (i / DATA_SOURCES.length) * Math.PI * 2 - Math.PI / 2;
+    const id = "D_" + i;
+    // Pinned, not merely urged. The examples are placed at absolute
+    // coordinates derived from this position, so if the root drifts outward
+    // under the simulation it ends up off-centre in its own ring - which is
+    // exactly why three of the six orbits were reading as one-sided.
     nodes.push({
-      id: "D_" + i, name, level: 0,
+      id, name: src.name, level: 0,
       x0: Math.cos(ang) * DATA_R,
-      y0: Math.sin(ang) * DATA_R
+      y0: Math.sin(ang) * DATA_R,
+      fx: Math.cos(ang) * DATA_R,
+      fy: Math.sin(ang) * DATA_R
     });
-    links.push({ source: CORE_ID, target: "D_" + i, spoke: true });
+    links.push({ source: CORE_ID, target: id, spoke: true });
+
+    // Ring the examples right around their source rather than fanning them off
+    // one side, so each source reads as a little system with its contents in
+    // orbit. Offsetting by half a step keeps any of them from landing exactly
+    // on the outward bearing, where the department link leaves.
+    const n = src.egs.length;
+    const ring = 22 + n * 1.1;
+    src.egs.forEach((eg, j) => {
+      const ea = ang + ((j + 0.5) / n) * Math.PI * 2;
+      const ex = Math.cos(ang) * DATA_R + Math.cos(ea) * ring;
+      const ey = Math.sin(ang) * DATA_R + Math.sin(ea) * ring;
+      nodes.push({
+        id: id + "_E" + j, name: eg.name, level: 5, example: true, vol: eg.vol,
+        hue: src.hue,
+        x0: ex, y0: ey, fx: ex, fy: ey
+      });
+      links.push({ source: id, target: id + "_E" + j, example: true, len: ring });
+    });
   });
 
   const N_DEPT = DEPARTMENTS.length;
-  const HUB_R = 210; // ring radius for departments
+  const HUB_R = 265; // ring radius for departments
 
   DEPARTMENTS.forEach((d, di) => {
     const ang = (di / N_DEPT) * Math.PI * 2 - Math.PI / 2;
@@ -349,25 +445,44 @@
     // connect core -> department (thin)
     links.push({ source: "D_" + (di % DATA_SOURCES.length), target: hubId });
 
-    const NS = d.skills.length;
-    d.skills.forEach((sk, si) => {
-      const sid = hubId + "_S" + si;
-      // fan away from center: base angle + spread
-      const spread = 0.8;
-      const a = ang + (si - (NS - 1) / 2) * (spread / (NS - 1 || 1));
-      const sr = HUB_R + 120;
-      const sx = Math.cos(a) * sr;
-      const sy = Math.sin(a) * sr;
-      nodes.push({ id: sid, name: sk.s, level: 2, x0: sx, y0: sy });
-      links.push({ source: hubId, target: sid });
+    // Walk each branch outward from the hub. Every step pushes further out and
+    // kicks the bearing sideways, so the chain zig-zags instead of running
+    // straight down a radius - the constellation look. The drift is clamped
+    // relative to the branch's own bearing so a wandering branch can't stray
+    // into the neighbouring department.
+    // Departments sit 2*PI/7 = 0.898 rad apart, so a branch may stray at most
+    // ~0.35 rad from its hub bearing before it starts interleaving with the
+    // neighbour. The old walk accumulated its kicks and reached 0.63, which is
+    // why the sectors blurred together. Now the kick ALTERNATES either side of
+    // the branch bearing instead of accumulating: the chain still zig-zags,
+    // but it cannot drift, and every department keeps a clear gutter.
+    const NB = d.branches.length;
+    const FAN = 0.38;                       // total angular width of the branches
+    const SWING = 0.16;                     // hard cap on either side
+    d.branches.forEach((chain, bi) => {
+      const baseA = ang + (NB === 1 ? 0 : (bi - (NB - 1) / 2) * (FAN / (NB - 1)));
+      let r = HUB_R;
+      let prevId = hubId;
 
-      // output terminal tip
-      const oid = sid + "_O";
-      const orr = sr + 82;
-      const ox = Math.cos(a) * orr;
-      const oy = Math.sin(a) * orr;
-      nodes.push({ id: oid, name: sk.o, level: 3, x0: ox, y0: oy });
-      links.push({ source: sid, target: oid });
+      chain.forEach((name, si) => {
+        const step = 72 + rand() * 46;      // uneven segment lengths
+        r += step;
+        const swing = 0.09 + rand() * (SWING - 0.09);
+        const a = baseA + (si % 2 === 0 ? swing : -swing);
+
+        const isTip = si === chain.length - 1;
+        const id = hubId + "_B" + bi + "_" + si;
+        nodes.push({
+          id, name, level: isTip ? 3 : 2,
+          solid: isTip ? false : randSolid() < 0.55,
+          x0: Math.cos(a) * r,
+          y0: Math.sin(a) * r
+        });
+        // carry the intended segment length so the link force does not drag
+        // the walk back to a uniform spacing
+        links.push({ source: prevId, target: id, len: step });
+        prevId = id;
+      });
     });
   });
 
@@ -399,19 +514,32 @@
   const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id)
         .distance(d => d.spoke ? DATA_R
+                     : d.example ? (d.len || 30)
+                     : d.len ? d.len
                      : (d.source.level === 0 || d.target.level === 0 ? 70 : 64))
         .strength(0.7))
-    .force("charge", d3.forceManyBody().strength(-90))
+    .force("charge", d3.forceManyBody().strength(d => d.example ? -14 : -90))
     .force("center", d3.forceCenter(0, 0))
-    .force("collision", d3.forceCollide().radius(d => rFor(d) + 4))
+    .force("collision", d3.forceCollide().radius(d => rFor(d) + (d.example ? 2 : 4)))
     // hold the nucleus and its data ring firmly on station so the middle
     // reads as an even wheel; let the outer layers breathe
-    .force("x", d3.forceX(d => d.x0 || 0).strength(d => (d.core || d.level === 0) ? 0.9 : 0.35))
-    .force("y", d3.forceY(d => d.y0 || 0).strength(d => (d.core || d.level === 0) ? 0.9 : 0.35));
+    // satellites hold their seeded orbit almost rigidly; the outer layers breathe
+    .force("x", d3.forceX(d => d.x0 || 0).strength(d => d.example ? 1 : (d.core || d.level === 0) ? 0.9 : 0.35))
+    .force("y", d3.forceY(d => d.y0 || 0).strength(d => d.example ? 1 : (d.core || d.level === 0) ? 0.9 : 0.35));
+
+  // Stop the auto-running timer. We settle the layout synchronously further
+  // down and paint it already in position, so the fit measures a finished graph
+  // and the intro can grow it outward from a known shape. Dragging restarts it.
+  simulation.stop();
+
+  // the nucleus and the whole data wheel are placed, not simulated
+  function isPinned(d) { return d.core || d.level === 0 || d.example; }
 
   function rFor(d) {
-    if (d.core) return 22;
-    if (d.level === 0) return 14;
+    if (d.core) return 8;    // same weight as the data nodes branching off it
+    if (d.example) return volRadius(d.vol);
+    if (d.level === 0) return 8;   // small, but it has to sit visibly at the
+                                   // centre of its own ring of examples
     if (d.hub) return 26;
     if (d.level === 2) return 9;
     return 7; // output
@@ -421,35 +549,54 @@
   const link = g.append("g").selectAll("line")
     .data(links).join("line")
     .attr("stroke", "var(--line)")
-    .attr("stroke-width", d => d.spoke ? 1.3 : (d.source.level === 0 ? 1.1 : 0.8))
+    .attr("stroke-width", d => d.spoke ? 1.3 : d.example ? 0.6 : (d.source.level === 0 ? 1.1 : 0.8))
     .attr("stroke-opacity", 0.55);
 
   // nodes
   const node = g.append("g").selectAll("g")
     .data(nodes).join("g")
     .call(d3.drag()
-      .on("start", (e, d) => { if (d.core) return; if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-      .on("drag", (e, d) => { if (d.core) return; d.fx = e.x; d.fy = e.y; })
-      .on("end", (e, d) => { if (d.core) return; if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+      .on("start", (e, d) => { if (isPinned(d)) return; if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { if (isPinned(d)) return; d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (isPinned(d)) return; if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+  // Halo tuning is per level: the skill cream is far brighter than the purple
+  // it replaced, so at the old alpha every star bloomed into a white blob.
+  function haloBase(d) { return d.level === 2 ? 0.15 : 0.32; }
+  function haloHot(d)  { return d.level === 2 ? 0.45 : 0.70; }
+  function haloR(d)    { return rFor(d) + (d.example ? 5 : d.level === 2 ? 9 : 18); }
 
   // halo (glow) behind each node
   node.append("circle")
     .attr("class", "halo")
-    .attr("r", d => rFor(d) + 18)
+    .attr("r", haloR)
     .attr("fill", d => "url(#halo-" + d.level + ")")
-    .attr("opacity", 0.32);
+    .attr("opacity", haloBase);
 
-  // core node body
+  // Node bodies. Skills carry the star-field cream and come in two weights -
+  // solid or outline - which is a fill treatment, not a change of shape;
+  // everything stays a circle.
+  const isSolidSkill = d => d.level === 2 && d.solid;
   node.append("circle")
+    .attr("class", "body")
     .attr("r", d => rFor(d))
-    .attr("fill", d => d.level === 0 ? LEVELS[0].color : "#0f1520")
-    .attr("stroke", d => LEVELS[d.level].color)
-    .attr("stroke-width", d => d.level === 0 ? 0 : (d.core ? 1.8 : 1.4))
-    .attr("stroke-opacity", d => d.level === 0 ? 0 : 0.9);
+    .attr("fill", d => d.core ? LEVELS[4].color
+                     : d.level === 0 ? LEVELS[0].color
+                     : d.example ? (d.hue || LEVELS[5].color)
+                     : isSolidSkill(d) ? LEVELS[2].color
+                     : "#141412")
+    .attr("fill-opacity", d => d.example ? 0.9 : isSolidSkill(d) ? 0.92 : 1)
+    .attr("stroke", d => d.level === 0 ? "#F0EEE6" : LEVELS[d.level].color)
+    .attr("stroke-width", d => d.level === 0 ? 1
+                             : d.core ? 0
+                             : isSolidSkill(d) ? 0.6
+                             : 1.4)
+    .attr("stroke-opacity", d => d.level === 0 ? 0.85 : 0.9);
 
   // glyphs - nucleus and department hubs only
   node.each(function (d) {
-    const glyph = GLYPHS[d.core ? "CORE" : (d.level === 1 ? d.name : "")];
+    // no glyph on the nucleus any more - nothing legible survives at r=8
+    const glyph = GLYPHS[d.level === 1 ? d.name : ""];
     if (!glyph) return;
     const box = d.core ? 30 : 25;          // on-screen size of the 24-unit box
     const k = box / 24;
@@ -471,16 +618,6 @@
         .attr("fill", LEVELS[d.level].color).attr("stroke", "none"));
   });
 
-  // labels (hub + data only, to keep it clean; skill/output on hover)
-  node.append("text")
-    .text(d => (d.hub || d.core) ? d.name : "")
-    .attr("dy", d => d.core ? 42 : (d.hub ? -34 : 0))
-    .attr("text-anchor", "middle")
-    .attr("fill", "var(--text)")
-    .attr("font-size", 11)
-    .attr("letter-spacing", "0.06em")
-    .attr("pointer-events", "none");
-
   /* ---------------------------------------------------------------
    *  SECTION HIGHLIGHTING
    *  Hover over a DATA node (level 0) → highlight ALL data nodes.
@@ -495,7 +632,7 @@
   const deptMembers = {};
   // map data node id -> the full list of data node ids
   // the wheel = nucleus + every data source spoked off it
-  const wheelIds = nodes.filter(n => n.level === 0 || n.core).map(n => n.id);
+  const wheelIds = nodes.filter(n => n.level === 0 || n.core || n.example).map(n => n.id);
 
   // seed department memberships from the hub/skill/output link structure
   nodes.forEach(n => { if (n.level === 1) { deptMembers[n.id] = new Set([n.id]); } });
@@ -526,7 +663,7 @@
 
   // For any node, return the set of ids to highlight (or null).
   function highlightSet(d) {
-    if (d.level === 0 || d.core) return new Set(wheelIds);
+    if (d.level === 0 || d.core || d.example) return new Set(wheelIds);
     const root = d.level === 1 ? d.id : deptRootOf[d.id];
     if (root && deptMembers[root]) return new Set(deptMembers[root]);
     return null;
@@ -539,11 +676,19 @@
   function applyHighlight(ids) {
     node.transition().duration(140)
       .attr("opacity", n => (!ids || ids.has(n.id)) ? 1 : 0.22);
+    // every node in the set glows, not just the one under the cursor, so
+    // hovering a department lights the whole department
+    node.select("circle.halo").transition().duration(140)
+      .attr("opacity", n => (ids && ids.has(n.id)) ? haloHot(n) : haloBase(n));
     link.transition().duration(140)
       .attr("stroke-opacity", l => {
         if (!ids) return 0.55;
         return (ids.has(l.source.id) && ids.has(l.target.id)) ? 0.7 : 0.12;
       });
+    if (typeof deptLabels !== "undefined" && deptLabels) {
+      deptLabels.transition().duration(140)
+        .attr("opacity", n => (!ids || ids.has(n.id)) ? 1 : 0.25);
+    }
   }
 
   function clearHighlight() { applyHighlight(null); }
@@ -635,7 +780,9 @@
   let pinnedId = null;
 
   function showTip(e, d) {
-    tip.html('<div class="lvl">' + LEVELS[d.level].name + '</div>' + d.name)
+    const lvl = LEVELS[d.level].name +
+      (d.example && VOL_WORDS[d.vol] ? ' \u00b7 ' + VOL_WORDS[d.vol] : '');
+    tip.html('<div class="lvl">' + lvl + '</div>' + d.name)
       .style("opacity", 1)
       .style("left", (e.pageX + 14) + "px")
       .style("top", (e.pageY + 14) + "px");
@@ -644,16 +791,17 @@
   node
     .style("cursor", "pointer")
     .on("mouseover", function (e, d) {
-      // brighten this node's own halo
-      d3.select(this).select("circle.halo").transition().duration(120).attr("opacity", 0.7);
+      // the glow is driven by the highlight set now, so the whole department
+      // lights up rather than the single node under the cursor
       if (!pinnedId) applyHighlight(highlightSet(d));
-      showTip(e, d);
+      // departments are named out on the rim; a tooltip would just repeat it
+      if (d.hub) tip.style("opacity", 0);
+      else showTip(e, d);
     })
     .on("mousemove", function (e) {
       tip.style("left", (e.pageX + 14) + "px").style("top", (e.pageY + 14) + "px");
     })
     .on("mouseout", function () {
-      d3.select(this).select("circle.halo").transition().duration(120).attr("opacity", 0.32);
       if (!pinnedId) clearHighlight();
       tip.style("opacity", 0);
     })
@@ -681,18 +829,79 @@
   });
 
   // tick
-  simulation.on("tick", () => {
+  function render() {
     link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
         .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
     node.attr("transform", d => "translate(" + d.x + "," + d.y + ")");
-  });
+  }
+  simulation.on("tick", render);
+
+  // settle now, then paint once, so everything below measures final positions
+  simulation.tick(400);
+  render();
+
+  /* ---------------------------------------------------------------
+   *  DEPTH FROM THE NUCLEUS
+   *  Breadth-first from the core: core 0, data 1, department 2, skill 3,
+   *  output 4. Drives the order the tree grows in.
+   * --------------------------------------------------------------- */
+
+  const depthOf = {};
+  (function () {
+    const adj = {};
+    links.forEach(l => {
+      const a = l.source.id, b = l.target.id;
+      (adj[a] = adj[a] || []).push(b);
+      (adj[b] = adj[b] || []).push(a);
+    });
+    depthOf[CORE_ID] = 0;
+    const queue = [CORE_ID];
+    while (queue.length) {
+      const id = queue.shift();
+      (adj[id] || []).forEach(next => {
+        if (depthOf[next] === undefined) {
+          depthOf[next] = depthOf[id] + 1;
+          queue.push(next);
+        }
+      });
+    }
+  })();
+  const MAX_DEPTH = Math.max.apply(null, Object.keys(depthOf).map(k => depthOf[k]));
+
+  /* ---------------------------------------------------------------
+   *  DEPARTMENT LABELS
+   *  Set on a ring outside every node rather than tucked against the hub,
+   *  each one pushed straight out along its department's own bearing and
+   *  anchored so the text reads away from the middle.
+   * --------------------------------------------------------------- */
+
+  const LABEL_R = nodes.reduce(
+    (m, n) => Math.max(m, Math.hypot(n.x, n.y) + rFor(n)), 0) + 56;
+
+  const deptLayer = g.append("g").attr("class", "dept-labels");
+  const deptLabels = deptLayer.selectAll("text")
+    .data(nodes.filter(n => n.level === 1))
+    .join("text")
+      .attr("x", d => Math.cos(Math.atan2(d.y, d.x)) * LABEL_R)
+      .attr("y", d => Math.sin(Math.atan2(d.y, d.x)) * LABEL_R)
+      .attr("text-anchor", d => {
+        const c = Math.cos(Math.atan2(d.y, d.x));
+        return c > 0.3 ? "start" : (c < -0.3 ? "end" : "middle");
+      })
+      .attr("dominant-baseline", "central")
+      .attr("fill", "var(--text)")
+      .attr("font-size", 13)
+      .attr("font-weight", 500)
+      .attr("letter-spacing", "0.2em")
+      .attr("pointer-events", "none")
+      .text(d => d.name.toUpperCase());
 
   /* ---------------------------------------------------------------
    *  ZOOM / PAN
    *  Drag = pan, mouse wheel = zoom centered on the cursor position.
    * --------------------------------------------------------------- */
   const zoom = d3.zoom()
-    .scaleExtent([0.25, 4])
+    .scaleExtent([0.25, 12])
     .filter((event) => {
       // allow drag and wheel; block double-click-zoom so it doesn't fight the click-to-expand
       return !event.button && event.type !== "dblclick";
@@ -712,7 +921,7 @@
     const transform = d3.zoomTransform(this);
     const gp = d3.pointer(event, this);
     // new scale, clamped
-    const k = Math.max(0.25, Math.min(4, transform.k * Math.pow(2, -event.deltaY * 0.0015)));
+    const k = Math.max(0.25, Math.min(12, transform.k * Math.pow(2, -event.deltaY * 0.0015)));
     // keep the screen point under the cursor fixed:
     // world point w satisfies: screen = transform.x + transform.k * w
     // so new transform.x = gp - k * (gp - transform.x) / transform.k
@@ -741,13 +950,23 @@
   function graphBounds() {
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
     nodes.forEach(n => {
-      // hub labels sit ~34px above their circle, so give those extra headroom
-      const r = rFor(n) + (n.hub ? 44 : 14);
+      const r = rFor(n) + 14;
       if (n.x - r < x0) x0 = n.x - r;
       if (n.x + r > x1) x1 = n.x + r;
       if (n.y - r < y0) y0 = n.y - r;
       if (n.y + r > y1) y1 = n.y + r;
     });
+    // department labels sit outside every node, so fold their box in too or
+    // the fit will happily crop them off the edge of the screen
+    try {
+      const lb = deptLayer.node().getBBox();
+      if (lb.width || lb.height) {
+        if (lb.x < x0) x0 = lb.x;
+        if (lb.y < y0) y0 = lb.y;
+        if (lb.x + lb.width > x1) x1 = lb.x + lb.width;
+        if (lb.y + lb.height > y1) y1 = lb.y + lb.height;
+      }
+    } catch (err) { /* not rendered yet; nodes alone are a fine fallback */ }
     return { x0, y0, x1, y1 };
   }
 
@@ -796,10 +1015,71 @@
   d3.select("#zfit").on("click", () => fitNow(260));
 
   /* ---------------------------------------------------------------
+   *  INTRO
+   *  Grow the tree outward from the nucleus: each ring of edges draws
+   *  itself from parent to child, and a node fades in as the edge that
+   *  feeds it arrives. The layout is already settled, so nothing moves -
+   *  it is purely a reveal, which keeps it readable.
+   * --------------------------------------------------------------- */
+
+  const STAGE = 340, LINK_DRAW = 320, NODE_FADE = 260;
+  const INTRO_MS = (MAX_DEPTH - 1) * STAGE + LINK_DRAW + 240;
+
+  function linkLength(l) {
+    return Math.hypot(l.target.x - l.source.x, l.target.y - l.source.y) || 1;
+  }
+  function depthFor(id) {
+    return depthOf[id] === undefined ? 1 : depthOf[id];
+  }
+
+  function runIntro() {
+    // edges: draw each one from its parent end outward
+    link
+      .attr("stroke-dasharray", l => { const L = linkLength(l); return L + " " + L; })
+      .attr("stroke-dashoffset", l => linkLength(l))
+      .transition("intro")
+        .delay(l => (Math.max(depthFor(l.source.id), depthFor(l.target.id)) - 1) * STAGE)
+        .duration(LINK_DRAW)
+        .ease(d3.easeCubicOut)
+        .attr("stroke-dashoffset", 0);
+
+    // nodes: arrive just after the edge that feeds them
+    node
+      .attr("opacity", 0)
+      .transition("intro")
+        .delay(d => depthFor(d.id) === 0 ? 0
+                                         : (depthFor(d.id) - 1) * STAGE + LINK_DRAW * 0.5)
+        .duration(NODE_FADE)
+        .attr("opacity", 1);
+
+    // rim labels land once the outermost ring is on its way
+    deptLabels
+      .attr("opacity", 0)
+      .transition("intro")
+        .delay((MAX_DEPTH - 1) * STAGE)
+        .duration(360)
+        .attr("opacity", 1);
+
+    // Guarantee a clean end state. A hover part-way through interrupts the
+    // transitions above, which would otherwise strand an edge half-drawn.
+    setTimeout(() => {
+      link.attr("stroke-dasharray", null).attr("stroke-dashoffset", null);
+      deptLabels.attr("opacity", 1);
+      if (pinnedId) {
+        applyHighlight(highlightSet(nodes.find(n => n.id === pinnedId)));
+      } else {
+        node.attr("opacity", 1);
+      }
+    }, INTRO_MS);
+  }
+
+  runIntro();
+
+  /* ---------------------------------------------------------------
    *  LEGEND
    * --------------------------------------------------------------- */
   const legend = d3.select("#legend");
-  [4, 0, 1, 2, 3].map(i => LEVELS[i]).forEach(L => {
+  [4, 0, 5, 1, 2, 3].map(i => LEVELS[i]).forEach(L => {
     legend.append("div").attr("class", "lg")
       .style("--c", L.color)
       .append("span").attr("class", "dot");
@@ -820,7 +1100,7 @@
       const a = Math.random() * 0.5 + 0.1;
       cx.beginPath();
       cx.arc(x, y, r, 0, Math.PI * 2);
-      cx.fillStyle = "rgba(160,180,210," + a + ")";
+      cx.fillStyle = "rgba(235,225,205," + a + ")";
       cx.fill();
     }
   }
