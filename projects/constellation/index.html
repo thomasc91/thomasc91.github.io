@@ -265,12 +265,88 @@
     .attr("letter-spacing", "0.06em")
     .attr("pointer-events", "none");
 
-  // tooltip + click interactions
+  /* ---------------------------------------------------------------
+   *  SECTION HIGHLIGHTING
+   *  Hover over a DATA node (level 0) → highlight ALL data nodes.
+   *  Hover over a DEPARTMENT (hub) → highlight that hub + its skills
+   *  + its outputs (the whole subtree, excluding data).
+   *  Hover over a SKILL/OUTPUT → highlight its own department subtree.
+   * --------------------------------------------------------------- */
+
+  // map node id -> its "department root hub id" (undefined for data nodes)
+  const deptRootOf = {};
+  // map department hub id -> set of all node ids in its subtree (hub + skills + outputs)
+  const deptMembers = {};
+  // map data node id -> the full list of data node ids
+  const allDataIds = nodes.filter(n => n.level === 0).map(n => n.id);
+
+  // seed department memberships from the hub/skill/output link structure
+  nodes.forEach(n => { if (n.level === 1) { deptMembers[n.id] = new Set([n.id]); } });
+  // skill -> hub (via link source = hub)
+  links.forEach(l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    // if source is a hub (level 1), member t belongs to that hub
+    const src = nodes.find(n => n.id === s);
+    const tgt = nodes.find(n => n.id === t);
+    if (src && src.level === 1) {
+      deptRootOf[t] = src.id;
+      if (deptMembers[src.id]) deptMembers[src.id].add(t);
+    }
+    // if tgt is a hub, record that hub as the root for src? (data->hub edges)
+    if (tgt && tgt.level === 1) {
+      // src here is a data node linking into the hub; do NOT mark it a member
+    }
+  });
+  // second pass: skills link to outputs; outputs must roll up to the same hub as their skill
+  links.forEach(l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    if (deptRootOf[s]) { deptRootOf[t] = deptRootOf[s]; }
+    const root = deptRootOf[s] || deptRootOf[t];
+    if (root && deptMembers[root]) {
+      deptMembers[root].add(s); deptMembers[root].add(t);
+    }
+  });
+
+  // For any node, return the set of ids to highlight (or null).
+  function highlightSet(d) {
+    if (d.level === 0) return new Set(allDataIds);
+    const root = d.level === 1 ? d.id : deptRootOf[d.id];
+    if (root && deptMembers[root]) return new Set(deptMembers[root]);
+    return null;
+  }
+
+  function applyHighlight(ids) {
+    // dim everything, then brighten the target set
+    node.each(function (n) {
+      const sel = d3.select(this);
+      const inSet = ids && ids.has(n.id);
+      sel.selectAll("circle")
+        .transition().duration(140)
+        .attr("opacity", inSet ? 1 : 0.22);
+      sel.selectAll("text")
+        .transition().duration(140)
+        .attr("opacity", inSet ? 1 : 0.22);
+    });
+    link.transition().duration(140)
+      .attr("stroke-opacity", ids ? 0.12 : 0.55);
+  }
+
+  function clearHighlight() {
+    node.each(function () {
+      const sel = d3.select(this);
+      sel.selectAll("circle").transition().duration(140).attr("opacity", 1);
+      sel.selectAll("text").transition().duration(140).attr("opacity", 1);
+    });
+    link.transition().duration(140).attr("stroke-opacity", 0.55);
+  }
+
+  // tooltip + interactions
   const tip = d3.select("#tip");
   node
     .style("cursor", "pointer")
     .on("mouseover", function (e, d) {
       d3.select(this).selectAll("circle").filter((dd) => !dd || true).transition().duration(120).attr("filter", haloFilter());
+      applyHighlight(highlightSet(d));
       tip.html('<div class="lvl">' + LEVELS[d.level].name + '</div>' + d.name)
         .style("opacity", 1)
         .style("left", (e.pageX + 14) + "px")
@@ -279,8 +355,9 @@
     .on("mousemove", function (e) {
       tip.style("left", (e.pageX + 14) + "px").style("top", (e.pageY + 14) + "px");
     })
-    .on("mouseout", function () {
-      d3.select(this).selectAll("circle").filter((d, i) => i === 0).attr("filter", null);
+    .on("mouseout", function (e, d) {
+      d3.select(this).selectAll("circle").filter((dd, i) => i === 0).attr("filter", null);
+      clearHighlight();
       tip.style("opacity", 0);
     })
     .on("click", function (e, d) {
@@ -306,11 +383,30 @@
 
   /* ---------------------------------------------------------------
    *  ZOOM / PAN
+   *  Drag = pan, mouse wheel = zoom centered on the cursor position.
    * --------------------------------------------------------------- */
-  const zoom = d3.zoom().scaleExtent([0.25, 4]).on("zoom", (e) => {
-    g.attr("transform", e.transform);
-  });
+  const zoom = d3.zoom()
+    .scaleExtent([0.25, 4])
+    .on("zoom", (e) => { g.attr("transform", e.transform); });
   svg.call(zoom);
+
+  // center wheel zoom on the cursor rather than the center of the view.
+  // Uses d3.zoom().transform() so D3's internal zoom state stays in sync with
+  // drag/pan and the +/- / fit buttons.
+  svg.call(zoom)
+    .on("wheel.zoom", function (event) {
+      event.preventDefault();
+      const transform = d3.zoomTransform(this);
+      const k = transform.k * Math.pow(2, -event.deltaY * 0.002);
+      const gp = d3.pointer(event, this);
+      const newTransform = d3.zoomIdentity
+        .translate(transform.x, transform.y)
+        .scale(transform.k)
+        .translate((gp[0] - transform.x) / transform.k, (gp[1] - transform.y) / transform.k)
+        .scale(k / transform.k)
+        .translate(-gp[0], -gp[1]);
+      d3.select(this).transition().duration(0).call(zoom.transform, newTransform);
+    });
 
   // center the world on the middle of the screen (nudged up so bottom fans aren't cropped)
   const startTransform = d3.zoomIdentity.translate(W / 2, H / 2 - 40);
