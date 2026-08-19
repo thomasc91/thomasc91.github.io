@@ -387,34 +387,41 @@
    * --------------------------------------------------------------- */
   const zoom = d3.zoom()
     .scaleExtent([0.25, 4])
-    .on("zoom", (e) => { g.attr("transform", e.transform); });
+    .filter((event) => {
+      // allow drag and wheel; block double-click-zoom so it doesn't fight the click-to-expand
+      return !event.button && event.type !== "dblclick";
+    })
+    .on("zoom", (event) => {
+      g.attr("transform", event.transform);
+    });
+
   svg.call(zoom);
 
-  // center wheel zoom on the cursor rather than the center of the view.
-  // Uses d3.zoom().transform() so D3's internal zoom state stays in sync with
-  // drag/pan and the +/- / fit buttons.
-  svg.call(zoom)
-    .on("wheel.zoom", function (event) {
-      event.preventDefault();
-      const transform = d3.zoomTransform(this);
-      const k = transform.k * Math.pow(2, -event.deltaY * 0.002);
-      const gp = d3.pointer(event, this);
-      const newTransform = d3.zoomIdentity
-        .translate(transform.x, transform.y)
-        .scale(transform.k)
-        .translate((gp[0] - transform.x) / transform.k, (gp[1] - transform.y) / transform.k)
-        .scale(k / transform.k)
-        .translate(-gp[0], -gp[1]);
-      d3.select(this).transition().duration(0).call(zoom.transform, newTransform);
-    });
+  // center wheel zoom on the cursor (D3's default wheel zoom centres on the
+  // viewport centre; we re-anchor to the pointer and route it back through the
+  // zoom behaviour so drag/pan and the +/- / fit buttons stay in sync).
+  svg.on("wheel.zoom", function (event) {
+    event.preventDefault();
+    const transform = d3.zoomTransform(this);
+    const gp = d3.pointer(event, this);
+    // new scale, clamped
+    const k = Math.max(0.25, Math.min(4, transform.k * Math.pow(2, -event.deltaY * 0.0015)));
+    // keep the screen point under the cursor fixed:
+    // world point w satisfies: screen = transform.x + transform.k * w
+    // so new transform.x = gp - k * (gp - transform.x) / transform.k
+    const nx = gp[0] - k * (gp[0] - transform.x) / transform.k;
+    const ny = gp[1] - k * (gp[1] - transform.y) / transform.k;
+    const next = d3.zoomIdentity.translate(nx, ny).scale(k);
+    svg.call(zoom.transform, next);
+  }, { passive: false });
 
   // center the world on the middle of the screen (nudged up so bottom fans aren't cropped)
   const startTransform = d3.zoomIdentity.translate(W / 2, H / 2 - 40);
   svg.call(zoom.transform, startTransform);
 
-  d3.select("#zin").on("click", () => svg.transition().call(zoom.scaleBy, 1.35));
-  d3.select("#zout").on("click", () => svg.transition().call(zoom.scaleBy, 1 / 1.35));
-  d3.select("#zfit").on("click", () => svg.transition().call(zoom.transform, startTransform));
+  d3.select("#zin").on("click", () => svg.transition().duration(200).call(zoom.scaleBy, 1.35));
+  d3.select("#zout").on("click", () => svg.transition().duration(200).call(zoom.scaleBy, 1 / 1.35));
+  d3.select("#zfit").on("click", () => svg.transition().duration(200).call(zoom.transform, startTransform));
 
   /* ---------------------------------------------------------------
    *  LEGEND
