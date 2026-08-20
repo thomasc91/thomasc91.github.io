@@ -31,7 +31,9 @@
     position: absolute; top: 0; left: 0; right: 0;
     display: flex; align-items: center; gap: 18px;
     padding: 14px 22px; z-index: 10; pointer-events: none;
+    transition: opacity .3s ease;
   }
+  #bar.hidden { opacity: 0; }
   #bar .title { color: var(--text); font-size: 14px; letter-spacing: 0.14em; font-weight: 600; }
   #bar .title span { color: var(--text-dim); font-weight: 400; }
   #bar .build {
@@ -78,6 +80,34 @@
     opacity: 0; transition: opacity .12s ease; white-space: nowrap;
   }
   #tip .lvl { color: var(--text-dim); font-size: 10px; letter-spacing: 0.08em; }
+
+  /* ---------------- department view chrome ---------------- */
+  #focusui { position: absolute; inset: 0; z-index: 12; pointer-events: none;
+             opacity: 0; transition: opacity .35s ease; }
+  #focusui.on { opacity: 1; }
+
+  #focusui button {
+    position: absolute; pointer-events: auto; cursor: pointer;
+    background: none; border: 0; color: var(--text-dim);
+    font-family: inherit; transition: color .15s ease;
+  }
+  #focusui button:hover { color: var(--text); }
+
+  #backAll {
+    top: 16px; left: 22px;
+    font-size: 12px; letter-spacing: 0.18em; font-weight: 600;
+  }
+
+  #navPrev, #navNext {
+    top: 50%; transform: translateY(-50%);
+    display: flex; align-items: center; gap: 14px;
+    font-size: 20px; letter-spacing: 0.28em; font-weight: 300;
+  }
+  #navPrev { left: 20px; }
+  #navNext { right: 20px; }
+  #navPrev .nm, #navNext .nm { writing-mode: vertical-rl; }
+  #navPrev .nm { transform: rotate(180deg); }
+  #navPrev .chev, #navNext .chev { font-size: 26px; opacity: 0.75; }
 
   /* ---------------- side panel (click the nucleus) ---------------- */
   #panel {
@@ -181,6 +211,12 @@
 
   <div id="tip"></div>
 
+  <div id="focusui" aria-hidden="true">
+    <button id="backAll">&#8592; ALL DEPARTMENTS</button>
+    <button id="navPrev"><span class="chev">&#8249;</span><span class="nm"></span></button>
+    <button id="navNext"><span class="nm"></span><span class="chev">&#8250;</span></button>
+  </div>
+
   <aside id="panel" aria-hidden="true"></aside>
 
 <script>
@@ -188,7 +224,7 @@
   "use strict";
 
   // --- build stamp: bump this on every deploy so the browser shows the latest ---
-  const BUILD_TS = "2026-08-19 17:46";
+  const BUILD_TS = "2026-08-20 11:18";
   const buildTag = document.getElementById("buildTag");
   if (buildTag) buildTag.textContent = "build " + BUILD_TS;
 
@@ -261,38 +297,38 @@
   // the counts and the lengths here and the layout follows automatically.
   const DEPARTMENTS = [
     { name: "Operations", branches: [
-      ["Forecast Agent", "Demand Model", "Demand Dashboard"],
-      ["Anomaly Agent", "Alert List"],
-      ["Repair Agent", "Fault Triage", "Dispatch Queue"],
-      ["Capacity Agent", "Shift Plan"] ] },
+      { group: "Forecasting", chain: ["Forecast Agent", "Demand Model", "Demand Dashboard"] },
+      { group: "Monitoring",  chain: ["Anomaly Agent", "Alert List"] },
+      { group: "Repair",      chain: ["Repair Agent", "Fault Triage", "Dispatch Queue"] },
+      { group: "Capacity",    chain: ["Capacity Agent", "Shift Plan"] } ] },
     { name: "Marketing", branches: [
-      ["Growth Agent", "Channel Mix", "Campaign Board"],
-      ["Content Agent", "Content Calendar"],
-      ["Paid Media Agent", "Bid Model", "Spend Report"] ] },
+      { group: "Creation",     chain: ["Growth Agent", "Channel Mix", "Campaign Board"] },
+      { group: "Distribution", chain: ["Content Agent", "Content Calendar"] },
+      { group: "Paid",         chain: ["Paid Media Agent", "Bid Model", "Spend Report"] } ] },
     { name: "Sales", branches: [
-      ["Pricing Agent", "Quote Engine"],
-      ["Outreach Agent", "Sequence Builder", "Outreach Targets"],
-      ["Win/Loss Agent", "Deal Memo"],
-      ["Territory Agent", "Patch Map"] ] },
+      { group: "Pricing",   chain: ["Pricing Agent", "Quote Engine"] },
+      { group: "Outreach",  chain: ["Outreach Agent", "Sequence Builder", "Outreach Targets"] },
+      { group: "Win/Loss",  chain: ["Win/Loss Agent", "Deal Memo"] },
+      { group: "Territory", chain: ["Territory Agent", "Patch Map"] } ] },
     { name: "Finance", branches: [
-      ["Reconciler Agent", "Ledger Match", "Close Pack"],
-      ["Cashflow Agent", "Runway Report"],
-      ["Audit Agent", "Control Tests", "Audit Trail"] ] },
+      { group: "Reconciliation", chain: ["Reconciler Agent", "Ledger Match", "Close Pack"] },
+      { group: "Cashflow",       chain: ["Cashflow Agent", "Runway Report"] },
+      { group: "Audit",          chain: ["Audit Agent", "Control Tests", "Audit Trail"] } ] },
     { name: "Customer", branches: [
-      ["Churn Agent", "Risk Scores", "Churn Playlist"],
-      ["Sentiment Agent", "Voice Report"],
-      ["NPS Agent", "NPS Tracker"],
-      ["Onboarding Agent", "Ramp Plan", "Adoption Curve"] ] },
+      { group: "Retention",  chain: ["Churn Agent", "Risk Scores", "Churn Playlist"] },
+      { group: "Voice",      chain: ["Sentiment Agent", "Voice Report"] },
+      { group: "Loyalty",    chain: ["NPS Agent", "NPS Tracker"] },
+      { group: "Onboarding", chain: ["Onboarding Agent", "Ramp Plan", "Adoption Curve"] } ] },
     { name: "Intelligence", branches: [
-      ["Cluster Agent", "Segment Map"],
-      ["Report Agent", "Metric Store", "KPI Board"],
-      ["Risk Agent", "Risk Register"] ] },
+      { group: "Segmentation", chain: ["Cluster Agent", "Segment Map"] },
+      { group: "Reporting",    chain: ["Report Agent", "Metric Store", "KPI Board"] },
+      { group: "Risk",         chain: ["Risk Agent", "Risk Register"] } ] },
     { name: "Back Office", branches: [
-      ["HR Agent", "People Dashboard"],
-      ["Vendor Agent", "Spend Cube", "Vendor List"],
-      ["Compliance Agent", "Policy Check", "Compliance Log"],
-      ["Payroll Agent", "Pay Run"],
-      ["Facilities Agent", "Site Log"] ] }
+      { group: "People",     chain: ["HR Agent", "People Dashboard"] },
+      { group: "Vendors",    chain: ["Vendor Agent", "Spend Cube", "Vendor List"] },
+      { group: "Compliance", chain: ["Compliance Agent", "Policy Check", "Compliance Log"] },
+      { group: "Payroll",    chain: ["Payroll Agent", "Pay Run"] },
+      { group: "Facilities", chain: ["Facilities Agent", "Site Log"] } ] }
   ];
 
   // Seeded PRNG. The branch walk needs to look wandering but must be identical
@@ -432,6 +468,9 @@
     });
   });
 
+  // hub id -> [{ group, ids }], used by the department view for its labels
+  const BRANCHES = {};
+
   const N_DEPT = DEPARTMENTS.length;
   const HUB_R = 265; // ring radius for departments
 
@@ -440,7 +479,8 @@
     const hx = Math.cos(ang) * HUB_R;
     const hy = Math.sin(ang) * HUB_R;
     const hubId = "H_" + di;
-    nodes.push({ id: hubId, name: d.name, level: 1, x0: hx, y0: hy, hub: true });
+    nodes.push({ id: hubId, name: d.name, level: 1, x0: hx, y0: hy, hub: true,
+                 deptIndex: di });
 
     // connect core -> department (thin)
     links.push({ source: "D_" + (di % DATA_SOURCES.length), target: hubId });
@@ -459,10 +499,14 @@
     const NB = d.branches.length;
     const FAN = 0.38;                       // total angular width of the branches
     const SWING = 0.16;                     // hard cap on either side
-    d.branches.forEach((chain, bi) => {
+    BRANCHES[hubId] = [];
+
+    d.branches.forEach((br, bi) => {
+      const chain = br.chain;
       const baseA = ang + (NB === 1 ? 0 : (bi - (NB - 1) / 2) * (FAN / (NB - 1)));
       let r = HUB_R;
       let prevId = hubId;
+      const record = { group: br.group, ids: [] };
 
       chain.forEach((name, si) => {
         const step = 72 + rand() * 46;      // uneven segment lengths
@@ -475,6 +519,9 @@
         nodes.push({
           id, name, level: isTip ? 3 : 2,
           solid: isTip ? false : randSolid() < 0.55,
+          // kept so the department view can redraw this branch with the same
+          // stride and the same kink, just pointing a different way
+          step, swing,
           x0: Math.cos(a) * r,
           y0: Math.sin(a) * r
         });
@@ -482,7 +529,10 @@
         // the walk back to a uniform spacing
         links.push({ source: prevId, target: id, len: step });
         prevId = id;
+        record.ids.push(id);
       });
+
+      BRANCHES[hubId].push(record);
     });
   });
 
@@ -553,12 +603,12 @@
     .attr("stroke-opacity", 0.55);
 
   // nodes
+  // No drag behaviour. Every label in both views - the rim names, the group
+  // names, the ghosted department name - is placed against fixed coordinates,
+  // so a node that could be dragged would silently walk away from its own
+  // label. The simulation is a build step, not something that runs live.
   const node = g.append("g").selectAll("g")
-    .data(nodes).join("g")
-    .call(d3.drag()
-      .on("start", (e, d) => { if (isPinned(d)) return; if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-      .on("drag", (e, d) => { if (isPinned(d)) return; d.fx = e.x; d.fy = e.y; })
-      .on("end", (e, d) => { if (isPinned(d)) return; if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+    .data(nodes).join("g");
 
   // Halo tuning is per level: the skill cream is far brighter than the purple
   // it replaced, so at the old alpha every star bloomed into a white blob.
@@ -674,6 +724,10 @@
   // hover every halo snapped to fully opaque and stayed there.
   // Pass null to reset.
   function applyHighlight(ids) {
+    // In the department view visibility belongs to the mode, not to hover
+    // state: a null set here means "show everything", which would drag the
+    // other six departments back on top of the one being looked at.
+    if (focusHub) return;
     node.transition().duration(140)
       .attr("opacity", n => (!ids || ids.has(n.id)) ? 1 : 0.22);
     // every node in the set glows, not just the one under the cursor, so
@@ -770,6 +824,8 @@
   panelEl.addEventListener("click", (e) => e.stopPropagation());
 
   document.addEventListener("keydown", (e) => {
+    // Escape closes the panel only. Returning to the overview is deliberately
+    // the ALL DEPARTMENTS button's job, so the view cannot be lost by accident.
     if (e.key === "Escape" && panelIsOpen()) closePanel();
   });
 
@@ -793,7 +849,7 @@
     .on("mouseover", function (e, d) {
       // the glow is driven by the highlight set now, so the whole department
       // lights up rather than the single node under the cursor
-      if (!pinnedId) applyHighlight(highlightSet(d));
+      if (!pinnedId && !focusHub) applyHighlight(highlightSet(d));
       // departments are named out on the rim; a tooltip would just repeat it
       if (d.hub) tip.style("opacity", 0);
       else showTip(e, d);
@@ -802,11 +858,13 @@
       tip.style("left", (e.pageX + 14) + "px").style("top", (e.pageY + 14) + "px");
     })
     .on("mouseout", function () {
-      if (!pinnedId) clearHighlight();
+      if (!pinnedId && !focusHub) clearHighlight();
       tip.style("opacity", 0);
     })
     .on("click", function (e, d) {
       e.stopPropagation();
+      // a department redraws itself on its own screen
+      if (d.hub) { goFocus(d.id); return; }
       // click pins the highlight so it survives mouseout; click again to release
       if (pinnedId === d.id) {
         pinnedId = null;
@@ -839,6 +897,12 @@
   // settle now, then paint once, so everything below measures final positions
   simulation.tick(400);
   render();
+
+  // ...and that is the last tick it will ever run. Nothing past this point may
+  // move a node except the department view, which writes coordinates directly
+  // while the nodes concerned are invisible.
+  simulation.on("tick", null);
+  simulation.stop();
 
   /* ---------------------------------------------------------------
    *  DEPTH FROM THE NUCLEUS
@@ -878,7 +942,55 @@
   const LABEL_R = nodes.reduce(
     (m, n) => Math.max(m, Math.hypot(n.x, n.y) + rFor(n)), 0) + 56;
 
+  // The settled overview coordinates. Every node keeps them so the department
+  // view can be left again without re-running the simulation.
+  nodes.forEach(n => { n.ox = n.x; n.oy = n.y; });
+
+  /* ---------------------------------------------------------------
+   *  DEPARTMENT-VIEW COORDINATES
+   *  The same branches redrawn as a bottom-to-top fan rooted on the hub
+   *  WHERE IT ALREADY SITS. The hub never moves - only its branches take
+   *  new positions, and they are invisible at the moment they do, so the
+   *  redraw never reads as things sliding around. Each branch keeps the
+   *  stride and kink it had on the wheel, so it stays recognisably the
+   *  same constellation, just stood upright.
+   * --------------------------------------------------------------- */
+
+  const byId = {};
+  nodes.forEach(n => { byId[n.id] = n; });
+
+  const FOCUS_ARC = Math.PI * 0.8;   // fanned upward, kept under a half turn
+  Object.keys(BRANCHES).forEach(hubId => {
+    const hub = byId[hubId];
+    const brs = BRANCHES[hubId];
+    brs.forEach((br, bi) => {
+      const baseA = -Math.PI / 2 - FOCUS_ARC / 2 +
+                    ((bi + 0.5) / brs.length) * FOCUS_ARC;
+      let fr = 0;
+      br.ids.forEach((id, si) => {
+        const n = byId[id];
+        fr += n.step * 1.5;          // longer legs: one department, more room
+        const fa = baseA + (si % 2 === 0 ? n.swing * 1.4 : -n.swing * 1.4);
+        n.fx2 = hub.x + Math.cos(fa) * fr;
+        n.fy2 = hub.y + Math.sin(fa) * fr;
+      });
+    });
+  });
+
   const deptLayer = g.append("g").attr("class", "dept-labels");
+  // The ghosted department name. Kept in its own layer because it is far wider
+  // than the constellation, and folding it into the fit bounds would shrink the
+  // whole view to make room for a piece of decoration.
+  // Inserted as the FIRST child of the world group: it is background. Appended
+  // after the node group, it painted straight over the department's own nodes.
+  const focusMark = g.insert("g", ":first-child").attr("class", "focus-mark").attr("opacity", 0);
+  // labels belonging to the department view; populated on entry
+  const focusLayer = g.append("g").attr("class", "focus-labels").attr("opacity", 0);
+
+  // id of the department being shown on its own, or null for the overview.
+  // Declared here rather than with the rest of the department-view code below
+  // because graphBounds() reads it, and the first fit runs before that point.
+  let focusHub = null;
   const deptLabels = deptLayer.selectAll("text")
     .data(nodes.filter(n => n.level === 1))
     .join("text")
@@ -942,57 +1054,79 @@
 
   // keeps the graph clear of the header bar, the legend and the zoom controls
   const INSET = { top: 76, right: 30, bottom: 64, left: 30 };
+  // the department view swaps those for the back link and the vertical
+  // prev/next names running down either edge
+  const FOCUS_INSET = { top: 70, right: 104, bottom: 76, left: 104 };
+  function insets() { return focusHub ? FOCUS_INSET : INSET; }
 
   // true once the viewer has panned or zoomed by hand; we stop auto-refitting
   // after that so a resize never yanks the view out from under them
   let userAdjusted = false;
 
-  function graphBounds() {
+  // Bounds over an arbitrary set of nodes read through an arbitrary accessor,
+  // so the same code can frame the live layout or a layout we are about to
+  // animate into.
+  function boundsOf(list, getXY, pad) {
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
-    nodes.forEach(n => {
-      const r = rFor(n) + 14;
-      if (n.x - r < x0) x0 = n.x - r;
-      if (n.x + r > x1) x1 = n.x + r;
-      if (n.y - r < y0) y0 = n.y - r;
-      if (n.y + r > y1) y1 = n.y + r;
+    list.forEach(n => {
+      const xy = getXY(n);
+      const r = rFor(n) + 14 + (pad || 0);
+      if (xy[0] - r < x0) x0 = xy[0] - r;
+      if (xy[0] + r > x1) x1 = xy[0] + r;
+      if (xy[1] - r < y0) y0 = xy[1] - r;
+      if (xy[1] + r > y1) y1 = xy[1] + r;
     });
-    // department labels sit outside every node, so fold their box in too or
-    // the fit will happily crop them off the edge of the screen
-    try {
-      const lb = deptLayer.node().getBBox();
-      if (lb.width || lb.height) {
-        if (lb.x < x0) x0 = lb.x;
-        if (lb.y < y0) y0 = lb.y;
-        if (lb.x + lb.width > x1) x1 = lb.x + lb.width;
-        if (lb.y + lb.height > y1) y1 = lb.y + lb.height;
-      }
-    } catch (err) { /* not rendered yet; nodes alone are a fine fallback */ }
     return { x0, y0, x1, y1 };
   }
 
-  function fitTransform() {
-    const b = graphBounds();
+  function foldIn(b, layer) {
+    try {
+      const lb = layer.node().getBBox();
+      if (lb.width || lb.height) {
+        if (lb.x < b.x0) b.x0 = lb.x;
+        if (lb.y < b.y0) b.y0 = lb.y;
+        if (lb.x + lb.width > b.x1) b.x1 = lb.x + lb.width;
+        if (lb.y + lb.height > b.y1) b.y1 = lb.y + lb.height;
+      }
+    } catch (err) { /* not rendered yet; nodes alone are a fine fallback */ }
+    return b;
+  }
+
+  function graphBounds() {
+    if (focusHub) {
+      const set = deptMembers[focusHub];
+      const b = boundsOf(nodes.filter(n => set.has(n.id)), n => [n.x, n.y], 0);
+      return foldIn(b, focusLayer);
+    }
+    // department labels sit outside every node, so fold their box in too or
+    // the fit will happily crop them off the edge of the screen
+    return foldIn(boundsOf(nodes, n => [n.x, n.y], 0), deptLayer);
+  }
+
+  function fitTransform(bounds) {
+    const b = bounds || graphBounds();
     const gw = Math.max(1, b.x1 - b.x0);
     const gh = Math.max(1, b.y1 - b.y0);
     // an open panel eats into the usable width
-    const right = INSET.right +
+    const IN = insets();
+    const right = IN.right +
       (panelIsOpen() ? panelEl.getBoundingClientRect().width : 0);
     // Measure the viewport here rather than trusting W/H: those are captured at
     // script start and can already be stale by first paint (the layout viewport
     // settles late, scrollbars appear). A fit that measures itself can't drift.
     const vw = window.innerWidth, vh = window.innerHeight;
-    const availW = Math.max(80, vw - INSET.left - right);
-    const availH = Math.max(80, vh - INSET.top - INSET.bottom);
+    const availW = Math.max(80, vw - IN.left - right);
+    const availH = Math.max(80, vh - IN.top - IN.bottom);
     // contain, never blow past the zoom extent
     const k = Math.max(0.25, Math.min(4, Math.min(availW / gw, availH / gh)));
     const cx = (b.x0 + b.x1) / 2, cy = (b.y0 + b.y1) / 2;
     return d3.zoomIdentity
-      .translate(INSET.left + availW / 2 - k * cx, INSET.top + availH / 2 - k * cy)
+      .translate(IN.left + availW / 2 - k * cx, IN.top + availH / 2 - k * cy)
       .scale(k);
   }
 
-  function fitNow(duration) {
-    const t = fitTransform();
+  function fitNow(duration, bounds) {
+    const t = fitTransform(bounds);
     if (duration) svg.transition().duration(duration).call(zoom.transform, t);
     else svg.call(zoom.transform, t);
     userAdjusted = false;
@@ -1013,6 +1147,235 @@
     svg.transition().duration(200).call(zoom.scaleBy, 1 / 1.35);
   });
   d3.select("#zfit").on("click", () => fitNow(260));
+
+  /* ---------------------------------------------------------------
+   *  DEPARTMENT VIEW
+   *  Clicking a department redraws it on its own: the hub becomes an
+   *  anchor at the foot of the screen and its branches fan upward. Both
+   *  layouts were computed up front, so this is an interpolation between
+   *  two known coordinate sets rather than a fresh simulation - which is
+   *  what lets it read as the same constellation rearranging itself
+   *  rather than a different picture appearing.
+   * --------------------------------------------------------------- */
+
+  const ZOOM_MS = 820;                    // camera flight to the department
+  const DRAW_STAGE = 240, DRAW_DUR = 300; // then the branches draw outward
+
+  const focusUI = d3.select("#focusui");
+  const legendEl = d3.select("#legend");
+
+  function inFocusSet(n) {
+    if (!focusHub) return true;
+    const set = deptMembers[focusHub];
+    return !!(set && set.has(n.id));
+  }
+
+  // where a member of the focused department sits in the department view
+  function fpos(n) { return n.hub ? [n.x, n.y] : [n.fx2, n.fy2]; }
+
+  function buildFocusLabels(hubId) {
+    focusLayer.selectAll("*").remove();
+    focusMark.selectAll("*").remove();
+
+    const hub = byId[hubId];
+    const set = deptMembers[hubId];
+    const members = nodes.filter(n => set.has(n.id));
+
+    // the name, ghosted large across the constellation
+    focusMark.append("text")
+      .attr("x", d3.mean(members, n => fpos(n)[0]))
+      .attr("y", d3.mean(members, n => fpos(n)[1]))
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("fill", "var(--text)")
+      .attr("opacity", 0.07)
+      .attr("font-size", 76)
+      .attr("font-weight", 300)
+      .attr("letter-spacing", "0.14em")
+      .attr("pointer-events", "none")
+      .text(hub.name.toUpperCase());
+
+    // and small, directly under the anchor
+    focusLayer.append("text")
+      .attr("x", hub.x)
+      .attr("y", hub.y + 46)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("fill", "var(--text)")
+      .attr("font-size", 13)
+      .attr("font-weight", 500)
+      .attr("letter-spacing", "0.2em")
+      .attr("pointer-events", "none")
+      .text(hub.name.toUpperCase());
+
+    // one label per branch, just beyond its outermost node
+    (BRANCHES[hubId] || []).forEach(br => {
+      const tip = byId[br.ids[br.ids.length - 1]];
+      if (!tip) return;
+      const tp = fpos(tip);
+      const dx = tp[0] - hub.x, dy = tp[1] - hub.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = dx / len, ny = dy / len;
+      focusLayer.append("text")
+        .attr("x", tp[0] + nx * 32)
+        .attr("y", tp[1] + ny * 32)
+        .attr("text-anchor", nx > 0.3 ? "start" : nx < -0.3 ? "end" : "middle")
+        .attr("dominant-baseline", "central")
+        .attr("fill", "var(--text-dim)")
+        .attr("font-size", 10)
+        .attr("letter-spacing", "0.2em")
+        .attr("pointer-events", "none")
+        .text(br.group.toUpperCase());
+    });
+  }
+
+  function syncChrome() {
+    const on = !!focusHub;
+    focusUI.classed("on", on).attr("aria-hidden", on ? "false" : "true");
+    d3.select("#bar").classed("hidden", on);
+    node.attr("pointer-events", n => inFocusSet(n) ? null : "none");
+    if (!on) return;
+    const i = nodes.find(n => n.id === focusHub).deptIndex;
+    focusUI.select("#navPrev .nm").text(DEPARTMENTS[(i - 1 + N_DEPT) % N_DEPT].name.toUpperCase());
+    focusUI.select("#navNext .nm").text(DEPARTMENTS[(i + 1) % N_DEPT].name.toUpperCase());
+  }
+
+  // bounds of the department view, computed from the destination coordinates
+  // so the camera can start moving before anything has been repositioned
+  function deptBounds(hubId) {
+    const set = deptMembers[hubId];
+    return foldIn(boundsOf(nodes.filter(n => set.has(n.id)), fpos, 0), focusLayer);
+  }
+
+  // branches take / give up their department-view positions. Always called
+  // while they are invisible, which is the whole point.
+  function placeDept(hubId, focused) {
+    const set = deptMembers[hubId];
+    nodes.forEach(n => {
+      if (!set.has(n.id) || n.hub) return;
+      n.x = focused ? n.fx2 : n.ox;
+      n.y = focused ? n.fy2 : n.oy;
+    });
+  }
+
+  // Draw the branches back out from the hub, in the order they hang off it.
+  // Same technique as the opening reveal: each edge draws from parent to child
+  // and its node arrives behind it.
+  function drawOut(hubId, startDelay) {
+    const set = deptMembers[hubId];
+    const hubDepth = depthOf[hubId] || 2;
+    const rel = id => (depthOf[id] === undefined ? 1 : depthOf[id] - hubDepth);
+    const inSet = n => set.has(n.id);
+
+    const dept = link.filter(l => inSet(l.source) && inSet(l.target));
+    dept.each(function (l) {
+      const L = Math.hypot(l.target.x - l.source.x, l.target.y - l.source.y) || 1;
+      d3.select(this).attr("stroke-dasharray", L + " " + L).attr("stroke-dashoffset", L);
+    });
+    dept.transition("draw")
+      .delay(l => startDelay + (rel(l.target.id) - 1) * DRAW_STAGE)
+      .duration(DRAW_DUR).ease(d3.easeCubicOut)
+      .attr("stroke-opacity", 0.55)
+      .attr("stroke-dashoffset", 0);
+
+    node.filter(n => inSet(n) && !n.hub)
+      .transition("draw")
+        .delay(n => startDelay + (rel(n.id) - 1) * DRAW_STAGE + DRAW_DUR * 0.5)
+        .duration(DRAW_DUR)
+        .attr("opacity", 1);
+
+    focusMark.transition("draw").delay(startDelay).duration(600).attr("opacity", 1);
+    focusLayer.transition("draw").delay(startDelay + DRAW_STAGE).duration(420).attr("opacity", 1);
+
+    // a hover part-way through would interrupt the draw and strand an edge
+    clearTimeout(drawTimer);
+    drawTimer = setTimeout(() => {
+      dept.attr("stroke-dasharray", null).attr("stroke-dashoffset", null)
+          .attr("stroke-opacity", 0.55);
+      node.filter(n => inSet(n)).attr("opacity", 1);
+      focusLayer.attr("opacity", 1);
+      focusMark.attr("opacity", 1);
+    }, startDelay + 4 * DRAW_STAGE + DRAW_DUR + 120);
+  }
+
+  let drawTimer = null, placeTimer = null;
+
+  function goFocus(hubId) {
+    pinnedId = null;
+    clearHighlight();
+    tip.style("opacity", 0);
+    hidePanel();
+
+    const leaving = focusHub;
+    focusHub = hubId;
+    buildFocusLabels(hubId);
+    syncChrome();
+
+    // Everything drops away except the department's own hub, which stays put.
+    node.transition("mode").duration(300)
+      .attr("opacity", n => n.id === hubId ? 1 : 0);
+    link.transition("mode").duration(300).attr("stroke-opacity", 0);
+    deptLabels.transition("mode").duration(300).attr("opacity", 0);
+    legendEl.transition("mode").duration(300).style("opacity", 0);
+    focusLayer.interrupt("draw").attr("opacity", 0);
+    focusMark.interrupt("draw").attr("opacity", 0);
+
+    // the camera can leave immediately: the destination is known from the
+    // department-view coordinates, without anything having moved yet
+    fitNow(ZOOM_MS, deptBounds(hubId));
+
+    // once the branches are out of sight, stand them up, then draw them
+    clearTimeout(placeTimer);
+    placeTimer = setTimeout(() => {
+      if (focusHub !== hubId) return;          // superseded by another click
+      if (leaving && leaving !== hubId) placeDept(leaving, false);
+      placeDept(hubId, true);
+      render();
+      drawOut(hubId, 120);
+    }, 320);
+  }
+
+  function leaveFocus() {
+    if (!focusHub) return;
+    clearTimeout(drawTimer);
+    clearTimeout(placeTimer);
+    const leaving = focusHub;
+    focusHub = null;
+    syncChrome();
+
+    // Fold the department away first. Its branches have to go back to their
+    // places on the wheel, and that must not be visible as a jump.
+    const set = deptMembers[leaving];
+    node.filter(n => set.has(n.id) && !n.hub)
+      .transition("mode").duration(280).attr("opacity", 0);
+    link.filter(l => set.has(l.source.id) && set.has(l.target.id))
+      .transition("mode").duration(280).attr("stroke-opacity", 0);
+    focusLayer.interrupt("draw").transition("mode").duration(240).attr("opacity", 0);
+    focusMark.interrupt("draw").transition("mode").duration(240).attr("opacity", 0);
+
+    placeTimer = setTimeout(() => {
+      if (focusHub) return;                    // went back in before we landed
+      placeDept(leaving, false);
+      render();
+      node.transition("mode").duration(520).attr("opacity", 1);
+      link.transition("mode").duration(520)
+        .attr("stroke-dasharray", null).attr("stroke-dashoffset", null)
+        .attr("stroke-opacity", 0.55);
+      deptLabels.transition("mode").duration(520).attr("opacity", 1);
+      legendEl.transition("mode").duration(520).style("opacity", 1);
+      fitNow(ZOOM_MS, foldIn(boundsOf(nodes, n => [n.ox, n.oy], 0), deptLayer));
+    }, 300);
+  }
+
+  function stepDept(delta) {
+    if (!focusHub) return;
+    const i = nodes.find(n => n.id === focusHub).deptIndex;
+    goFocus("H_" + ((i + delta + N_DEPT) % N_DEPT));
+  }
+
+  d3.select("#backAll").on("click", (e) => { e.stopPropagation(); leaveFocus(); });
+  d3.select("#navPrev").on("click", (e) => { e.stopPropagation(); stepDept(-1); });
+  d3.select("#navNext").on("click", (e) => { e.stopPropagation(); stepDept(1); });
 
   /* ---------------------------------------------------------------
    *  INTRO
